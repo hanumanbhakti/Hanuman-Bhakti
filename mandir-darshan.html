@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>भारत के 15 प्रसिद्ध हनुमान मंदिर | Mandir Darshan - Hanuman Bhakti</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Fire Layout CSS */
+        .mandir-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        .mandir-card {
+            display: block; /* Card ko link banane ke liye */
+            text-decoration: none; /* Link underline hatane ke liye */
+            position: relative;
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .mandir-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(230, 81, 0, 0.25);
+        }
+
+        .mandir-image-wrapper {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+            background: #ff9800;
+        }
+
+        .mandir-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .mandir-card:hover .mandir-image-wrapper img {
+            transform: scale(1.1);
+        }
+
+        .specialty-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(230, 81, 0, 0.92);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+            text-align: center;
+            opacity: 0;
+            transition: 0.4s;
+            font-family: 'Mukta';
+        }
+
+        .specialty-overlay i {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .mandir-card:hover .specialty-overlay {
+            opacity: 1;
+        }
+
+        .mandir-info {
+            padding: 20px;
+            background: #fff;
+        }
+
+        .mandir-name {
+            font-family: 'Mukta';
+            font-size: 22px;
+            color: #222;
+            margin-bottom: 10px;
+            display: block;
+            font-weight: 700;
+        }
+
+        .location-badge {
+            display: inline-flex;
+            align-items: center;
+            background: #fff5f0;
+            color: #e65100;
+            padding: 6px 15px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .fire-header {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542310503-490333d4566c?auto=format&fit=crop&q=80&w=1000');
+            background-size: cover;
+            background-position: center;
+            border-radius: 30px;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .fire-header h1 { font-family: 'Mukta'; font-size: 45px; margin-bottom: 15px; }
+        
+        @media (max-width: 768px) {
+            .fire-header h1 { font-size: 32px; }
+            .mandir-grid { grid-template-columns: 1fr; }
+        }
+        .mandir-card-wrapper {
+        background: #fff;
+        border-radius: 20px;
+        padding-bottom: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        display: flex;
+        flex-direction: column;
+    }
+    .maps-btn {
+        display: block;
+        margin: 0 20px 10px 20px;
+        background: #fdf2f2;
+        color: #d32f2f;
+        text-align: center;
+        padding: 10px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        transition: 0.3s;
+        border: 1px solid #ffcdd2;
+    }
+    .maps-btn:hover {
+        background: #d32f2f;
+        color: #fff;
+    }
+
+    </style>
+</head>
+<body>
+
+<header>
+  <div class="header-wrap">
+    <button class="menu-btn" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+    <div class="logo"><i class="fas fa-om"></i>Hanuman Bhakti</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chalisa.html">Chalisa</a></li>
+        <li><a href="katha-sagar.html">Katha</a></li>
+        <li><a href="contact-us.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="wrapper">
+    <main class="main">
+        
+        <div class="fire-header">
+            <h1><i class="fas fa-om"></i> प्रसिद्ध हनुमान मंदिर दर्शन</h1>
+            <p>मंदिर के बारे में विस्तार से जानने के लिए फोटो पर क्लिक करें</p>
+        </div>
+
+ <div class="mandir-grid">
+    
+    <div class="mandir-card-wrapper">
+        <a href="mandir-ayodhya.html" class="mandir-card">
+            <div class="mandir-image-wrapper">
+                <img src="assets/images/hanuman-garhi.jpg" alt="Hanuman Garhi Ayodhya">
+                <div class="specialty-overlay">
+                    <i class="fas fa-eye"></i>
+                    <p>प्रभु श्री राम के दर्शन से पहले यहाँ हनुमान जी की आज्ञा लेना अनिवार्य माना जाता है।</p>
+                    <strong>विस्तार से पढ़ें →</strong>
+                </div>
+            </div>
+            <div class="mandir-info">
+                <strong class="mandir-name">हनुमान गढ़ी</strong>
+                <span class="location-badge"><i class="fas fa-map-marker-alt"></i> अयोध्या, उत्तर प्रदेश</span>
+            </div>
+        </a>
+        <a href="https://maps.google.com/?q=Hanuman+Garhi+Ayodhya" target="_blank" class="maps-btn">
+            <i class="fas fa-directions"></i> View on Google Maps
+        </a>
+    </div>
+
+    <div class="mandir-card-wrapper">
+        <a href="mandir-salasar.html" class="mandir-card">
+            <div class="mandir-image-wrapper">
+                <img src="assets/images/salasar-balaji.jpg" alt="Salasar Balaji Rajasthan">
+                <div class="specialty-overlay">
+                    <i class="fas fa-eye"></i>
+                    <p>यहाँ हनुमान जी की दाढ़ी और मूंछ वाली प्रतिमा स्थापित है, जो पूरे विश्व में प्रसिद्ध है।</p>
+                    <strong>विस्तार से पढ़ें →</strong>
+                </div>
+            </div>
+            <div class="mandir-info">
+                <strong class="mandir-name">सालासर बालाजी</strong>
+                <span class="location-badge"><i class="fas fa-map-marker-alt"></i> चूरू, राजस्थान</span>
+            </div>
+        </a>
+        <a href="https://maps.google.com/?q=Salasar+Balaji+Temple+Rajasthan" target="_blank" class="maps-btn">
+            <i class="fas fa-directions"></i> View on Google Maps
+        </a>
+    </div>
+
+    <div class="mandir-card-wrapper">
+        <a href="mandir-mehendipur.html" class="mandir-card">
+            <div class="mandir-image-wrapper">
+                <img src="assets/images/mehendipur-balaji.jpg" alt="Mehendipur Balaji Rajasthan">
+                <div class="specialty-overlay">
+                    <i class="fas fa-eye"></i>
+                    <p>यह मंदिर संकट मोचन और ऊपरी बाधाओं से मुक्ति के लिए जाना जाता है।</p>
+                    <strong>विस्तार से पढ़ें →</strong>
+                </div>
+            </div>
+            <div class="mandir-info">
+                <strong class="mandir-name">मेहंदीपुर बालाजी</strong>
+                <span class="location-badge"><i class="fas fa-map-marker-alt"></i> दौसा, राजस्थान</span>
+            </div>
+        </a>
+        <a href="https://maps.google.com/?q=Mehendipur+Balaji+Temple" target="_blank" class="maps-btn">
+            <i class="fas fa-directions"></i> View on Google Maps
+        </a>
+    </div>
+
+    <div class="mandir-card-wrapper">
+        <a href="mandir-varanasi.html" class="mandir-card">
+            <div class="mandir-image-wrapper">
+                <img src="assets/images/sankat-mochan-varanasi.jpg" alt="Sankat Mochan Varanasi">
+                <div class="specialty-overlay">
+                    <i class="fas fa-eye"></i>
+                    <p>इसकी स्थापना गोस्वामी तुलसीदास जी ने की थी। यह अत्यंत प्राचीन मंदिर है।</p>
+                    <strong>विस्तार से पढ़ें →</strong>
+                </div>
+            </div>
+            <div class="mandir-info">
+                <strong class="mandir-name">संकट मोचन मंदिर</strong>
+                <span class="location-badge"><i class="fas fa-map-marker-alt"></i> वाराणसी, उत्तर प्रदेश</span>
+            </div>
+        </a>
+        <a href="https://maps.google.com/?q=Sankat+Mochan+Hanuman+Temple+Varanasi" target="_blank" class="maps-btn">
+            <i class="fas fa-directions"></i> View on Google Maps
+        </a>
+    </div>
+
+    <div class="mandir-card-wrapper">
+        <a href="mandir-prayagraj.html" class="mandir-card">
+            <div class="mandir-image-wrapper">
+                <img src="assets/images/lete-hanuman-prayagraj.jpg" alt="Lete Hanuman Prayagraj">
+                <div class="specialty-overlay">
+                    <i class="fas fa-eye"></i>
+                    <p>संगम के तट पर स्थित एकमात्र मंदिर जहाँ हनुमान जी की लेटी हुई विशाल प्रतिमा है।</p>
+                    <strong>विस्तार से पढ़ें →</strong>
+                </div>
+            </div>
+            <div class="mandir-info">
+                <strong class="mandir-name">लेटे हुए हनुमान जी</strong>
+                <span class="location-badge"><i class="fas fa-map-marker-alt"></i> प्रयागराज, उत्तर प्रदेश</span>
+            </div>
+        </a>
+        <a href="https://maps.google.com/?q=Lete+Hanuman+Temple+Prayagraj" target="_blank" class="maps-btn">
+            <i class="fas fa-directions"></i> View on Google Maps
+        </a>
+    </div>
+
+    <div class="mandir-card-wrapper">
+        <a href="mandir-sarangpur.html" class="mandir-card">
+            <div class="mandir-image-wrapper">
+                <img src="assets/images/kashtbhanjan-sarangpur.jpg" alt="Kashtbhanjan Sarangpur Gujarat">
+                <div class="specialty-overlay">
+                    <i class="fas fa-eye"></i>
+                    <p>यहाँ हनुमान जी के चरणों में शनि देव स्त्री रूप में विराजमान हैं।</p>
+                    <strong>विस्तार से पढ़ें →</strong>
+                </div>
+            </div>
+            <div class="mandir-info">
+                <strong class="mandir-name">कष्टभंजन हनुमान</strong>
+                <span class="location-badge"><i class="fas fa-map-marker-alt"></i> सारंगपुर, गुजरात</span>
+            </div>
+        </a>
+        <a href="https://maps.google.com/?q=Shree+Kashtbhanjan+Dev+Hanumanji+Temple+Sarangpur" target="_blank" class="maps-btn">
+            <i class="fas fa-directions"></i> View on Google Maps
+        </a>
+    </div>
+
+    <div class="mandir-card-wrapper">
+        <a href="mandir-shimla.html" class="mandir-card">
+            <div class="mandir-image-wrapper">
+                <img src="assets/images/jakhu-temple-shimla.jpg" alt="Jakhu Temple Shimla">
+                <div class="specialty-overlay">
+                    <i class="fas fa-eye"></i>
+                    <p>पहाड़ों की चोटी पर स्थित यहाँ हनुमान जी की 108 फीट ऊँची विशाल प्रतिमा है।</p>
+                    <strong>विस्तार से पढ़ें →</strong>
+                </div>
+            </div>
+            <div class="mandir-info">
+                <strong class="mandir-name">जाखू मंदिर</strong>
+                <span class="location-badge"><i class="fas fa-map-marker-alt"></i> शिमला, हिमाचल प्रदेश</span>
+            </div>
+        </a>
+        <a href="https://maps.google.com/?q=Jakhoo+Temple+Shimla" target="_blank" class="maps-btn">
+            <i class="fas fa-directions"></i> View on Google Maps
+        </a>
+    </div>
+
+    <div class="mandir-card-wrapper">
+        <a href="mandir-namakkal.html" class="mandir-card">
+            <div class="mandir-image-wrapper">
+                <img src="assets/images/namakkal-anjaneyar.jpg" alt="Namakkal Anjaneyar Tamil Nadu">
+                <div class="specialty-overlay">
+                    <i class="fas fa-eye"></i>
+                    <p>यहाँ हनुमान जी की प्रतिमा खुले आसमान के नीचे है और 18 फीट ऊँची है।</p>
+                    <strong>विस्तार से पढ़ें →</strong>
+                </div>
+            </div>
+            <div class="mandir-info">
+                <strong class="mandir-name">नामक्कल अंजनयार</strong>
+                <span class="location-badge"><i class="fas fa-map-marker-alt"></i> तमिलनाडु</span>
+            </div>
+        </a>
+        <a href="https://maps.google.com/?q=Namakkal+Anjaneyar+Temple" target="_blank" class="maps-btn">
+            <i class="fas fa-directions"></i> View on Google Maps
+        </a>
+    </div>
+
+    <div class="mandir-card-wrapper">
+        <a href="mandir-kerala.html" class="mandir-card">
+            <div class="mandir-image-wrapper">
+                <img src="assets/images/mahiyappan-kerala.jpg" alt="Mahiyappan Temple Kerala">
+                <div class="specialty-overlay">
+                    <i class="fas fa-eye"></i>
+                    <p>दक्षिण भारत का एक अत्यंत प्राचीन और शक्तिशाली हनुमान मंदिर।</p>
+                    <strong>विस्तार से पढ़ें →</strong>
+                </div>
+            </div>
+            <div class="mandir-info">
+                <strong class="mandir-name">महीयप्पन मंदिर</strong>
+                <span class="location-badge"><i class="fas fa-map-marker-alt"></i> केरल</span>
+            </div>
+        </a>
+        <a href="https://maps.google.com/?q=Alathiyur+Hanuman+Temple+Kerala" target="_blank" class="maps-btn">
+            <i class="fas fa-directions"></i> View on Google Maps
+        </a>
+    </div>
+
+    <div class="mandir-card-wrapper">
+        <a href="mandir-delhi.html" class="mandir-card">
+            <div class="mandir-image-wrapper">
+                <img src="assets/images/hanuman-temple-delhi.jpg" alt="Prachin Hanuman Temple Delhi">
+                <div class="specialty-overlay">
+                    <i class="fas fa-eye"></i>
+                    <p>महाभारत काल का माना जाने वाला यह मंदिर दिल्ली के हृदय में स्थित है।</p>
+                    <strong>विस्तार से पढ़ें →</strong>
+                </div>
+            </div>
+            <div class="mandir-info">
+                <strong class="mandir-name">प्राचीन हनुमान मंदिर</strong>
+                <span class="location-badge"><i class="fas fa-map-marker-alt"></i> कनॉट प्लेस, दिल्ली</span>
+            </div>
+        </a>
+        <a href="https://maps.google.com/?q=Prachin+Hanuman+Temple+Connaught+Place" target="_blank" class="maps-btn">
+            <i class="fas fa-directions"></i> View on Google Maps
+        </a>
+    </div>
+
+    <div class="mandir-card-wrapper">
+        <a href="mandir-kumbakonam.html" class="mandir-card">
+            <div class="mandir-image-wrapper">
+                <img src="assets/images/panchmukhi-kumbakonam.jpg" alt="Panchmukhi Anjaneyar Kumbakonam">
+                <div class="specialty-overlay">
+                    <i class="fas fa-eye"></i>
+                    <p>जहाँ हनुमान जी का पंचमुखी अवतार साक्षात विराजा है।</p>
+                    <strong>विस्तार से पढ़ें →</strong>
+                </div>
+            </div>
+            <div class="mandir-info">
+                <strong class="mandir-name">पंचमुखी आंजनेयर</strong>
+                <span class="location-badge"><i class="fas fa-map-marker-alt"></i> कुंभकोणम, तमिलनाडु</span>
+            </div>
+        </a>
+        <a href="https://maps.google.com/?q=Panchamukha+Anjaneyar+Temple+Kumbakonam" target="_blank" class="maps-btn">
+            <i class="fas fa-directions"></i> View on Google Maps
+        </a>
+    </div>
+
+    <div class="mandir-card-wrapper">
+        <a href="mandir-chitrakoot.html" class="mandir-card">
+            <div class="mandir-image-wrapper">
+                <img src="assets/images/hanuman-dhara-chitrakoot.jpg" alt="Hanuman Dhara Chitrakoot">
+                <div class="specialty-overlay">
+                    <i class="fas fa-eye"></i>
+                    <p>यहाँ पहाड़ों से जल की एक धारा हनुमान जी पर निरंतर गिरती रहती है।</p>
+                    <strong>विस्तार से पढ़ें →</strong>
+                </div>
+            </div>
+            <div class="mandir-info">
+                <strong class="mandir-name">हनुमान धारा</strong>
+                <span class="location-badge"><i class="fas fa-map-marker-alt"></i> चित्रकूट, मध्य प्रदेश</span>
+            </div>
+        </a>
+        <a href="https://maps.google.com/?q=Hanuman+Dhara+Chitrakoot" target="_blank" class="maps-btn">
+            <i class="fas fa-directions"></i> View on Google Maps
+        </a>
+    </div>
+
+    <div class="mandir-card-wrapper">
+        <a href="mandir-kurukshetra.html" class="mandir-card">
+            <div class="mandir-image-wrapper">
+                <img src="assets/images/balaji-dham-kurukshetra.jpg" alt="Balaji Dham Kurukshetra">
+                <div class="specialty-overlay">
+                    <i class="fas fa-eye"></i>
+                    <p>महाभारत की ऐतिहासिक भूमि पर स्थित एक भव्य मंदिर।</p>
+                    <strong>विस्तार से पढ़ें →</strong>
+                </div>
+            </div>
+            <div class="mandir-info">
+                <strong class="mandir-name">बालाजी धाम</strong>
+                <span class="location-badge"><i class="fas fa-map-marker-alt"></i> कुरुक्षेत्र, हरियाणा</span>
+            </div>
+        </a>
+        <a href="https://maps.google.com/?q=Sidhpura+Balaji+Dham+Kurukshetra" target="_blank" class="maps-btn">
+            <i class="fas fa-directions"></i> View on Google Maps
+        </a>
+    </div>
+
+    <div class="mandir-card-wrapper">
+        <a href="mandir-guna.html" class="mandir-card">
+            <div class="mandir-image-wrapper">
+                <img src="assets/images/bajranggarh-guna.jpg" alt="Bajranggarh Temple Guna">
+                <div class="specialty-overlay">
+                    <i class="fas fa-eye"></i>
+                    <p>एक प्राचीन किले के ऊपर स्थित अद्भुत और शक्तिशाली मंदिर।</p>
+                    <strong>विस्तार से पढ़ें →</strong>
+                </div>
+            </div>
+            <div class="mandir-info">
+                <strong class="mandir-name">बजरंगगढ़ मंदिर</strong>
+                <span class="location-badge"><i class="fas fa-map-marker-alt"></i> गुना, मध्य प्रदेश</span>
+            </div>
+        </a>
+        <a href="https://maps.google.com/?q=Bajrangarh+Fort+Hanuman+Temple+Guna" target="_blank" class="maps-btn">
+            <i class="fas fa-directions"></i> View on Google Maps
+        </a>
+    </div>
+</div>
+
+        <div style="background: #fff8f1; padding: 40px; text-align: center; border: 2px dashed #e65100; border-radius: 20px; margin: 50px 0;">
+            <p style="color: #666; font-weight: bold;">Google AdSense Advertisement</p>
+        </div>
+
+    </main>
+    
+     <aside class="sidebar" id="sidebar">
+        <div class="widget">
+          <h3>भक्ति मार्ग</h3>
+          <ul class="side-list">
+            <li><a href="chalisa.html"><i class="fas fa-book-open"></i> हनुमान चालीसा</a></li>
+            <li><a href="bajrang-baan.html"><i class="fas fa-bolt"></i> बजरंग बाण</a></li>
+            <li><a href="katha-sagar.html"><i class="fas fa-scroll"></i> पौराणिक कथाएँ</a></li>
+            <li><a href="mandir-darshan.html"><i class="fas fa-gopuram"></i> प्रसिद्ध मंदिर</a></li>
+          </ul>
+        </div>
+        <div class="widget">
+          <h3>Sponsorship</h3>
+          <div class="ad-box">Google AdSense Space</div>
+        </div>
+    </aside>
+</div> 
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-box">
+      <h3>Hanuman Bhakti</h3>
+      <p>Hanuman Bhakti एक समर्पित सनातन मंच है, जहाँ श्री हनुमान जी की भक्ति, चालीसा, कथा और आध्यात्मिक ज्ञान शुद्ध रूप में प्रस्तुत किया जाता है।</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-box">
+      <h4>महत्वपूर्ण लिंक</h4>
+      <ul>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
+      </ul>
+    </div>
+    <div class="footer-box">
+      <h4>भक्ति सामग्री</h4>
+      <ul>
+        <li><a href="chalisa.html">Hanuman Chalisa</a></li>
+        <li><a href="bajrang-baan.html">Bajrang Baan</a></li>
+        <li><a href="hanuman-ashtak.html">Hanuman Ashtak</a></li>
+        <li><a href="sunderkand.html">Sunderkand</a></li>
+        <li><a href="katha.html">Pauranik Kathayein</a></li>
+      </ul>
+    </div>
+    <div class="footer-box">
+      <h4>विश्वसनीय जानकारी</h4>
+      <p class="trust-text">✔ 100% Bhakti Content<br>✔ No Misleading Information<br>✔ Sanatan Values Based Platform</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 www.hanumanbhakti.org • Jai Bajrang Bali 🔱 <br>
+    <span>यह वेबसाइट केवल धार्मिक एवं शैक्षिक उद्देश्य हेतु है।</span>
+  </div>
+</footer>
+
+<div class="mobile-bottom-nav">
+    <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="chalisa.html" class="nav-item"><i class="fas fa-book-open"></i><span>Chalisa</span></a>
+    <a href="mandir-darshan.html" class="nav-item"><i class="fas fa-gopuram"></i><span>Mandir</span></a>
+    <a href="javascript:void(0);" class="nav-item" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i><span>Menu</span></a>
+</div>
+
+<div class="mobile-drawer-overlay" id="drawerOverlay" onclick="toggleMobileMenu()"></div>
+
+<div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+        <div class="drawer-logo"><i class="fas fa-om"></i><span>Hanuman Bhakti</span></div>
+        <button class="close-btn" onclick="toggleMobileMenu()">&times;</button>
+    </div>
+    <div class="drawer-content">
+        <div class="drawer-section">
+            <h4>मुख्य श्रेणियाँ</h4>
+            <ul class="drawer-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> होम</a></li>
+                <li><a href="chalisa.html"><i class="fas fa-book"></i> हनुमान चालीसा</a></li>
+                <li><a href="sunderkand.html"><i class="fas fa-pray"></i> सुंदरकांड पाठ</a></li>
+                <li><a href="mantra.html"><i class="fas fa-dharmachakra"></i> मंत्र एवं विधि</a></li>
+                <li><a href="katha.html"><i class="fas fa-history"></i> पौराणिक कथाएं</a></li>
+            </ul>
+        </div>
+        <div class="drawer-section">
+            <h4>अन्य जानकारी</h4>
+            <ul class="drawer-links">
+                <li><a href="about-us.html">हमारे बारे में</a></li>
+                <li><a href="contact-us.html">संपर्क करें</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
