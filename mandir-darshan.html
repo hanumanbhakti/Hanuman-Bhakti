@@ -145,6 +145,29 @@
         background: #d32f2f;
         color: #fff;
     }
+        .fire-header{
+    position: relative;
+    background: url("images/hanuman-temple-sky-view.webp") center/cover no-repeat;
+    padding: 80px 20px;
+    text-align: center;
+    color: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.fire-header::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 0;
+}
+
+.fire-header h1,
+.fire-header p{
+    position: relative;
+    z-index: 1;
+}
 
     </style>
 </head>
