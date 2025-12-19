@@ -103,41 +103,7 @@ nav a:hover { color: var(--orange); }
   cursor: pointer;
   display: none;
 }
-/* =========================
-   HERO SECTION
-========================= */
-.hero {
-  position: relative;
-  min-height: 75vh;
-  padding: 100px 20px 80px;
-  background: linear-gradient(180deg, #120500, #050200);
-  color: #ffffff;
-  text-align: left;
-  overflow: hidden;
-}
 
-/* 🔱 Hanuman Ji Glow Murti (Hero) */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background: url("/assets/images/hanuman-bg.png") no-repeat;
-  background-position: right bottom;
-  background-size: 65%;
-
-  opacity: 1;
-
-  filter:
-    brightness(1.35)
-    contrast(1.25)
-    drop-shadow(0 0 30px rgba(255,180,70,0.7))
-    drop-shadow(0 0 70px rgba(255,140,0,0.55))
-    drop-shadow(0 0 110px rgba(255,120,0,0.4));
-
-  pointer-events: none;
-  z-index: 0;
-}
 
 /* Dark overlay – text readable */
 .hero::after {
@@ -164,7 +130,27 @@ nav a:hover { color: var(--orange); }
   max-width: 600px;
 }
 
-.hero h1 {
+.hero.site-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: url("../assets/images/hanuman-bg.png") no-repeat;
+  background-position: center bottom;
+  background-size: 95%;
+
+  opacity: 1;
+
+  filter:
+    brightness(1.35)
+    contrast(1.25)
+    drop-shadow(0 0 25px rgba(255,180,70,0.6))
+    drop-shadow(0 0 55px rgba(255,140,0,0.5))
+    drop-shadow(0 0 90px rgba(255,120,0,0.35));
+
+  pointer-events: none;
+  z-index: 0;
+} h1 {
   font-size: 38px;
   font-weight: 700;
   margin-bottom: 16px;
