@@ -24,4 +24,4 @@ Hanuman Bhakti 🚩
 ​🛠️ Installation & Usage
 ​Clone or download the repository.
 ​Open index.html in any modern web browser to view the site locally.
-​To deploy, upload all files to a hosting provider (like Netlify, GitHub Pages, or Hostinger).
+​To deploy, upload all files to a hosting provider (like Netlify, GitHub Pages, or Hostinger)
