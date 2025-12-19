@@ -2,43 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://hanumanbhakti.org/</loc>
-    <lastmod>2025-12-19</lastmod>
-    <priority>1.0</priority>
+    <priority>1.00</priority>
   </url>
 
   <url>
     <loc>https://hanumanbhakti.org/chalisa.html</loc>
-    <lastmod>2025-12-19</lastmod>
-    <priority>0.9</priority>
+    <priority>0.90</priority>
   </url>
-
+  <url>
+    <loc>https://hanumanbhakti.org/chalisa-arth.html</loc>
+    <priority>0.85</priority>
+  </url>
   <url>
     <loc>https://hanumanbhakti.org/sunderkand.html</loc>
-    <lastmod>2025-12-19</lastmod>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
-
   <url>
     <loc>https://hanumanbhakti.org/bajrang-baan.html</loc>
-    <lastmod>2025-12-19</lastmod>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/hanuman-ashtak.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/mantra.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/katha.html</loc>
+    <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://hanumanbhakti.org/contact-us.html</loc>
-    <lastmod>2025-12-19</lastmod>
-    <priority>0.5</priority>
+    <loc>https://hanumanbhakti.org/mandir-darshan.html</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/mandir-ayodhya.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/hanuman-ji-ke-baare.html</loc>
+    <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://hanumanbhakti.org/about-us.html</loc>
-    <lastmod>2025-12-19</lastmod>
-    <priority>0.5</priority>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/contact-us.html</loc>
+    <priority>0.60</priority>
   </url>
 
   <url>
     <loc>https://hanumanbhakti.org/privacy-policy.html</loc>
-    <lastmod>2025-12-19</lastmod>
-    <priority>0.5</priority>
+    <priority>0.30</priority>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/terms.html</loc>
+    <priority>0.30</priority>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/disclaimer.html</loc>
+    <priority>0.30</priority>
   </url>
 </urlset>
