@@ -868,3 +868,86 @@ nav a:hover { color: var(--orange); }
         padding: 20px;
     }
 }
+/* Bhakti Materials Section Styling */
+.bhakti-materials {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    margin: 20px 0;
+}
+
+.section-title {
+    font-family: 'Mukta', sans-serif;
+    color: #E65100;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    border-bottom: 2px solid #FFB300;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.materials-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.material-card {
+    display: flex;
+    align-items: center;
+    background: #FFF8F1;
+    padding: 15px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    border: 1px solid #FFE0B2;
+}
+
+.material-card:hover {
+    background: #E65100;
+    color: #fff;
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(230, 81, 0, 0.2);
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    background: #FF9800;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+.material-card:hover .icon-circle {
+    background: white;
+    color: #E65100;
+}
+
+.arrow {
+    margin-left: auto;
+    font-size: 14px;
+    opacity: 0.5;
+}
+
+.material-card:hover .arrow {
+    opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .material-card {
+        font-size: 16px;
+        padding: 12px 15px;
+    }
+}
