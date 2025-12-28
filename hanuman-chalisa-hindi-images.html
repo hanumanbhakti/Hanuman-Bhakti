@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>श्री हनुमान चालीसा | Hanuman Chalisa with Images & Meaning</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Tiro+Hindi&family=Yantra+Roman:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        :root {
+            --deep-orange: #E65100;
+            --light-saffron: #FFF4E5;
+            --gold-gradient: linear-gradient(135deg, #FF9800, #F57C00);
+        }
+
+        .chalisa-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .main-title {
+            text-align: center;
+            font-family: 'Mukta', sans-serif;
+            color: var(--deep-orange);
+            font-size: 36px;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Premium Card Styling */
+        .chalisa-visual-card {
+            background: #fff;
+            margin-bottom: 40px;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(230, 81, 0, 0.1);
+            border: 1px solid #ffe0b2;
+            transition: transform 0.3s ease;
+        }
+
+        .chalisa-visual-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(230, 81, 0, 0.15);
+        }
+
+        .img-container {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            background: #f0f0f0;
+            overflow: hidden;
+        }
+
+        .chaupai-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .chalisa-visual-card:hover .chaupai-img {
+            transform: scale(1.05);
+        }
+
+        /* Ribbon Effect for Numbering */
+        .chaupai-number {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--gold-gradient);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .chaupai-text {
+            padding: 30px 25px 15px;
+            font-family: 'Tiro Hindi', serif;
+            font-size: 24px;
+            color: #1a1a1a;
+            line-height: 1.6;
+            background: linear-gradient(to bottom, #ffffff, #fffdfb);
+        }
+
+        .chaupai-meaning {
+            padding: 0 25px 30px;
+            font-size: 17px;
+            color: #555;
+            line-height: 1.6;
+            border-top: 1px dashed #ffd180;
+            margin: 0 25px;
+            padding-top: 15px;
+        }
+
+        /* Interlinking Section */
+        .interlink-section {
+            background: #fff;
+            padding: 40px;
+            border-radius: 25px;
+            margin-top: 60px;
+            border: 2px solid #E65100;
+            position: relative;
+        }
+
+        .interlink-section h3 {
+            position: absolute;
+            top: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #E65100;
+            color: white;
+            padding: 5px 25px;
+            border-radius: 50px;
+            white-space: nowrap;
+        }
+
+        .link-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #FFF8F1;
+            padding: 15px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #444;
+            font-weight: 600;
+            border: 1px solid #FFE0B2;
+            transition: 0.3s;
+        }
+
+        .link-item:hover {
+            background: var(--gold-gradient);
+            color: white;
+            border-color: transparent;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            .chaupai-text { font-size: 20px; }
+            .img-container { height: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+  <div class="header-wrap">
+    <button class="menu-btn" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+    <div class="logo"><i class="fas fa-om"></i>Hanuman Bhakti</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chalisa.html">Chalisa</a></li>
+        <li><a href="katha.html">Katha</a></li>
+        <li><a href="contact-us.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="wrapper">
+    <main class="main chalisa-container">
+        <h1 class="main-title">🔱 श्री हनुमान चालीसा 🔱</h1>
+
+<style>
+    .chalisa-hero {
+        background: linear-gradient(rgba(230, 81, 0, 0.8), rgba(255, 152, 0, 0.7)), url('images/hero-bg.jpg'); /* Background image optional hai */
+        background-size: cover;
+        background-position: center;
+        padding: 60px 20px;
+        text-align: center;
+        color: white;
+        border-radius: 25px;
+        margin-bottom: 40px;
+        box-shadow: 0 15px 30px rgba(230, 81, 0, 0.3);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-badge {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 5px 20px;
+        border-radius: 50px;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        backdrop-filter: blur(5px);
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .chalisa-hero h1 {
+        font-family: 'Mukta', sans-serif;
+        font-size: 42px;
+        margin-bottom: 15px;
+        text-shadow: 2px 4px 6px rgba(0,0,0,0.3);
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+        max-width: 600px;
+        margin: 0 auto 30px;
+        line-height: 1.6;
+        opacity: 0.95;
+    }
+
+    /* Internal Quick Links Menu */
+    .hero-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .hero-nav-link {
+        background: white;
+        color: #E65100;
+        padding: 10px 22px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 15px;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .hero-nav-link:hover {
+        background: #333;
+        color: white;
+        transform: translateY(-3px);
+    }
+
+    @media (max-width: 600px) {
+        .chalisa-hero h1 { font-size: 30px; }
+        .hero-subtitle { font-size: 15px; }
+    }
+</style>
+
+<section class="chalisa-hero">
+    <div class="hero-badge">हनुमान भक्ति विशेष</div>
+    <h1>श्री हनुमान चालीसा (सचित्र)</h1>
+    <p class="hero-subtitle">सम्पूर्ण चालीसा का पाठ करें, हर चौपाई के सुंदर अर्थ और भव्य चित्रों के साथ। श्री राम के अनन्य भक्त पवनपुत्र की कृपा पाएं।</p>
+    
+    <div class="hero-nav">
+        <a href="chalisa-arth.html" class="hero-nav-link"><i class="fas fa-book"></i> चालीसा अर्थ</a>
+        <a href="sunderkand.html" class="hero-nav-link"><i class="fas fa-fire"></i> सुंदरकांड</a>
+        <a href="bajrang-baan.html" class="hero-nav-link"><i class="fas fa-bolt"></i> बजरंग बाण</a>
+        <a href="mantra.html" class="hero-nav-link"><i class="fas fa-om"></i> सिद्ध मंत्र</a>
+        <a href="katha.html" class="hero-nav-link"><i class="fas fa-history"></i> कथा सागर</a>
+    </div>
+</section>
+
+        
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">दोहा 1</span>
+        <img src="assets/images/doha-1.jpg" alt="Shree Guru Charan Saroj Raj - Hanuman Chalisa" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        श्रीगुरु चरन सरोज रज निज मनु मुकुरु सुधारि।<br>
+        बरनऊं रघुबर बिमल जसु जो दायकु फल चारि॥
+    </div>
+    <div class="chaupai-meaning">
+        <strong>अर्थ:</strong> श्री गुरुदेव के चरण-कमलों की धूल से अपने मन रूपी दर्पण को पवित्र करके, मैं श्री रघुवीर के निर्मल यश का वर्णन करता हूँ, जो चारों फल (धर्म, अर्थ, काम और मोक्ष) देने वाला है।
+    </div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">दोहा 2</span>
+        <img src="assets/images/doha-2.jpg" alt="Buddhi Heen Tanu Janike - Hanuman Chalisa" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        बुद्धिहीन तनु जानिके सुमिरौं पवन-कुमार।<br>
+        बल बुधि बिद्या देहु मोहिं हरहु कलेस बिकार॥
+    </div>
+    <div class="chaupai-meaning">
+        <strong>अर्थ:</strong> हे पवनपुत्र! मैं स्वयं को बुद्धिहीन जानकर आपका स्मरण करता हूँ। आप मुझे बल, बुद्धि और विद्या प्रदान करें और मेरे सभी कष्टों व दोषों का नाश करें।
+    </div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 1</span>
+        <img src="assets/images/chaupai-1.jpg" alt="Jai Hanuman Gyan Gun Sagar" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        जय हनुमान ज्ञान गुन सागर। जय कपीस तिहुं लोक उजागर॥
+    </div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> ज्ञान और गुणों के सागर श्री हनुमान जी की जय हो। तीनों लोकों में आपकी कीर्ति व्याप्त है।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 2</span>
+        <img src="assets/images/chaupai-2.jpg" alt="Ram Doot Atulit Bal Dhama" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        राम दूत अतुलित बल धामा। अंजनि पुत्र पवनसुत नामा॥
+    </div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> आप श्री राम के दूत और अतुलित शक्ति के धाम हैं। माता अंजनी के पुत्र होने के कारण आप पवनसुत नाम से जाने जाते हैं।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 3</span>
+        <img src="assets/images/chaupai-3.jpg" alt="Mahabir Bikram Bajrangi" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        महाबीर बिक्रम बजरंगी। कुमति निवार सुमति के संगी॥
+    </div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> आप महान वीर और पराक्रमी हैं। आप दुर्बुद्धि को दूर करने वाले और अच्छी बुद्धि वालों के सहायक हैं।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 4</span>
+        <img src="assets/images/chaupai-4.jpg" alt="Kanchan Baran Biraj Subesa" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        कंचन बरन बिराज सुबेसा। कानन कुंडल कुंचित केसा॥
+    </div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> आपका रंग सोने के समान चमकीला है और आप सुंदर वस्त्रों, कानों में कुंडल और घुंघराले बालों से सुशोभित हैं।</div>
+</div>
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 5</span>
+        <img src="assets/images/chaupai-5.jpg" alt="Hath Bajra Aur Dhwaja Biraje" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        हाथ बज्र औ ध्वजा बिराजै। कांधे मूंज जनेऊ साजै॥
+    </div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> आपके हाथों में वज्र और ध्वजा सुशोभित है, और कंधे पर मूंज का जनेऊ आपकी शोभा बढ़ा रहा है।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 6</span>
+        <img src="assets/images/chaupai-6.jpg" alt="Shankar Suvan Kesarinandan" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        शंकर सुवन केसरीनंदन। तेज प्रताप महा जग बंदन॥
+    </div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> आप भगवान शिव के अवतार और केसरी के पुत्र हैं। आपके प्रताप और तेज की सारा संसार वंदना करता है।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 7</span>
+        <img src="assets/images/chaupai-7.jpg" alt="Bidyawan Guni Ati Chatur" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        बिद्यावान गुनी अति चातुर। राम काज करिबे को आतुर॥
+    </div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> आप अत्यंत विद्वान, गुणी और चतुर हैं। आप श्री राम के कार्यों को करने के लिए हमेशा उत्सुक रहते हैं।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 8</span>
+        <img src="assets/images/chaupai-8.jpg" alt="Prabhu Charitra Sunibe Ko Rasiya" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        प्रभु चरित्र सुनिबे को रसिया। राम लखन सीता मन बसिया॥
+    </div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> आप प्रभु राम की कथा सुनने के रसिक हैं। राम, लक्ष्मण और सीता हमेशा आपके हृदय में बसते हैं।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 9</span>
+        <img src="assets/images/chaupai-9.jpg" alt="Sukshma Roopa Dhari Siyahi Dikhawa" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        सूक्ष्म रूप धरि सियहिं दिखावा। बिकट रूप धरि लंक जरावा॥
+    </div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> आपने माता सीता को सूक्ष्म रूप दिखाया और विशाल रूप धारण करके लंका को जलाया।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 10</span>
+        <img src="assets/images/chaupai-10.jpg" alt="Bhima Roopa Dhari Asura Sanhare" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        भीम रूप धरि असुर संहारे। रामचंद्र के काज संवारे॥
+    </div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> आपने अत्यंत विशाल रूप धारण करके राक्षसों का संहार किया और श्री राम के सभी कार्य सफल बनाए।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 11</span>
+        <img src="assets/images/chaupai-11.jpg" alt="Laye Sanjivan Lakhan Jiyaye" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        लाय संजीवन लखन जियाये। श्रीरघुबीर हरषि उर लाये॥
+    </div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> आपने संजीवनी बूटी लाकर लक्ष्मण जी के प्राण बचाए, जिससे प्रसन्न होकर श्री राम ने आपको गले लगा लिया।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 12</span>
+        <img src="assets/images/chaupai-12.jpg" alt="Raghupati Kinhi Bahut Badai" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        रघुपति कीन्ही बहुत बड़ाई। तुम मम प्रिय भरतहि सम भाई॥
+    </div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> श्री राम ने आपकी बहुत प्रशंसा की और कहा कि तुम मेरे लिए भाई भरत के समान प्रिय हो।</div>
+</div>
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 13</span>
+        <img src="assets/images/chaupai-13.jpg" alt="Sahas Badan Tumharo Yash Gaave" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        सहस बदन तुम्हरो जस गावैं। अस कहि श्रीपति कंठ लगावैं॥
+    </div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> हज़ारों मुख वाले शेषनाग आपके यश का गान करते हैं—ऐसा कहकर श्री राम ने आपको गले से लगा लिया।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 14</span>
+        <img src="assets/images/chaupai-14.jpg" alt="Sanakadika Brahmadi Munisa" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        सनकादिक ब्रह्मादि मुनीसा। नारद सारद सहित अहीसा॥
+    </div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> सनक आदि ऋषि, ब्रह्मा जैसे देवता, नारद, सरस्वती और शेषनाग सहित सभी आपका गुणगान करते हैं।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 15</span>
+        <img src="assets/images/chaupai-15.jpg" alt="Yam Kuber Digpal Jahan Te" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        यम कुबेर दिगपाल जहां ते। कबि कोबिद कहि सके कहां ते॥
+    </div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> यमराज, कुबेर और दसों दिशाओं के रक्षक तक आपके यश का वर्णन नहीं कर सकते, फिर कवि और विद्वान कैसे कर पाएंगे।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 16</span>
+        <img src="assets/images/chaupai-16.jpg" alt="Tum Upkar Sugreevahin Keenha" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        तुम उपकार सुग्रीवहिं कीन्हा। राम मिलाय राज पद दीन्हा॥
+    </div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> आपने सुग्रीव पर महान उपकार किया, उन्हें श्री राम से मिलवाया और उन्हें पुनः राजा बनाया।</div>
+</div>
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 17</span>
+        <img src="assets/images/chaupai-17.jpg" alt="Tumharo Mantra Bibhishan Maana" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        तुम्हरो मंत्र बिभीषन माना। लंकेश्वर भए सब जग जाना॥
+    </div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> आपकी सलाह को विभीषण ने माना, जिसके फलस्वरूप वे लंका के राजा बने, यह बात सारा संसार जानता है।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 18</span>
+        <img src="assets/images/chaupai-18.jpg" alt="Yug Sahastra Yojan Par Bhanu" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        जुग सहस्र जोजन पर भानू। लील्यो ताहि मधुर फल जानू॥
+    </div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> जो सूर्य यहाँ से हजारों योजन की दूरी पर है, उसे आपने एक मीठा फल समझकर निगल लिया था।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 19</span>
+        <img src="assets/images/chaupai-19.jpg" alt="Prabhu Mudrika Meli Mukh Maahi" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        प्रभु मुद्रिका मेलि मुख माहीं। जलधि लांघि गये अचरज नाहीं॥
+    </div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> श्री राम की अंगूठी को मुख में रखकर आपने समुद्र को लांघ लिया, इसमें कोई आश्चर्य की बात नहीं है।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 20</span>
+        <img src="assets/images/chaupai-20.jpg" alt="Durgam Kaj Jagat Ke Jete" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        दुर्गम काज जगत के जेते। सुगम अनुग्रह तुम्हरे तेते॥
+    </div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> संसार में जितने भी कठिन से कठिन कार्य हैं, वे आपकी कृपा से बहुत ही आसान हो जाते हैं।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 21</span>
+        <img src="assets/images/chaupai-21.jpg" alt="Ram Duare Tum Rakhware" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">राम दुआरे तुम रखवारे। होत न आज्ञा बिनु पैसारे॥</div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> आप श्री राम के दरबार के द्वारपाल हैं। आपकी अनुमति के बिना कोई भी अंदर प्रवेश नहीं कर सकता।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 22</span>
+        <img src="assets/images/chaupai-22.jpg" alt="Sab Sukh Lahai Tumhari Sarna" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">सब सुख लहै तुम्हारी सरना। तुम रक्षक काहू को डर ना॥</div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> आपकी शरण में आने वाले को सभी सुख प्राप्त होते हैं। जब आप रक्षक हैं, तो किसी का डर नहीं रहता।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 23</span>
+        <img src="assets/images/chaupai-23.jpg" alt="Aapan Tej Samharo Aapai" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">आपन तेज सम्हारो आपै। तीनों लोक हांक तें कांपै॥</div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> आपके तेज को केवल आप ही संभाल सकते हैं। आपकी एक हुंकार से तीनों लोक कांप उठते हैं।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 24</span>
+        <img src="assets/images/chaupai-24.jpg" alt="Bhoot Pisach Nikat Nahi Aave" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">भूत पिसाच निकट नहिं आवै। महाबीर जब नाम सुनावै॥</div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> जहाँ 'महावीर' हनुमान का नाम लिया जाता है, वहाँ भूत-प्रेत और नकारात्मक शक्तियाँ पास भी नहीं फटकतीं।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 25</span>
+        <img src="assets/images/chaupai-25.jpg" alt="Nase Rog Hare Sab Peera" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">नासै रोग हरै सब पीरा। जपत निरंतर हनुमत बीरा॥</div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> वीर हनुमान जी का निरंतर जप करने से सभी रोग नष्ट हो जाते हैं और सारे कष्ट मिट जाते हैं।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 26</span>
+        <img src="assets/images/chaupai-26.jpg" alt="Sankat Te Hanuman Chhudave" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">संकट तें हनुमान छुड़ावै। मन क्रम बचन ध्यान जो लावै॥</div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> जो व्यक्ति मन, कर्म और वचन से हनुमान जी का ध्यान करता है, उन्हें वे हर संकट से बचा लेते हैं।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 27</span>
+        <img src="assets/images/chaupai-27.jpg" alt="Sab Par Ram Tapasvee Raja" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">सब पर राम तपस्वी राजा। तिन के काज सकल तुम साजा॥</div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> तपस्वी राजा श्री राम सबसे ऊपर हैं, और उनके सभी कठिन कार्यों को आपने ही आसान बनाया है।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 28</span>
+        <img src="assets/images/chaupai-28.jpg" alt="Aur Manorath Jo Koi Lavai" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">और मनोरथ जो कोई लावै। सोइ अमित जीवन फल पावै॥</div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> जो कोई भी सच्ची श्रद्धा के साथ कोई इच्छा लेकर आता है, उसे जीवन का असीमित फल प्राप्त होता है।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 29</span>
+        <img src="assets/images/chaupai-29.jpg" alt="Charo Yug Partap Tumhara" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">चारों जुग परताप तुम्हारा। है परसिद्ध जगत उजियारा॥</div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> आपका प्रताप चारों युगों (सतयुग, त्रेता, द्वापर, कलियुग) में फैला है और आपकी कीर्ति पूरे जगत को आलोकित करती है।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 30</span>
+        <img src="assets/images/chaupai-30.jpg" alt="Sadhu Sant Ke Tum Rakhware" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">साधु संत के तुम रखवारे। असुर निकंदन राम दुलारे॥</div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> आप सज्जनों और संतों की रक्षा करते हैं, राक्षसों का नाश करते हैं और श्री राम के अत्यंत प्रिय हैं।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 31</span>
+        <img src="assets/images/chaupai-31.jpg" alt="Ashta Siddhi Nau Nidhi Ke Data" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">अष्ट सिद्धि नौ निधि के दाता। अस बर दीन्ह जानकी माता॥</div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> आपको माता सीता से यह वरदान प्राप्त है कि आप किसी को भी आठों सिद्धियाँ और नौ निधियाँ दे सकते हैं।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 32</span>
+        <img src="assets/images/chaupai-32.jpg" alt="Ram Rasayan Tumhare Pasa" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">राम रसायन तुम्हरे पासा। सदा रहो रघुपति के दासा॥</div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> आपके पास श्री राम के नाम की औषधि (भक्ति) है। आप सदैव भगवान राम के अनन्य सेवक बने रहते हैं।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 33</span>
+        <img src="assets/images/chaupai-33.jpg" alt="Tumhare Bhajan Ram Ko Pavai" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">तुम्हरे भजन राम को पावै। जनम जनम के दुख बिसरावै॥</div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> आपके भजन से भक्त श्री राम को प्राप्त कर लेते हैं और अपने कई जन्मों के दुखों को भूल जाते हैं।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 34</span>
+        <img src="assets/images/chaupai-34.jpg" alt="Anta Kaal Raghubar Pur Jai" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">अंत काल रघुबर पुर जाई। जहाँ जन्म हरिभक्त कहाई॥</div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> अंत समय में भक्त श्री राम के धाम (साकेत) जाता है और यदि पुनः जन्म ले, तो ईश्वर का भक्त ही कहलाता है।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 35</span>
+        <img src="assets/images/chaupai-35.jpg" alt="Aur Devta Chitt Na Dharai" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">और देवता चित्त न धरई। हनुमत सेइ सर्ब सुख करई॥</div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> किसी अन्य देवता को मन में न रखते हुए, केवल हनुमान जी की सेवा से ही सारे सुख प्राप्त हो जाते हैं।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 36</span>
+        <img src="assets/images/chaupai-36.jpg" alt="Sankat Kate Mite Sab Peera" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">संकट कटै मिटै सब पीरा। जो सुमिरै हनुमत बलबीरा॥</div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> जो शक्तिशाली हनुमान जी का स्मरण करता है, उसके सारे संकट कट जाते हैं और सारी पीड़ाएं मिट जाती हैं।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 37</span>
+        <img src="assets/images/chaupai-37.jpg" alt="Jai Jai Jai Hanuman Gosain" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">जय जय जय हनुमान गोसाईं। कृपा करहु गुरुदेव की नाईं॥</div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> हे स्वामी हनुमान! आपकी जय हो, जय हो, जय हो। मुझ पर एक गुरु के समान कृपा कीजिए।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 38</span>
+        <img src="assets/images/chaupai-38.jpg" alt="Jo Sat Bar Path Kar Koi" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">जो सत बार पाठ कर कोई। छूटहि बंदि महा सुख होई॥</div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> जो कोई सौ बार इसका पाठ करेगा, वह सभी बंधनों से मुक्त हो जाएगा और उसे परम सुख प्राप्त होगा।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 39</span>
+        <img src="assets/images/chaupai-39.jpg" alt="Jo Yah Padhe Hanuman Chalisa" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">जो यह पढ़ै हनुमान चालीसा। होय सिद्धि साखी गौरीसा॥</div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> जो इस हनुमान चालीसा को पढ़ता है, उसकी मनोकामनाएं सिद्ध होती हैं—स्वयं भगवान शिव इसके साक्षी हैं।</div>
+</div>
+
+<div class="chalisa-visual-card">
+    <div class="img-container">
+        <span class="chaupai-number">चौपाई 40</span>
+        <img src="assets/images/chaupai-40.jpg" alt="Tulasidas Sada Hari Chera" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">तुलसीदास सदा हरि चेरा। कीजै नाथ हृदय मंह डेरा॥</div>
+    <div class="chaupai-meaning"><strong>अर्थ:</strong> तुलसीदास हमेशा भगवान के सेवक हैं। हे स्वामी! आप सदैव मेरे हृदय में वास कीजिए।</div>
+</div>
+
+
+<div class="chalisa-visual-card" style="border: 2px solid var(--deep-orange);">
+    <div class="img-container">
+        <span class="chaupai-number">अंतिम दोहा</span>
+        <img src="assets/images/antim-doha.jpg" alt="Pavan Tanay Sankat Haran" class="chaupai-img">
+    </div>
+    <div class="chaupai-text">
+        पवनतनय संकट हरन मंगल मूरति रूप।<br>
+        राम लखन सीता सहित हृदय बसहु सुर भूप॥
+    </div>
+    <div class="chaupai-meaning">
+        <strong>अर्थ:</strong> हे संकटमोचन पवनपुत्र! आप मंगल की मूर्ति हैं। आप देवताओं के राजा श्री राम, माता सीता और लक्ष्मण जी सहित सदा मेरे हृदय में निवास करें।
+    </div>
+</div>
+
+
+        <section class="interlink-section">
+            <h3>सम्पूर्ण भक्ति मार्ग</h3>
+            <div class="link-grid">
+                <a href="index.html" class="link-item"><i class="fas fa-home"></i> &nbsp; मुख्य पृष्ठ</a>
+                <a href="chalisa-arth.html" class="link-item">📖 चालीसा अर्थ</a>
+                <a href="sunderkand.html" class="link-item">🔥 सुंदरकांड</a>
+                <a href="bajrang-baan.html" class="link-item">⚡ बजरंग बाण</a>
+                <a href="hanuman-ji-ke-baare.html" class="link-item">🔱 जीवनी</a>
+                <a href="katha.html" class="link-item">📜 कथाएं</a>
+                <a href="mantra.html" class="link-item">🕉️ मंत्र</a>
+                <a href="contact-us.html" class="link-item">📞 संपर्क</a>
+            </div>
+        </section>
+    </main>
+</div>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="widget">
+          <h3>भक्ति मार्ग</h3>
+          <ul class="side-list">
+            <li><a href="chalisa.html"><i class="fas fa-book-open"></i> हनुमान चालीसा</a></li>
+            <li><a href="bajrang-baan.html"><i class="fas fa-bolt"></i> बजरंग बाण</a></li>
+            <li><a href="katha-sagar.html"><i class="fas fa-scroll"></i> पौराणिक कथाएँ</a></li>
+            <li><a href="mandir-darshan.html"><i class="fas fa-gopuram"></i> प्रसिद्ध मंदिर</a></li>
+          </ul>
+        </div>
+        <div class="widget">
+          <h3>Sponsorship</h3>
+          <div class="ad-box">Google AdSense Space</div>
+        </div>
+    </aside>
+</div> 
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-box">
+      <h3>Hanuman Bhakti</h3>
+      <p>Hanuman Bhakti एक समर्पित सनातन मंच है, जहाँ श्री हनुमान जी की भक्ति, चालीसा, कथा और आध्यात्मिक ज्ञान शुद्ध रूप में प्रस्तुत किया जाता है।</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-box">
+      <h4>महत्वपूर्ण लिंक</h4>
+      <ul>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
+      </ul>
+    </div>
+    <div class="footer-box">
+      <h4>भक्ति सामग्री</h4>
+      <ul>
+        <li><a href="chalisa.html">Hanuman Chalisa</a></li>
+        <li><a href="bajrang-baan.html">Bajrang Baan</a></li>
+        <li><a href="hanuman-ashtak.html">Hanuman Ashtak</a></li>
+        <li><a href="sunderkand.html">Sunderkand</a></li>
+        <li><a href="katha.html">Pauranik Kathayein</a></li>
+      </ul>
+    </div>
+    <div class="footer-box">
+      <h4>विश्वसनीय जानकारी</h4>
+      <p class="trust-text">✔ 100% Bhakti Content<br>✔ No Misleading Information<br>✔ Sanatan Values Based Platform</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 www.hanumanbhakti.org • Jai Bajrang Bali 🔱 <br>
+    <span>यह वेबसाइट केवल धार्मिक एवं शैक्षिक उद्देश्य हेतु है।</span>
+  </div>
+</footer>
+
+<div class="mobile-bottom-nav">
+    <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="chalisa.html" class="nav-item"><i class="fas fa-book-open"></i><span>Chalisa</span></a>
+    <a href="mandir-darshan.html" class="nav-item"><i class="fas fa-gopuram"></i><span>Mandir</span></a>
+    <a href="javascript:void(0);" class="nav-item" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i><span>Menu</span></a>
+</div>
+
+<div class="mobile-drawer-overlay" id="drawerOverlay" onclick="toggleMobileMenu()"></div>
+
+<div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+        <div class="drawer-logo"><i class="fas fa-om"></i><span>Hanuman Bhakti</span></div>
+        <button class="close-btn" onclick="toggleMobileMenu()">&times;</button>
+    </div>
+    <div class="drawer-content">
+        <div class="drawer-section">
+            <h4>मुख्य श्रेणियाँ</h4>
+            <ul class="drawer-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> होम</a></li>
+                <li><a href="chalisa.html"><i class="fas fa-book"></i> हनुमान चालीसा</a></li>
+                <li><a href="sunderkand.html"><i class="fas fa-pray"></i> सुंदरकांड पाठ</a></li>
+                <li><a href="mantra.html"><i class="fas fa-dharmachakra"></i> मंत्र एवं विधि</a></li>
+                <li><a href="katha.html"><i class="fas fa-history"></i> पौराणिक कथाएं</a></li>
+            </ul>
+        </div>
+        <div class="drawer-section">
+            <h4>अन्य जानकारी</h4>
+            <ul class="drawer-links">
+                <li><a href="about-us.html">हमारे बारे में</a></li>
+                <li><a href="contact-us.html">संपर्क करें</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
