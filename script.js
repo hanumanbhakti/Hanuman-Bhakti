@@ -77,3 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   });
 });
+
+function sharePage() {
+  const text = "🙏 आज का हनुमान चालीसा पढ़ें: https://hanumanbhakti.org";
+  window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
+}
