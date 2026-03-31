@@ -951,3 +951,17 @@ nav a:hover { color: var(--orange); }
         padding: 12px 15px;
     }
 }
+
+.sticky-share {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.sticky-share button {
+  background: orange;
+  color: white;
+  padding: 12px;
+  border-radius: 50px;
+  border: none;
+}
