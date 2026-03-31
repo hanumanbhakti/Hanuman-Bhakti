@@ -82,16 +82,3 @@ function sharePage() {
   const text = "🙏 आज का हनुमान चालीसा पढ़ें: https://hanumanbhakti.org";
   window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
 }
-
-.audio-box {
-  text-align: center;
-  padding: 20px;
-  background: #fff3e0;
-  border-radius: 10px;
-  margin: 20px;
-}
-
-.audio-box p {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
