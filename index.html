@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="fHwWx-yXmn0w37t0YhNhatgNj-OUkhmgH78fdUGw1Es" />
 
   <title>हनुमान भक्ति | श्री हनुमान जी की चालीसा, कथा, मंत्र और आध्यात्मिक ज्ञान</title>
@@ -16,7 +15,6 @@
 
   <link rel="canonical" href="https://hanumanbhakti.org/" />
 
-  <!-- Open Graph -->
   <meta property="og:locale" content="hi_IN" />
   <meta property="og:title" content="हनुमान भक्ति | श्री हनुमान जी की चालीसा, कथा, मंत्र और आध्यात्मिक ज्ञान" />
   <meta property="og:description" content="हनुमान चालीसा, बजरंग बाण, सुंदरकांड, कथा, मंत्र और भक्ति सामग्री एक पवित्र मंच पर।" />
@@ -25,27 +23,18 @@
   <meta property="og:image" content="https://hanumanbhakti.org/assets/images/hanuman-bg.png" />
   <meta property="og:site_name" content="हनुमान भक्ति" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="हनुमान भक्ति | श्री हनुमान जी की चालीसा, कथा, मंत्र और आध्यात्मिक ज्ञान" />
   <meta name="twitter:description" content="हनुमान चालीसा, बजरंग बाण, सुंदरकांड, कथा, मंत्र और भक्ति सामग्री एक पवित्र मंच पर।" />
   <meta name="twitter:image" content="https://hanumanbhakti.org/assets/images/hanuman-bg.png" />
 
-  <!-- Preload Hero Image -->
   <link rel="preload" as="image" href="./assets/images/hanuman-bg.png" fetchpriority="high" />
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -69,6 +58,13 @@
   </script>
 </head>
 <body>
+  <div class="site-loader" id="siteLoader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-icon"><i class="fas fa-om"></i></div>
+      <p>जय बजरंग बली</p>
+    </div>
+  </div>
+
   <a href="#mainContent" class="skip-link">मुख्य सामग्री पर जाएँ</a>
 
   <header class="site-header" id="siteHeader">
@@ -80,14 +76,21 @@
 
       <nav class="desktop-nav" aria-label="मुख्य नेविगेशन">
         <ul>
-          <li><a href="index.html" class="active" aria-current="page">होम</a></li>
-          <li><a href="chalisa.html">चालीसा</a></li>
-          <li><a href="bajrang-baan.html">बजरंग बाण</a></li>
-          <li><a href="sunderkand.html">सुंदरकांड</a></li>
-          <li><a href="mandir-darshan.html">मंदिर</a></li>
-          <li><a href="contact-us.html">संपर्क</a></li>
+          <li><a href="#home" class="nav-link active" aria-current="page">होम</a></li>
+          <li><a href="#popular" class="nav-link">लोकप्रिय</a></li>
+          <li><a href="#mainContent" class="nav-link">सामग्री</a></li>
+          <li><a href="#footerSection" class="nav-link">संपर्क</a></li>
         </ul>
       </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="searchToggleBtn" type="button" aria-label="खोज खोलें">
+          <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+        </button>
+        <button class="icon-btn" id="themeToggleBtn" type="button" aria-label="डार्क मोड बदलें" aria-pressed="false">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </button>
+      </div>
 
       <button
         class="menu-btn"
@@ -102,7 +105,7 @@
     </div>
   </header>
 
-  <section class="hero" aria-label="मुख्य परिचय">
+  <section class="hero" id="home" aria-label="मुख्य परिचय">
     <div class="hero-overlay"></div>
     <div class="container hero-content reveal">
       <div class="hero-badge">🔱 श्री हनुमान जी की पावन भक्ति</div>
@@ -125,7 +128,7 @@
     </div>
   </section>
 
-  <section class="section" aria-labelledby="popularContentHeading">
+  <section class="section" id="popular" aria-labelledby="popularContentHeading">
     <div class="container">
       <div class="section-heading reveal">
         <h2 id="popularContentHeading">लोकप्रिय भक्ति सामग्री</h2>
@@ -247,7 +250,10 @@
         </section>
 
         <section class="card ad-card reveal" aria-label="विज्ञापन क्षेत्र">
-          <div class="ad-box">Google AdSense Space</div>
+          <div class="ad-box adsense-ready">
+            <span class="ad-label">Advertisement</span>
+            Google AdSense Space (Responsive)
+          </div>
         </section>
       </main>
 
@@ -265,20 +271,23 @@
 
         <div class="sidebar-widget reveal">
           <h3>दैनिक प्रेरणा</h3>
-          <blockquote class="quote">
+          <blockquote class="quote" id="dailyQuote">
             “राम काज कीन्हे बिनु मोहि कहाँ विश्राम”
           </blockquote>
         </div>
 
         <div class="sidebar-widget reveal" aria-label="प्रायोजन">
           <h3>प्रायोजन</h3>
-          <div class="ad-box">Google AdSense Space</div>
+          <div class="ad-box adsense-ready">
+            <span class="ad-label">Advertisement</span>
+            Google AdSense Space
+          </div>
         </div>
       </aside>
     </div>
   </section>
 
-  <footer class="site-footer">
+  <footer class="site-footer" id="footerSection">
     <div class="container footer-container">
       <div class="footer-box reveal">
         <h3>हनुमान भक्ति</h3>
@@ -335,6 +344,10 @@
     <i class="fas fa-share-nodes" aria-hidden="true"></i>
   </button>
 
+  <button class="back-to-top" id="backToTopBtn" type="button" aria-label="ऊपर जाएँ">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
   <nav class="mobile-bottom-nav" aria-label="मोबाइल त्वरित नेविगेशन">
     <a href="index.html" class="nav-item active" aria-current="page">
       <i class="fas fa-home" aria-hidden="true"></i>
@@ -356,12 +369,7 @@
 
   <div class="mobile-drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
 
-  <aside
-    class="mobile-drawer"
-    id="mobileDrawer"
-    aria-label="मोबाइल मेनू"
-    aria-hidden="true"
-  >
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="मोबाइल मेनू" aria-hidden="true">
     <div class="drawer-header">
       <div class="drawer-logo">
         <i class="fas fa-om" aria-hidden="true"></i>
@@ -401,6 +409,36 @@
       </div>
     </div>
   </aside>
+
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+    <div class="search-modal" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
+      <div class="search-top">
+        <h3 id="searchTitle">भक्ति सामग्री खोजें</h3>
+        <button type="button" class="close-btn" id="searchCloseBtn" aria-label="खोज बंद करें">&times;</button>
+      </div>
+
+      <div class="search-box-wrap">
+        <input
+          type="search"
+          id="searchInput"
+          class="search-input"
+          placeholder="जैसे: चालीसा, बजरंग बाण, सुंदरकांड..."
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="search-results" id="searchResults">
+        <a href="chalisa.html" class="search-item">हनुमान चालीसा</a>
+        <a href="bajrang-baan.html" class="search-item">बजरंग बाण</a>
+        <a href="sunderkand.html" class="search-item">सुंदरकांड</a>
+        <a href="hanuman-ashtak.html" class="search-item">हनुमान अष्टक</a>
+        <a href="mantra.html" class="search-item">हनुमान मंत्र</a>
+        <a href="katha.html" class="search-item">पौराणिक कथाएँ</a>
+        <a href="mandir-darshan.html" class="search-item">मंदिर दर्शन</a>
+        <a href="contact-us.html" class="search-item">संपर्क करें</a>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
