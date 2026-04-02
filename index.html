@@ -1,278 +1,407 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="fHwWx-yXmn0w37t0YhNhatgNj-OUkhmgH78fdUGw1Es" />
 
-  <title>Hanuman Bhakti | श्री हनुमान जी की भक्ति, चालीसा, कथा और ज्ञान</title>
+  <title>हनुमान भक्ति | श्री हनुमान जी की चालीसा, कथा, मंत्र और आध्यात्मिक ज्ञान</title>
+  <meta name="description" content="HanumanBhakti.org पर पाएँ श्री हनुमान जी की भक्ति, हनुमान चालीसा, बजरंग बाण, सुंदरकांड, कथा, मंत्र और आध्यात्मिक ज्ञान — सरल, शुद्ध और प्रमाणिक रूप में।" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Hanuman Bhakti" />
+  <meta name="theme-color" content="#ff7a00" />
+  <meta name="format-detection" content="telephone=no" />
 
-  <meta name="description" content="HanumanBhakti.org पर पाएँ श्री हनुमान जी की भक्ति, हनुमान चालीसा, बजरंग बाण, सुंदरकांड, कथा और आध्यात्मिक ज्ञान — एक पवित्र मंच पर।">
+  <link rel="canonical" href="https://hanumanbhakti.org/" />
 
-  <!-- 🔥 Preload HERO Image (instant feel) -->
-  <link rel="preload"
-        as="image"
-        href="./assets/images/hanuman-bg.png"
-        fetchpriority="high">
+  <!-- Open Graph -->
+  <meta property="og:locale" content="hi_IN" />
+  <meta property="og:title" content="हनुमान भक्ति | श्री हनुमान जी की चालीसा, कथा, मंत्र और आध्यात्मिक ज्ञान" />
+  <meta property="og:description" content="हनुमान चालीसा, बजरंग बाण, सुंदरकांड, कथा, मंत्र और भक्ति सामग्री एक पवित्र मंच पर।" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hanumanbhakti.org/" />
+  <meta property="og:image" content="https://hanumanbhakti.org/assets/images/hanuman-bg.png" />
+  <meta property="og:site_name" content="हनुमान भक्ति" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="हनुमान भक्ति | श्री हनुमान जी की चालीसा, कथा, मंत्र और आध्यात्मिक ज्ञान" />
+  <meta name="twitter:description" content="हनुमान चालीसा, बजरंग बाण, सुंदरकांड, कथा, मंत्र और भक्ति सामग्री एक पवित्र मंच पर।" />
+  <meta name="twitter:image" content="https://hanumanbhakti.org/assets/images/hanuman-bg.png" />
+
+  <!-- Preload Hero Image -->
+  <link rel="preload" as="image" href="./assets/images/hanuman-bg.png" fetchpriority="high" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="canonical" href="https://hanumanbhakti.org/">
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Hanuman Bhakti",
+        "url": "https://hanumanbhakti.org/",
+        "inLanguage": "hi",
+        "description": "श्री हनुमान जी की भक्ति, चालीसा, कथा, मंत्र और आध्यात्मिक ज्ञान का मंच।"
+      },
+      {
+        "@type": "Organization",
+        "name": "Hanuman Bhakti",
+        "url": "https://hanumanbhakti.org/",
+        "logo": "https://hanumanbhakti.org/assets/images/hanuman-bg.png",
+        "sameAs": []
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-<header>
-  <div class="header-wrap">
-    <button class="menu-btn" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
-    <div class="logo"><i class="fas fa-om"></i>Hanuman Bhakti</div>
+  <a href="#mainContent" class="skip-link">मुख्य सामग्री पर जाएँ</a>
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="chalisa.html" style="color:var(--orange)">Chalisa</a></li>
-        <li><a href="katha-sagar.html">Katha</a></li>
-        <li><a href="mandir-darshan.html">Mandir</a></li>
-        <li><a href="contact-us.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-wrap">
+      <a href="index.html" class="logo" aria-label="हनुमान भक्ति होम">
+        <i class="fas fa-om" aria-hidden="true"></i>
+        <span>हनुमान भक्ति</span>
+      </a>
 
-<section class="hero">
-  <h1>जहाँ भक्ति मिलती है शक्ति से</h1>
-  <p>
-    श्री हनुमान जी की भक्ति, चालीसा, पौराणिक कथा और आध्यात्मिक ज्ञान —
-    एक विश्वसनीय सनातन मंच पर।
-  </p>
+      <nav class="desktop-nav" aria-label="मुख्य नेविगेशन">
+        <ul>
+          <li><a href="index.html" class="active" aria-current="page">होम</a></li>
+          <li><a href="chalisa.html">चालीसा</a></li>
+          <li><a href="bajrang-baan.html">बजरंग बाण</a></li>
+          <li><a href="sunderkand.html">सुंदरकांड</a></li>
+          <li><a href="mandir-darshan.html">मंदिर</a></li>
+          <li><a href="contact-us.html">संपर्क</a></li>
+        </ul>
+      </nav>
 
-  <div class="btns">
-    <a href="hanuman-chalisa-hindi-images.html"
-       class="btn"
-       title="हनुमान चालीसा हिंदी में चित्रों सहित"
-       aria-label="हनुमान चालीसा चित्रों सहित पढ़ें">
-       📖 हनुमान चालीसा (चित्रों सहित)
-    </a>
-
-    <a href="hanuman-ji-ke-baare.html" class="btn alt">
-       🔍 हनुमान जी के बारे में
-    </a>
-  </div>
-</section>
-
-<div class="wrapper">
-  <main class="main">
-    <section class="section">
-      <h2>हनुमान भक्ति क्यों आवश्यक है?</h2>
-      <p>कलयुग में श्री हनुमान जी को संकटमोचन कहा गया है। वे शक्ति, साहस, सेवा और अटूट भक्ति के प्रतीक हैं।</p>
-      <p>हनुमान चालीसा, बजरंग बाण और सुंदरकांड का नियमित पाठ मानसिक शांति, आत्मबल और जीवन की बाधाओं से मुक्ति प्रदान करता है।</p>
-      <p>Hanuman Bhakti का उद्देश्य सनातन धर्म की शुद्ध, सरल और प्रमाणिक जानकारी भक्तों तक पहुँचाना है।</p>
-    </section>
-
-    <section class="section">
-      <h2>लोकप्रिय स्तोत्र एवं पाठ</h2>
-      <div class="grid">
-        <a href="chalisa.html">हनुमान चालीसा</a>
-
-<div class="audio-box">
-  <p>🎧 हनुमान चालीसा सुनें</p>
-  <audio controls>
-    <source src="assets/chalisa.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-</div>
-
-        <a href="bajrang-baan.html">बजरंग बाण</a>
-        <a href="hanuman-ashtak.html">हनुमान अष्टक</a>
-        <a href="sunderkand.html">सुंदरकांड</a>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>हनुमान जी का आध्यात्मिक महत्व</h2>
-      <p>हनुमान जी केवल अपार शक्ति के ही नहीं, बल्कि विनम्रता, सेवा और रामभक्ति के सर्वोच्च उदाहरण हैं। वे हर युग में भक्तों के रक्षक माने जाते हैं।</p>
-
-<div class="daily-blessing">
-  🙏 आज का आशीर्वाद: जो हनुमान जी का नाम लेता है, उसका हर संकट दूर होता है।
-</div>
-
-<div class="hero-actions">
-  <a href="chalisa.html" class="btn primary">📿 आज ही चालीसा पढ़ें</a>
-  <button onclick="sharePage()" class="btn share">📤 परिवार के साथ शेयर करें</button>
-</div>
-
-    </section>
-
-    <section class="section">
-      <div class="ad-box">Google AdSense Space</div>
-    </section>
-  </main>
-<section class="bhakti-materials section">
-
-<div class="extra-links section">
-  <h3>📿 और पढ़ें</h3>
-  <ul>
-    <li><a href="chalisa-arth.html">हनुमान चालीसा का अर्थ</a></li>
-    <li><a href="hanuman-ji-ke-baare.html">हनुमान जी कौन हैं?</a></li>
-    <li><a href="hanuman-janm.html">हनुमान जी का जन्म</a></li>
-    <li><a href="hanuman-mantra.html">हनुमान जी के शक्तिशाली मंत्र</a></li>
-  </ul>
-</div>
-
-  <h2 class="section-title"><i class="fas fa-dharmachakra"></i> हनुमान भक्ति की प्रमुख सामग्री</h2>
-  <div class="materials-grid">
-    <a href="chalisa.html" class="material-card">
-        <div class="icon-circle"><i class="fas fa-book-open"></i></div>
-        <span>हनुमान चालीसा – सम्पूर्ण पाठ</span>
-        <i class="fas fa-chevron-right arrow"></i>
-    </a>
-    <a href="bajrang-baan.html" class="material-card">
-        <div class="icon-circle"><i class="fas fa-bolt"></i></div>
-        <span>बजरंग बाण – संकट निवारण स्तोत्र</span>
-        <i class="fas fa-chevron-right arrow"></i>
-    </a>
-    <a href="sunderkand.html" class="material-card">
-        <div class="icon-circle"><i class="fas fa-fire"></i></div>
-        <span>सुंदरकांड – सम्पूर्ण पाठ</span>
-        <i class="fas fa-chevron-right arrow"></i>
-    </a>
-    <a href="hanuman-ashtak.html" class="material-card">
-        <div class="icon-circle"><i class="fas fa-pray"></i></div>
-        <span>संकट मोचन हनुमान अष्टक</span>
-        <i class="fas fa-chevron-right arrow"></i>
-    </a>
-    <a href="mantra.html" class="material-card">
-        <div class="icon-circle"><i class="fas fa-om"></i></div>
-        <span>हनुमान जी के मंत्र</span>
-        <i class="fas fa-chevron-right arrow"></i>
-    </a>
-  </div>
-</section>
-  <aside class="sidebar" id="sidebar">
-    <button class="sidebar-close" onclick="closeSidebar()">✕</button>
-    <div class="widget">
-      <h3>भक्ति मार्ग</h3>
-      <ul>
-        <li><a href="chalisa.html"><i class="fas fa-book-open"></i> हनुमान चालीसा</a></li>
-        <li><a href="bajrang-baan.html"><i class="fas fa-bolt"></i> बजरंग बाण</a></li>
-        <li><a href="katha.html"><i class="fas fa-scroll"></i> पौराणिक कथाएँ</a></li>
-        <li><a href="mandir-darshan.html"><i class="fas fa-gopuram"></i> प्रसिद्ध मंदिर</a></li>
-      </ul>
+      <button
+        class="menu-btn"
+        id="menuToggleBtn"
+        type="button"
+        aria-label="मेनू खोलें"
+        aria-expanded="false"
+        aria-controls="mobileDrawer"
+      >
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
     </div>
-    <div class="widget">
-      <h3>Sponsorship</h3>
-      <div class="ad-box">Google AdSense Space</div>
+  </header>
+
+  <section class="hero" aria-label="मुख्य परिचय">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content reveal">
+      <div class="hero-badge">🔱 श्री हनुमान जी की पावन भक्ति</div>
+      <h1>श्री हनुमान जी की कृपा, शक्ति और भक्ति का विश्वसनीय आध्यात्मिक मंच</h1>
+      <p>
+        यहाँ पाएँ हनुमान चालीसा, बजरंग बाण, सुंदरकांड, हनुमान अष्टक, मंत्र, कथा और
+        आध्यात्मिक ज्ञान — सरल, शुद्ध और श्रद्धा के साथ।
+      </p>
+
+      <div class="hero-btns">
+        <a href="chalisa.html" class="btn btn-primary">
+          <i class="fas fa-book-open" aria-hidden="true"></i>
+          <span>हनुमान चालीसा पढ़ें</span>
+        </a>
+        <a href="hanuman-ji-ke-baare.html" class="btn btn-secondary">
+          <i class="fas fa-circle-info" aria-hidden="true"></i>
+          <span>हनुमान जी के बारे में</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="popularContentHeading">
+    <div class="container">
+      <div class="section-heading reveal">
+        <h2 id="popularContentHeading">लोकप्रिय भक्ति सामग्री</h2>
+        <p>भक्तों के लिए सबसे अधिक पढ़े और सुने जाने वाले पाठ</p>
+      </div>
+
+      <div class="materials-grid">
+        <a href="chalisa.html" class="material-card reveal" aria-label="हनुमान चालीसा पढ़ें">
+          <div class="icon-circle"><i class="fas fa-book-open" aria-hidden="true"></i></div>
+          <h3>हनुमान चालीसा</h3>
+          <p>सम्पूर्ण पाठ सरल भाषा में</p>
+        </a>
+
+        <a href="bajrang-baan.html" class="material-card reveal" aria-label="बजरंग बाण पढ़ें">
+          <div class="icon-circle"><i class="fas fa-bolt" aria-hidden="true"></i></div>
+          <h3>बजरंग बाण</h3>
+          <p>संकट निवारण हेतु प्रसिद्ध स्तोत्र</p>
+        </a>
+
+        <a href="sunderkand.html" class="material-card reveal" aria-label="सुंदरकांड पढ़ें">
+          <div class="icon-circle"><i class="fas fa-fire" aria-hidden="true"></i></div>
+          <h3>सुंदरकांड</h3>
+          <p>भक्ति, शक्ति और विजय का पाठ</p>
+        </a>
+
+        <a href="hanuman-ashtak.html" class="material-card reveal" aria-label="हनुमान अष्टक पढ़ें">
+          <div class="icon-circle"><i class="fas fa-hands-praying" aria-hidden="true"></i></div>
+          <h3>हनुमान अष्टक</h3>
+          <p>संकट मोचन स्तुति</p>
+        </a>
+
+        <a href="mantra.html" class="material-card reveal" aria-label="हनुमान मंत्र पढ़ें">
+          <div class="icon-circle"><i class="fas fa-om" aria-hidden="true"></i></div>
+          <h3>हनुमान मंत्र</h3>
+          <p>शक्ति और संरक्षण के मंत्र</p>
+        </a>
+
+        <a href="mandir-darshan.html" class="material-card reveal" aria-label="मंदिर दर्शन देखें">
+          <div class="icon-circle"><i class="fas fa-gopuram" aria-hidden="true"></i></div>
+          <h3>मंदिर दर्शन</h3>
+          <p>प्रसिद्ध हनुमान मंदिरों की जानकारी</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container content-grid">
+      <main class="main-content" id="mainContent">
+        <article class="card reveal">
+          <h2>हनुमान भक्ति क्यों आवश्यक है?</h2>
+          <p>
+            कलयुग में श्री हनुमान जी को संकटमोचन माना गया है। वे शक्ति, साहस, सेवा,
+            निष्ठा और रामभक्ति के सर्वोच्च प्रतीक हैं। उनकी भक्ति से मन में आत्मबल,
+            श्रद्धा और सकारात्मक ऊर्जा उत्पन्न होती है।
+          </p>
+          <p>
+            हनुमान चालीसा, बजरंग बाण और सुंदरकांड का नियमित पाठ जीवन की कठिनाइयों,
+            भय, मानसिक अशांति और नकारात्मकता से मुक्ति दिलाने में सहायक माना जाता है।
+          </p>
+          <p>
+            हमारा उद्देश्य भक्तों तक सनातन धर्म की शुद्ध, सरल और प्रमाणिक जानकारी
+            पहुँचाना है ताकि हर व्यक्ति श्रद्धा के साथ आध्यात्मिक मार्ग पर आगे बढ़ सके।
+          </p>
+        </article>
+
+        <section class="card audio-card reveal" aria-labelledby="audioHeading">
+          <h2 id="audioHeading">हनुमान चालीसा सुनें</h2>
+          <p>🎧 श्रद्धा के साथ हनुमान चालीसा का श्रवण करें</p>
+          <audio controls preload="none">
+            <source src="assets/chalisa.mp3" type="audio/mpeg" />
+            आपका ब्राउज़र ऑडियो का समर्थन नहीं करता।
+          </audio>
+        </section>
+
+        <article class="card reveal">
+          <h2>हनुमान जी का आध्यात्मिक महत्व</h2>
+          <p>
+            श्री हनुमान जी केवल अपार शक्ति के प्रतीक नहीं, बल्कि विनम्रता, सेवा, समर्पण,
+            सदाचार और परम रामभक्ति के जीवंत आदर्श हैं। वे भक्तों के रक्षक और दुःखों के
+            निवारक माने जाते हैं।
+          </p>
+
+          <div class="daily-blessing" role="note">
+            🙏 आज का आशीर्वाद: जो श्रद्धा से हनुमान जी का स्मरण करता है, उसके जीवन में साहस, रक्षा और आत्मविश्वास बना रहता है।
+          </div>
+
+          <div class="action-row">
+            <a href="chalisa.html" class="btn btn-primary">
+              <i class="fas fa-scroll" aria-hidden="true"></i>
+              <span>आज ही चालीसा पढ़ें</span>
+            </a>
+            <button class="btn btn-share" type="button" id="shareBtn">
+              <i class="fas fa-share-nodes" aria-hidden="true"></i>
+              <span>साझा करें</span>
+            </button>
+          </div>
+        </article>
+
+        <section class="card reveal" aria-labelledby="moreReadHeading">
+          <h2 id="moreReadHeading">और पढ़ें</h2>
+          <div class="link-list">
+            <a href="chalisa-arth.html"><i class="fas fa-angle-right" aria-hidden="true"></i> हनुमान चालीसा का अर्थ</a>
+            <a href="hanuman-ji-ke-baare.html"><i class="fas fa-angle-right" aria-hidden="true"></i> हनुमान जी कौन हैं?</a>
+            <a href="hanuman-janm.html"><i class="fas fa-angle-right" aria-hidden="true"></i> हनुमान जी का जन्म</a>
+            <a href="mantra.html"><i class="fas fa-angle-right" aria-hidden="true"></i> हनुमान जी के शक्तिशाली मंत्र</a>
+            <a href="katha.html"><i class="fas fa-angle-right" aria-hidden="true"></i> पौराणिक कथाएँ</a>
+          </div>
+        </section>
+
+        <section class="card reveal" aria-labelledby="featuresHeading">
+          <h2 id="featuresHeading">हमारी विशेषताएँ</h2>
+          <div class="trust-grid">
+            <div class="trust-card">✔ सरल और भक्तिमय भाषा</div>
+            <div class="trust-card">✔ शुद्ध और प्रमाणिक सामग्री</div>
+            <div class="trust-card">✔ सनातन मूल्यों पर आधारित मंच</div>
+            <div class="trust-card">✔ भक्ति और अध्ययन दोनों के लिए उपयोगी</div>
+          </div>
+        </section>
+
+        <section class="card ad-card reveal" aria-label="विज्ञापन क्षेत्र">
+          <div class="ad-box">Google AdSense Space</div>
+        </section>
+      </main>
+
+      <aside class="sidebar" aria-label="साइडबार">
+        <div class="sidebar-widget reveal">
+          <h3>भक्ति मार्ग</h3>
+          <ul>
+            <li><a href="chalisa.html"><i class="fas fa-book-open" aria-hidden="true"></i> हनुमान चालीसा</a></li>
+            <li><a href="bajrang-baan.html"><i class="fas fa-bolt" aria-hidden="true"></i> बजरंग बाण</a></li>
+            <li><a href="sunderkand.html"><i class="fas fa-fire" aria-hidden="true"></i> सुंदरकांड</a></li>
+            <li><a href="katha.html"><i class="fas fa-scroll" aria-hidden="true"></i> पौराणिक कथाएँ</a></li>
+            <li><a href="mandir-darshan.html"><i class="fas fa-gopuram" aria-hidden="true"></i> प्रसिद्ध मंदिर</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget reveal">
+          <h3>दैनिक प्रेरणा</h3>
+          <blockquote class="quote">
+            “राम काज कीन्हे बिनु मोहि कहाँ विश्राम”
+          </blockquote>
+        </div>
+
+        <div class="sidebar-widget reveal" aria-label="प्रायोजन">
+          <h3>प्रायोजन</h3>
+          <div class="ad-box">Google AdSense Space</div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-box reveal">
+        <h3>हनुमान भक्ति</h3>
+        <p>
+          हनुमान भक्ति एक समर्पित सनातन मंच है, जहाँ श्री हनुमान जी की भक्ति, चालीसा,
+          कथा, मंत्र और आध्यात्मिक ज्ञान श्रद्धा और शुद्धता के साथ प्रस्तुत किया जाता है।
+        </p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-box reveal">
+        <h4>महत्वपूर्ण लिंक</h4>
+        <ul>
+          <li><a href="about-us.html">हमारे बारे में</a></li>
+          <li><a href="contact-us.html">संपर्क करें</a></li>
+          <li><a href="privacy-policy.html">गोपनीयता नीति</a></li>
+          <li><a href="disclaimer.html">अस्वीकरण</a></li>
+          <li><a href="terms.html">नियम एवं शर्तें</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box reveal">
+        <h4>भक्ति सामग्री</h4>
+        <ul>
+          <li><a href="chalisa.html">हनुमान चालीसा</a></li>
+          <li><a href="bajrang-baan.html">बजरंग बाण</a></li>
+          <li><a href="hanuman-ashtak.html">हनुमान अष्टक</a></li>
+          <li><a href="sunderkand.html">सुंदरकांड</a></li>
+          <li><a href="katha.html">पौराणिक कथाएँ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box reveal">
+        <h4>विश्वास का आधार</h4>
+        <p class="trust-text">
+          ✔ भक्ति-आधारित सामग्री<br />
+          ✔ भ्रामक जानकारी से मुक्त<br />
+          ✔ सनातन मूल्यों पर आधारित मंच
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 www.hanumanbhakti.org • जय बजरंग बली 🔱<br />
+      <span>यह वेबसाइट केवल धार्मिक एवं शैक्षिक उद्देश्य हेतु है।</span>
+    </div>
+  </footer>
+
+  <button class="sticky-share" type="button" aria-label="पेज साझा करें">
+    <i class="fas fa-share-nodes" aria-hidden="true"></i>
+  </button>
+
+  <nav class="mobile-bottom-nav" aria-label="मोबाइल त्वरित नेविगेशन">
+    <a href="index.html" class="nav-item active" aria-current="page">
+      <i class="fas fa-home" aria-hidden="true"></i>
+      <span>होम</span>
+    </a>
+    <a href="chalisa.html" class="nav-item">
+      <i class="fas fa-book-open" aria-hidden="true"></i>
+      <span>चालीसा</span>
+    </a>
+    <a href="mandir-darshan.html" class="nav-item">
+      <i class="fas fa-gopuram" aria-hidden="true"></i>
+      <span>मंदिर</span>
+    </a>
+    <button type="button" class="nav-item mobile-nav-menu-btn" aria-label="मेनू खोलें" aria-expanded="false">
+      <i class="fas fa-bars" aria-hidden="true"></i>
+      <span>मेनू</span>
+    </button>
+  </nav>
+
+  <div class="mobile-drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+
+  <aside
+    class="mobile-drawer"
+    id="mobileDrawer"
+    aria-label="मोबाइल मेनू"
+    aria-hidden="true"
+  >
+    <div class="drawer-header">
+      <div class="drawer-logo">
+        <i class="fas fa-om" aria-hidden="true"></i>
+        <span>हनुमान भक्ति</span>
+      </div>
+      <button class="close-btn" type="button" id="drawerCloseBtn" aria-label="मेनू बंद करें">
+        &times;
+      </button>
+    </div>
+
+    <div class="drawer-content">
+      <div class="drawer-section">
+        <h4>मुख्य श्रेणियाँ</h4>
+        <ul class="drawer-links">
+          <li><a href="index.html"><i class="fas fa-home" aria-hidden="true"></i> होम</a></li>
+          <li><a href="chalisa.html"><i class="fas fa-book-open" aria-hidden="true"></i> हनुमान चालीसा</a></li>
+          <li><a href="bajrang-baan.html"><i class="fas fa-bolt" aria-hidden="true"></i> बजरंग बाण</a></li>
+          <li><a href="sunderkand.html"><i class="fas fa-fire" aria-hidden="true"></i> सुंदरकांड</a></li>
+          <li><a href="mantra.html"><i class="fas fa-om" aria-hidden="true"></i> मंत्र एवं विधि</a></li>
+          <li><a href="katha.html"><i class="fas fa-scroll" aria-hidden="true"></i> पौराणिक कथाएँ</a></li>
+        </ul>
+      </div>
+
+      <div class="drawer-section">
+        <h4>अन्य जानकारी</h4>
+        <ul class="drawer-links">
+          <li><a href="about-us.html">हमारे बारे में</a></li>
+          <li><a href="contact-us.html">संपर्क करें</a></li>
+          <li><a href="privacy-policy.html">गोपनीयता नीति</a></li>
+        </ul>
+      </div>
+
+      <div class="drawer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+      </div>
     </div>
   </aside>
-</div>
 
-<div class="sticky-share">
-  <button onclick="sharePage()">📤 Share</button>
-</div>
-
-<footer class="site-footer">
-  <div class="footer-container">
-
-    <div class="footer-box">
-      <h3>Hanuman Bhakti</h3>
-      <p>
-        Hanuman Bhakti एक समर्पित सनातन मंच है, जहाँ श्री हनुमान जी की भक्ति,
-        चालीसा, कथा और आध्यात्मिक ज्ञान शुद्ध रूप में प्रस्तुत किया जाता है।
-      </p>
-      <div class="footer-social">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-
-    <div class="footer-box">
-      <h4>महत्वपूर्ण लिंक</h4>
-      <ul>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="contact-us.html">Contact Us</a></li>
-        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="disclaimer.html">Disclaimer</a></li>
-        <li><a href="terms.html">Terms & Conditions</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-box">
-      <h4>भक्ति सामग्री</h4>
-      <ul>
-        <li><a href="chalisa.html">Hanuman Chalisa</a></li>
-        <li><a href="bajrang-baan.html">Bajrang Baan</a></li>
-        <li><a href="hanuman-ashtak.html">Hanuman Ashtak</a></li>
-        <li><a href="sunderkand.html">Sunderkand</a></li>
-        <li><a href="katha.html">Pauranik Kathayein</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-box">
-      <h4>विश्वसनीय जानकारी</h4>
-      <p class="trust-text">
-        ✔ 100% Bhakti Content<br>
-        ✔ No Misleading Information<br>
-        ✔ Sanatan Values Based Platform
-      </p>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    © 2025 www.hanumanbhakti.org • Jai Bajrang Bali 🔱<br>
-    <span>यह वेबसाइट केवल धार्मिक एवं शैक्षिक उद्देश्य हेतु है।</span>
-  </div>
-</footer>
-
-<div class="mobile-bottom-nav">
-    <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>Home</span></a>
-    <a href="chalisa.html" class="nav-item"><i class="fas fa-book-open"></i><span>Chalisa</span></a>
-    <a href="mandir-darshan.html" class="nav-item"><i class="fas fa-gopuram"></i><span>Mandir</span></a>
-    <a href="javascript:void(0);" class="nav-item" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i><span>Menu</span></a>
-</div>
-
-<div class="mobile-drawer-overlay" id="drawerOverlay" onclick="toggleMobileMenu()"></div>
-
-<div class="mobile-drawer" id="mobileDrawer">
-    <div class="drawer-header">
-        <div class="drawer-logo"><i class="fas fa-om"></i><span>Hanuman Bhakti</span></div>
-        <button class="close-btn" onclick="toggleMobileMenu()">&times;</button>
-    </div>
-    <div class="drawer-content">
-        <div class="drawer-section">
-            <h4>मुख्य श्रेणियाँ</h4>
-            <ul class="drawer-links">
-                <li><a href="index.html"><i class="fas fa-home"></i> होम</a></li>
-                <li><a href="chalisa.html"><i class="fas fa-book"></i> हनुमान चालीसा</a></li>
-                <li><a href="sunderkand.html"><i class="fas fa-pray"></i> सुंदरकांड पाठ</a></li>
-                <li><a href="mantra.html"><i class="fas fa-dharmachakra"></i> मंत्र एवं विधि</a></li>
-                <li><a href="katha.html"><i class="fas fa-history"></i> पौराणिक कथाएं</a></li>
-            </ul>
-        </div>
-        <div class="drawer-section">
-            <h4>अन्य जानकारी</h4>
-            <ul class="drawer-links">
-                <li><a href="about-us.html">हमारे बारे में</a></li>
-                <li><a href="contact-us.html">संपर्क करें</a></li>
-                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            </ul>
-        </div>
-        <div class="drawer-social">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-    </div>
-</div>
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
