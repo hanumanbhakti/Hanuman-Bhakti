@@ -9,8 +9,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const stickyShareBtn = document.querySelector(".sticky-share");
   const mobileMenuBtn = document.querySelector(".mobile-nav-menu-btn");
   const revealElements = document.querySelectorAll(".reveal");
+  const siteLoader = document.getElementById("siteLoader");
+  const backToTopBtn = document.getElementById("backToTopBtn");
+  const themeToggleBtn = document.getElementById("themeToggleBtn");
+  const searchToggleBtn = document.getElementById("searchToggleBtn");
+  const searchOverlay = document.getElementById("searchOverlay");
+  const searchCloseBtn = document.getElementById("searchCloseBtn");
+  const searchInput = document.getElementById("searchInput");
+  const searchResults = document.getElementById("searchResults");
+  const dailyQuote = document.getElementById("dailyQuote");
+  const navLinks = document.querySelectorAll(".nav-link");
 
   let lastFocusedElement = null;
+  let lastSearchFocus = null;
+
+  const quotes = [
+    "“राम काज कीन्हे बिनु मोहि कहाँ विश्राम”",
+    "“बुद्धिहीन तनु जानिके, सुमिरौं पवन-कुमार”",
+    "“संकट ते हनुमान छुड़ावै, मन क्रम वचन ध्यान जो लावै”",
+    "“जय हनुमान ज्ञान गुन सागर”",
+    "“सब सुख लहै तुम्हारी सरना, तुम रक्षक काहू को डरना”"
+  ];
 
   function isDrawerOpen() {
     return drawer && drawer.classList.contains("active");
@@ -20,11 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!drawer || !overlay) return;
 
     lastFocusedElement = document.activeElement;
-
     drawer.classList.add("active");
     overlay.classList.add("active");
     body.classList.add("drawer-open");
-
     drawer.setAttribute("aria-hidden", "false");
 
     if (menuBtn) {
@@ -46,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
     drawer.classList.remove("active");
     overlay.classList.remove("active");
     body.classList.remove("drawer-open");
-
     drawer.setAttribute("aria-hidden", "true");
 
     if (menuBtn) {
@@ -129,13 +145,24 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function handleHeaderScroll() {
-    if (!header) return;
-    header.classList.toggle("scrolled", window.scrollY > 20);
+    if (header) {
+      header.classList.toggle("scrolled", window.scrollY > 20);
+    }
+
+    if (backToTopBtn) {
+      backToTopBtn.classList.toggle("show", window.scrollY > 320);
+    }
+
+    updateActiveNav();
   }
 
   function handleEscapeKey(e) {
     if (e.key === "Escape" && isDrawerOpen()) {
       closeMobileMenu();
+    }
+
+    if (e.key === "Escape" && searchOverlay?.classList.contains("active")) {
+      closeSearch();
     }
   }
 
@@ -146,10 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
       'a, button, textarea, input, select, [tabindex]:not([tabindex="-1"])'
     );
 
-    const focusable = [...focusableElements].filter(
-      el => !el.hasAttribute("disabled")
-    );
-
+    const focusable = [...focusableElements].filter(el => !el.hasAttribute("disabled"));
     if (!focusable.length) return;
 
     const firstEl = focusable[0];
@@ -179,12 +203,115 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
       },
-      {
-        threshold: 0.12
-      }
+      { threshold: 0.12 }
     );
 
     revealElements.forEach(el => observer.observe(el));
+  }
+
+  function initLoader() {
+    window.addEventListener("load", () => {
+      if (siteLoader) {
+        setTimeout(() => {
+          siteLoader.classList.add("hidden");
+        }, 500);
+      }
+    });
+  }
+
+  function initTheme() {
+    const savedTheme = localStorage.getItem("hb-theme");
+    if (savedTheme === "dark") {
+      body.classList.add("dark-mode");
+      updateThemeIcon(true);
+    } else {
+      updateThemeIcon(false);
+    }
+  }
+
+  function updateThemeIcon(isDark) {
+    if (!themeToggleBtn) return;
+    const icon = themeToggleBtn.querySelector("i");
+    themeToggleBtn.setAttribute("aria-pressed", String(isDark));
+    if (icon) {
+      icon.className = isDark ? "fas fa-sun" : "fas fa-moon";
+    }
+  }
+
+  function toggleTheme() {
+    const isDark = body.classList.toggle("dark-mode");
+    localStorage.setItem("hb-theme", isDark ? "dark" : "light");
+    updateThemeIcon(isDark);
+  }
+
+  function openSearch() {
+    if (!searchOverlay) return;
+    lastSearchFocus = document.activeElement;
+    searchOverlay.classList.add("active");
+    searchOverlay.setAttribute("aria-hidden", "false");
+    body.classList.add("drawer-open");
+    if (searchInput) searchInput.focus();
+  }
+
+  function closeSearch() {
+    if (!searchOverlay) return;
+    searchOverlay.classList.remove("active");
+    searchOverlay.setAttribute("aria-hidden", "true");
+    body.classList.remove("drawer-open");
+    if (lastSearchFocus && typeof lastSearchFocus.focus === "function") {
+      lastSearchFocus.focus();
+    }
+  }
+
+  function filterSearchResults() {
+    if (!searchInput || !searchResults) return;
+    const query = searchInput.value.trim().toLowerCase();
+    const items = searchResults.querySelectorAll(".search-item");
+
+    items.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      item.style.display = text.includes(query) ? "block" : "none";
+    });
+  }
+
+  function initQuotes() {
+    if (!dailyQuote || !quotes.length) return;
+    let current = 0;
+
+    setInterval(() => {
+      current = (current + 1) % quotes.length;
+      dailyQuote.style.opacity = "0";
+
+      setTimeout(() => {
+        dailyQuote.textContent = quotes[current];
+        dailyQuote.style.opacity = "1";
+      }, 220);
+    }, 4000);
+  }
+
+  function updateActiveNav() {
+    if (!navLinks.length) return;
+
+    const sections = [...navLinks]
+      .map(link => document.querySelector(link.getAttribute("href")))
+      .filter(Boolean);
+
+    let currentId = "";
+
+    sections.forEach(section => {
+      const top = section.offsetTop - 120;
+      const height = section.offsetHeight;
+      if (window.scrollY >= top && window.scrollY < top + height) {
+        currentId = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      const isActive = link.getAttribute("href") === `#${currentId}`;
+      link.classList.toggle("active", isActive);
+      if (isActive) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
+    });
   }
 
   if (menuBtn) menuBtn.addEventListener("click", toggleMobileMenu);
@@ -193,6 +320,20 @@ document.addEventListener("DOMContentLoaded", () => {
   if (overlay) overlay.addEventListener("click", closeMobileMenu);
   if (shareBtn) shareBtn.addEventListener("click", sharePage);
   if (stickyShareBtn) stickyShareBtn.addEventListener("click", sharePage);
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+  if (themeToggleBtn) themeToggleBtn.addEventListener("click", toggleTheme);
+  if (searchToggleBtn) searchToggleBtn.addEventListener("click", openSearch);
+  if (searchCloseBtn) searchCloseBtn.addEventListener("click", closeSearch);
+  if (searchOverlay) {
+    searchOverlay.addEventListener("click", e => {
+      if (e.target === searchOverlay) closeSearch();
+    });
+  }
+  if (searchInput) searchInput.addEventListener("input", filterSearchResults);
 
   document.addEventListener("keydown", handleEscapeKey);
   document.addEventListener("keydown", trapFocus);
@@ -200,6 +341,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   handleHeaderScroll();
   initRevealAnimation();
+  initLoader();
+  initTheme();
+  initQuotes();
 
   if (drawer) {
     const drawerLinks = drawer.querySelectorAll("a");
