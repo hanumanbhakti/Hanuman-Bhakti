@@ -1,243 +1,389 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>सम्पूर्ण सुंदरकांड पाठ | Sunderkand Lyrics in Hindi & PDF Download</title>
-    <meta name="description" content="श्री रामचरितमानस सुंदरकांड पाठ हिंदी में। यहाँ पढ़ें सम्पूर्ण सुंदरकांड के 60 दोहे और चौपाइयां अर्थ सहित। PDF डाउनलोड करें।">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Tiro+Hindi&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="canonical" href="https://hanumanbhakti.org/sunderkand.html">
-    
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .path-container { background: #fff; border-radius: 15px; padding: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .sunderkand-text { font-family: 'Tiro Hindi', serif; font-size: 20px; text-align: center; line-height: 2; color: #2c3e50; }
-        .doha-card { background: #fff8f0; border: 1px solid #ffe0b2; padding: 20px; border-radius: 10px; margin: 20px 0; font-weight: bold; }
-        
-        /* PDF Download Box */
-        .pdf-download-card {
-            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-            border: 2px dashed #E65100;
-            padding: 30px;
-            text-align: center;
-            border-radius: 15px;
-            margin: 40px 0;
-        }
-        .download-btn {
-            background: #E65100;
-            color: white !important;
-            padding: 12px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        .download-btn:hover { background: #bf360c; transform: translateY(-2px); }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <title>सम्पूर्ण सुंदरकांड पाठ | Sunderkand Lyrics in Hindi & PDF - हनुमान भक्ति</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 
-        /* FAQ Section */
-        .faq-section { margin-top: 50px; }
-        .faq-item { background: #f9f9f9; padding: 15px; border-radius: 8px; margin-bottom: 10px; border: 1px solid #eee; }
-        .faq-item h4 { color: #E65100; margin-bottom: 5px; }
-    </style>
+  <style>
+    /* 🔥 SUNDERKAND SPECIFIC STYLES */
+    .sunderkand-section { padding-top: 20px; }
+    .path-card { text-align: center; border-top: 5px solid #ff7a00; }
+    
+    .sunderkand-text {
+      font-size: 1.25rem;
+      line-height: 2.2;
+      color: #333;
+      text-align: center;
+    }
+
+    .doha-card {
+      background: #fff8f0;
+      border: 1px solid #ffe0b2;
+      padding: 25px;
+      border-radius: 15px;
+      margin: 25px 0;
+      font-weight: bold;
+      color: #b35900;
+      cursor: pointer;
+      transition: 0.3s;
+      position: relative;
+    }
+    .doha-card:hover { background: #fff3e0; transform: translateY(-2px); }
+
+    .chaupai-line {
+      padding: 10px;
+      margin: 5px 0;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: 0.2s;
+    }
+    .chaupai-line:hover { background: #fff7ec; color: #ff7a00; }
+
+    /* PDF Download Box */
+    .pdf-card {
+      background: linear-gradient(135deg, #fff5e6 0%, #ffedda 100%);
+      border: 2px dashed #ff7a00;
+      padding: 30px;
+      text-align: center;
+      border-radius: 20px;
+      margin: 30px 0;
+    }
+    .btn-download {
+      background: #ff7a00;
+      color: #fff !important;
+      padding: 15px 30px;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      margin-top: 15px;
+      box-shadow: 0 4px 15px rgba(255, 122, 0, 0.3);
+    }
+
+    /* FAQ Section */
+    .faq-container { margin-top: 40px; text-align: left; }
+    .faq-item {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #eee;
+    }
+    .faq-item h4 { color: #ff7a00; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+
+    /* Focus Mode */
+    body.reading-mode .hide-on-focus { display: none !important; }
+    body.reading-mode { background: #fffcf5 !important; }
+
+    #copyToast {
+      visibility: hidden; min-width: 200px; background-color: #ff7a00; color: #fff;
+      text-align: center; border-radius: 50px; padding: 12px; position: fixed;
+      z-index: 10000; bottom: 100px; left: 50%; transform: translateX(-50%);
+    }
+    #copyToast.show { visibility: visible; animation: fadein 0.5s, fadeout 0.5s 2.5s; }
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="header-wrap">
-    <button class="menu-btn" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
-    <div class="logo"><i class="fas fa-om"></i>Hanuman Bhakti</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="chalisa.html">Chalisa</a></li>
-        <li><a href="katha-sagar.html">Katha</a></li>
-        <li><a href="mandir-darshan.html">Mandir</a></li>
-      </ul>
-    </nav>
+  <div class="site-loader" id="siteLoader">
+    <div class="loader-inner">
+      <div class="loader-icon"><i class="fas fa-om"></i></div>
+      <p>जय बजरंग बली</p>
+    </div>
   </div>
-</header>
 
-<div class="wrapper">
-    <main class="main">
-        <article>
-            <h1 class="main-title">सम्पूर्ण सुंदरकांड पाठ: हिंदी लिरिक्स और महत्व</h1>
-            <p class="intro-text">गोस्वामी तुलसीदास कृत श्री रामचरितमानस का पांचवां अध्याय 'सुंदरकांड' हनुमान जी की विजय गाथा है। इसका पाठ करने से जीवन के सभी दुख और क्लेश मिट जाते हैं।</p>
+  <header class="site-header hide-on-focus" id="siteHeader">
+    <div class="container header-wrap">
+      <a href="index.html" class="logo"><i class="fas fa-om"></i><span>हनुमान भक्ति</span></a>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">होम</a></li>
+          <li><a href="chalisa.html">चालीसा</a></li>
+          <li><a href="sunderkand.html" class="active">सुंदरकांड</a></li>
+          <li><button onclick="toggleReadingMode()" class="btn btn-secondary">Focus Mode</button></li>
+        </ul>
+      </nav>
+      <button class="menu-btn" id="menuToggleBtn"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
 
-            <div class="pdf-download-card">
-                <i class="fas fa-file-pdf" style="font-size: 40px; color: #d32f2f;"></i>
-                <h3>सम्पूर्ण सुंदरकांड PDF डाउनलोड करें</h3>
-                <p>क्या आप ऑफलाइन पाठ करना चाहते हैं? शुद्ध हिंदी सुंदरकांड PDF यहाँ से प्राप्त करें।</p>
-                <a href="files/sunderkand-full.pdf" download class="download-btn">
-                    <i class="fas fa-cloud-download-alt"></i> Download PDF Now
-                </a>
+  <section class="section section-soft sunderkand-section">
+    <div class="container content-grid">
+      
+      <main class="main-content">
+        
+        <article class="card path-card">
+          <h1 style="color: #ff7a00;">॥ श्री सुंदरकांड पाठ ॥</h1>
+          <p class="intro-text hide-on-focus">हनुमान जी की विजय का यह अध्याय आत्मविश्वास और सफलता प्रदान करने वाला है।</p>
+
+          <div class="pdf-card hide-on-focus">
+            <i class="fas fa-file-pdf" style="font-size: 3rem; color: #d32f2f;"></i>
+            <h3>सुंदरकांड PDF डाउनलोड</h3>
+            <p>शुद्ध एवं पूर्ण सुंदरकांड पाठ PDF में प्राप्त करें।</p>
+            <a href="files/sunderkand-full.pdf" download class="btn-download">
+              <i class="fas fa-download"></i> Download PDF
+            </a>
+          </div>
+
+          <div class="sunderkand-text">
+            <h2 style="color: #d32f2f;">॥ मंगलाचरण ॥</h2>
+            <div class="chaupai-line">शान्तं शाश्वतमप्रमेयमनघं निर्वाणशान्तिप्रदं।</div>
+            <div class="chaupai-line">ब्रह्माशम्भुफणीन्द्रसेव्यमनिशं वेदान्तवेद्यं विभुम्॥</div>
+            <div class="chaupai-line">रामाख्यं जगदीश्वरं सुरगुरुं मायामनुष्यं हरिं।</div>
+            <div class="chaupai-line">वन्देऽहं करुणाकरं रघुवरं भूपालचूडामणिम्॥</div>
+
+            <div class="doha-card">
+              <span>दोहा 1</span><br>
+              जामवंत के बचन सुहाए। सुनि हनुमंत हृदय अति भाए॥<br>
+              तब लगि मोहि परिखेहु तुम्ह भाई। सहि दुखु कंद मूल फल खाई॥<br>
+              जब लगि आवौं सीतहि देखी। होइहि काजु मोहि हरष बिसेषी॥
             </div>
 
-            <div class="path-container">
-                <div class="sunderkand-text">
-                    <h2 style="color: #d32f2f;">॥ मंगलाचरण ॥</h2>
-                    <p>शान्तं शाश्वतमप्रमेयमनघं निर्वाणशान्तिप्रदं।<br>
-                    ब्रह्माशम्भुफणीन्द्रसेव्यमनिशं वेदान्तवेद्यं विभुम्॥<br>
-                    रामाख्यं जगदीश्वरं सुरगुरुं मायामनुष्यं हरिं।<br>
-                    वन्देऽहं करुणाकरं रघुवरं भूपालचूडामणिम्॥</p>
+            <div class="chaupai-line">यह कहि नाइ सबन्हि कहुँ माथा। चलेउ हरषि हियँ धरि रघुनाथा॥</div>
+            <div class="chaupai-line">सिंधु तीर एक भूधर सुंदर। कौतुक कूदि चढ़ेउ ता ऊपर॥</div>
+            <div class="chaupai-line">बार बार रघुबीर सँभारी। तरकेउ पवनतनय बल भारी॥</div>
 
-                    <div class="doha-card">
-                        दोहा 1: जामवंत के बचन सुहाए। सुनि हनुमंत हृदय अति भाए॥<br>
-                        तब लगि मोहि परिखेहु तुम्ह भाई। सहि दुखु कंद मूल फल खाई॥<br>
-                        जब लगि आवौं सीतहि देखी। होइहि काजु मोहि हरष बिसेषी॥
-                    </div>
+            <div class="ad-box hide-on-focus" style="margin: 30px 0;">AdSense Content Ad</div>
 
-                    <p>यह कहि नाइ सबन्हि कहुँ माथा। चलेउ हरषि हियँ धरि रघुनाथा॥<br>
-                    सिंधु तीर एक भूधर सुंदर। कौतुक कूदि चढ़ेउ ता ऊपर॥<br>
-                    बार बार रघुबीर सँभारी। तरकेउ पवनतनय बल भारी॥</p>
-
-                    <div id="full-text" style="text-align: center;">
-                        <p>... (यहाँ बीच की चौपाइयां और दोहे हैं) ...</p>
-                        
-                        <div class="doha-card">
-                            दोहा 60: सकल सुमंगल दायक रघुनायक गुन गान।<br>
-                            सादर सुनहिं ते तरहिं भव सिंधु बिना जलजान॥
-                        </div>
-                    </div>
-                    
-                    <h2 style="color: #d32f2f;">॥ इति सुंदरकांड समाप्त ॥</h2>
-                </div>
+            <p style="font-style: italic; color: #999; margin: 40px 0;">... (सम्पूर्ण 60 दोहे यहाँ इसी फॉर्मेट में आएंगे) ...</p>
+            
+            <div class="doha-card">
+              <span>दोहा 60</span><br>
+              सकल सुमंगल दायक रघुनायक गुन गान।<br>
+              सादर सुनहिं ते तरहिं भव सिंधु बिना जलजान॥
             </div>
-
-            <section class="faq-section">
-                <h3>सुंदरकांड से जुड़े महत्वपूर्ण सवाल (FAQ)</h3>
-                <div class="faq-item">
-                    <h4>1. सुंदरकांड का पाठ कब करना चाहिए?</h4>
-                    <p>सुंदरकांड का पाठ मंगलवार, शनिवार, पूर्णिमा या हनुमान जयंती के दिन करना सबसे फलदायी माना जाता है।</p>
-                </div>
-                <div class="faq-item">
-                    <h4>2. सुंदरकांड पाठ के क्या लाभ हैं?</h4>
-                    <p>यह आत्मविश्वास बढ़ाता है, मानसिक शांति देता है और घर से नकारात्मक शक्तियों को दूर भगाता है।</p>
-                </div>
-                <div class="faq-item">
-                    <h4>3. क्या रात में सुंदरकांड पढ़ सकते हैं?</h4>
-                    <p>हाँ, सुंदरकांड का पाठ रात्रि में करना भी शुभ होता है, विशेषकर हनुमान जी की साधना के लिए।</p>
-                </div>
-            </section>
+            
+            <h2 style="color: #d32f2f; margin-top: 40px;">॥ इति सुंदरकांड समाप्त ॥</h2>
+          </div>
         </article>
-    </main>
-  <aside class="sidebar" id="sidebar">
-    <button class="sidebar-close" onclick="closeSidebar()">✕</button>
-    <div class="widget">
-      <h3>भक्ति मार्ग</h3>
-      <ul>
-        <li><a href="chalisa.html"><i class="fas fa-book-open"></i> हनुमान चालीसा</a></li>
-        <li><a href="bajrang-baan.html"><i class="fas fa-bolt"></i> बजरंग बाण</a></li>
-        <li><a href="katha.html"><i class="fas fa-scroll"></i> पौराणिक कथाएँ</a></li>
-        <li><a href="mandir-darshan.html"><i class="fas fa-gopuram"></i> प्रसिद्ध मंदिर</a></li>
-      </ul>
-    </div>
-    <div class="widget">
-      <h3>Sponsorship</h3>
-      <div class="ad-box">Google AdSense Space</div>
-    </div>
-  </aside>
-</div>
 
-<footer class="site-footer">
-  <div class="footer-container">
+        <section class="faq-container hide-on-focus reveal">
+          <h3 style="text-align: center; margin-bottom: 25px;">अक्सर पूछे जाने वाले प्रश्न (FAQ)</h3>
+          <div class="faq-item">
+            <h4><i class="fas fa-question-circle"></i> सुंदरकांड का पाठ कब करना चाहिए?</h4>
+            <p>मंगलवार और शनिवार को पाठ करना विशेष फलदायी है। संकट के समय कभी भी इसका पाठ शुरू किया जा सकता है।</p>
+          </div>
+          <div class="faq-item">
+            <h4><i class="fas fa-shield-alt"></i> पाठ के क्या लाभ हैं?</h4>
+            <p>यह मानसिक शक्ति, भय से मुक्ति और कार्य सिद्धि के लिए अचूक माना जाता है।</p>
+          </div>
+        </section>
 
-    <div class="footer-box">
-      <h3>Hanuman Bhakti</h3>
-      <p>
-        Hanuman Bhakti एक समर्पित सनातन मंच है, जहाँ श्री हनुमान जी की भक्ति,
-        चालीसा, कथा और आध्यात्मिक ज्ञान शुद्ध रूप में प्रस्तुत किया जाता है।
-      </p>
-      <div class="footer-social">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </main>
+      <aside class="sidebar" aria-label="साइडबार">
+        <div class="sidebar-widget reveal">
+          <h3>भक्ति मार्ग</h3>
+          <ul>
+            <li><a href="chalisa.html"><i class="fas fa-book-open" aria-hidden="true"></i> हनुमान चालीसा</a></li>
+            <li><a href="bajrang-baan.html"><i class="fas fa-bolt" aria-hidden="true"></i> बजरंग बाण</a></li>
+            <li><a href="sunderkand.html"><i class="fas fa-fire" aria-hidden="true"></i> सुंदरकांड</a></li>
+            <li><a href="katha.html"><i class="fas fa-scroll" aria-hidden="true"></i> पौराणिक कथाएँ</a></li>
+            <li><a href="mandir-darshan.html"><i class="fas fa-gopuram" aria-hidden="true"></i> प्रसिद्ध मंदिर</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget reveal">
+          <h3>दैनिक प्रेरणा</h3>
+          <blockquote class="quote" id="dailyQuote">
+            “राम काज कीन्हे बिनु मोहि कहाँ विश्राम”
+          </blockquote>
+        </div>
+
+        <div class="sidebar-widget reveal" aria-label="प्रायोजन">
+          <h3>प्रायोजन</h3>
+          <div class="ad-box adsense-ready">
+            <span class="ad-label">Advertisement</span>
+            Google AdSense Space
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="site-footer" id="footerSection">
+    <div class="container footer-container">
+      <div class="footer-box reveal">
+        <h3>हनुमान भक्ति</h3>
+        <p>
+          हनुमान भक्ति एक समर्पित सनातन मंच है, जहाँ श्री हनुमान जी की भक्ति, चालीसा,
+          कथा, मंत्र और आध्यात्मिक ज्ञान श्रद्धा और शुद्धता के साथ प्रस्तुत किया जाता है।
+        </p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-box reveal">
+        <h4>महत्वपूर्ण लिंक</h4>
+        <ul>
+          <li><a href="about-us.html">हमारे बारे में</a></li>
+          <li><a href="contact-us.html">संपर्क करें</a></li>
+          <li><a href="privacy-policy.html">गोपनीयता नीति</a></li>
+          <li><a href="disclaimer.html">अस्वीकरण</a></li>
+          <li><a href="terms.html">नियम एवं शर्तें</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box reveal">
+        <h4>भक्ति सामग्री</h4>
+        <ul>
+          <li><a href="chalisa.html">हनुमान चालीसा</a></li>
+          <li><a href="bajrang-baan.html">बजरंग बाण</a></li>
+          <li><a href="hanuman-ashtak.html">हनुमान अष्टक</a></li>
+          <li><a href="sunderkand.html">सुंदरकांड</a></li>
+          <li><a href="katha.html">पौराणिक कथाएँ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box reveal">
+        <h4>विश्वास का आधार</h4>
+        <p class="trust-text">
+          ✔ भक्ति-आधारित सामग्री<br />
+          ✔ भ्रामक जानकारी से मुक्त<br />
+          ✔ सनातन मूल्यों पर आधारित मंच
+        </p>
       </div>
     </div>
 
-    <div class="footer-box">
-      <h4>महत्वपूर्ण लिंक</h4>
-      <ul>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="contact-us.html">Contact Us</a></li>
-        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="disclaimer.html">Disclaimer</a></li>
-        <li><a href="terms.html">Terms & Conditions</a></li>
-      </ul>
+    <div class="footer-bottom">
+      © 2025 www.hanumanbhakti.org • जय बजरंग बली 🔱<br />
+      <span>यह वेबसाइट केवल धार्मिक एवं शैक्षिक उद्देश्य हेतु है।</span>
     </div>
+  </footer>
 
-    <div class="footer-box">
-      <h4>भक्ति सामग्री</h4>
-      <ul>
-        <li><a href="chalisa.html">Hanuman Chalisa</a></li>
-        <li><a href="bajrang-baan.html">Bajrang Baan</a></li>
-        <li><a href="hanuman-ashtak.html">Hanuman Ashtak</a></li>
-        <li><a href="sunderkand.html">Sunderkand</a></li>
-        <li><a href="katha.html">Pauranik Kathayein</a></li>
-      </ul>
-    </div>
+  <button class="sticky-share" type="button" aria-label="पेज साझा करें">
+    <i class="fas fa-share-nodes" aria-hidden="true"></i>
+  </button>
 
-    <div class="footer-box">
-      <h4>विश्वसनीय जानकारी</h4>
-      <p class="trust-text">
-        ✔ 100% Bhakti Content<br>
-        ✔ No Misleading Information<br>
-        ✔ Sanatan Values Based Platform
-      </p>
-    </div>
+  <button class="back-to-top" id="backToTopBtn" type="button" aria-label="ऊपर जाएँ">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
 
-  </div>
+  <nav class="mobile-bottom-nav" aria-label="मोबाइल त्वरित नेविगेशन">
+    <a href="index.html" class="nav-item active" aria-current="page">
+      <i class="fas fa-home" aria-hidden="true"></i>
+      <span>होम</span>
+    </a>
+    <a href="chalisa.html" class="nav-item">
+      <i class="fas fa-book-open" aria-hidden="true"></i>
+      <span>चालीसा</span>
+    </a>
+    <a href="mandir-darshan.html" class="nav-item">
+      <i class="fas fa-gopuram" aria-hidden="true"></i>
+      <span>मंदिर</span>
+    </a>
+    <button type="button" class="nav-item mobile-nav-menu-btn" aria-label="मेनू खोलें" aria-expanded="false">
+      <i class="fas fa-bars" aria-hidden="true"></i>
+      <span>मेनू</span>
+    </button>
+  </nav>
 
-  <div class="footer-bottom">
-    © 2025 www.hanumanbhakti.org • Jai Bajrang Bali 🔱<br>
-    <span>यह वेबसाइट केवल धार्मिक एवं शैक्षिक उद्देश्य हेतु है।</span>
-  </div>
-</footer>
+  <div class="mobile-drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
 
-<div class="mobile-bottom-nav">
-    <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>Home</span></a>
-    <a href="chalisa.html" class="nav-item"><i class="fas fa-book-open"></i><span>Chalisa</span></a>
-    <a href="mandir-darshan.html" class="nav-item"><i class="fas fa-gopuram"></i><span>Mandir</span></a>
-    <a href="javascript:void(0);" class="nav-item" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i><span>Menu</span></a>
-</div>
-
-<div class="mobile-drawer-overlay" id="drawerOverlay" onclick="toggleMobileMenu()"></div>
-
-<div class="mobile-drawer" id="mobileDrawer">
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="मोबाइल मेनू" aria-hidden="true">
     <div class="drawer-header">
-        <div class="drawer-logo"><i class="fas fa-om"></i><span>Hanuman Bhakti</span></div>
-        <button class="close-btn" onclick="toggleMobileMenu()">&times;</button>
+      <div class="drawer-logo">
+        <i class="fas fa-om" aria-hidden="true"></i>
+        <span>हनुमान भक्ति</span>
+      </div>
+      <button class="close-btn" type="button" id="drawerCloseBtn" aria-label="मेनू बंद करें">
+        &times;
+      </button>
     </div>
+
     <div class="drawer-content">
-        <div class="drawer-section">
-            <h4>मुख्य श्रेणियाँ</h4>
-            <ul class="drawer-links">
-                <li><a href="index.html"><i class="fas fa-home"></i> होम</a></li>
-                <li><a href="chalisa.html"><i class="fas fa-book"></i> हनुमान चालीसा</a></li>
-                <li><a href="sunderkand.html"><i class="fas fa-pray"></i> सुंदरकांड पाठ</a></li>
-                <li><a href="mantra.html"><i class="fas fa-dharmachakra"></i> मंत्र एवं विधि</a></li>
-                <li><a href="katha.html"><i class="fas fa-history"></i> पौराणिक कथाएं</a></li>
-            </ul>
-        </div>
-        <div class="drawer-section">
-            <h4>अन्य जानकारी</h4>
-            <ul class="drawer-links">
-                <li><a href="about-us.html">हमारे बारे में</a></li>
-                <li><a href="contact-us.html">संपर्क करें</a></li>
-                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            </ul>
-        </div>
-        <div class="drawer-social">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
+      <div class="drawer-section">
+        <h4>मुख्य श्रेणियाँ</h4>
+        <ul class="drawer-links">
+          <li><a href="index.html"><i class="fas fa-home" aria-hidden="true"></i> होम</a></li>
+          <li><a href="chalisa.html"><i class="fas fa-book-open" aria-hidden="true"></i> हनुमान चालीसा</a></li>
+          <li><a href="bajrang-baan.html"><i class="fas fa-bolt" aria-hidden="true"></i> बजरंग बाण</a></li>
+          <li><a href="sunderkand.html"><i class="fas fa-fire" aria-hidden="true"></i> सुंदरकांड</a></li>
+          <li><a href="mantra.html"><i class="fas fa-om" aria-hidden="true"></i> मंत्र एवं विधि</a></li>
+          <li><a href="katha.html"><i class="fas fa-scroll" aria-hidden="true"></i> पौराणिक कथाएँ</a></li>
+        </ul>
+      </div>
+
+      <div class="drawer-section">
+        <h4>अन्य जानकारी</h4>
+        <ul class="drawer-links">
+          <li><a href="about-us.html">हमारे बारे में</a></li>
+          <li><a href="contact-us.html">संपर्क करें</a></li>
+          <li><a href="privacy-policy.html">गोपनीयता नीति</a></li>
+        </ul>
+      </div>
+
+      <div class="drawer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+      </div>
     </div>
-</div>
-<script src="script.js"></script>
+  </aside>
+
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+    <div class="search-modal" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
+      <div class="search-top">
+        <h3 id="searchTitle">भक्ति सामग्री खोजें</h3>
+        <button type="button" class="close-btn" id="searchCloseBtn" aria-label="खोज बंद करें">&times;</button>
+      </div>
+
+      <div class="search-box-wrap">
+        <input
+          type="search"
+          id="searchInput"
+          class="search-input"
+          placeholder="जैसे: चालीसा, बजरंग बाण, सुंदरकांड..."
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="search-results" id="searchResults">
+        <a href="chalisa.html" class="search-item">हनुमान चालीसा</a>
+        <a href="bajrang-baan.html" class="search-item">बजरंग बाण</a>
+        <a href="sunderkand.html" class="search-item">सुंदरकांड</a>
+        <a href="hanuman-ashtak.html" class="search-item">हनुमान अष्टक</a>
+        <a href="mantra.html" class="search-item">हनुमान मंत्र</a>
+        <a href="katha.html" class="search-item">पौराणिक कथाएँ</a>
+        <a href="mandir-darshan.html" class="search-item">मंदिर दर्शन</a>
+        <a href="contact-us.html" class="search-item">संपर्क करें</a>
+      </div>
+    </div>
+  </div>
+  <div id="copyToast">जय श्री राम! पंक्ति कॉपी हो गई</div>
+  <script src="script.js"></script>
+  <script>
+  // 🚩 Copy Feature: बजरंग बाण की पंक्तियों के लिए
+  document.querySelectorAll(".path-line").forEach(line => {
+    line.addEventListener("click", function() {
+      // हिंट टेक्स्ट को हटाकर सिर्फ मुख्य पाठ कॉपी करेगा
+      let textToCopy = this.innerText
+        .replace("टैप करके कॉपी करें", "")
+        .replace("शक्तिशाली मंत्र - कॉपी करें", "")
+        .trim();
+      
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const toast = document.getElementById("copyToast");
+        if (toast) {
+          toast.className = "show";
+          setTimeout(() => { toast.className = ""; }, 2500);
+        }
+      });
+    });
+  });
+
+  // 📖 Focus Mode Function
+  function toggleReadingMode() {
+    document.body.classList.toggle("reading-mode");
+  }
+</script>
+
 </body>
 </html>
