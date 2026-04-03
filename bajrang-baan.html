@@ -1,237 +1,385 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>श्री बजरंग बाण हिंदी लिरिक्स | Shri Bajrang Baan Lyrics in Hindi</title>
-    <meta name="description" content="सम्पूर्ण श्री बजरंग बाण पाठ हिंदी में। संकटों से मुक्ति के लिए बजरंग बाण का पाठ अत्यंत प्रभावशाली है।">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
 
-    <link rel="canonical" href="https://hanumanbhakti.org/bajrang-baan.html">
+  <title>श्री बजरंग बाण | संकट निवारण हेतु शक्तिशाली पाठ - हनुमान भक्ति</title>
+  <meta name="description" content="सम्पूर्ण श्री बजरंग बाण पाठ हिंदी में। संकटों से मुक्ति और शत्रुओं के नाश के लिए बजरंग बाण का पाठ अत्यंत प्रभावशाली है।" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { overflow-x: hidden; }
     
-    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    /* 🔥 BAJRANG BAAN PAGE SPECIFIC STYLES */
+    .path-section { padding-top: 20px; }
+    .path-card { text-align: center; border-top: 5px solid #d32f2f; } /* बजरंग बाण के लिए Red थीम */
     
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .path-box {
-            background: #fff;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            border: 2px solid #f1f1f1;
-            line-height: 2;
-            text-align: center;
-            font-size: 18px;
-            color: #333;
-        }
-        .path-title {
-            color: #d32f2f;
-            font-size: 28px;
-            margin-bottom: 20px;
-            text-decoration: underline;
-        }
-        .highlight-verse {
-            color: #E65100;
-            font-weight: bold;
-            margin: 15px 0;
-            display: block;
-        }
-        .instruction-card {
-            background: #fff8e1;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 30px;
-            border-left: 5px solid #ffc107;
-            text-align: left;
-        }
-    </style>
+    .path-line {
+      font-size: 1.3rem;
+      line-height: 2;
+      background: #fff5f5; /* Light Red/Orange tint */
+      border: 1px solid #ffcccc;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+      color: #333;
+    }
+    .path-line:hover { background: #ffebeb; transform: scale(1.01); border-color: #d32f2f; }
+    
+    .highlight-verse {
+      color: #d32f2f;
+      font-weight: 800;
+      border: 2px dashed #d32f2f;
+      background: #fff;
+    }
+
+    .copy-hint { display: block; font-size: 0.75rem; color: #d32f2f; margin-top: 5px; font-weight: bold; }
+    
+    .instruction-card {
+      background: #fff8e1;
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 30px;
+      border-left: 5px solid #ffc107;
+      text-align: left;
+    }
+
+    /* Focus Mode */
+    body.reading-mode .hide-on-focus { display: none !important; }
+    body.reading-mode { background: #fffcf5 !important; }
+    
+    /* Toast (Jai Shri Ram) */
+    #copyToast {
+      visibility: hidden; min-width: 200px; background-color: #d32f2f; color: #fff;
+      text-align: center; border-radius: 50px; padding: 12px; position: fixed;
+      z-index: 10000; bottom: 100px; left: 50%; transform: translateX(-50%);
+    }
+    #copyToast.show { visibility: visible; animation: fadein 0.5s, fadeout 0.5s 2.5s; }
+    @keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 100px; opacity: 1;} }
+    @keyframes fadeout { from {bottom: 100px; opacity: 1;} to {bottom: 0; opacity: 0;} }
+
+    /* Reveal Fix */
+    .path-card { opacity: 1 !important; transform: none !important; visibility: visible !important; }
+  </style>
 </head>
 <body>
-  
-<header>
-  <div class="header-wrap">
-    <button class="menu-btn" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
-    <div class="logo"><i class="fas fa-om"></i>Hanuman Bhakti</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="chalisa.html">Chalisa</a></li>
-        <li><a href="katha-sagar.html">Katha</a></li>
-        <li><a href="mandir-darshan.html">Mandir</a></li>
-        <li><a href="contact-us.html">Contact</a></li>
-      </ul>
-    </nav>
+
+  <div class="site-loader" id="siteLoader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-icon"><i class="fas fa-om"></i></div>
+      <p>जय बजरंग बली</p>
+    </div>
   </div>
-</header>
 
-<div class="wrapper">
-    <main class="main">
-        <article>
-            <h1 class="main-title">श्री बजरंग बाण लिरिक्स</h1>
-            <p class="intro-text">बजरंग बाण का पाठ शत्रुओं के नाश और बड़े से बड़े संकट को टालने के लिए किया जाता है। यहाँ इसका पूर्ण पाठ दिया गया है।</p>
+  <header class="site-header hide-on-focus" id="siteHeader">
+    <div class="container header-wrap">
+      <a href="index.html" class="logo">
+        <i class="fas fa-om"></i><span>हनुमान भक्ति</span>
+      </a>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html" class="nav-link">होम</a></li>
+          <li><a href="chalisa.html" class="nav-link">चालीसा</a></li>
+          <li><a href="bajrang-baan.html" class="nav-link active">बजरंग बाण</a></li>
+          <li><button onclick="toggleReadingMode()" class="btn btn-secondary" style="padding: 5px 12px; font-size: 0.85rem;">Focus Mode</button></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="searchToggleBtn"><i class="fas fa-magnifying-glass"></i></button>
+        <button class="icon-btn" id="themeToggleBtn"><i class="fas fa-moon"></i></button>
+      </div>
+      <button class="menu-btn" id="menuToggleBtn"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
 
-            <div class="path-box">
-                <h2 class="path-title">॥ श्री बजरंग बाण ॥</h2>
-                
-                <strong>॥ दोहा ॥</strong><br>
-                निश्चय प्रेम प्रतीति ते, बिनय करैं सनमान।<br>
-                तेहि के कारज सकल शुभ, सिद्ध करैं हनुमान॥<br><br>
+  <section class="section section-soft path-section">
+    <div class="container content-grid">
+      
+      <main class="main-content">
+        
+        <div class="card ad-card hide-on-focus">
+          <div class="ad-box">Google AdSense Top</div>
+        </div>
 
-                <strong>॥ चौपाई ॥</strong><br>
-                जय हनुमंत संत हितकारी। सुन लीजै प्रभु अरज हमारी॥<br>
-                जन के काज बिलंब न कीजै। आतुर दौरि महा सुख दीजै॥<br><br>
-
-                जैसे कूदि सिंधु महि पारा। सुरसा बदन पैठि बिस्तारा॥<br>
-                आगे जाय लंकिनी रोका। मारेहु लात गई सुर लोका॥<br><br>
-
-                जाय बिभीषन को सुख दीन्हा। सीता निरखि परम पद लीन्हा॥<br>
-                बाग उजारि सिंधु महं बोरा। अति आतुर यमकातर तोरा॥<br><br>
-
-                अक्षय कुमार मारि संहारा। लूम लपेटि लंक को जारा॥<br>
-                लाह समान लंक जरि गई। जय जय धुनि सुरपुर महं भई॥<br><br>
-
-                अब बिलंब केहि कारन स्वामी। कृपा करहु उर अंतरजामी॥<br>
-                जय जय लखन प्रान के दाता। आतुर ह्रै दुख करहु निपाता॥<br><br>
-
-                <span class="highlight-verse">जपहुं निरंतर हनुमत बीरा। स्वाहा स्वाहा लखहु सरीरा॥</span>
-
-                अथ श्री बजरंग बाण, प्रभु की आन! <br>
-                आये दौरि मिलु प्रान समान॥<br><br>
-
-                उठु उठु चलु तोहि राम दुहाई। पाय परौं कर जोरि मनाई॥<br>
-                ओम चं चं चं चं चपल चलंता। ओम हनु हनु हनु हनु हनुमंता॥<br><br>
-
-                ओम हं हं हांक देत कपि चंचल। ओम सं सं सहमि पराने खल दल॥<br>
-                अपने जन को तुरत उबारो। सुमिरत होय आनंद हमारो॥<br><br>
-
-                यह बजरंग बाण जेहि मारै। ताहि कहो फिर कौन उबारै॥<br>
-                पाठ करै बजरंग बाण की। हनुमत रक्षा करै प्रान की॥<br><br>
-
-                <strong>॥ दोहा ॥</strong><br>
-                प्रेम प्रतीतिहिं कपि भजै, सदा धरैं उर ध्यान।<br>
-                तेहि के कारज सकल शुभ, सिद्ध करैं हनुमान॥
+        <article class="card path-card">
+          <h1 style="color: #d32f2f;">॥ श्री बजरंग बाण ॥</h1>
+          <p class="intro-text hide-on-focus">बजरंग बाण का पाठ शत्रुओं के नाश और बड़े से बड़े संकट को टालने के लिए किया जाता है।</p>
+          
+          <div class="path-content">
+            
+            <div class="section-title" style="margin: 20px 0; font-weight: bold;">॥ दोहा ॥</div>
+            
+            <div class="path-line">
+              निश्चय प्रेम प्रतीति ते, बिनय करैं सनमान।<br>
+              तेहि के कारज सकल शुभ, सिद्ध करैं हनुमान॥
+              <span class="copy-hint"><i class="fas fa-copy"></i> टैप करके कॉपी करें</span>
             </div>
 
-            <div class="instruction-card">
-                <h3><i class="fas fa-info-circle"></i> पाठ की सावधानी</h3>
-                <p>बजरंग बाण का पाठ रोज बिना कारण नहीं करना चाहिए। जब आप किसी बड़े संकट में हों या कोई रास्ता न दिख रहा हो, तभी इसका संकल्प लेकर पाठ करें। पाठ के दौरान शुद्धता का विशेष ध्यान रखें।</p>
+            <div class="section-title" style="margin: 30px 0; font-weight: bold;">॥ चौपाई ॥</div>
+
+            <div class="path-line">जय हनुमंत संत हितकारी। सुन लीजै प्रभु अरज हमारी॥</div>
+            <div class="path-line">जन के काज बिलंब न कीजै। आतुर दौरि महा सुख दीजै॥</div>
+            <div class="path-line">जैसे कूदि सिंधु महि पारा। सुरसा बदन पैठि बिस्तारा॥</div>
+            <div class="path-line">आगे जाय लंकिनी रोका। मारेहु लात गई सुर लोका॥</div>
+
+            <div class="ad-box hide-on-focus" style="margin: 20px 0;">AdSense Content Ad</div>
+
+            <div class="path-line">जाय बिभीषन को सुख दीन्हा। सीता निरखि परम पद लीन्हा॥</div>
+            <div class="path-line">बाग उजारि सिंधु महं बोरा। अति आतुर यमकातर तोरा॥</div>
+            <div class="path-line">अक्षय कुमार मारि संहारा। लूम लपेटि लंक को जारा॥</div>
+            <div class="path-line">लाह समान लंक जरि गई। जय जय धुनि सुरपुर महं भई॥</div>
+
+            <div class="path-line highlight-verse">
+              जपहुं निरंतर हनुमत बीरा। स्वाहा स्वाहा लखहु सरीरा॥
+              <span class="copy-hint">शक्तिशाली मंत्र - कॉपी करें</span>
             </div>
+
+            <div class="path-line">अब बिलंब केहि कारन स्वामी। कृपा करहु उर अंतरजामी॥</div>
+            <div class="path-line">जय जय लखन प्रान के दाता। आतुर ह्रै दुख करहु निपाता॥</div>
+            <div class="path-line">अथ श्री बजरंग बाण, प्रभु की आन! आये दौरि मिलु प्रान समान॥</div>
+            <div class="path-line">उठु उठु चलु तोहि राम दुहाई। पाय परौं कर जोरि मनाई॥</div>
+            <div class="path-line">ओम चं चं चं चं चपल चलंता। ओम हनु हनु हनु हनु हनुमंता॥</div>
+            <div class="path-line">ओम हं हं हांक देत कपि चंचल। ओम सं सं सहमि पराने खल दल॥</div>
+            <div class="path-line">अपने जन को तुरत उबारो। सुमिरत होय आनंद हमारो॥</div>
+            <div class="path-line">यह बजरंग बाण जेहि मारै। ताहि कहो फिर कौन उबारै॥</div>
+            <div class="path-line">पाठ करै बजरंग बाण की। हनुमत रक्षा करै प्रान की॥</div>
+
+            <div class="section-title" style="margin: 30px 0; font-weight: bold;">॥ दोहा ॥</div>
+
+            <div class="path-line">
+              प्रेम प्रतीतिहिं कपि भजै, सदा धरैं उर ध्यान।<br>
+              तेहि के कारज सकल शुभ, सिद्ध करैं हनुमान॥
+              <span class="copy-hint"><i class="fas fa-copy"></i> टैप करके कॉपी करें</span>
+            </div>
+
+          </div>
         </article>
-    </main>
-  <aside class="sidebar" id="sidebar">
-    <button class="sidebar-close" onclick="closeSidebar()">✕</button>
-    <div class="widget">
-      <h3>भक्ति मार्ग</h3>
-      <ul>
-        <li><a href="chalisa.html"><i class="fas fa-book-open"></i> हनुमान चालीसा</a></li>
-        <li><a href="bajrang-baan.html"><i class="fas fa-bolt"></i> बजरंग बाण</a></li>
-        <li><a href="katha.html"><i class="fas fa-scroll"></i> पौराणिक कथाएँ</a></li>
-        <li><a href="mandir-darshan.html"><i class="fas fa-gopuram"></i> प्रसिद्ध मंदिर</a></li>
-      </ul>
-    </div>
-    <div class="widget">
-      <h3>Sponsorship</h3>
-      <div class="ad-box">Google AdSense Space</div>
-    </div>
-  </aside>
-</div>
 
-<footer class="site-footer">
-  <div class="footer-container">
+        <div class="instruction-card hide-on-focus reveal">
+            <h3><i class="fas fa-info-circle"></i> पाठ की सावधानी</h3>
+            <p>बजरंग बाण का पाठ रोज बिना कारण नहीं करना चाहिए। जब आप किसी बड़े संकट में हों, तभी इसका संकल्प लेकर पाठ करें।</p>
+        </div>
 
-    <div class="footer-box">
-      <h3>Hanuman Bhakti</h3>
-      <p>
-        Hanuman Bhakti एक समर्पित सनातन मंच है, जहाँ श्री हनुमान जी की भक्ति,
-        चालीसा, कथा और आध्यात्मिक ज्ञान शुद्ध रूप में प्रस्तुत किया जाता है।
-      </p>
-      <div class="footer-social">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <div class="card ad-card hide-on-focus reveal">
+          <div class="ad-box">Google AdSense Bottom</div>
+        </div>
+      </main>
+      <aside class="sidebar" aria-label="साइडबार">
+        <div class="sidebar-widget reveal">
+          <h3>भक्ति मार्ग</h3>
+          <ul>
+            <li><a href="chalisa.html"><i class="fas fa-book-open" aria-hidden="true"></i> हनुमान चालीसा</a></li>
+            <li><a href="bajrang-baan.html"><i class="fas fa-bolt" aria-hidden="true"></i> बजरंग बाण</a></li>
+            <li><a href="sunderkand.html"><i class="fas fa-fire" aria-hidden="true"></i> सुंदरकांड</a></li>
+            <li><a href="katha.html"><i class="fas fa-scroll" aria-hidden="true"></i> पौराणिक कथाएँ</a></li>
+            <li><a href="mandir-darshan.html"><i class="fas fa-gopuram" aria-hidden="true"></i> प्रसिद्ध मंदिर</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget reveal">
+          <h3>दैनिक प्रेरणा</h3>
+          <blockquote class="quote" id="dailyQuote">
+            “राम काज कीन्हे बिनु मोहि कहाँ विश्राम”
+          </blockquote>
+        </div>
+
+        <div class="sidebar-widget reveal" aria-label="प्रायोजन">
+          <h3>प्रायोजन</h3>
+          <div class="ad-box adsense-ready">
+            <span class="ad-label">Advertisement</span>
+            Google AdSense Space
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="site-footer" id="footerSection">
+    <div class="container footer-container">
+      <div class="footer-box reveal">
+        <h3>हनुमान भक्ति</h3>
+        <p>
+          हनुमान भक्ति एक समर्पित सनातन मंच है, जहाँ श्री हनुमान जी की भक्ति, चालीसा,
+          कथा, मंत्र और आध्यात्मिक ज्ञान श्रद्धा और शुद्धता के साथ प्रस्तुत किया जाता है।
+        </p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-box reveal">
+        <h4>महत्वपूर्ण लिंक</h4>
+        <ul>
+          <li><a href="about-us.html">हमारे बारे में</a></li>
+          <li><a href="contact-us.html">संपर्क करें</a></li>
+          <li><a href="privacy-policy.html">गोपनीयता नीति</a></li>
+          <li><a href="disclaimer.html">अस्वीकरण</a></li>
+          <li><a href="terms.html">नियम एवं शर्तें</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box reveal">
+        <h4>भक्ति सामग्री</h4>
+        <ul>
+          <li><a href="chalisa.html">हनुमान चालीसा</a></li>
+          <li><a href="bajrang-baan.html">बजरंग बाण</a></li>
+          <li><a href="hanuman-ashtak.html">हनुमान अष्टक</a></li>
+          <li><a href="sunderkand.html">सुंदरकांड</a></li>
+          <li><a href="katha.html">पौराणिक कथाएँ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box reveal">
+        <h4>विश्वास का आधार</h4>
+        <p class="trust-text">
+          ✔ भक्ति-आधारित सामग्री<br />
+          ✔ भ्रामक जानकारी से मुक्त<br />
+          ✔ सनातन मूल्यों पर आधारित मंच
+        </p>
       </div>
     </div>
 
-    <div class="footer-box">
-      <h4>महत्वपूर्ण लिंक</h4>
-      <ul>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="contact-us.html">Contact Us</a></li>
-        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="disclaimer.html">Disclaimer</a></li>
-        <li><a href="terms.html">Terms & Conditions</a></li>
-      </ul>
+    <div class="footer-bottom">
+      © 2025 www.hanumanbhakti.org • जय बजरंग बली 🔱<br />
+      <span>यह वेबसाइट केवल धार्मिक एवं शैक्षिक उद्देश्य हेतु है।</span>
     </div>
+  </footer>
 
-    <div class="footer-box">
-      <h4>भक्ति सामग्री</h4>
-      <ul>
-        <li><a href="chalisa.html">Hanuman Chalisa</a></li>
-        <li><a href="bajrang-baan.html">Bajrang Baan</a></li>
-        <li><a href="hanuman-ashtak.html">Hanuman Ashtak</a></li>
-        <li><a href="sunderkand.html">Sunderkand</a></li>
-        <li><a href="katha.html">Pauranik Kathayein</a></li>
-      </ul>
-    </div>
+  <button class="sticky-share" type="button" aria-label="पेज साझा करें">
+    <i class="fas fa-share-nodes" aria-hidden="true"></i>
+  </button>
 
-    <div class="footer-box">
-      <h4>विश्वसनीय जानकारी</h4>
-      <p class="trust-text">
-        ✔ 100% Bhakti Content<br>
-        ✔ No Misleading Information<br>
-        ✔ Sanatan Values Based Platform
-      </p>
-    </div>
+  <button class="back-to-top" id="backToTopBtn" type="button" aria-label="ऊपर जाएँ">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
 
-  </div>
+  <nav class="mobile-bottom-nav" aria-label="मोबाइल त्वरित नेविगेशन">
+    <a href="index.html" class="nav-item active" aria-current="page">
+      <i class="fas fa-home" aria-hidden="true"></i>
+      <span>होम</span>
+    </a>
+    <a href="chalisa.html" class="nav-item">
+      <i class="fas fa-book-open" aria-hidden="true"></i>
+      <span>चालीसा</span>
+    </a>
+    <a href="mandir-darshan.html" class="nav-item">
+      <i class="fas fa-gopuram" aria-hidden="true"></i>
+      <span>मंदिर</span>
+    </a>
+    <button type="button" class="nav-item mobile-nav-menu-btn" aria-label="मेनू खोलें" aria-expanded="false">
+      <i class="fas fa-bars" aria-hidden="true"></i>
+      <span>मेनू</span>
+    </button>
+  </nav>
 
-  <div class="footer-bottom">
-    © 2025 www.hanumanbhakti.org • Jai Bajrang Bali 🔱<br>
-    <span>यह वेबसाइट केवल धार्मिक एवं शैक्षिक उद्देश्य हेतु है।</span>
-  </div>
-</footer>
+  <div class="mobile-drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
 
-<div class="mobile-bottom-nav">
-    <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>Home</span></a>
-    <a href="chalisa.html" class="nav-item"><i class="fas fa-book-open"></i><span>Chalisa</span></a>
-    <a href="mandir-darshan.html" class="nav-item"><i class="fas fa-gopuram"></i><span>Mandir</span></a>
-    <a href="javascript:void(0);" class="nav-item" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i><span>Menu</span></a>
-</div>
-
-<div class="mobile-drawer-overlay" id="drawerOverlay" onclick="toggleMobileMenu()"></div>
-
-<div class="mobile-drawer" id="mobileDrawer">
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="मोबाइल मेनू" aria-hidden="true">
     <div class="drawer-header">
-        <div class="drawer-logo"><i class="fas fa-om"></i><span>Hanuman Bhakti</span></div>
-        <button class="close-btn" onclick="toggleMobileMenu()">&times;</button>
+      <div class="drawer-logo">
+        <i class="fas fa-om" aria-hidden="true"></i>
+        <span>हनुमान भक्ति</span>
+      </div>
+      <button class="close-btn" type="button" id="drawerCloseBtn" aria-label="मेनू बंद करें">
+        &times;
+      </button>
     </div>
+
     <div class="drawer-content">
-        <div class="drawer-section">
-            <h4>मुख्य श्रेणियाँ</h4>
-            <ul class="drawer-links">
-                <li><a href="index.html"><i class="fas fa-home"></i> होम</a></li>
-                <li><a href="chalisa.html"><i class="fas fa-book"></i> हनुमान चालीसा</a></li>
-                <li><a href="sunderkand.html"><i class="fas fa-pray"></i> सुंदरकांड पाठ</a></li>
-                <li><a href="mantra.html"><i class="fas fa-dharmachakra"></i> मंत्र एवं विधि</a></li>
-                <li><a href="katha.html"><i class="fas fa-history"></i> पौराणिक कथाएं</a></li>
-            </ul>
-        </div>
-        <div class="drawer-section">
-            <h4>अन्य जानकारी</h4>
-            <ul class="drawer-links">
-                <li><a href="about-us.html">हमारे बारे में</a></li>
-                <li><a href="contact-us.html">संपर्क करें</a></li>
-                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            </ul>
-        </div>
-        <div class="drawer-social">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
+      <div class="drawer-section">
+        <h4>मुख्य श्रेणियाँ</h4>
+        <ul class="drawer-links">
+          <li><a href="index.html"><i class="fas fa-home" aria-hidden="true"></i> होम</a></li>
+          <li><a href="chalisa.html"><i class="fas fa-book-open" aria-hidden="true"></i> हनुमान चालीसा</a></li>
+          <li><a href="bajrang-baan.html"><i class="fas fa-bolt" aria-hidden="true"></i> बजरंग बाण</a></li>
+          <li><a href="sunderkand.html"><i class="fas fa-fire" aria-hidden="true"></i> सुंदरकांड</a></li>
+          <li><a href="mantra.html"><i class="fas fa-om" aria-hidden="true"></i> मंत्र एवं विधि</a></li>
+          <li><a href="katha.html"><i class="fas fa-scroll" aria-hidden="true"></i> पौराणिक कथाएँ</a></li>
+        </ul>
+      </div>
+
+      <div class="drawer-section">
+        <h4>अन्य जानकारी</h4>
+        <ul class="drawer-links">
+          <li><a href="about-us.html">हमारे बारे में</a></li>
+          <li><a href="contact-us.html">संपर्क करें</a></li>
+          <li><a href="privacy-policy.html">गोपनीयता नीति</a></li>
+        </ul>
+      </div>
+
+      <div class="drawer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+      </div>
     </div>
-</div>
-<script src="script.js"></script>
+  </aside>
+
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+    <div class="search-modal" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
+      <div class="search-top">
+        <h3 id="searchTitle">भक्ति सामग्री खोजें</h3>
+        <button type="button" class="close-btn" id="searchCloseBtn" aria-label="खोज बंद करें">&times;</button>
+      </div>
+
+      <div class="search-box-wrap">
+        <input
+          type="search"
+          id="searchInput"
+          class="search-input"
+          placeholder="जैसे: चालीसा, बजरंग बाण, सुंदरकांड..."
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="search-results" id="searchResults">
+        <a href="chalisa.html" class="search-item">हनुमान चालीसा</a>
+        <a href="bajrang-baan.html" class="search-item">बजरंग बाण</a>
+        <a href="sunderkand.html" class="search-item">सुंदरकांड</a>
+        <a href="hanuman-ashtak.html" class="search-item">हनुमान अष्टक</a>
+        <a href="mantra.html" class="search-item">हनुमान मंत्र</a>
+        <a href="katha.html" class="search-item">पौराणिक कथाएँ</a>
+        <a href="mandir-darshan.html" class="search-item">मंदिर दर्शन</a>
+        <a href="contact-us.html" class="search-item">संपर्क करें</a>
+      </div>
+    </div>
+  </div>
+  <div id="copyToast">जय श्री राम! पंक्ति कॉपी हो गई</div>
+  <script src="script.js"></script>
+  <script>
+  // 🚩 Copy Feature: बजरंग बाण की पंक्तियों के लिए
+  document.querySelectorAll(".path-line").forEach(line => {
+    line.addEventListener("click", function() {
+      // हिंट टेक्स्ट को हटाकर सिर्फ मुख्य पाठ कॉपी करेगा
+      let textToCopy = this.innerText
+        .replace("टैप करके कॉपी करें", "")
+        .replace("शक्तिशाली मंत्र - कॉपी करें", "")
+        .trim();
+      
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const toast = document.getElementById("copyToast");
+        if (toast) {
+          toast.className = "show";
+          setTimeout(() => { toast.className = ""; }, 2500);
+        }
+      });
+    });
+  });
+
+  // 📖 Focus Mode Function
+  function toggleReadingMode() {
+    document.body.classList.toggle("reading-mode");
+  }
+</script>
+
 </body>
 </html>
-
