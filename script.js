@@ -352,3 +352,102 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+/* 🔥 SCROLL PERFORMANCE BOOST */
+let ticking = false;
+
+window.addEventListener("scroll", () => {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      handleHeaderScroll();
+      ticking = false;
+    });
+    ticking = true;
+  }
+}, { passive: true });
+/* 🔥 LAZY LOAD IMAGES */
+const lazyImages = document.querySelectorAll("img");
+
+if ("IntersectionObserver" in window) {
+  const imgObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        if (img.dataset.src) {
+          img.src = img.dataset.src;
+        }
+        observer.unobserve(img);
+      }
+    });
+  });
+
+  lazyImages.forEach(img => imgObserver.observe(img));
+}
+/* 🔥 BUTTON CLICK EFFECT */
+document.querySelectorAll(".btn, .nav-item, .icon-btn").forEach(el => {
+  el.addEventListener("click", () => {
+    el.style.transform = "scale(0.96)";
+    setTimeout(() => {
+      el.style.transform = "";
+    }, 120);
+  });
+});
+/* 🔥 AUTO CLOSE MENU ON SCROLL */
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.scrollY;
+
+  if (isDrawerOpen() && currentScroll > lastScroll) {
+    closeMobileMenu();
+  }
+
+  lastScroll = currentScroll;
+});
+/* 🔥 TOAST CONTROL */
+let toastActive = false;
+
+function showToastSafe(msg) {
+  if (toastActive) return;
+  toastActive = true;
+
+  showToast(msg);
+
+  setTimeout(() => {
+    toastActive = false;
+  }, 2500);
+}
+/* 🔥 INTERNET STATUS */
+window.addEventListener("offline", () => {
+  showToastSafe("⚠️ इंटरनेट कनेक्शन बंद है");
+});
+
+window.addEventListener("online", () => {
+  showToastSafe("✅ इंटरनेट वापस आ गया");
+});
+/* 🔥 SCROLL PROGRESS */
+const progressBar = document.createElement("div");
+progressBar.style.position = "fixed";
+progressBar.style.top = "0";
+progressBar.style.left = "0";
+progressBar.style.height = "3px";
+progressBar.style.background = "linear-gradient(to right, #ff8a00, #ff5e00)";
+progressBar.style.zIndex = "9999";
+progressBar.style.width = "0%";
+document.body.appendChild(progressBar);
+
+window.addEventListener("scroll", () => {
+  const scroll = window.scrollY;
+  const height = document.body.scrollHeight - window.innerHeight;
+  const progress = (scroll / height) * 100;
+  progressBar.style.width = progress + "%";
+});
+/* 🔥 DOUBLE TAP FIX */
+let lastTap = 0;
+
+document.addEventListener("touchend", e => {
+  const now = new Date().getTime();
+  if (now - lastTap < 300) {
+    e.preventDefault();
+  }
+  lastTap = now;
+}, { passive: false });
