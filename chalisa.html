@@ -1,230 +1,408 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>श्री हनुमान चालीसा | Hanuman Chalisa Lyrics in Hindi with Meaning</title>
-    <meta name="description" content="श्री हनुमान चालीसा के शुद्ध हिंदी लिरिक्स और अर्थ यहाँ पढ़ें। जानें हनुमान चालीसा पाठ करने की सही विधि और इसके अद्भुत लाभ।">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+
+  <style>
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { overflow-x: hidden; }
+    img, video { max-width: 100%; height: auto; }
     
-    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    /* 🔥 CHALISA PAGE SPECIFIC STYLES */
+    .chalisa-section { padding-top: 20px; }
+    .chalisa-card { text-align: center; border-top: 5px solid #ff7a00; }
+    .chalisa-line {
+      font-size: 1.3rem;
+      line-height: 2;
+      background: #fff7ec;
+      border: 1px solid #f3d2a8;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+      color: #333;
+    }
+    .chalisa-line:hover { background: #ffe8c9; transform: scale(1.01); border-color: #ff7a00; }
+    .copy-hint { display: block; font-size: 0.75rem; color: #ff7a00; margin-top: 5px; font-weight: bold; }
     
-    <link rel="stylesheet" href="style.css">
-    <link rel="canonical" href="https://hanumanbhakti.org/chalisa.html">
+    /* Focus Mode */
+    body.reading-mode .hide-on-focus { display: none !important; }
+    body.reading-mode { background: #fffcf5 !important; }
+    
+    /* Toast */
+    #copyToast {
+      visibility: hidden; min-width: 200px; background-color: #ff7a00; color: #fff;
+      text-align: center; border-radius: 50px; padding: 12px; position: fixed;
+      z-index: 10000; bottom: 100px; left: 50%; transform: translateX(-50%);
+    }
+    #copyToast.show { visibility: visible; animation: fadein 0.5s, fadeout 0.5s 2.5s; }
+    @keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 100px; opacity: 1;} }
+    @keyframes fadeout { from {bottom: 100px; opacity: 1;} to {bottom: 0; opacity: 0;} }
+    /* 🛠️ REVEAL FIX: पेज लोड होते ही कंटेंट दिखेगा */
+.chalisa-card {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+/* अगर तुम चाहते हो कि बाकी चीज़ें एनिमेट हों पर चालीसा तुरंत दिखे */
+.main-content .chalisa-card.reveal {
+  animation: none !important;
+  transition: none !important;
+}
+  </style>
+
+  <title>श्री हनुमान चालीसा | संपूर्ण पाठ - हनुमान भक्ति</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-  <div class="header-wrap">
-    <button class="menu-btn" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
-    <div class="logo"><i class="fas fa-om"></i>Hanuman Bhakti</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="chalisa.html" style="color:var(--orange)">Chalisa</a></li>
-        <li><a href="katha-sagar.html">Katha</a></li>
-        <li><a href="mandir-darshan.html">Mandir</a></li>
-        <li><a href="contact-us.html">Contact</a></li>
-      </ul>
-    </nav>
+  <div class="site-loader" id="siteLoader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-icon"><i class="fas fa-om"></i></div>
+      <p>जय बजरंग बली</p>
+    </div>
   </div>
-</header>
 
-<div class="wrapper">
-    <main class="main">
-        <article>
-            <h1 class="main-title">हनुमान चालीसा हिंदी लिरिक्स और अर्थ</h1>
-            <p class="intro-text">श्री हनुमान चालीसा का पाठ करने से जीवन के सभी संकट दूर होते हैं। यहाँ शुद्ध हिंदी में लिरिक्स और उनका भावार्थ दिया गया है।</p>
+  <header class="site-header hide-on-focus" id="siteHeader">
+    <div class="container header-wrap">
+      <a href="index.html" class="logo">
+        <i class="fas fa-om"></i><span>हनुमान भक्ति</span>
+      </a>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html" class="nav-link">होम</a></li>
+          <li><a href="chalisa.html" class="nav-link active">चालीसा</a></li>
+          <li><button onclick="toggleReadingMode()" class="btn btn-secondary" style="padding: 5px 15px; font-size: 0.9rem;">Focus Mode</button></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="searchToggleBtn"><i class="fas fa-magnifying-glass"></i></button>
+        <button class="icon-btn" id="themeToggleBtn"><i class="fas fa-moon"></i></button>
+      </div>
+      <button class="menu-btn" id="menuToggleBtn"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
 
-            <div class="chalisa-box">
-                <h2 class="chalisa-title">॥ श्री हनुमान चालीसा ॥</h2>
-                
-                <div class="doha">
-                    <p>श्रीगुरु चरन सरोज रज निज मनु मुकुरु सुधारि।</p>
-                    <p>बरनऊं रघुबर बिमल जसु जो दायकु फल चारि॥</p>
-                    <p>बुद्धिहीन तनु जानिके सुमिरौं पवन-कुमार।</p>
-                    <p>बल बुधि बिद्या देहु मोहिं हरहु कलेस बिकार॥</p>
-                </div>
+  <section class="section section-soft chalisa-section">
+    <div class="container content-grid">
+      
+      <main class="main-content">
+        
+        <div class="card ad-card hide-on-focus reveal">
+          <div class="ad-box">Google AdSense Top</div>
+        </div>
+<article class="card chalisa-card">
+  <h1 style="color: var(--primary-color, #ff7a00); text-align: center; margin-bottom: 20px;">॥ श्री हनुमान चालीसा ॥</h1>
+  
+  <div class="chalisa-content">
+    
+    <div class="section-title" style="text-align: center; font-weight: bold; margin: 20px 0;">॥ दोहा ॥</div>
+    
+    <div class="chalisa-line">
+      श्रीगुरु चरन सरोज रज निज मनु मुकुरु सुधारि।<br>
+      बरनऊँ रघुबर बिमल जसु जो दायकु फल चारि॥
+      <span class="copy-hint"><i class="fas fa-copy"></i> टैप करके कॉपी करें</span>
+    </div>
 
-                <div class="chaupai-grid">
-                    <span class="chaupai-line">जय हनुमान ज्ञान गुन सागर। जय कपीस तिहुं लोक उजागर॥१॥</span>
-                    <span class="chaupai-line">राम दूत अतुलित बल धामा। अंजनि पुत्र पवनसुत नामा॥२॥</span>
-                    <span class="chaupai-line">महाबीर बिक्रम बजरंगी। कुमति निवार सुमति के संगी॥३॥</span>
-                    <span class="chaupai-line">कंचन बरन बिराज सुबेसा। कानन कुंडल कुंचित केसा॥४॥</span>
-                    <span class="chaupai-line">हाथ बज्र औ ध्वजा बिराजै। कांधे मूंज जनेऊ साजै॥५॥</span>
-                    <span class="chaupai-line">शंकर सुवन केसरी नंदन। तेज प्रताप महा जग बंदन॥६॥</span>
-                    <span class="chaupai-line">बिद्यावान गुनी अति चातुर। राम काज करिबे को आतुर॥७॥</span>
-                    <span class="chaupai-line">प्रभु चरित्र सुनिबे को रसिया। राम लखन सीता मन बसिया॥८॥</span>
-                    <span class="chaupai-line">सूक्ष्म रूप धरि सियहिं दिखावा। बिकट रूप धरि लंक जरावा॥९॥</span>
-                    <span class="chaupai-line">भीम रूप धरि असुर संहारे। रामचन्द्र के काज संवारे॥१०॥</span>
-                    <span class="chaupai-line">लाय सजीवन लखन जियाये। श्री रघुबीर हरषि उर लाए॥११॥</span>
-                    <span class="chaupai-line">रघुपति कीन्ही बहुत बड़ाई। तुम मम प्रिय भरतहि सम भाई॥१२॥</span>
-                    <span class="chaupai-line">सहस बदन तुम्हरो जस गावैं। अस कहि श्रीपति कंठ लगावैं॥१३॥</span>
-                    <span class="chaupai-line">सनकादिक ब्रह्मादि मुनीसा। नारद सारद सहित अहीसा॥१४॥</span>
-                    <span class="chaupai-line">जम कुबेर दिगपाल जहां ते। कबि कोबिद कहि सके कहां ते॥१५॥</span>
-                    <span class="chaupai-line">तुम उपकार सुग्रीवहिं कीन्हा। राम मिलाय राज पद दीन्हा॥१६॥</span>
-                    <span class="chaupai-line">तुम्हरो मंत्र बिभीषन माना। लंकेस्वर भए सब जग जाना॥१७॥</span>
-                    <span class="chaupai-line">जुग सहस्र जोजन पर भानू। लील्यो ताहि मधुर फल जानू॥१८॥</span>
-                    <span class="chaupai-line">प्रभु मुद्रिका मेलि मुख माहीं। जलधि लांघि गये अचरज नाहीं॥१९॥</span>
-                    <span class="chaupai-line">दुर्गम काज जगत के जेते। सुगम अनुग्रह तुम्हरे तेते॥२०॥</span>
-                    <span class="chaupai-line">राम दुआरे तुम रखवारे। होत न आग्या बिनु पैसारे॥२१॥</span>
-                    <span class="chaupai-line">सब सुख लहै तुम्हारी सरना। तुम रक्षक काहू को डर ना॥२२॥</span>
-                    <span class="chaupai-line">आपन तेज सम्हारो आपै। तीनों लोक हांक तें कांपै॥२३॥</span>
-                    <span class="chaupai-line">भूत पिसाच निकट नहिं आवै। महाबीर जब नाम सुनावै॥२४॥</span>
-                    <span class="chaupai-line">नासै रोग हरै सब पीरा। जपत निरंतर हनुमत बीरा॥२५॥</span>
-                    <span class="chaupai-line">संकट तें हनुमान छुड़ावै। मन क्रम बचन ध्यान जो लावै॥२६॥</span>
-                    <span class="chaupai-line">सब पर राम तपस्वी राजा। तिन के काज सकल तुम साजा॥२७॥</span>
-                    <span class="chaupai-line">और मनोरथ जो कोई लावै। सोइ अमित जीवन फल पावै॥२८॥</span>
-                    <span class="chaupai-line">चारों जुग परताप तुम्हारा। है परसिद्ध जगत उजियारा॥२९॥</span>
-                    <span class="chaupai-line">साधु संत के तुम रखवारे। असुर निकंदन राम दुलारे॥३०॥</span>
-                    <span class="chaupai-line">अष्ट सिद्धि नौ निधि के दाता। अस बर दीन जानकी माता॥३१॥</span>
-                    <span class="chaupai-line">राम रसायन तुम्हरे पासा। सदा रहो रघुपति के दासा॥३२॥</span>
-                    <span class="chaupai-line">तुम्हरे भजन राम को पावै। जनम जनम के दुख बिसरावै॥३३॥</span>
-                    <span class="chaupai-line">अन्त काल रघुबर पुर जाई। जहां जन्म हरि-भक्त कहाई॥३४॥</span>
-                    <span class="chaupai-line">और देवता चित्त न धरई। हनुमत सेइ सर्ब सुख करई॥३५॥</span>
-                    <span class="chaupai-line">संकट कटै मिटै सब पीरा। जो सुमिरै हनुमत बलबीरा॥३६॥</span>
-                    <span class="chaupai-line">जै जै जै हनुमान गोसाईं। कृपा करहु गुरुदेव की नाईं॥३७॥</span>
-                    <span class="chaupai-line">जो सत बार पाठ कर कोई। छूटहि बंदि महा सुख होई॥३८॥</span>
-                    <span class="chaupai-line">जो यह पढ़ै हनुमान चालीसा। होय सिद्धि साखी गौरीसा॥३९॥</span>
-                    <span class="chaupai-line">तुलसीदास सदा हरि चेरा। कीजै नाथ हृदय महं डेरा॥४०॥</span>
-                </div>
+    <div class="chalisa-line">
+      बुद्धिहीन तनु जानिके सुमिरौं पवन-कुमार।<br>
+      बल बुधि बिद्या देहु मोहिं हरहु कलेस बिकार॥
+      <span class="copy-hint"><i class="fas fa-copy"></i> टैप करके कॉपी करें</span>
+    </div>
 
-                <div class="doha">
-                    <p>पवनतनय संकट हरन मंगल मूरति रूप।</p>
-                    <p>राम लखन सीता सहित हृदय बसहु सुर भूप॥</p>
-                </div>
-            </div>
+    <div class="section-title" style="text-align: center; font-weight: bold; margin: 30px 0;">॥ चौपाई ॥</div>
 
-            <div class="info-section">
-                <h3>हनुमान चालीसा पाठ के लाभ</h3>
-                <ul>
-                    <li>भय और तनाव से मुक्ति मिलती है।</li>
-                    <li>आत्मविश्वास (Confidence) में वृद्धि होती है।</li>
-                    <li>नकारात्मक ऊर्जा दूर रहती है।</li>
-                </ul>
-            </div>
+    <div class="chalisa-line">जय हनुमान ज्ञान गुन सागर। जय कपीस तिहुँ लोक उजागर॥</div>
+    <div class="chalisa-line">राम दूत अतुलित बल धामा। अंजनि-पुत्र पवनसुत नामा॥</div>
+    <div class="chalisa-line">महाबीर बिक्रम बजरंगी। कुमति निवार सुमति के संगी॥</div>
+    <div class="chalisa-line">कंचन बरन बिराज सुबेसा। कानन कुंडल कुंचित केसा॥</div>
+    <div class="chalisa-line">हाथ बज्र औ ध्वजा बिराजै। काँधे मूँज जनेऊ साजै॥</div>
+    <div class="chalisa-line">संकर सुवन केसरीनंदन। तेज प्रताप महा जग बंदन॥</div>
+    <div class="chalisa-line">बिद्यावान गुनी अति चातुर। राम काज करिबे को आतुर॥</div>
+    <div class="chalisa-line">प्रभु चरित्र सुनिबे को रसिया। राम लखन सीता मन बसिया॥</div>
+    <div class="chalisa-line">सूक्ष्म रूप धरि सियहिं दिखावा। बिकट रूप धरि लंक जरावा॥</div>
+    <div class="chalisa-line">भीम रूप धरि असुर सँहारे। रामचन्द्र के काज सवाँरे॥</div>
+
+    <div class="ad-box hide-on-focus" style="margin: 20px 0; border: 1px dashed #ccc; padding: 15px; text-align: center; background: #fafafa;">
+        <small>Advertisement</small><br>Google AdSense Content Ad
+    </div>
+
+    <div class="chalisa-line">लाय सजीवन लखन जियाये। श्रीरघुबीर हरषि उर लाये॥</div>
+    <div class="chalisa-line">रघुपति कीन्ही बहुत बड़ाई। तुम मम प्रिय भरतहि सम भाई॥</div>
+    <div class="chalisa-line">सहस बदन तुम्हरो जस गावैं। अस कहि श्रीपति कंठ लगावैं॥</div>
+    <div class="chalisa-line">सनकादिक ब्रह्मादि मुनीसा। नारद सारद सहित अहीसा॥</div>
+    <div class="chalisa-line">जम कुबेर दिगपाल जहाँ ते। कबि कोबिद कहि सके कहाँ ते॥</div>
+    <div class="chalisa-line">तुम उपकार सुग्रीवहिं कीन्हा। राम मिलाय राज पद दीन्हा॥</div>
+    <div class="chalisa-line">तुम्हरो मंत्र बिभीषन माना। लंकेस्वर भए सब जग जाना॥</div>
+    <div class="chalisa-line">जुग सहस्र जोजन पर भानू। लील्यो ताहि मधुर फल जानू॥</div>
+    <div class="chalisa-line">प्रभु मुद्रिका मेलि मुख माहीं। जलधि लाँघि गये अचरज नाहीं॥</div>
+    <div class="chalisa-line">दुर्गम काज जगत के जेते। सुगम अनुग्रह तुम्हरे तेते॥</div>
+
+    <div class="chalisa-line">राम दुआरे तुम रखवारे। होत न आग्या बिनु पैसारे॥</div>
+    <div class="chalisa-line">सब सुख लहै तुम्हारी सरना। तुम रक्षक काहू को डर ना॥</div>
+    <div class="chalisa-line">आपन तेज सम्हारो आपै। तीनों लोक हाँक तें काँपै॥</div>
+    <div class="chalisa-line">भूत पिसाच निकट नहिं आवै। महाबीर जब नाम सुनावै॥</div>
+    <div class="chalisa-line">नासै रोग हरै सब पीरा। जपत निरंतर हनुमत बीरा॥</div>
+    <div class="chalisa-line">संकट तें हनुमान छुड़ावै। मन क्रम बचन ध्यान जो लावै॥</div>
+    <div class="chalisa-line">सब पर राम तपस्वी राजा। तिन के काज सकल तुम साजा॥</div>
+    <div class="chalisa-line">और मनोरथ जो कोई लावै। सोइ अमित जीवन फल पावै॥</div>
+    <div class="chalisa-line">चारों जुग परताप तुम्हारा। है परसिद्ध जगत उजियारा॥</div>
+    <div class="chalisa-line">साधु संत के तुम रखवारे। असुर निकंदन राम दुलारे॥</div>
+
+    <div class="chalisa-line">अष्ट सिद्धि नौ निधि के दाता। अस बर दीन जानकी माता॥</div>
+    <div class="chalisa-line">राम रसायन तुम्हरे पासा। सदा रहो रघुपति के दासा॥</div>
+    <div class="chalisa-line">तुम्हरे भजन राम को पावै। जनम जनम के दुख बिसरावै॥</div>
+    <div class="chalisa-line">अंत काल रघुबर पुर जाई। जहाँ जन्म हरि-भक्त कहाई॥</div>
+    <div class="chalisa-line">और देवता चित्त न धरई। हनुमत सेइ सर्ब सुख करई॥</div>
+    <div class="chalisa-line">संकट कटै मिटै सब पीरा। जो सुमिरै हनुमत बलबीरा॥</div>
+    <div class="chalisa-line">जय जय जय हनुमान गोसाईं। कृपा करहु गुरुदेव की नाईं॥</div>
+    <div class="chalisa-line">जो सत बार पाठ कर कोई। छूटहि बंदि महा सुख होई॥</div>
+    <div class="chalisa-line">जो यह पढ़ै हनुमान चालीसा। होय सिद्धि साखी गौरीसा॥</div>
+    <div class="chalisa-line">तुलसीदास सदा हरि चेरा। कीजै नाथ हृदय मँह डेरा॥</div>
+
+    <div class="section-title" style="text-align: center; font-weight: bold; margin: 30px 0;">॥ दोहा ॥</div>
+
+    <div class="chalisa-line">
+      पवनतनय संकट हरन मंगल मूरति रूप।<br>
+      राम लखन सीता सहित हृदय बसहु सुर भूप॥
+      <span class="copy-hint"><i class="fas fa-copy"></i> टैप करके कॉपी करें</span>
+    </div>
+
+  </div>
+</article>
+
+        <article class="card reveal hide-on-focus">
+          <h2>हनुमान चालीसा का महत्व</h2>
+          <p>हनुमान चालीसा का नियमित पाठ करने से भय, संकट और रोगों का नाश होता है...</p>
         </article>
-    </main>
-  <aside class="sidebar" id="sidebar">
-    <button class="sidebar-close" onclick="closeSidebar()">✕</button>
-    <div class="widget">
-      <h3>भक्ति मार्ग</h3>
-      <ul>
-        <li><a href="chalisa.html"><i class="fas fa-book-open"></i> हनुमान चालीसा</a></li>
-        <li><a href="bajrang-baan.html"><i class="fas fa-bolt"></i> बजरंग बाण</a></li>
-        <li><a href="katha-sagar.html"><i class="fas fa-scroll"></i> पौराणिक कथाएँ</a></li>
-        <li><a href="mandir-darshan.html"><i class="fas fa-gopuram"></i> प्रसिद्ध मंदिर</a></li>
-      </ul>
-    </div>
-    <div class="widget">
-      <h3>Sponsorship</h3>
-      <div class="ad-box">Google AdSense Space</div>
-    </div>
-  </aside>
-</div>
 
-<section class="related-article-section">
-    <div class="related-card">
-        <div class="related-image">
-            <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?q=80&w=500" alt="Hanuman Ji">
-            <div class="overlay-badge">Must Read</div>
+        <div class="card ad-card hide-on-focus reveal">
+          <div class="ad-box">Google AdSense Bottom</div>
         </div>
-        <div class="related-info">
-            <span class="category-tag">Gehri Vyakhya</span>
-            <h3>हनुमान चालीसा का सम्पूर्ण अर्थ (40 चौपाइयां)</h3>
-            <p>क्या आप जानते हैं 'जुग सहस्र जोजन पर भानू' का वैज्ञानिक अर्थ क्या है? पढ़िए चालीसा की हर एक पंक्ति का गहरा भावार्थ।</p>
-            <a href="chalisa-arth.html" class="read-more-btn">
-                अर्थ सहित पढ़िए <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-    </div>
-</section>
+      </main>
 
-<footer class="site-footer">
-  <div class="footer-container">
-    <div class="footer-box">
-      <h3>Hanuman Bhakti</h3>
-      <p>Hanuman Bhakti एक समर्पित सनातन मंच है, जहाँ श्री हनुमान जी की भक्ति, चालीसा, कथा और आध्यात्मिक ज्ञान शुद्ध रूप में प्रस्तुत किया जाता है।</p>
-      <div class="footer-social">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <aside class="sidebar hide-on-focus">
+        <div class="sidebar-widget reveal">
+          <h3>दैनिक प्रेरणा</h3>
+          <blockquote class="quote">“संकट कटै मिटै सब पीरा, जो सुमिरै हनुमत बलबीरा”</blockquote>
+        </div>
+        <div class="sidebar-widget reveal">
+          <h3>विज्ञापन</h3>
+          <div class="ad-box">AdSense Sidebar</div>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+ <footer class="site-footer" id="footerSection">
+    <div class="container footer-container">
+      <div class="footer-box reveal">
+        <h3>हनुमान भक्ति</h3>
+        <p>
+          हनुमान भक्ति एक समर्पित सनातन मंच है, जहाँ श्री हनुमान जी की भक्ति, चालीसा,
+          कथा, मंत्र और आध्यात्मिक ज्ञान श्रद्धा और शुद्धता के साथ प्रस्तुत किया जाता है।
+        </p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-box reveal">
+        <h4>महत्वपूर्ण लिंक</h4>
+        <ul>
+          <li><a href="about-us.html">हमारे बारे में</a></li>
+          <li><a href="contact-us.html">संपर्क करें</a></li>
+          <li><a href="privacy-policy.html">गोपनीयता नीति</a></li>
+          <li><a href="disclaimer.html">अस्वीकरण</a></li>
+          <li><a href="terms.html">नियम एवं शर्तें</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box reveal">
+        <h4>भक्ति सामग्री</h4>
+        <ul>
+          <li><a href="chalisa.html">हनुमान चालीसा</a></li>
+          <li><a href="bajrang-baan.html">बजरंग बाण</a></li>
+          <li><a href="hanuman-ashtak.html">हनुमान अष्टक</a></li>
+          <li><a href="sunderkand.html">सुंदरकांड</a></li>
+          <li><a href="katha.html">पौराणिक कथाएँ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box reveal">
+        <h4>विश्वास का आधार</h4>
+        <p class="trust-text">
+          ✔ भक्ति-आधारित सामग्री<br />
+          ✔ भ्रामक जानकारी से मुक्त<br />
+          ✔ सनातन मूल्यों पर आधारित मंच
+        </p>
       </div>
     </div>
-    <div class="footer-box">
-      <h4>महत्वपूर्ण लिंक</h4>
-      <ul>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="contact-us.html">Contact Us</a></li>
-        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="disclaimer.html">Disclaimer</a></li>
-        <li><a href="terms.html">Terms & Conditions</a></li>
-      </ul>
-    </div>
-    <div class="footer-box">
-      <h4>भक्ति सामग्री</h4>
-      <ul>
-        <li><a href="chalisa.html">Hanuman Chalisa</a></li>
-        <li><a href="bajrang-baan.html">Bajrang Baan</a></li>
-        <li><a href="hanuman-ashtak.html">Hanuman Ashtak</a></li>
-        <li><a href="sunderkand.html">Sunderkand</a></li>
-        <li><a href="katha.html">Pauranik Kathayein</a></li>
-      </ul>
-    </div>
-    <div class="footer-box">
-      <h4>विश्वसनीय जानकारी</h4>
-      <p class="trust-text">✔ 100% Bhakti Content<br>✔ No Misleading Information<br>✔ Sanatan Values Based Platform</p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    © 2025 www.hanumanbhakti.org • Jai Bajrang Bali 🔱 <br>
-    <span>यह वेबसाइट केवल धार्मिक एवं शैक्षिक उद्देश्य हेतु है।</span>
-  </div>
-</footer>
 
-<div class="mobile-bottom-nav">
-    <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>Home</span></a>
-    <a href="chalisa.html" class="nav-item"><i class="fas fa-book-open"></i><span>Chalisa</span></a>
-    <a href="mandir-darshan.html" class="nav-item"><i class="fas fa-gopuram"></i><span>Mandir</span></a>
-    <a href="javascript:void(0);" class="nav-item" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i><span>Menu</span></a>
-</div>
+    <div class="footer-bottom">
+      © 2025 www.hanumanbhakti.org • जय बजरंग बली 🔱<br />
+      <span>यह वेबसाइट केवल धार्मिक एवं शैक्षिक उद्देश्य हेतु है।</span>
+    </div>
+  </footer>
+  
+  <button class="sticky-share" type="button" aria-label="पेज साझा करें">
+    <i class="fas fa-share-nodes" aria-hidden="true"></i>
+  </button>
 
-<div class="mobile-drawer-overlay" id="drawerOverlay" onclick="toggleMobileMenu()"></div>
+  <button class="back-to-top" id="backToTopBtn" type="button" aria-label="ऊपर जाएँ">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
 
-<div class="mobile-drawer" id="mobileDrawer">
+  <nav class="mobile-bottom-nav" aria-label="मोबाइल त्वरित नेविगेशन">
+    <a href="index.html" class="nav-item active" aria-current="page">
+      <i class="fas fa-home" aria-hidden="true"></i>
+      <span>होम</span>
+    </a>
+    <a href="chalisa.html" class="nav-item">
+      <i class="fas fa-book-open" aria-hidden="true"></i>
+      <span>चालीसा</span>
+    </a>
+    <a href="mandir-darshan.html" class="nav-item">
+      <i class="fas fa-gopuram" aria-hidden="true"></i>
+      <span>मंदिर</span>
+    </a>
+    <button type="button" class="nav-item mobile-nav-menu-btn" aria-label="मेनू खोलें" aria-expanded="false">
+      <i class="fas fa-bars" aria-hidden="true"></i>
+      <span>मेनू</span>
+    </button>
+  </nav>
+
+  <div class="mobile-drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="मोबाइल मेनू" aria-hidden="true">
     <div class="drawer-header">
-        <div class="drawer-logo"><i class="fas fa-om"></i><span>Hanuman Bhakti</span></div>
-        <button class="close-btn" onclick="toggleMobileMenu()">&times;</button>
+      <div class="drawer-logo">
+        <i class="fas fa-om" aria-hidden="true"></i>
+        <span>हनुमान भक्ति</span>
+      </div>
+      <button class="close-btn" type="button" id="drawerCloseBtn" aria-label="मेनू बंद करें">
+        &times;
+      </button>
     </div>
+
     <div class="drawer-content">
-        <div class="drawer-section">
-            <h4>मुख्य श्रेणियाँ</h4>
-            <ul class="drawer-links">
-                <li><a href="index.html"><i class="fas fa-home"></i> होम</a></li>
-                <li><a href="chalisa.html"><i class="fas fa-book"></i> हनुमान चालीसा</a></li>
-                <li><a href="sunderkand.html"><i class="fas fa-pray"></i> सुंदरकांड पाठ</a></li>
-                <li><a href="mantra.html"><i class="fas fa-dharmachakra"></i> मंत्र एवं विधि</a></li>
-                <li><a href="katha.html"><i class="fas fa-history"></i> पौराणिक कथाएं</a></li>
-            </ul>
-        </div>
-        <div class="drawer-section">
-            <h4>अन्य जानकारी</h4>
-            <ul class="drawer-links">
-                <li><a href="about-us.html">हमारे बारे में</a></li>
-                <li><a href="contact-us.html">संपर्क करें</a></li>
-                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            </ul>
-        </div>
-        <div class="drawer-social">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
+      <div class="drawer-section">
+        <h4>मुख्य श्रेणियाँ</h4>
+        <ul class="drawer-links">
+          <li><a href="index.html"><i class="fas fa-home" aria-hidden="true"></i> होम</a></li>
+          <li><a href="chalisa.html"><i class="fas fa-book-open" aria-hidden="true"></i> हनुमान चालीसा</a></li>
+          <li><a href="bajrang-baan.html"><i class="fas fa-bolt" aria-hidden="true"></i> बजरंग बाण</a></li>
+          <li><a href="sunderkand.html"><i class="fas fa-fire" aria-hidden="true"></i> सुंदरकांड</a></li>
+          <li><a href="mantra.html"><i class="fas fa-om" aria-hidden="true"></i> मंत्र एवं विधि</a></li>
+          <li><a href="katha.html"><i class="fas fa-scroll" aria-hidden="true"></i> पौराणिक कथाएँ</a></li>
+        </ul>
+      </div>
+
+      <div class="drawer-section">
+        <h4>अन्य जानकारी</h4>
+        <ul class="drawer-links">
+          <li><a href="about-us.html">हमारे बारे में</a></li>
+          <li><a href="contact-us.html">संपर्क करें</a></li>
+          <li><a href="privacy-policy.html">गोपनीयता नीति</a></li>
+        </ul>
+      </div>
+
+      <div class="drawer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+      </div>
     </div>
-</div>
+  </aside>
 
-<script src="script.js"></script>
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+    <div class="search-modal" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
+      <div class="search-top">
+        <h3 id="searchTitle">भक्ति सामग्री खोजें</h3>
+        <button type="button" class="close-btn" id="searchCloseBtn" aria-label="खोज बंद करें">&times;</button>
+      </div>
 
+      <div class="search-box-wrap">
+        <input
+          type="search"
+          id="searchInput"
+          class="search-input"
+          placeholder="जैसे: चालीसा, बजरंग बाण, सुंदरकांड..."
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="search-results" id="searchResults">
+        <a href="chalisa.html" class="search-item">हनुमान चालीसा</a>
+        <a href="bajrang-baan.html" class="search-item">बजरंग बाण</a>
+        <a href="sunderkand.html" class="search-item">सुंदरकांड</a>
+        <a href="hanuman-ashtak.html" class="search-item">हनुमान अष्टक</a>
+        <a href="mantra.html" class="search-item">हनुमान मंत्र</a>
+        <a href="katha.html" class="search-item">पौराणिक कथाएँ</a>
+        <a href="mandir-darshan.html" class="search-item">मंदिर दर्शन</a>
+        <a href="contact-us.html" class="search-item">संपर्क करें</a>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script> 
+  <script>
+    // Copy Feature
+    document.querySelectorAll(".chalisa-line").forEach(line => {
+  line.addEventListener("click", function() {
+    // 1. सबसे पहले "copy-hint" वाले स्पैन को इग्नोर करके सिर्फ मुख्य टेक्स्ट उठाओ
+    // हम एक temporary div बनाकर टेक्स्ट को साफ़ (clean) कर रहे हैं
+    let textToCopy = this.innerText.replace("टैप करके कॉपी करें", "").trim();
+    
+    // 2. Clipboard में कॉपी करने का सबसे सुरक्षित तरीका
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        showToast();
+      }).catch(err => {
+        console.error('Copy करने में दिक्कत आई: ', err);
+      });
+    } else {
+      // Fallback: अगर ब्राउज़र पुराना है तो ये तरीका काम करेगा
+      let textArea = document.createElement("textarea");
+      textArea.value = textToCopy;
+      document.body.appendChild(textArea);
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        showToast();
+      } catch (err) {
+        console.error('Fallback copy failed', err);
+      }
+      document.body.removeChild(textArea);
+    }
+  });
+});
+
+// Toast दिखाने का फंक्शन
+function showToast() {
+  const toast = document.getElementById("copyToast");
+  if (toast) {
+    toast.className = "show";
+    setTimeout(() => { 
+      toast.className = toast.className.replace("show", ""); 
+    }, 2500);
+  }
+}
+
+    
+
+    // Focus Mode
+    function toggleReadingMode() {
+      document.body.classList.toggle("reading-mode");
+    }
+  </script>
 </body>
 </html>
-
