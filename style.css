@@ -1428,3 +1428,30 @@ html, body {
   padding-left: 14px;
   padding-right: 14px;
 }
+
+/* 1. बटन को ज़बरदस्ती ऊपर लाएं */
+.button-wrapper {
+    position: relative !important;
+    z-index: 999 !important;
+    margin-top: 20px;
+}
+
+/* 2. बटन का अपना स्टाइल */
+.btn-primary {
+    display: inline-block !important;
+    background: #ea580c !important; /* गहरा नारंगी */
+    color: #ffffff !important;
+    padding: 15px 30px !important;
+    border-radius: 14px !important;
+    font-weight: 800 !important;
+    text-decoration: none !important;
+    opacity: 1 !important; /* धुंधलापन हटाता है */
+    filter: none !important; /* ब्लर हटाता है */
+    border: 2px solid white !important;
+}
+
+/* 3. ये चेक करें कि कोई parent blur तो नहीं दे रहा */
+.hero, .hero-content, .hero-overlay {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
