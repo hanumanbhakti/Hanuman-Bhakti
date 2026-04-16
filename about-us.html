@@ -14,21 +14,44 @@
 </head>
 <body>
 
-<header>
-  <div class="header-wrap">
-    <button class="menu-btn" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
-    <div class="logo"><i class="fas fa-om"></i>Hanuman Bhakti</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="chalisa.html">Chalisa</a></li>
-        <li><a href="katha-sagar.html">Katha</a></li>
-        <li><a href="mandir-darshan.html">Mandir</a></li>
-        <li><a href="contact-us.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-wrap">
+      <a href="index.html" class="logo" aria-label="हनुमान भक्ति होम">
+        <i class="fas fa-om" aria-hidden="true"></i>
+        <span>हनुमान भक्ति</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="मुख्य नेविगेशन">
+        <ul>
+          <li><a href="#home" class="nav-link active" aria-current="page">होम</a></li>
+          <li><a href="#popular" class="nav-link">लोकप्रिय</a></li>
+          <li><a href="#mainContent" class="nav-link">सामग्री</a></li>
+          <li><a href="#footerSection" class="nav-link">संपर्क</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="searchToggleBtn" type="button" aria-label="खोज खोलें">
+          <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+        </button>
+        <button class="icon-btn" id="themeToggleBtn" type="button" aria-label="डार्क मोड बदलें" aria-pressed="false">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <button
+        class="menu-btn"
+        id="menuToggleBtn"
+        type="button"
+        aria-label="मेनू खोलें"
+        aria-expanded="false"
+        aria-controls="mobileDrawer"
+      >
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
 
 <div class="wrapper">
     <main class="main">
@@ -69,99 +92,189 @@
         </article>
     </main>
 
-    <aside class="sidebar" id="sidebar">
-        <div class="widget">
+      <aside class="sidebar" aria-label="साइडबार">
+        <div class="sidebar-widget reveal">
           <h3>भक्ति मार्ग</h3>
-          <ul class="side-list">
-            <li><a href="chalisa.html"><i class="fas fa-book-open"></i> हनुमान चालीसा</a></li>
-            <li><a href="bajrang-baan.html"><i class="fas fa-bolt"></i> बजरंग बाण</a></li>
-            <li><a href="katha-sagar.html"><i class="fas fa-scroll"></i> पौराणिक कथाएँ</a></li>
-            <li><a href="mandir-darshan.html"><i class="fas fa-gopuram"></i> प्रसिद्ध मंदिर</a></li>
+          <ul>
+            <li><a href="chalisa.html"><i class="fas fa-book-open" aria-hidden="true"></i> हनुमान चालीसा</a></li>
+            <li><a href="bajrang-baan.html"><i class="fas fa-bolt" aria-hidden="true"></i> बजरंग बाण</a></li>
+            <li><a href="sunderkand.html"><i class="fas fa-fire" aria-hidden="true"></i> सुंदरकांड</a></li>
+            <li><a href="katha.html"><i class="fas fa-scroll" aria-hidden="true"></i> पौराणिक कथाएँ</a></li>
+            <li><a href="mandir-darshan.html"><i class="fas fa-gopuram" aria-hidden="true"></i> प्रसिद्ध मंदिर</a></li>
           </ul>
         </div>
-        <div class="widget">
-          <h3>Sponsorship</h3>
-          <div class="ad-box">Google AdSense Space</div>
+
+        <div class="sidebar-widget reveal">
+          <h3>दैनिक प्रेरणा</h3>
+          <blockquote class="quote" id="dailyQuote">
+            “राम काज कीन्हे बिनु मोहि कहाँ विश्राम”
+          </blockquote>
         </div>
-    </aside>
-</div> <footer class="site-footer">
-  <div class="footer-container">
-    <div class="footer-box">
-      <h3>Hanuman Bhakti</h3>
-      <p>Hanuman Bhakti एक समर्पित सनातन मंच है, जहाँ श्री हनुमान जी की भक्ति, चालीसा, कथा और आध्यात्मिक ज्ञान शुद्ध रूप में प्रस्तुत किया जाता है।</p>
-      <div class="footer-social">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+
+        <div class="sidebar-widget reveal" aria-label="प्रायोजन">
+          <h3>प्रायोजन</h3>
+          <div class="ad-box adsense-ready">
+            <span class="ad-label">Advertisement</span>
+            Google AdSense Space
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="site-footer" id="footerSection">
+    <div class="container footer-container">
+      <div class="footer-box reveal">
+        <h3>हनुमान भक्ति</h3>
+        <p>
+          हनुमान भक्ति एक समर्पित सनातन मंच है, जहाँ श्री हनुमान जी की भक्ति, चालीसा,
+          कथा, मंत्र और आध्यात्मिक ज्ञान श्रद्धा और शुद्धता के साथ प्रस्तुत किया जाता है।
+        </p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-box reveal">
+        <h4>महत्वपूर्ण लिंक</h4>
+        <ul>
+          <li><a href="about-us.html">हमारे बारे में</a></li>
+          <li><a href="contact-us.html">संपर्क करें</a></li>
+          <li><a href="privacy-policy.html">गोपनीयता नीति</a></li>
+          <li><a href="disclaimer.html">अस्वीकरण</a></li>
+          <li><a href="terms.html">नियम एवं शर्तें</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box reveal">
+        <h4>भक्ति सामग्री</h4>
+        <ul>
+          <li><a href="chalisa.html">हनुमान चालीसा</a></li>
+          <li><a href="bajrang-baan.html">बजरंग बाण</a></li>
+          <li><a href="hanuman-ashtak.html">हनुमान अष्टक</a></li>
+          <li><a href="sunderkand.html">सुंदरकांड</a></li>
+          <li><a href="katha.html">पौराणिक कथाएँ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box reveal">
+        <h4>विश्वास का आधार</h4>
+        <p class="trust-text">
+          ✔ भक्ति-आधारित सामग्री<br />
+          ✔ भ्रामक जानकारी से मुक्त<br />
+          ✔ सनातन मूल्यों पर आधारित मंच
+        </p>
       </div>
     </div>
-    <div class="footer-box">
-      <h4>महत्वपूर्ण लिंक</h4>
-      <ul>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="contact-us.html">Contact Us</a></li>
-        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="disclaimer.html">Disclaimer</a></li>
-        <li><a href="terms.html">Terms & Conditions</a></li>
-      </ul>
-    </div>
-    <div class="footer-box">
-      <h4>भक्ति सामग्री</h4>
-      <ul>
-        <li><a href="chalisa.html">Hanuman Chalisa</a></li>
-        <li><a href="bajrang-baan.html">Bajrang Baan</a></li>
-        <li><a href="hanuman-ashtak.html">Hanuman Ashtak</a></li>
-        <li><a href="sunderkand.html">Sunderkand</a></li>
-        <li><a href="katha.html">Pauranik Kathayein</a></li>
-      </ul>
-    </div>
-    <div class="footer-box">
-      <h4>विश्वसनीय जानकारी</h4>
-      <p class="trust-text">✔ 100% Bhakti Content<br>✔ No Misleading Information<br>✔ Sanatan Values Based Platform</p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    © 2025 www.hanumanbhakti.org • Jai Bajrang Bali 🔱 <br>
-    <span>यह वेबसाइट केवल धार्मिक एवं शैक्षिक उद्देश्य हेतु है।</span>
-  </div>
-</footer>
 
-<div class="mobile-bottom-nav">
-    <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>Home</span></a>
-    <a href="chalisa.html" class="nav-item"><i class="fas fa-book-open"></i><span>Chalisa</span></a>
-    <a href="mandir-darshan.html" class="nav-item"><i class="fas fa-gopuram"></i><span>Mandir</span></a>
-    <a href="javascript:void(0);" class="nav-item" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i><span>Menu</span></a>
-</div>
+    <div class="footer-bottom">
+      © 2025 www.hanumanbhakti.org • जय बजरंग बली 🔱<br />
+      <span>यह वेबसाइट केवल धार्मिक एवं शैक्षिक उद्देश्य हेतु है।</span>
+    </div>
+  </footer>
 
-<div class="mobile-drawer-overlay" id="drawerOverlay" onclick="toggleMobileMenu()"></div>
+  <button class="sticky-share" type="button" aria-label="पेज साझा करें">
+    <i class="fas fa-share-nodes" aria-hidden="true"></i>
+  </button>
 
-<div class="mobile-drawer" id="mobileDrawer">
+  <button class="back-to-top" id="backToTopBtn" type="button" aria-label="ऊपर जाएँ">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <nav class="mobile-bottom-nav" aria-label="मोबाइल त्वरित नेविगेशन">
+    <a href="index.html" class="nav-item active" aria-current="page">
+      <i class="fas fa-home" aria-hidden="true"></i>
+      <span>होम</span>
+    </a>
+    <a href="chalisa.html" class="nav-item">
+      <i class="fas fa-book-open" aria-hidden="true"></i>
+      <span>चालीसा</span>
+    </a>
+    <a href="mandir-darshan.html" class="nav-item">
+      <i class="fas fa-gopuram" aria-hidden="true"></i>
+      <span>मंदिर</span>
+    </a>
+    <button type="button" class="nav-item mobile-nav-menu-btn" aria-label="मेनू खोलें" aria-expanded="false">
+      <i class="fas fa-bars" aria-hidden="true"></i>
+      <span>मेनू</span>
+    </button>
+  </nav>
+
+  <div class="mobile-drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="मोबाइल मेनू" aria-hidden="true">
     <div class="drawer-header">
-        <div class="drawer-logo"><i class="fas fa-om"></i><span>Hanuman Bhakti</span></div>
-        <button class="close-btn" onclick="toggleMobileMenu()">&times;</button>
+      <div class="drawer-logo">
+        <i class="fas fa-om" aria-hidden="true"></i>
+        <span>हनुमान भक्ति</span>
+      </div>
+      <button class="close-btn" type="button" id="drawerCloseBtn" aria-label="मेनू बंद करें">
+        &times;
+      </button>
     </div>
-    <div class="drawer-content">
-        <div class="drawer-section">
-            <h4>मुख्य श्रेणियाँ</h4>
-            <ul class="drawer-links">
-                <li><a href="index.html"><i class="fas fa-home"></i> होम</a></li>
-                <li><a href="chalisa.html"><i class="fas fa-book"></i> हनुमान चालीसा</a></li>
-                <li><a href="sunderkand.html"><i class="fas fa-pray"></i> सुंदरकांड पाठ</a></li>
-                <li><a href="mantra.html"><i class="fas fa-dharmachakra"></i> मंत्र एवं विधि</a></li>
-                <li><a href="katha.html"><i class="fas fa-history"></i> पौराणिक कथाएं</a></li>
-            </ul>
-        </div>
-        <div class="drawer-section">
-            <h4>अन्य जानकारी</h4>
-            <ul class="drawer-links">
-                <li><a href="about-us.html">हमारे बारे में</a></li>
-                <li><a href="contact-us.html">संपर्क करें</a></li>
-                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
 
-<script src="script.js"></script>
+    <div class="drawer-content">
+      <div class="drawer-section">
+        <h4>मुख्य श्रेणियाँ</h4>
+        <ul class="drawer-links">
+          <li><a href="index.html"><i class="fas fa-home" aria-hidden="true"></i> होम</a></li>
+          <li><a href="chalisa.html"><i class="fas fa-book-open" aria-hidden="true"></i> हनुमान चालीसा</a></li>
+          <li><a href="bajrang-baan.html"><i class="fas fa-bolt" aria-hidden="true"></i> बजरंग बाण</a></li>
+          <li><a href="sunderkand.html"><i class="fas fa-fire" aria-hidden="true"></i> सुंदरकांड</a></li>
+          <li><a href="mantra.html"><i class="fas fa-om" aria-hidden="true"></i> मंत्र एवं विधि</a></li>
+          <li><a href="katha.html"><i class="fas fa-scroll" aria-hidden="true"></i> पौराणिक कथाएँ</a></li>
+        </ul>
+      </div>
+
+      <div class="drawer-section">
+        <h4>अन्य जानकारी</h4>
+        <ul class="drawer-links">
+          <li><a href="about-us.html">हमारे बारे में</a></li>
+          <li><a href="contact-us.html">संपर्क करें</a></li>
+          <li><a href="privacy-policy.html">गोपनीयता नीति</a></li>
+        </ul>
+      </div>
+
+      <div class="drawer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+    <div class="search-modal" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
+      <div class="search-top">
+        <h3 id="searchTitle">भक्ति सामग्री खोजें</h3>
+        <button type="button" class="close-btn" id="searchCloseBtn" aria-label="खोज बंद करें">&times;</button>
+      </div>
+
+      <div class="search-box-wrap">
+        <input
+          type="search"
+          id="searchInput"
+          class="search-input"
+          placeholder="जैसे: चालीसा, बजरंग बाण, सुंदरकांड..."
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="search-results" id="searchResults">
+        <a href="chalisa.html" class="search-item">हनुमान चालीसा</a>
+        <a href="bajrang-baan.html" class="search-item">बजरंग बाण</a>
+        <a href="sunderkand.html" class="search-item">सुंदरकांड</a>
+        <a href="hanuman-ashtak.html" class="search-item">हनुमान अष्टक</a>
+        <a href="mantra.html" class="search-item">हनुमान मंत्र</a>
+        <a href="katha.html" class="search-item">पौराणिक कथाएँ</a>
+        <a href="mandir-darshan.html" class="search-item">मंदिर दर्शन</a>
+        <a href="contact-us.html" class="search-item">संपर्क करें</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
