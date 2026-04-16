@@ -151,10 +151,92 @@ margin:20px 0;
 border:1px dashed #ff9800;
 }
 
+.premium-loader{
+  position:fixed;
+  inset:0;
+  background:#0f0f0f;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  transition:opacity 0.8s ease, visibility 0.8s;
+}
+
+/* CENTER */
+.loader-content{
+  text-align:center;
+  color:#fff;
+  font-family:'Mukta';
+}
+
+/* 🪔 SOFT GLOW (premium effect) */
+.diya-glow{
+  width:120px;
+  height:120px;
+  margin:auto;
+  background:radial-gradient(circle, rgba(255,140,0,0.6), transparent 70%);
+  filter:blur(20px);
+  animation:glowPulse 2.5s infinite;
+}
+
+/* ॐ */
+.om-symbol{
+  font-size:50px;
+  margin-top:-70px;
+  color:#ff7a00;
+  letter-spacing:2px;
+  animation:fadeUp 1.8s ease infinite;
+}
+
+/* TEXT */
+.loader-text{
+  margin-top:12px;
+  font-size:16px;
+  color:#ccc;
+  letter-spacing:2px;
+  animation:fade 2s infinite;
+}
+
+/* ANIMATIONS */
+@keyframes glowPulse{
+  0%{opacity:0.5; transform:scale(1);}
+  50%{opacity:1; transform:scale(1.3);}
+  100%{opacity:0.5;}
+}
+
+@keyframes fadeUp{
+  0%{opacity:0; transform:translateY(10px);}
+  50%{opacity:1; transform:translateY(0);}
+  100%{opacity:0;}
+}
+
+@keyframes fade{
+  0%,100%{opacity:0.4;}
+  50%{opacity:1;}
+}
+
+/* HIDE */
+.premium-loader.hide{
+  opacity:0;
+  visibility:hidden;
+}
+
 </style>
 </head>
 
 <body>
+
+<div class="premium-loader" id="premiumLoader">
+  <div class="loader-content">
+
+    <div class="diya-glow"></div>
+
+    <div class="om-symbol">ॐ</div>
+
+    <p class="loader-text">जय बजरंग बली</p>
+
+  </div>
+</div>
 
  <header class="site-header" id="siteHeader">
     <div class="container header-wrap">
