@@ -451,15 +451,3 @@ document.addEventListener("touchend", e => {
   }
   lastTap = now;
 }, { passive: false });
-
-window.addEventListener("load", function(){
-
-  const loader = document.getElementById("premiumLoader");
-
-  // minimum display time (premium feel)
-  setTimeout(()=>{
-    loader.classList.add("hide");
-  }, 1600);
-
-});
-
