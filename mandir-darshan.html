@@ -156,13 +156,43 @@ border:1px dashed #ff9800;
 
 <body>
 
-<header class="site-header">
-<div class="container header-wrap">
-<a href="index.html" class="logo">
-<i class="fas fa-om"></i> हनुमान भक्ति
-</a>
-</div>
-</header>
+ <header class="site-header" id="siteHeader">
+    <div class="container header-wrap">
+      <a href="index.html" class="logo" aria-label="हनुमान भक्ति होम">
+        <i class="fas fa-om" aria-hidden="true"></i>
+        <span>हनुमान भक्ति</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="मुख्य नेविगेशन">
+        <ul>
+          <li><a href="#home" class="nav-link active" aria-current="page">होम</a></li>
+          <li><a href="#popular" class="nav-link">लोकप्रिय</a></li>
+          <li><a href="#mainContent" class="nav-link">सामग्री</a></li>
+          <li><a href="#footerSection" class="nav-link">संपर्क</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="searchToggleBtn" type="button" aria-label="खोज खोलें">
+          <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+        </button>
+        <button class="icon-btn" id="themeToggleBtn" type="button" aria-label="डार्क मोड बदलें" aria-pressed="false">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <button
+        class="menu-btn"
+        id="menuToggleBtn"
+        type="button"
+        aria-label="मेनू खोलें"
+        aria-expanded="false"
+        aria-controls="mobileDrawer"
+      >
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
 
 <section class="hero-custom">
 <h1>🔱 प्रसिद्ध हनुमान मंदिर</h1>
@@ -406,24 +436,6 @@ border:1px dashed #ff9800;
 🙏 क्या आपने आज हनुमान चालीसा पढ़ी?
 <br><br>
 <a href="chalisa.html">👉 अभी पढ़ें</a>
-</div>
-
-<!-- CARD -->
-<div class="mandir-card">
-<a href="mandir-ayodhya.html">
-<div class="mandir-img">
-<img loading="lazy" src="assets/images/hanuman-garhi.jpg" alt="हनुमान गढ़ी अयोध्या">
-<div class="overlay"><p>राम दर्शन से पहले यहाँ आना जरूरी माना जाता है</p></div>
-</div>
-<div class="mandir-content">
-<h3>हनुमान गढ़ी</h3>
-<span>अयोध्या</span>
-</div>
-</a>
-
-<a href="https://maps.google.com/?q=Hanuman+Garhi" target="_blank" class="maps-btn">
-📍 अभी रास्ता देखें
-</a>
 </div>
 
 </div>
