@@ -382,6 +382,12 @@ audio:focus-visible {
   gap: 14px;
 }
 
+.hero {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+
 /* Buttons */
 .btn {
   display: inline-flex;
