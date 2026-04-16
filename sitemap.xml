@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- HOMEPAGE -->
   <url>
     <loc>https://hanumanbhakti.org/</loc>
     <priority>1.00</priority>
   </url>
 
-  <!-- MAIN HANUMAN CHALISA (IMAGES) -->
+  <!-- MAIN AUTHORITY PAGE -->
   <url>
     <loc>https://hanumanbhakti.org/hanuman-chalisa-hindi-images.html</loc>
-    <priority>0.95</priority>
+    <priority>0.90</priority>
   </url>
 
-  <!-- OLD / SIMPLE CHALISA -->
+  <!-- CORE CONTENT -->
   <url>
     <loc>https://hanumanbhakti.org/chalisa.html</loc>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://hanumanbhakti.org/chalisa-arth.html</loc>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
     <loc>https://hanumanbhakti.org/sunderkand.html</loc>
-    <priority>0.85</priority>
+    <priority>0.80</priority>
   </url>
 
   <url>
@@ -50,19 +46,21 @@
 
   <url>
     <loc>https://hanumanbhakti.org/mandir-darshan.html</loc>
-    <priority>0.90</priority>
+    <priority>0.80</priority>
   </url>
 
+  <!-- SECONDARY CONTENT -->
   <url>
     <loc>https://hanumanbhakti.org/mandir-ayodhya.html</loc>
-    <priority>0.80</priority>
+    <priority>0.70</priority>
   </url>
 
   <url>
     <loc>https://hanumanbhakti.org/hanuman-ji-ke-baare.html</loc>
-    <priority>0.75</priority>
+    <priority>0.70</priority>
   </url>
 
+  <!-- INFO / LEGAL -->
   <url>
     <loc>https://hanumanbhakti.org/about-us.html</loc>
     <priority>0.60</priority>
