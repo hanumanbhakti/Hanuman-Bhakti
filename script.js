@@ -435,19 +435,3 @@ progressBar.style.zIndex = "9999";
 progressBar.style.width = "0%";
 document.body.appendChild(progressBar);
 
-window.addEventListener("scroll", () => {
-  const scroll = window.scrollY;
-  const height = document.body.scrollHeight - window.innerHeight;
-  const progress = (scroll / height) * 100;
-  progressBar.style.width = progress + "%";
-});
-/* 🔥 DOUBLE TAP FIX */
-let lastTap = 0;
-
-document.addEventListener("touchend", e => {
-  const now = new Date().getTime();
-  if (now - lastTap < 300) {
-    e.preventDefault();
-  }
-  lastTap = now;
-}, { passive: false });
