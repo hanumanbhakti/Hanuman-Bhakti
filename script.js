@@ -451,3 +451,9 @@ document.addEventListener("touchend", e => {
   }
   lastTap = now;
 }, { passive: false });
+
+
+const yearEl = document.getElementById("year");
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
