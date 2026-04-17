@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
 
 <!-- Better Mobile Rendering -->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
 <!-- Smooth font rendering -->
 <meta name="color-scheme" content="light dark" />
@@ -73,7 +73,10 @@
         "name": "Hanuman Bhakti",
         "url": "https://hanumanbhakti.org/",
         "logo": "https://hanumanbhakti.org/assets/images/hanuman-bg.png",
-        "sameAs": []
+        "sameAs": [
+  "https://instagram.com/yourpage",
+  "https://youtube.com/yourchannel"
+]
       }
     ]
   }
@@ -197,16 +200,20 @@
     </div>
   </section>
 
-<div class="hero-content">
-    <h2>श्री हनुमान चालीसा: भक्ति और अर्थ</h2>
-    <p>संकट मोचन हनुमान जी के गुणों को समझें...</p>
-    
-    <div class="button-wrapper">
-        <a href="/hanuman-chalisa-hindi-images.html" class="btn btn-primary" title="हनुमान चालीसा अर्थ और चित्र सहित पढ़ें">
-  चालीसा अर्थ (चित्र सहित)
-</a>
+<section class="section">
+  <div class="container">
+    <div class="hero-content">
+      <h2>श्री हनुमान चालीसा: भक्ति और अर्थ</h2>
+      <p>संकट मोचन हनुमान जी के गुणों को समझें...</p>
+      
+      <div class="button-wrapper">
+        <a href="/hanuman-chalisa-hindi-images.html" class="btn btn-primary">
+          चालीसा अर्थ (चित्र सहित)
+        </a>
+      </div>
     </div>
-</div>
+  </div>
+</section>
 
   <section class="section section-soft">
     <div class="container content-grid">
@@ -331,7 +338,7 @@
             <a href="hanuman-chalisa-labh.html">
                 <img 
                     src="assets/images/hanuman-chalisa-labh.webp" 
-                    alt="हनुमान चालीसा के चमत्कारी लाभ"
+                    alt="हनुमान चालीसा के चमत्कारी लाभ और फायदे"
                     title="हनुमान चालीसा के फायदे"
                     loading="lazy"
                     width="300"
@@ -425,7 +432,7 @@
     </div>
 
     <div class="footer-bottom">
-      © 2025 www.hanumanbhakti.org • जय बजरंग बली 🔱<br />
+   © <span id="year"></span> www.hanumanbhakti.org • जय बजरंग बली 🔱<br />
       <span>यह वेबसाइट केवल धार्मिक एवं शैक्षिक उद्देश्य हेतु है।</span>
     </div>
   </footer>
@@ -530,6 +537,6 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+ <script src="script.js" defer></script>
 </body>
 </html>
