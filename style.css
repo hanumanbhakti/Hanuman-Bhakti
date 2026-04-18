@@ -1526,3 +1526,25 @@ html, body {
         height: 150px;
     }
 }
+
+/* ===== FIX START ===== */
+
+/* Loader block remove */
+.site-loader {
+  display: none;
+}
+
+/* Content always visible */
+.reveal {
+  opacity: 1;
+  transform: none;
+  transition: all 0.6s ease;
+}
+
+/* Animation (जब JS चले) */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== FIX END ===== */
