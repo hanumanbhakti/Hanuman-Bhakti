@@ -215,14 +215,26 @@ document.addEventListener("DOMContentLoaded", () => {
     revealElements.forEach(el => observer.observe(el));
   }
 
-  // ===== Loader (smooth hidden class only) =====
   function initLoader() {
-    window.addEventListener("load", () => {
-      if (siteLoader) {
-        setTimeout(() => siteLoader.classList.add("hidden"), 500);
-      }
-    });
+  // window.load ka wait karne ke bajaye jaldi hide karein
+  const hideLoader = () => {
+    if (siteLoader) {
+      siteLoader.classList.add("hidden");
+      setTimeout(() => {
+        siteLoader.style.display = "none";
+      }, 500);
+    }
+  };
+
+  if (document.readyState === 'complete') {
+    hideLoader();
+  } else {
+    window.addEventListener("load", hideLoader);
   }
+  
+  // Safety timeout: 3 second baad loader apne aap hat jaye
+  setTimeout(hideLoader, 3000); 
+}
 
   // ===== Theme =====
   function initTheme() {
