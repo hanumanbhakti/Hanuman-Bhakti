@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <title>हनुमान जी की आरती | हनुमान भक्ति</title>
+  <meta name="description" content="श्री हनुमान जी की पूर्ण आरती हिंदी में - आरती कीजै हनुमान लला की | हनुमान भक्ति" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;700;800&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+  <style>
+    /* ===== ROOT VARS (same palette as mandir page) ===== */
+    :root {
+      --saffron: #FF6B00;
+      --saffron-dark: #cc5500;
+      --saffron-light: #fff3e8;
+      --gold: #FFB300;
+      --maroon: #7B1818;
+      --deep: #4a0d00;
+      --text: #1a1a1a;
+      --text-muted: #666;
+      --bg: #fdf6ee;
+      --card-bg: #fff;
+      --header-bg: rgba(255,255,255,0.97);
+      --border: #e8d5c0;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08);
+      --radius: 14px;
+      --t: 0.3s cubic-bezier(.4,0,.2,1);
+    }
+    [data-theme="dark"] {
+      --bg: #1a100a;
+      --card-bg: #2a1a10;
+      --text: #f5e6d3;
+      --text-muted: #bba;
+      --header-bg: rgba(26,16,10,0.97);
+      --border: #4a2e1e;
+      --shadow: 0 4px 20px rgba(0,0,0,0.3);
+      --saffron-light: #2a1500;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Mukta', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background var(--t), color var(--t);
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    /* ===== LOADER ===== */
+    #siteLoader {
+      position: fixed; inset: 0; z-index: 9999;
+      background: var(--maroon);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 12px;
+      transition: opacity 0.5s, visibility 0.5s;
+    }
+    #siteLoader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .loader-icon { font-size: 3rem; color: var(--gold); animation: spin 2s linear infinite; }
+    #siteLoader p { color: #fff; font-size: 1.2rem; font-weight: 700; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--header-bg);
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid var(--border);
+      box-shadow: 0 2px 12px rgba(255,107,0,0.08);
+    }
+    .header-wrap {
+      display: flex; align-items: center; gap: 16px;
+      padding: 12px 20px; max-width: 1200px; margin: 0 auto;
+    }
+    .logo {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 1.3rem; font-weight: 800; color: var(--saffron);
+      white-space: nowrap;
+    }
+    .desktop-nav { display: none; margin-left: auto; }
+    .desktop-nav ul { display: flex; gap: 8px; }
+    .desktop-nav a {
+      padding: 6px 14px; border-radius: 20px;
+      font-weight: 600; font-size: 0.92rem;
+      color: var(--text-muted); transition: all var(--t);
+    }
+    .desktop-nav a:hover, .desktop-nav a.active { background: var(--saffron); color: #fff; }
+    .header-actions { display: flex; gap: 6px; margin-left: auto; }
+    .icon-btn {
+      width: 38px; height: 38px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--saffron-light); color: var(--saffron);
+      font-size: 1rem; transition: all var(--t);
+    }
+    .icon-btn:hover { background: var(--saffron); color: #fff; transform: scale(1.1); }
+    .menu-btn {
+      width: 38px; height: 38px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--saffron); color: #fff; font-size: 1rem;
+    }
+    @media (min-width: 768px) {
+      .desktop-nav { display: block; }
+      .menu-btn { display: none; }
+      .header-actions { margin-left: 0; }
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 44vh;
+      background: linear-gradient(135deg, var(--deep) 0%, var(--maroon) 45%, #d4500a 100%);
+      position: relative; display: flex; align-items: center; justify-content: center;
+      text-align: center; overflow: hidden;
+    }
+    /* Diya flame animation */
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 80%, rgba(255,179,0,0.25) 0%, transparent 65%);
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+    @keyframes glow { from { opacity: 0.4; } to { opacity: 1; } }
+    .hero-om {
+      position: absolute; font-size: 18rem; opacity: 0.04;
+      top: 50%; left: 50%; transform: translate(-50%,-50%);
+      color: #fff; pointer-events: none; user-select: none;
+      animation: slowSpin 30s linear infinite;
+    }
+    @keyframes slowSpin { to { transform: translate(-50%,-50%) rotate(360deg); } }
+    .hero-content { position: relative; z-index: 1; padding: 40px 20px; }
+    .hero-diya { font-size: 3.5rem; animation: diwaFlicker 1.5s ease-in-out infinite alternate; }
+    @keyframes diwaFlicker { 0%{transform:scale(1) rotate(-3deg)} 100%{transform:scale(1.08) rotate(3deg)} }
+    .hero-content h1 {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: clamp(1.8rem, 5.5vw, 3rem);
+      color: #fff; text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+      margin: 12px 0 8px; line-height: 1.3;
+    }
+    .hero-content p { color: rgba(255,255,255,0.82); font-size: 1rem; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,179,0,0.2); border: 1px solid rgba(255,179,0,0.5);
+      color: var(--gold); padding: 5px 14px; border-radius: 20px;
+      font-size: 0.82rem; font-weight: 700; margin-bottom: 10px;
+    }
+
+    /* ===== AARTI CONTROLS ===== */
+    .aarti-controls {
+      display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+      padding: 20px; background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 64px; z-index: 90;
+    }
+    .ctrl-btn {
+      display: flex; align-items: center; gap: 7px;
+      padding: 9px 18px; border-radius: 24px;
+      font-family: 'Mukta', sans-serif; font-size: 0.88rem; font-weight: 700;
+      transition: all var(--t); border: 2px solid var(--border);
+      background: var(--card-bg); color: var(--text);
+    }
+    .ctrl-btn:hover { border-color: var(--saffron); color: var(--saffron); }
+    .ctrl-btn.primary { background: var(--saffron); color: #fff; border-color: var(--saffron); }
+    .ctrl-btn.primary:hover { background: var(--saffron-dark); }
+    .font-size-wrap { display: flex; align-items: center; gap: 6px; }
+    .font-size-wrap span { font-size: 0.82rem; color: var(--text-muted); font-weight: 600; }
+
+    /* ===== AARTI SECTION ===== */
+    .aarti-section {
+      max-width: 760px; margin: 0 auto; padding: 40px 20px 20px;
+    }
+    .aarti-card {
+      background: var(--card-bg);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .aarti-card-header {
+      background: linear-gradient(135deg, var(--maroon), var(--saffron));
+      padding: 22px 28px;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .aarti-card-header .icon { font-size: 2.2rem; }
+    .aarti-card-header h2 {
+      font-size: 1.3rem; font-weight: 800; color: #fff;
+    }
+    .aarti-card-header p { color: rgba(255,255,255,0.8); font-size: 0.85rem; margin-top: 2px; }
+    .aarti-body { padding: 28px; }
+
+    /* ===== AARTI TEXT ===== */
+    .aarti-stanza {
+      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px dashed var(--border);
+      opacity: 0; transform: translateY(16px);
+      animation: fadeUp 0.5s ease forwards;
+    }
+    .aarti-stanza:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .aarti-stanza .stanza-label {
+      font-size: 0.75rem; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 2px; color: var(--saffron); margin-bottom: 10px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .aarti-stanza .stanza-label::after {
+      content: ''; flex: 1; height: 1px; background: var(--saffron-light);
+    }
+    .aarti-lines {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: 1.15rem; /* controlled by JS */
+      line-height: 2;
+      color: var(--text);
+    }
+    .aarti-lines .line { display: block; }
+    .aarti-lines .refrain {
+      color: var(--saffron-dark); font-weight: 600;
+    }
+
+    /* ===== HIGHLIGHTED LINE ===== */
+    .aarti-lines .line { 
+      padding: 2px 0; border-radius: 4px; transition: background 0.2s;
+    }
+    .aarti-lines .line:hover { background: var(--saffron-light); padding: 2px 8px; }
+
+    /* ===== DIVIDER ===== */
+    .om-divider {
+      text-align: center; padding: 10px 0; color: var(--gold);
+      font-size: 1.2rem; letter-spacing: 4px; opacity: 0.6;
+    }
+
+    /* ===== ARTICLE SECTION ===== */
+    .articles-section {
+      max-width: 1200px; margin: 0 auto; padding: 50px 20px;
+    }
+    .section-heading { text-align: center; margin-bottom: 36px; }
+    .section-heading h2 {
+      font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 800;
+      color: var(--saffron);
+      display: inline-flex; align-items: center; gap: 10px;
+    }
+    .section-heading h2::before, .section-heading h2::after {
+      content: ''; display: block; width: 40px; height: 2px; background: var(--gold);
+    }
+    .section-heading p { color: var(--text-muted); margin-top: 8px; font-size: 0.95rem; }
+
+    /* ===== ARTICLE CARDS ===== */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 26px;
+    }
+    .article-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform var(--t), box-shadow var(--t);
+      display: flex; flex-direction: column;
+    }
+    .article-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(255,107,0,0.16);
+    }
+    /* POSTER — decorative gradient instead of real image */
+    .article-poster {
+      height: 210px; position: relative; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .poster-1 { background: linear-gradient(135deg, #7B1818 0%, #FF6B00 60%, #FFB300 100%); }
+    .poster-2 { background: linear-gradient(135deg, #1a3a4a 0%, #0d6986 55%, #00c6a7 100%); }
+    .poster-3 { background: linear-gradient(135deg, #2d1b4e 0%, #7b2d8b 55%, #d4407a 100%); }
+    .poster-pattern {
+      position: absolute; inset: 0; opacity: 0.08;
+      background-image: repeating-linear-gradient(
+        45deg, #fff 0px, #fff 1px, transparent 0px, transparent 50%
+      );
+      background-size: 20px 20px;
+    }
+    .poster-emoji { font-size: 4.5rem; position: relative; z-index: 1; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3)); }
+    .poster-label {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.6));
+      padding: 30px 16px 14px;
+      z-index: 2;
+    }
+    .poster-tag {
+      display: inline-block; background: rgba(255,255,255,0.2);
+      color: #fff; font-size: 0.72rem; font-weight: 800;
+      padding: 3px 10px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.3);
+      backdrop-filter: blur(4px); text-transform: uppercase; letter-spacing: 1px;
+    }
+    .article-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+    .article-body h3 {
+      font-size: 1.08rem; font-weight: 800; color: var(--text);
+      margin-bottom: 8px; line-height: 1.4;
+    }
+    .article-body p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; flex: 1; }
+    .article-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 20px 18px;
+    }
+    .article-meta { font-size: 0.78rem; color: var(--text-muted); }
+    .read-btn {
+      display: flex; align-items: center; gap: 6px;
+      padding: 8px 16px; border-radius: 20px;
+      background: var(--saffron); color: #fff;
+      font-family: 'Mukta', sans-serif; font-weight: 700; font-size: 0.85rem;
+      transition: all var(--t);
+    }
+    .read-btn:hover { background: var(--saffron-dark); transform: translateX(3px); }
+
+    /* ===== COPY TOAST ===== */
+    .toast {
+      position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%) translateY(20px);
+      background: #222; color: #fff; padding: 10px 22px; border-radius: 24px;
+      font-size: 0.88rem; font-weight: 600; z-index: 1000;
+      opacity: 0; transition: all 0.3s; pointer-events: none; white-space: nowrap;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* ===== FOOTER ===== */
+    .site-footer { background: #1a0a00; color: #ccc; margin-top: 60px; }
+    .footer-container {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px; padding: 50px 20px 30px;
+    }
+    .footer-box h3, .footer-box h4 { color: var(--gold); margin-bottom: 14px; font-size: 1rem; }
+    .footer-box p { font-size: 0.88rem; line-height: 1.7; color: #aaa; }
+    .footer-box ul { display: flex; flex-direction: column; gap: 8px; }
+    .footer-box ul a { font-size: 0.88rem; color: #aaa; transition: color var(--t); }
+    .footer-box ul a:hover { color: var(--saffron); }
+    .footer-social { display: flex; gap: 12px; margin-top: 14px; }
+    .footer-social a {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,255,255,0.1); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      transition: background var(--t);
+    }
+    .footer-social a:hover { background: var(--saffron); }
+    .footer-bottom {
+      text-align: center; padding: 18px 20px;
+      border-top: 1px solid #333; color: #888; font-size: 0.82rem; line-height: 1.8;
+    }
+
+    /* ===== BACK TO TOP ===== */
+    .back-to-top {
+      position: fixed; bottom: 90px; right: 20px; z-index: 200;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--saffron); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(255,107,0,0.4);
+      opacity: 0; visibility: hidden; transition: all var(--t);
+    }
+    .back-to-top.visible { opacity: 1; visibility: visible; }
+
+    /* ===== MOBILE BOTTOM NAV ===== */
+    .mobile-bottom-nav {
+      display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+      background: var(--card-bg);
+      border-top: 1px solid var(--border);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    .mobile-bottom-nav .nav-item {
+      flex: 1; display: flex; flex-direction: column; align-items: center;
+      padding: 8px 4px; color: var(--text-muted);
+      font-size: 0.72rem; font-weight: 600; gap: 3px; transition: color var(--t);
+    }
+    .mobile-bottom-nav .nav-item i { font-size: 1.2rem; }
+    .mobile-bottom-nav .nav-item.active, .mobile-bottom-nav .nav-item:hover { color: var(--saffron); }
+    @media (min-width: 768px) { .mobile-bottom-nav { display: none; } }
+
+    /* ===== DRAWER ===== */
+    .drawer-overlay {
+      position: fixed; inset: 0; z-index: 300;
+      background: rgba(0,0,0,0.5);
+      opacity: 0; visibility: hidden; transition: all 0.3s;
+    }
+    .drawer-overlay.open { opacity: 1; visibility: visible; }
+    .mobile-drawer {
+      position: fixed; top: 0; left: 0; bottom: 0; z-index: 400;
+      width: min(80vw, 300px); background: var(--card-bg);
+      transform: translateX(-100%); transition: transform 0.35s cubic-bezier(.4,0,.2,1);
+      overflow-y: auto; display: flex; flex-direction: column;
+    }
+    .mobile-drawer.open { transform: translateX(0); }
+    .drawer-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 16px; background: var(--saffron); color: #fff;
+    }
+    .drawer-logo { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 1.1rem; }
+    .drawer-header .close-btn { font-size: 1.6rem; color: #fff; }
+    .drawer-section { padding: 18px 16px; border-bottom: 1px solid var(--border); }
+    .drawer-section h4 {
+      font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px;
+      color: var(--text-muted); margin-bottom: 12px;
+    }
+    .drawer-links { display: flex; flex-direction: column; gap: 2px; }
+    .drawer-links a {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 12px; border-radius: 8px;
+      font-size: 0.95rem; font-weight: 600; color: var(--text);
+      transition: background var(--t);
+    }
+    .drawer-links a i { color: var(--saffron); width: 18px; text-align: center; }
+    .drawer-links a:hover { background: var(--saffron-light); }
+    .drawer-social { display: flex; gap: 12px; padding: 20px 16px; }
+    .drawer-social a {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--saffron-light); color: var(--saffron);
+      display: flex; align-items: center; justify-content: center;
+      transition: all var(--t);
+    }
+    .drawer-social a:hover { background: var(--saffron); color: #fff; }
+
+    /* ===== SEARCH ===== */
+    .search-overlay {
+      position: fixed; inset: 0; z-index: 500;
+      background: rgba(0,0,0,0.6); backdrop-filter: blur(6px);
+      display: flex; align-items: flex-start; justify-content: center;
+      padding-top: 80px;
+      opacity: 0; visibility: hidden; transition: all 0.3s;
+    }
+    .search-overlay.open { opacity: 1; visibility: visible; }
+    .search-modal {
+      background: var(--card-bg); border-radius: 16px;
+      width: min(560px, 90vw); padding: 24px;
+    }
+    .search-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .search-top h3 { font-size: 1.05rem; font-weight: 800; }
+    .search-top .close-btn { font-size: 1.5rem; color: var(--text-muted); }
+    .search-input {
+      width: 100%; padding: 12px 16px; border-radius: 10px;
+      border: 2px solid var(--border); background: var(--bg);
+      font-family: 'Mukta', sans-serif; font-size: 1rem; color: var(--text);
+      outline: none; transition: border-color var(--t);
+    }
+    .search-input:focus { border-color: var(--saffron); }
+    .search-results { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .search-item {
+      padding: 7px 14px; background: var(--saffron-light);
+      color: var(--saffron); border-radius: 20px; font-size: 0.88rem; font-weight: 700;
+      transition: all var(--t);
+    }
+    .search-item:hover { background: var(--saffron); color: #fff; }
+
+    /* ===== BODY PADDING ===== */
+    @media (max-width: 767px) { body { padding-bottom: 70px; } }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-in { animation: fadeIn 0.6s ease both; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* staggered stanza delays */
+    .aarti-stanza:nth-child(1) { animation-delay: 0.1s; }
+    .aarti-stanza:nth-child(2) { animation-delay: 0.2s; }
+    .aarti-stanza:nth-child(3) { animation-delay: 0.3s; }
+    .aarti-stanza:nth-child(4) { animation-delay: 0.4s; }
+    .aarti-stanza:nth-child(5) { animation-delay: 0.5s; }
+    .aarti-stanza:nth-child(6) { animation-delay: 0.6s; }
+    .aarti-stanza:nth-child(7) { animation-delay: 0.7s; }
+    .aarti-stanza:nth-child(8) { animation-delay: 0.75s; }
+  </style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="siteLoader">
+  <div class="loader-icon"><i class="fas fa-om"></i></div>
+  <p>जय बजरंग बली 🙏</p>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-wrap">
+    <a href="index.html" class="logo">
+      <i class="fas fa-om"></i>
+      <span>हनुमान भक्ति</span>
+    </a>
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="index.html" class="nav-link">होम</a></li>
+        <li><a href="chalisa.html" class="nav-link">चालीसा</a></li>
+        <li><a href="aarti.html" class="nav-link active">आरती</a></li>
+        <li><a href="mandir-darshan.html" class="nav-link">मंदिर</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggleBtn" aria-label="खोज">
+        <i class="fas fa-magnifying-glass"></i>
+      </button>
+      <button class="icon-btn" id="themeToggleBtn" aria-label="थीम">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+    <button class="menu-btn" id="menuToggleBtn"><i class="fas fa-bars"></i></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-om">🕉</div>
+  <div class="hero-content fade-in">
+    <div class="hero-diya">🪔</div>
+    <div class="hero-badge"><i class="fas fa-star"></i> पूर्ण आरती पाठ</div>
+    <h1>श्री हनुमान जी की आरती</h1>
+    <p>आरती कीजै हनुमान लला की — भक्तिपूर्वक पाठ करें</p>
+  </div>
+</section>
+
+<!-- AARTI CONTROLS -->
+<div class="aarti-controls" id="aartiControls">
+  <button class="ctrl-btn primary" id="copyBtn">
+    <i class="fas fa-copy"></i> आरती कॉपी करें
+  </button>
+  <div class="font-size-wrap">
+    <span>फ़ॉन्ट:</span>
+    <button class="ctrl-btn" id="fontDec"><i class="fas fa-minus"></i> छोटा</button>
+    <button class="ctrl-btn" id="fontInc"><i class="fas fa-plus"></i> बड़ा</button>
+  </div>
+  <button class="ctrl-btn" id="shareBtn">
+    <i class="fas fa-share-nodes"></i> साझा करें
+  </button>
+</div>
+
+<!-- AARTI CONTENT -->
+<section class="aarti-section" id="aartiSection">
+  <div class="aarti-card">
+    <div class="aarti-card-header">
+      <span class="icon">🪔</span>
+      <div>
+        <h2>श्री हनुमान आरती</h2>
+        <p>आरती कीजै हनुमान लला की</p>
+      </div>
+    </div>
+    <div class="aarti-body" id="aartiBody">
+
+      <div class="aarti-stanza">
+        <div class="stanza-label">मुखड़ा</div>
+        <div class="aarti-lines" id="aartiText">
+          <span class="line refrain">आरती कीजै हनुमान लला की।</span>
+          <span class="line refrain">दुष्ट दलन रघुनाथ कला की॥</span>
+        </div>
+      </div>
+
+      <div class="om-divider">॰ ॐ ॰</div>
+
+      <div class="aarti-stanza">
+        <div class="stanza-label">पद — १</div>
+        <div class="aarti-lines">
+          <span class="line">जाके बल से गिरिवर काँपे।</span>
+          <span class="line">रोग दोष जाके निकट न झाँपे॥</span>
+          <span class="line refrain">आरती कीजै हनुमान लला की।</span>
+          <span class="line refrain">दुष्ट दलन रघुनाथ कला की॥</span>
+        </div>
+      </div>
+
+      <div class="aarti-stanza">
+        <div class="stanza-label">पद — २</div>
+        <div class="aarti-lines">
+          <span class="line">अंजनि पुत्र महा बलदाई।</span>
+          <span class="line">संतन के प्रभु सदा सहाई॥</span>
+          <span class="line refrain">आरती कीजै हनुमान लला की।</span>
+          <span class="line refrain">दुष्ट दलन रघुनाथ कला की॥</span>
+        </div>
+      </div>
+
+      <div class="aarti-stanza">
+        <div class="stanza-label">पद — ३</div>
+        <div class="aarti-lines">
+          <span class="line">दे बीड़ा रघुपति मुस्काई।</span>
+          <span class="line">लंका जारि सिया सुधि लाई॥</span>
+          <span class="line refrain">आरती कीजै हनुमान लला की।</span>
+          <span class="line refrain">दुष्ट दलन रघुनाथ कला की॥</span>
+        </div>
+      </div>
+
+      <div class="aarti-stanza">
+        <div class="stanza-label">पद — ४</div>
+        <div class="aarti-lines">
+          <span class="line">लंका सो कोट समुद्र सी खाई।</span>
+          <span class="line">जात पवनसुत बार न लाई॥</span>
+          <span class="line refrain">आरती कीजै हनुमान लला की।</span>
+          <span class="line refrain">दुष्ट दलन रघुनाथ कला की॥</span>
+        </div>
+      </div>
+
+      <div class="aarti-stanza">
+        <div class="stanza-label">पद — ५</div>
+        <div class="aarti-lines">
+          <span class="line">लक्ष्मण मूर्छित पड़े सकारे।</span>
+          <span class="line">आणि संजीवन प्राण उबारे॥</span>
+          <span class="line refrain">आरती कीजै हनुमान लला की।</span>
+          <span class="line refrain">दुष्ट दलन रघुनाथ कला की॥</span>
+        </div>
+      </div>
+
+      <div class="aarti-stanza">
+        <div class="stanza-label">पद — ६</div>
+        <div class="aarti-lines">
+          <span class="line">पैठि पताल तोरि जमकारे।</span>
+          <span class="line">अहिरावण की भुजा उखारे॥</span>
+          <span class="line refrain">आरती कीजै हनुमान लला की।</span>
+          <span class="line refrain">दुष्ट दलन रघुनाथ कला की॥</span>
+        </div>
+      </div>
+
+      <div class="aarti-stanza">
+        <div class="stanza-label">पद — ७</div>
+        <div class="aarti-lines">
+          <span class="line">बाईं भुजा असुर दल मारे।</span>
+          <span class="line">दाहिनी भुजा संत जन तारे॥</span>
+          <span class="line refrain">आरती कीजै हनुमान लला की।</span>
+          <span class="line refrain">दुष्ट दलन रघुनाथ कला की॥</span>
+        </div>
+      </div>
+
+      <div class="aarti-stanza">
+        <div class="stanza-label">समापन</div>
+        <div class="aarti-lines">
+          <span class="line">सुर नर मुनि जन आरती उतारें।</span>
+          <span class="line">जय जय जय हनुमान उचारें॥</span>
+          <span class="line">कंचन थार कपूर लौ छाई।</span>
+          <span class="line">आरती करत अंजना माई॥</span>
+          <span class="line refrain">आरती कीजै हनुमान लला की।</span>
+          <span class="line refrain">दुष्ट दलन रघुनाथ कला की॥</span>
+        </div>
+      </div>
+
+    </div><!-- end aarti-body -->
+  </div><!-- end aarti-card -->
+</section>
+
+<!-- ARTICLES SECTION -->
+<section class="articles-section" id="articlesSection">
+  <div class="section-heading">
+    <h2>भक्ति लेख</h2>
+    <p>हनुमान जी से जुड़े ज्ञानवर्धक लेख पढ़ें</p>
+  </div>
+
+  <div class="articles-grid">
+
+    <!-- Article 1 -->
+    <div class="article-card fade-in" style="animation-delay:0.1s">
+      <div class="article-poster poster-1">
+        <div class="poster-pattern"></div>
+        <span class="poster-emoji">🐒</span>
+        <div class="poster-label">
+          <span class="poster-tag">पौराणिक कथा</span>
+        </div>
+      </div>
+      <div class="article-body">
+        <h3>हनुमान जी के जन्म की पूरी कथा — माता अंजनी और पवन देव का वरदान</h3>
+        <p>त्रेतायुग में माता अंजनी और पवन देव के आशीर्वाद से हनुमान जी का जन्म हुआ। जानिए इस अलौकिक जन्म की पूरी कहानी और बालहनुमान की लीलाएं।</p>
+      </div>
+      <div class="article-footer">
+        <span class="article-meta"><i class="fas fa-clock"></i> 5 मिनट पठन</span>
+        <a href="katha.html" class="read-btn">पढ़ें <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Article 2 -->
+    <div class="article-card fade-in" style="animation-delay:0.2s">
+      <div class="article-poster poster-2">
+        <div class="poster-pattern"></div>
+        <span class="poster-emoji">📿</span>
+        <div class="poster-label">
+          <span class="poster-tag">मंत्र एवं विधि</span>
+        </div>
+      </div>
+      <div class="article-body">
+        <h3>मंगलवार व्रत विधि — हनुमान जी को प्रसन्न करने का सबसे सरल उपाय</h3>
+        <p>मंगलवार का व्रत हनुमान जी का सबसे प्रिय दिन माना जाता है। जानिए पूजा की सही विधि, सामग्री, मंत्र और किन बातों का विशेष ध्यान रखना चाहिए।</p>
+      </div>
+      <div class="article-footer">
+        <span class="article-meta"><i class="fas fa-clock"></i> 7 मिनट पठन</span>
+        <a href="mantra.html" class="read-btn">पढ़ें <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Article 3 -->
+    <div class="article-card fade-in" style="animation-delay:0.3s">
+      <div class="article-poster poster-3">
+        <div class="poster-pattern"></div>
+        <span class="poster-emoji">📖</span>
+        <div class="poster-label">
+          <span class="poster-tag">सुंदरकांड महत्व</span>
+        </div>
+      </div>
+      <div class="article-body">
+        <h3>सुंदरकांड पाठ क्यों करें? — जानिए इसके 7 चमत्कारी लाभ और सही विधि</h3>
+        <p>रामचरितमानस का सुंदरकांड सबसे शक्तिशाली अध्याय है। हनुमान जी की वीरता और भक्ति का यह वर्णन जीवन में सकारात्मक परिवर्तन लाता है।</p>
+      </div>
+      <div class="article-footer">
+        <span class="article-meta"><i class="fas fa-clock"></i> 8 मिनट पठन</span>
+        <a href="sunderkand.html" class="read-btn">पढ़ें <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer" id="footerSection">
+  <div class="footer-container">
+    <div class="footer-box">
+      <h3>हनुमान भक्ति</h3>
+      <p>हनुमान भक्ति एक समर्पित सनातन मंच है, जहाँ श्री हनुमान जी की भक्ति, चालीसा, कथा, मंत्र और आध्यात्मिक ज्ञान प्रस्तुत किया जाता है।</p>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-box">
+      <h4>महत्वपूर्ण लिंक</h4>
+      <ul>
+        <li><a href="about-us.html">हमारे बारे में</a></li>
+        <li><a href="contact-us.html">संपर्क करें</a></li>
+        <li><a href="privacy-policy.html">गोपनीयता नीति</a></li>
+        <li><a href="disclaimer.html">अस्वीकरण</a></li>
+        <li><a href="terms.html">नियम एवं शर्तें</a></li>
+      </ul>
+    </div>
+    <div class="footer-box">
+      <h4>भक्ति सामग्री</h4>
+      <ul>
+        <li><a href="chalisa.html">हनुमान चालीसा</a></li>
+        <li><a href="bajrang-baan.html">बजरंग बाण</a></li>
+        <li><a href="hanuman-ashtak.html">हनुमान अष्टक</a></li>
+        <li><a href="sunderkand.html">सुंदरकांड</a></li>
+        <li><a href="katha.html">पौराणिक कथाएँ</a></li>
+      </ul>
+    </div>
+    <div class="footer-box">
+      <h4>विश्वास का आधार</h4>
+      <p>✔ भक्ति-आधारित सामग्री<br>✔ भ्रामक जानकारी से मुक्त<br>✔ सनातन मूल्यों पर आधारित मंच</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 www.hanumanbhakti.org • जय बजरंग बली 🔱<br>
+    <span>यह वेबसाइट केवल धार्मिक एवं शैक्षिक उद्देश्य हेतु है।</span>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTopBtn"><i class="fas fa-arrow-up"></i></button>
+
+<!-- MOBILE BOTTOM NAV -->
+<nav class="mobile-bottom-nav">
+  <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>होम</span></a>
+  <a href="chalisa.html" class="nav-item"><i class="fas fa-book-open"></i><span>चालीसा</span></a>
+  <a href="aarti.html" class="nav-item active"><i class="fas fa-fire"></i><span>आरती</span></a>
+  <button class="nav-item" id="mobileMenuBtn"><i class="fas fa-bars"></i><span>मेनू</span></button>
+</nav>
+
+<!-- DRAWER -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-header">
+    <div class="drawer-logo"><i class="fas fa-om"></i> हनुमान भक्ति</div>
+    <button class="close-btn" id="drawerCloseBtn">×</button>
+  </div>
+  <div class="drawer-section">
+    <h4>मुख्य श्रेणियाँ</h4>
+    <ul class="drawer-links">
+      <li><a href="index.html"><i class="fas fa-home"></i> होम</a></li>
+      <li><a href="chalisa.html"><i class="fas fa-book-open"></i> हनुमान चालीसा</a></li>
+      <li><a href="bajrang-baan.html"><i class="fas fa-bolt"></i> बजरंग बाण</a></li>
+      <li><a href="sunderkand.html"><i class="fas fa-fire"></i> सुंदरकांड</a></li>
+      <li><a href="mantra.html"><i class="fas fa-om"></i> मंत्र एवं विधि</a></li>
+      <li><a href="katha.html"><i class="fas fa-scroll"></i> पौराणिक कथाएँ</a></li>
+    </ul>
+  </div>
+  <div class="drawer-section">
+    <h4>अन्य जानकारी</h4>
+    <ul class="drawer-links">
+      <li><a href="about-us.html">हमारे बारे में</a></li>
+      <li><a href="contact-us.html">संपर्क करें</a></li>
+      <li><a href="privacy-policy.html">गोपनीयता नीति</a></li>
+    </ul>
+  </div>
+  <div class="drawer-social">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  </div>
+</aside>
+
+<!-- SEARCH -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-modal">
+    <div class="search-top">
+      <h3>भक्ति सामग्री खोजें</h3>
+      <button class="close-btn" id="searchCloseBtn">×</button>
+    </div>
+    <input type="search" id="searchInput" class="search-input" placeholder="जैसे: चालीसा, आरती, सुंदरकांड..." autocomplete="off" />
+    <div class="search-results">
+      <a href="chalisa.html" class="search-item">हनुमान चालीसा</a>
+      <a href="bajrang-baan.html" class="search-item">बजरंग बाण</a>
+      <a href="sunderkand.html" class="search-item">सुंदरकांड</a>
+      <a href="aarti.html" class="search-item">हनुमान आरती</a>
+      <a href="mantra.html" class="search-item">हनुमान मंत्र</a>
+      <a href="mandir-darshan.html" class="search-item">मंदिर दर्शन</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ===== LOADER =====
+  window.addEventListener('load', () => {
+    setTimeout(() => document.getElementById('siteLoader').classList.add('hidden'), 700);
+  });
+
+  // ===== THEME =====
+  const themeBtn = document.getElementById('themeToggleBtn');
+  if (localStorage.getItem('hb_theme') === 'dark') applyDark();
+  themeBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    if (isDark) { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('hb_theme','light'); themeBtn.querySelector('i').className='fas fa-moon'; }
+    else applyDark();
+  });
+  function applyDark() {
+    document.documentElement.setAttribute('data-theme','dark');
+    localStorage.setItem('hb_theme','dark');
+    themeBtn.querySelector('i').className='fas fa-sun';
+  }
+
+  // ===== FONT SIZE =====
+  let fontSize = 1.15;
+  const allLines = document.querySelectorAll('.aarti-lines');
+  document.getElementById('fontInc').addEventListener('click', () => {
+    fontSize = Math.min(fontSize + 0.1, 1.7);
+    allLines.forEach(el => el.style.fontSize = fontSize + 'rem');
+  });
+  document.getElementById('fontDec').addEventListener('click', () => {
+    fontSize = Math.max(fontSize - 0.1, 0.85);
+    allLines.forEach(el => el.style.fontSize = fontSize + 'rem');
+  });
+
+  // ===== COPY =====
+  const aartiText = `आरती कीजै हनुमान लला की।
+दुष्ट दलन रघुनाथ कला की॥
+
+जाके बल से गिरिवर काँपे।
+रोग दोष जाके निकट न झाँपे॥
+
+अंजनि पुत्र महा बलदाई।
+संतन के प्रभु सदा सहाई॥
+
+दे बीड़ा रघुपति मुस्काई।
+लंका जारि सिया सुधि लाई॥
+
+लंका सो कोट समुद्र सी खाई।
+जात पवनसुत बार न लाई॥
+
+लक्ष्मण मूर्छित पड़े सकारे।
+आणि संजीवन प्राण उबारे॥
+
+पैठि पताल तोरि जमकारे।
+अहिरावण की भुजा उखारे॥
+
+बाईं भुजा असुर दल मारे।
+दाहिनी भुजा संत जन तारे॥
+
+सुर नर मुनि जन आरती उतारें।
+जय जय जय हनुमान उचारें॥
+कंचन थार कपूर लौ छाई।
+आरती करत अंजना माई॥
+
+आरती कीजै हनुमान लला की।
+दुष्ट दलन रघुनाथ कला की॥
+
+— जय हनुमान | www.hanumanbhakti.org`;
+
+  document.getElementById('copyBtn').addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(aartiText);
+      showToast('✅ आरती कॉपी हो गई!');
+    } catch {
+      showToast('❌ कॉपी नहीं हो सका');
+    }
+  });
+
+  // ===== SHARE =====
+  document.getElementById('shareBtn').addEventListener('click', async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: 'हनुमान जी की आरती', text: 'श्री हनुमान जी की पूर्ण आरती पढ़ें', url: window.location.href });
+      } catch {}
+    } else {
+      await navigator.clipboard.writeText(window.location.href);
+      showToast('🔗 लिंक कॉपी हो गया!');
+    }
+  });
+
+  // ===== TOAST =====
+  let toastTimer;
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg; t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove('show'), 2500);
+  }
+
+  // ===== DRAWER =====
+  const openDrawer = () => { document.getElementById('mobileDrawer').classList.add('open'); document.getElementById('drawerOverlay').classList.add('open'); document.body.style.overflow='hidden'; };
+  const closeDrawer = () => { document.getElementById('mobileDrawer').classList.remove('open'); document.getElementById('drawerOverlay').classList.remove('open'); document.body.style.overflow=''; };
+  document.getElementById('menuToggleBtn').addEventListener('click', openDrawer);
+  document.getElementById('mobileMenuBtn').addEventListener('click', openDrawer);
+  document.getElementById('drawerCloseBtn').addEventListener('click', closeDrawer);
+  document.getElementById('drawerOverlay').addEventListener('click', closeDrawer);
+
+  // ===== SEARCH =====
+  document.getElementById('searchToggleBtn').addEventListener('click', () => { document.getElementById('searchOverlay').classList.add('open'); document.getElementById('searchInput').focus(); });
+  document.getElementById('searchCloseBtn').addEventListener('click', () => document.getElementById('searchOverlay').classList.remove('open'));
+  document.getElementById('searchOverlay').addEventListener('click', e => { if(e.target===document.getElementById('searchOverlay')) document.getElementById('searchOverlay').classList.remove('open'); });
+
+  // ===== BACK TO TOP =====
+  const topBtn = document.getElementById('backToTopBtn');
+  window.addEventListener('scroll', () => topBtn.classList.toggle('visible', scrollY > 300), {passive:true});
+  topBtn.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+
+  // ===== ESC =====
+  document.addEventListener('keydown', e => {
+    if (e.key==='Escape') { closeDrawer(); document.getElementById('searchOverlay').classList.remove('open'); }
+  });
+</script>
+</body>
+</html>
