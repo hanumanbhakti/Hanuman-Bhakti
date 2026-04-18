@@ -1420,3 +1420,17 @@ body.dark-mode .drawer-social a {
     transform: none !important;
   }
 }
+
+/* Safety Fallback: Agar 3 second tak JS load na ho toh sab kuch dikha do */
+.reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+/* Loader ko mobile par stuck hone se bachane ke liye */
+.site-loader.hidden {
+    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+}
