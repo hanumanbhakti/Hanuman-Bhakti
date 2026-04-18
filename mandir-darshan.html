@@ -5,265 +5,1004 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
   <title>प्रसिद्ध हनुमान मंदिर दर्शन | हनुमान भक्ति</title>
   <meta name="description" content="भारत के प्रसिद्ध श्री हनुमान मंदिरों की जानकारी और दिव्य दर्शन - हनुमान भक्ति" />
-  
-  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Preconnect for speed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <!-- Font Awesome async -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+  <style>
+    /* ===== CSS VARIABLES ===== */
+    :root {
+      --saffron: #FF6B00;
+      --saffron-dark: #cc5500;
+      --saffron-light: #fff3e8;
+      --gold: #FFB300;
+      --maroon: #7B1818;
+      --text: #1a1a1a;
+      --text-muted: #666;
+      --bg: #fdf6ee;
+      --card-bg: #fff;
+      --header-bg: rgba(255,255,255,0.97);
+      --border: #e8d5c0;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08);
+      --radius: 14px;
+      --transition: 0.3s cubic-bezier(.4,0,.2,1);
+    }
+    [data-theme="dark"] {
+      --bg: #1a100a;
+      --card-bg: #2a1a10;
+      --text: #f5e6d3;
+      --text-muted: #bba;
+      --header-bg: rgba(26,16,10,0.97);
+      --border: #4a2e1e;
+      --shadow: 0 4px 20px rgba(0,0,0,0.3);
+      --saffron-light: #2a1500;
+    }
+
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Mukta', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background var(--transition), color var(--transition);
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    /* ===== LOADER ===== */
+    #siteLoader {
+      position: fixed; inset: 0; z-index: 9999;
+      background: var(--maroon);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 12px;
+      transition: opacity 0.5s, visibility 0.5s;
+    }
+    #siteLoader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .loader-icon {
+      font-size: 3rem; color: var(--gold);
+      animation: spin 2s linear infinite;
+    }
+    #siteLoader p { color: #fff; font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--header-bg);
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid var(--border);
+      box-shadow: 0 2px 12px rgba(255,107,0,0.08);
+    }
+    .header-wrap {
+      display: flex; align-items: center; gap: 16px;
+      padding: 12px 20px; max-width: 1200px; margin: 0 auto;
+    }
+    .logo {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 1.3rem; font-weight: 800; color: var(--saffron);
+      white-space: nowrap;
+    }
+    .logo i { font-size: 1.4rem; }
+    .desktop-nav { display: none; margin-left: auto; }
+    .desktop-nav ul { display: flex; gap: 8px; }
+    .desktop-nav a {
+      padding: 6px 14px; border-radius: 20px;
+      font-weight: 600; font-size: 0.92rem;
+      color: var(--text-muted); transition: all var(--transition);
+    }
+    .desktop-nav a:hover, .desktop-nav a.active {
+      background: var(--saffron); color: #fff;
+    }
+    .header-actions { display: flex; gap: 6px; margin-left: auto; }
+    .icon-btn {
+      width: 38px; height: 38px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--saffron-light); color: var(--saffron);
+      font-size: 1rem; transition: all var(--transition);
+    }
+    .icon-btn:hover { background: var(--saffron); color: #fff; transform: scale(1.1); }
+    .menu-btn {
+      width: 38px; height: 38px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--saffron); color: #fff; font-size: 1rem;
+    }
+    @media (min-width: 768px) {
+      .desktop-nav { display: block; }
+      .menu-btn { display: none; }
+      .header-actions { margin-left: 0; }
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 42vh;
+      background: linear-gradient(135deg, var(--maroon) 0%, #c0392b 50%, var(--saffron) 100%);
+      position: relative; display: flex; align-items: center; justify-content: center;
+      text-align: center; overflow: hidden;
+    }
+    .hero::before {
+      content: '🕉';
+      position: absolute; font-size: 20rem; opacity: 0.04;
+      top: 50%; left: 50%; transform: translate(-50%,-50%);
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 1; padding: 40px 20px; }
+    .hero-content h1 {
+      font-size: clamp(1.6rem, 5vw, 2.8rem);
+      font-weight: 800; color: #fff;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+      margin-bottom: 10px;
+    }
+    .hero-content p { color: rgba(255,255,255,0.85); font-size: 1.05rem; }
+
+    /* ===== SECTION ===== */
+    .section { padding: 50px 20px; max-width: 1200px; margin: 0 auto; }
+    .section-heading { text-align: center; margin-bottom: 36px; }
+    .section-heading h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800;
+      color: var(--saffron);
+      display: inline-flex; align-items: center; gap: 10px;
+    }
+    .section-heading h2::before, .section-heading h2::after {
+      content: ''; display: block; width: 40px; height: 2px; background: var(--gold);
+    }
+
+    /* ===== FILTER BAR (NEW FEATURE) ===== */
+    .filter-bar {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      justify-content: center; margin-bottom: 30px;
+    }
+    .filter-btn {
+      padding: 7px 18px; border-radius: 20px;
+      border: 2px solid var(--border);
+      background: var(--card-bg); color: var(--text-muted);
+      font-family: 'Mukta', sans-serif; font-size: 0.88rem; font-weight: 600;
+      transition: all var(--transition);
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--saffron); color: #fff; border-color: var(--saffron);
+    }
+
+    /* ===== MANDIR GRID ===== */
+    .mandir-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    /* ===== MANDIR CARD ===== */
+    .mandir-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: transform var(--transition), box-shadow var(--transition);
+      cursor: pointer;
+    }
+    .mandir-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(255,107,0,0.18);
+    }
+    .card-img-wrap {
+      position: relative; overflow: hidden;
+      height: 180px; background: linear-gradient(135deg, #ffe0c0, #ffb36b);
+    }
+    .card-img-wrap img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .mandir-card:hover .card-img-wrap img { transform: scale(1.07); }
+    .card-img-placeholder {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 4rem; color: rgba(255,107,0,0.3);
+    }
+    .card-state-badge {
+      position: absolute; top: 10px; right: 10px;
+      background: rgba(255,107,0,0.9); color: #fff;
+      font-size: 0.72rem; font-weight: 700; padding: 3px 9px;
+      border-radius: 10px; backdrop-filter: blur(4px);
+    }
+    .card-body { padding: 16px; }
+    .card-body h3 { font-size: 1.05rem; font-weight: 800; color: var(--text); margin-bottom: 4px; }
+    .card-body .loc {
+      font-size: 0.85rem; color: var(--text-muted);
+      display: flex; align-items: center; gap: 5px;
+    }
+    .card-body .loc i { color: var(--saffron); font-size: 0.8rem; }
+    .card-footer {
+      display: flex; gap: 8px; padding: 12px 16px 16px;
+    }
+    .btn-darshan {
+      flex: 1; padding: 8px 12px; border-radius: 8px;
+      background: var(--saffron); color: #fff;
+      font-family: 'Mukta', sans-serif; font-weight: 700; font-size: 0.88rem;
+      transition: background var(--transition), transform var(--transition);
+      text-align: center;
+    }
+    .btn-darshan:hover { background: var(--saffron-dark); transform: scale(1.03); }
+    .btn-fav {
+      width: 36px; height: 36px; border-radius: 8px;
+      border: 2px solid var(--border); background: var(--card-bg);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-muted); font-size: 1rem;
+      transition: all var(--transition);
+    }
+    .btn-fav:hover, .btn-fav.active { border-color: #e74c3c; color: #e74c3c; background: #fff0f0; }
+    .btn-fav.active i { animation: heartbeat 0.3s ease; }
+    @keyframes heartbeat { 0%{transform:scale(1)} 50%{transform:scale(1.4)} 100%{transform:scale(1)} }
+
+    /* ===== DARSHAN MODAL (NEW FEATURE) ===== */
+    .modal-overlay {
+      position: fixed; inset: 0; z-index: 500;
+      background: rgba(0,0,0,0.75); backdrop-filter: blur(4px);
+      display: flex; align-items: center; justify-content: center;
+      padding: 20px;
+      opacity: 0; visibility: hidden; transition: all 0.3s;
+    }
+    .modal-overlay.open { opacity: 1; visibility: visible; }
+    .modal-box {
+      background: var(--card-bg); border-radius: 18px;
+      max-width: 480px; width: 100%;
+      overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      transform: translateY(20px); transition: transform 0.3s;
+    }
+    .modal-overlay.open .modal-box { transform: translateY(0); }
+    .modal-img { width: 100%; height: 220px; object-fit: cover; }
+    .modal-img-placeholder {
+      width: 100%; height: 220px;
+      background: linear-gradient(135deg, var(--maroon), var(--saffron));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 5rem; color: rgba(255,255,255,0.3);
+    }
+    .modal-body { padding: 22px; }
+    .modal-body h2 { font-size: 1.4rem; font-weight: 800; color: var(--saffron); margin-bottom: 6px; }
+    .modal-body .modal-loc { color: var(--text-muted); margin-bottom: 14px; font-size: 0.9rem; }
+    .modal-body p { font-size: 0.95rem; line-height: 1.7; color: var(--text); margin-bottom: 16px; }
+    .modal-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 16px; }
+    .modal-tag {
+      background: var(--saffron-light); color: var(--saffron);
+      padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;
+    }
+    .modal-close {
+      position: absolute; top: 14px; right: 14px;
+      width: 34px; height: 34px; border-radius: 50%;
+      background: rgba(0,0,0,0.4); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; z-index: 10;
+    }
+    .modal-img-wrap { position: relative; }
+
+    /* ===== FAVORITES SECTION (NEW FEATURE) ===== */
+    #favSection { display: none; }
+    #favSection.has-items { display: block; }
+    #favSection .mandir-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+
+    /* ===== STATS BAR (NEW FEATURE) ===== */
+    .stats-bar {
+      background: linear-gradient(90deg, var(--maroon), var(--saffron));
+      color: #fff; padding: 18px 20px;
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;
+    }
+    .stat-item { text-align: center; }
+    .stat-num { font-size: 1.8rem; font-weight: 800; display: block; }
+    .stat-lbl { font-size: 0.8rem; opacity: 0.85; }
+
+    /* ===== FOOTER ===== */
+    .site-footer { background: #1a0a00; color: #ccc; margin-top: 60px; }
+    .footer-container {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px; padding: 50px 20px 30px;
+    }
+    .footer-box h3, .footer-box h4 { color: var(--gold); margin-bottom: 14px; font-size: 1rem; }
+    .footer-box p { font-size: 0.88rem; line-height: 1.7; color: #aaa; }
+    .footer-box ul { display: flex; flex-direction: column; gap: 8px; }
+    .footer-box ul a { font-size: 0.88rem; color: #aaa; transition: color var(--transition); }
+    .footer-box ul a:hover { color: var(--saffron); }
+    .footer-social { display: flex; gap: 12px; margin-top: 14px; }
+    .footer-social a {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,255,255,0.1); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      transition: background var(--transition);
+    }
+    .footer-social a:hover { background: var(--saffron); }
+    .footer-bottom {
+      text-align: center; padding: 18px 20px;
+      border-top: 1px solid #333; color: #888; font-size: 0.82rem; line-height: 1.8;
+    }
+
+    /* ===== UTILITY BUTTONS ===== */
+    .back-to-top {
+      position: fixed; bottom: 90px; right: 20px; z-index: 200;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--saffron); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(255,107,0,0.4);
+      opacity: 0; visibility: hidden; transition: all var(--transition);
+      font-size: 1rem;
+    }
+    .back-to-top.visible { opacity: 1; visibility: visible; }
+
+    /* ===== MOBILE DRAWER ===== */
+    .drawer-overlay {
+      position: fixed; inset: 0; z-index: 300;
+      background: rgba(0,0,0,0.5);
+      opacity: 0; visibility: hidden; transition: all 0.3s;
+    }
+    .drawer-overlay.open { opacity: 1; visibility: visible; }
+    .mobile-drawer {
+      position: fixed; top: 0; left: 0; bottom: 0; z-index: 400;
+      width: min(80vw, 300px);
+      background: var(--card-bg);
+      transform: translateX(-100%); transition: transform 0.35s cubic-bezier(.4,0,.2,1);
+      overflow-y: auto; display: flex; flex-direction: column;
+    }
+    .mobile-drawer.open { transform: translateX(0); }
+    .drawer-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 16px; background: var(--saffron); color: #fff;
+    }
+    .drawer-logo { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 1.1rem; }
+    .drawer-header .close-btn { font-size: 1.6rem; color: #fff; line-height: 1; }
+    .drawer-section { padding: 18px 16px; border-bottom: 1px solid var(--border); }
+    .drawer-section h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-muted); margin-bottom: 12px; }
+    .drawer-links { display: flex; flex-direction: column; gap: 2px; }
+    .drawer-links a {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 12px; border-radius: 8px;
+      font-size: 0.95rem; font-weight: 600; color: var(--text);
+      transition: background var(--transition);
+    }
+    .drawer-links a i { color: var(--saffron); width: 18px; text-align: center; }
+    .drawer-links a:hover { background: var(--saffron-light); }
+    .drawer-social {
+      display: flex; gap: 12px; padding: 20px 16px;
+    }
+    .drawer-social a {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--saffron-light); color: var(--saffron);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; transition: all var(--transition);
+    }
+    .drawer-social a:hover { background: var(--saffron); color: #fff; }
+
+    /* ===== MOBILE BOTTOM NAV ===== */
+    .mobile-bottom-nav {
+      display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+      background: var(--card-bg);
+      border-top: 1px solid var(--border);
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    .mobile-bottom-nav .nav-item {
+      flex: 1; display: flex; flex-direction: column; align-items: center;
+      padding: 8px 4px;
+      color: var(--text-muted); font-size: 0.72rem; font-weight: 600;
+      transition: color var(--transition); gap: 3px;
+    }
+    .mobile-bottom-nav .nav-item i { font-size: 1.2rem; }
+    .mobile-bottom-nav .nav-item.active,
+    .mobile-bottom-nav .nav-item:hover { color: var(--saffron); }
+    @media (min-width: 768px) { .mobile-bottom-nav { display: none; } }
+
+    /* ===== SEARCH OVERLAY ===== */
+    .search-overlay {
+      position: fixed; inset: 0; z-index: 500;
+      background: rgba(0,0,0,0.6); backdrop-filter: blur(6px);
+      display: flex; align-items: flex-start; justify-content: center;
+      padding-top: 80px;
+      opacity: 0; visibility: hidden; transition: all 0.3s;
+    }
+    .search-overlay.open { opacity: 1; visibility: visible; }
+    .search-modal {
+      background: var(--card-bg); border-radius: 16px;
+      width: min(560px, 90vw); padding: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    .search-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .search-top h3 { font-size: 1.05rem; font-weight: 800; color: var(--text); }
+    .search-top .close-btn { font-size: 1.5rem; color: var(--text-muted); }
+    .search-input {
+      width: 100%; padding: 12px 16px; border-radius: 10px;
+      border: 2px solid var(--border); background: var(--bg);
+      font-family: 'Mukta', sans-serif; font-size: 1rem; color: var(--text);
+      outline: none; transition: border-color var(--transition);
+    }
+    .search-input:focus { border-color: var(--saffron); }
+    .search-results { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .search-item {
+      padding: 7px 14px; background: var(--saffron-light);
+      color: var(--saffron); border-radius: 20px; font-size: 0.88rem; font-weight: 700;
+      transition: all var(--transition);
+    }
+    .search-item:hover { background: var(--saffron); color: #fff; }
+
+    /* ===== SKIP LINK ===== */
+    .skip-link {
+      position: absolute; top: -40px; left: 0;
+      background: var(--saffron); color: #fff; padding: 8px 16px;
+      border-radius: 0 0 8px 0; font-weight: 700; z-index: 9999;
+      transition: top 0.2s;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-in { animation: fadeIn 0.5s ease both; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ===== TOAST (NEW FEATURE) ===== */
+    .toast {
+      position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%) translateY(20px);
+      background: #222; color: #fff; padding: 10px 20px; border-radius: 24px;
+      font-size: 0.88rem; font-weight: 600; z-index: 1000;
+      opacity: 0; transition: all 0.3s; pointer-events: none; white-space: nowrap;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* ===== EMPTY STATE ===== */
+    .empty-state { text-align: center; padding: 40px 20px; color: var(--text-muted); }
+    .empty-state i { font-size: 3rem; color: var(--border); margin-bottom: 12px; }
+
+    /* ===== BODY PADDING for bottom nav ===== */
+    @media (max-width: 767px) { body { padding-bottom: 70px; } }
+  </style>
 </head>
 <body>
 
-  <div class="site-loader" id="siteLoader">
-    <div class="loader-inner">
-      <div class="loader-icon"><i class="fas fa-om"></i></div>
-      <p>जय बजरंग बली</p>
-    </div>
-  </div>
-  <header class="site-header" id="siteHeader">
-    <div class="container header-wrap">
-      <a href="index.html" class="logo" aria-label="हनुमान भक्ति होम">
-        <i class="fas fa-om" aria-hidden="true"></i>
-        <span>हनुमान भक्ति</span>
-      </a>
+<a href="#mandirList" class="skip-link">मुख्य सामग्री पर जाएं</a>
 
-      <nav class="desktop-nav" aria-label="मुख्य नेविगेशन">
-        <ul>
-          <li><a href="#home" class="nav-link active" aria-current="page">होम</a></li>
-          <li><a href="#popular" class="nav-link">लोकप्रिय</a></li>
-          <li><a href="#mainContent" class="nav-link">सामग्री</a></li>
-          <li><a href="#footerSection" class="nav-link">संपर्क</a></li>
-        </ul>
-      </nav>
+<!-- LOADER -->
+<div id="siteLoader">
+  <div class="loader-icon"><i class="fas fa-om"></i></div>
+  <p>जय बजरंग बली 🙏</p>
+</div>
 
-      <div class="header-actions">
-        <button class="icon-btn" id="searchToggleBtn" type="button" aria-label="खोज खोलें">
-          <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
-        </button>
-        <button class="icon-btn" id="themeToggleBtn" type="button" aria-label="डार्क मोड बदलें" aria-pressed="false">
-          <i class="fas fa-moon" aria-hidden="true"></i>
-        </button>
-      </div>
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
 
-      <button
-        class="menu-btn"
-        id="menuToggleBtn"
-        type="button"
-        aria-label="मेनू खोलें"
-        aria-expanded="false"
-        aria-controls="mobileDrawer"
-      >
-        <i class="fas fa-bars" aria-hidden="true"></i>
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-wrap">
+    <a href="index.html" class="logo">
+      <i class="fas fa-om"></i>
+      <span>हनुमान भक्ति</span>
+    </a>
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="index.html" class="nav-link">होम</a></li>
+        <li><a href="#popular" class="nav-link">लोकप्रिय</a></li>
+        <li><a href="#mandirList" class="nav-link active">मंदिर</a></li>
+        <li><a href="#footerSection" class="nav-link">संपर्क</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggleBtn" aria-label="खोज खोलें">
+        <i class="fas fa-magnifying-glass"></i>
+      </button>
+      <button class="icon-btn" id="themeToggleBtn" aria-label="थीम बदलें">
+        <i class="fas fa-moon"></i>
       </button>
     </div>
-  </header>
-
-   <section class="hero" style="min-height: 40vh; background-image: url('assets/images/hanuman-temple-sky-view.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-    
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <h1>भारत के प्रसिद्ध हनुमान मंदिर</h1>
-      <p>दिव्य दर्शन और आध्यात्मिक शांति के केंद्र</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container" id="mandirList">
-      <div class="section-heading">
-        <h2>सिद्धपीठों के दर्शन</h2>
-      </div>
-      <div class="mandir-grid" id="mandirGrid">
-        </div>
-    </div>
-  </section>
-
-  <footer class="site-footer" id="footerSection">
-    <div class="container footer-container">
-      <div class="footer-box reveal">
-        <h3>हनुमान भक्ति</h3>
-        <p>
-          हनुमान भक्ति एक समर्पित सनातन मंच है, जहाँ श्री हनुमान जी की भक्ति, चालीसा,
-          कथा, मंत्र और आध्यात्मिक ज्ञान श्रद्धा और शुद्धता के साथ प्रस्तुत किया जाता है।
-        </p>
-        <div class="footer-social">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-        </div>
-      </div>
-
-      <div class="footer-box reveal">
-        <h4>महत्वपूर्ण लिंक</h4>
-        <ul>
-          <li><a href="about-us.html">हमारे बारे में</a></li>
-          <li><a href="contact-us.html">संपर्क करें</a></li>
-          <li><a href="privacy-policy.html">गोपनीयता नीति</a></li>
-          <li><a href="disclaimer.html">अस्वीकरण</a></li>
-          <li><a href="terms.html">नियम एवं शर्तें</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-box reveal">
-        <h4>भक्ति सामग्री</h4>
-        <ul>
-          <li><a href="chalisa.html">हनुमान चालीसा</a></li>
-          <li><a href="bajrang-baan.html">बजरंग बाण</a></li>
-          <li><a href="hanuman-ashtak.html">हनुमान अष्टक</a></li>
-          <li><a href="sunderkand.html">सुंदरकांड</a></li>
-          <li><a href="katha.html">पौराणिक कथाएँ</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-box reveal">
-        <h4>विश्वास का आधार</h4>
-        <p class="trust-text">
-          ✔ भक्ति-आधारित सामग्री<br />
-          ✔ भ्रामक जानकारी से मुक्त<br />
-          ✔ सनातन मूल्यों पर आधारित मंच
-        </p>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      © 2025 www.hanumanbhakti.org • जय बजरंग बली 🔱<br />
-      <span>यह वेबसाइट केवल धार्मिक एवं शैक्षिक उद्देश्य हेतु है।</span>
-    </div>
-  </footer>
-
-  <button class="sticky-share" type="button" aria-label="पेज साझा करें">
-    <i class="fas fa-share-nodes" aria-hidden="true"></i>
-  </button>
-
-  <button class="back-to-top" id="backToTopBtn" type="button" aria-label="ऊपर जाएँ">
-    <i class="fas fa-arrow-up" aria-hidden="true"></i>
-  </button>
-
-  <nav class="mobile-bottom-nav" aria-label="मोबाइल त्वरित नेविगेशन">
-    <a href="index.html" class="nav-item active" aria-current="page">
-      <i class="fas fa-home" aria-hidden="true"></i>
-      <span>होम</span>
-    </a>
-    <a href="chalisa.html" class="nav-item">
-      <i class="fas fa-book-open" aria-hidden="true"></i>
-      <span>चालीसा</span>
-    </a>
-    <a href="mandir-darshan.html" class="nav-item">
-      <i class="fas fa-gopuram" aria-hidden="true"></i>
-      <span>मंदिर</span>
-    </a>
-    <button type="button" class="nav-item mobile-nav-menu-btn" aria-label="मेनू खोलें" aria-expanded="false">
-      <i class="fas fa-bars" aria-hidden="true"></i>
-      <span>मेनू</span>
+    <button class="menu-btn" id="menuToggleBtn" aria-label="मेनू खोलें" aria-expanded="false">
+      <i class="fas fa-bars"></i>
     </button>
-  </nav>
+  </div>
+</header>
 
-  <div class="mobile-drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content fade-in">
+    <h1>🚩 भारत के प्रसिद्ध हनुमान मंदिर</h1>
+    <p>दिव्य दर्शन और आध्यात्मिक शांति के केंद्र</p>
+  </div>
+</section>
 
-  <aside class="mobile-drawer" id="mobileDrawer" aria-label="मोबाइल मेनू" aria-hidden="true">
-    <div class="drawer-header">
-      <div class="drawer-logo">
-        <i class="fas fa-om" aria-hidden="true"></i>
-        <span>हनुमान भक्ति</span>
-      </div>
-      <button class="close-btn" type="button" id="drawerCloseBtn" aria-label="मेनू बंद करें">
-        &times;
-      </button>
-    </div>
+<!-- STATS BAR (NEW FEATURE) -->
+<div class="stats-bar">
+  <div class="stat-item"><span class="stat-num" id="totalCount">15</span><span class="stat-lbl">प्रसिद्ध मंदिर</span></div>
+  <div class="stat-item"><span class="stat-num">10+</span><span class="stat-lbl">राज्य</span></div>
+  <div class="stat-item"><span class="stat-num" id="favCount">0</span><span class="stat-lbl">आपकी पसंद</span></div>
+</div>
 
-    <div class="drawer-content">
-      <div class="drawer-section">
-        <h4>मुख्य श्रेणियाँ</h4>
-        <ul class="drawer-links">
-          <li><a href="index.html"><i class="fas fa-home" aria-hidden="true"></i> होम</a></li>
-          <li><a href="chalisa.html"><i class="fas fa-book-open" aria-hidden="true"></i> हनुमान चालीसा</a></li>
-          <li><a href="bajrang-baan.html"><i class="fas fa-bolt" aria-hidden="true"></i> बजरंग बाण</a></li>
-          <li><a href="sunderkand.html"><i class="fas fa-fire" aria-hidden="true"></i> सुंदरकांड</a></li>
-          <li><a href="mantra.html"><i class="fas fa-om" aria-hidden="true"></i> मंत्र एवं विधि</a></li>
-          <li><a href="katha.html"><i class="fas fa-scroll" aria-hidden="true"></i> पौराणिक कथाएँ</a></li>
-        </ul>
-      </div>
+<!-- MAIN CONTENT -->
+<section class="section" id="mandirList">
 
-      <div class="drawer-section">
-        <h4>अन्य जानकारी</h4>
-        <ul class="drawer-links">
-          <li><a href="about-us.html">हमारे बारे में</a></li>
-          <li><a href="contact-us.html">संपर्क करें</a></li>
-          <li><a href="privacy-policy.html">गोपनीयता नीति</a></li>
-        </ul>
-      </div>
-
-      <div class="drawer-social">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-      </div>
-    </div>
-  </aside>
-
-  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
-    <div class="search-modal" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
-      <div class="search-top">
-        <h3 id="searchTitle">भक्ति सामग्री खोजें</h3>
-        <button type="button" class="close-btn" id="searchCloseBtn" aria-label="खोज बंद करें">&times;</button>
-      </div>
-
-      <div class="search-box-wrap">
-        <input
-          type="search"
-          id="searchInput"
-          class="search-input"
-          placeholder="जैसे: चालीसा, बजरंग बाण, सुंदरकांड..."
-          autocomplete="off"
-        />
-      </div>
-
-      <div class="search-results" id="searchResults">
-        <a href="chalisa.html" class="search-item">हनुमान चालीसा</a>
-        <a href="bajrang-baan.html" class="search-item">बजरंग बाण</a>
-        <a href="sunderkand.html" class="search-item">सुंदरकांड</a>
-        <a href="hanuman-ashtak.html" class="search-item">हनुमान अष्टक</a>
-        <a href="mantra.html" class="search-item">हनुमान मंत्र</a>
-        <a href="katha.html" class="search-item">पौराणिक कथाएँ</a>
-        <a href="mandir-darshan.html" class="search-item">मंदिर दर्शन</a>
-        <a href="contact-us.html" class="search-item">संपर्क करें</a>
-      </div>
-    </div>
+  <!-- FILTER BAR (NEW FEATURE) -->
+  <div class="filter-bar" id="filterBar">
+    <button class="filter-btn active" data-state="all">सभी राज्य</button>
+    <button class="filter-btn" data-state="उत्तर प्रदेश">उत्तर प्रदेश</button>
+    <button class="filter-btn" data-state="राजस्थान">राजस्थान</button>
+    <button class="filter-btn" data-state="गुजरात">गुजरात</button>
+    <button class="filter-btn" data-state="तमिलनाडु">तमिलनाडु</button>
+    <button class="filter-btn" data-state="मध्य प्रदेश">मध्य प्रदेश</button>
+    <button class="filter-btn" data-state="अन्य">अन्य</button>
   </div>
 
-  <script src="script.js"></script>
-</body>
-</html>
-  <script>
-    const mandirs = [
-      {name: "हनुमान गढ़ी", loc: "अयोध्या, उत्तर प्रदेश", img: "assets/images/hanuman-garhi.jpg"},
-      {name: "सालासर बालाजी", loc: "चूरू, राजस्थान", img: "assets/images/salasar-balaji.jpg"},
-      {name: "मेहंदीपुर बालाजी", loc: "दौसा, राजस्थान", img: "assets/images/mehendipur-balaji.jpg"},
-      {name: "संकट मोचन मंदिर", loc: "वाराणसी, उत्तर प्रदेश", img: "assets/images/sankat-mochan-varanasi.jpg"},
-      {name: "लेटे हनुमान जी", loc: "प्रयागराज, उत्तर प्रदेश", img: "assets/images/lete-hanuman-prayagraj.jpg"},
-      {name: "कष्टभंजन हनुमान", loc: "सारंगपुर, गुजरात", img: "assets/images/kashtbhanjan-sarangpur.jpg"},
-      {name: "जाखू मंदिर", loc: "शिमला, हिमाचल प्रदेश", img: "assets/images/jakhu-temple-shimla.jpg"},
-      {name: "नामक्कल अंजनयार", loc: "तमिलनाडु", img: "assets/images/namakkal-anjaneyar.jpg"},
-      {name: "महीयप्पन मंदिर", loc: "केरल", img: "assets/images/mahiyappan-kerala.jpg"},
-      {name: "प्राचीन हनुमान मंदिर", loc: "दिल्ली", img: "assets/images/hanuman-temple-delhi.jpg"},
-      {name: "पंचमुखी आंजनेयर", loc: "तमिलनाडु", img: "assets/images/panchmukhi-kumbakonam.jpg"},
-      {name: "हनुमान धारा", loc: "चित्रकूट", img: "assets/images/hanuman-dhara-chitrakoot.jpg"},
-      {name: "बालाजी धाम", loc: "कुरुक्षेत्र", img: "assets/images/balaji-dham-kurukshetra.jpg"},
-      {name: "बजरंगगढ़ मंदिर", loc: "गुना, मध्य प्रदेश", img: "assets/images/bajranggarh-guna.jpg"},
-      {name: "महावीर मंदिर", loc: "पटना, बिहार", img: "assets/images/mahavir-mandir-patna.jpg"}
-    ];
+  <div class="section-heading">
+    <h2>सिद्धपीठों के दर्शन</h2>
+  </div>
 
-    const grid = document.getElementById('mandirGrid');
-    mandirs.forEach(m => {
-      grid.innerHTML += `
-        <div class="material-card">
-          <img src="${m.img}" alt="${m.name}" loading="lazy" style="border-radius: 8px 8px 0 0;">
-          <div style="padding: 15px;">
-            <h3>${m.name}</h3>
-            <p>${m.loc}</p>
-            <a href="#" class="btn btn-secondary" style="margin-top:10px; display:inline-block;">दर्शन करें</a>
-          </div>
+  <div class="mandir-grid" id="mandirGrid"></div>
+</section>
+
+<!-- FAVORITES SECTION (NEW FEATURE) -->
+<section class="section" id="favSection" style="background: var(--saffron-light); border-radius: 20px; margin: 0 16px;">
+  <div class="section-heading">
+    <h2>❤️ आपके पसंदीदा मंदिर</h2>
+  </div>
+  <div class="mandir-grid" id="favGrid"></div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer" id="footerSection">
+  <div class="footer-container">
+    <div class="footer-box">
+      <h3>हनुमान भक्ति</h3>
+      <p>हनुमान भक्ति एक समर्पित सनातन मंच है, जहाँ श्री हनुमान जी की भक्ति, चालीसा, कथा, मंत्र और आध्यात्मिक ज्ञान प्रस्तुत किया जाता है।</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-box">
+      <h4>महत्वपूर्ण लिंक</h4>
+      <ul>
+        <li><a href="about-us.html">हमारे बारे में</a></li>
+        <li><a href="contact-us.html">संपर्क करें</a></li>
+        <li><a href="privacy-policy.html">गोपनीयता नीति</a></li>
+        <li><a href="disclaimer.html">अस्वीकरण</a></li>
+        <li><a href="terms.html">नियम एवं शर्तें</a></li>
+      </ul>
+    </div>
+    <div class="footer-box">
+      <h4>भक्ति सामग्री</h4>
+      <ul>
+        <li><a href="chalisa.html">हनुमान चालीसा</a></li>
+        <li><a href="bajrang-baan.html">बजरंग बाण</a></li>
+        <li><a href="hanuman-ashtak.html">हनुमान अष्टक</a></li>
+        <li><a href="sunderkand.html">सुंदरकांड</a></li>
+        <li><a href="katha.html">पौराणिक कथाएँ</a></li>
+      </ul>
+    </div>
+    <div class="footer-box">
+      <h4>विश्वास का आधार</h4>
+      <p class="trust-text">✔ भक्ति-आधारित सामग्री<br>✔ भ्रामक जानकारी से मुक्त<br>✔ सनातन मूल्यों पर आधारित मंच</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 www.hanumanbhakti.org • जय बजरंग बली 🔱<br>
+    <span>यह वेबसाइट केवल धार्मिक एवं शैक्षिक उद्देश्य हेतु है।</span>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTopBtn" aria-label="ऊपर जाएँ">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- MOBILE BOTTOM NAV -->
+<nav class="mobile-bottom-nav">
+  <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>होम</span></a>
+  <a href="chalisa.html" class="nav-item"><i class="fas fa-book-open"></i><span>चालीसा</span></a>
+  <a href="mandir-darshan.html" class="nav-item active"><i class="fas fa-gopuram"></i><span>मंदिर</span></a>
+  <button class="nav-item" id="mobileMenuBtn" aria-label="मेनू"><i class="fas fa-bars"></i><span>मेनू</span></button>
+</nav>
+
+<!-- DRAWER OVERLAY -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
+<!-- MOBILE DRAWER -->
+<aside class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-header">
+    <div class="drawer-logo"><i class="fas fa-om"></i> हनुमान भक्ति</div>
+    <button class="close-btn" id="drawerCloseBtn">×</button>
+  </div>
+  <div class="drawer-section">
+    <h4>मुख्य श्रेणियाँ</h4>
+    <ul class="drawer-links">
+      <li><a href="index.html"><i class="fas fa-home"></i> होम</a></li>
+      <li><a href="chalisa.html"><i class="fas fa-book-open"></i> हनुमान चालीसा</a></li>
+      <li><a href="bajrang-baan.html"><i class="fas fa-bolt"></i> बजरंग बाण</a></li>
+      <li><a href="sunderkand.html"><i class="fas fa-fire"></i> सुंदरकांड</a></li>
+      <li><a href="mantra.html"><i class="fas fa-om"></i> मंत्र एवं विधि</a></li>
+      <li><a href="katha.html"><i class="fas fa-scroll"></i> पौराणिक कथाएँ</a></li>
+    </ul>
+  </div>
+  <div class="drawer-section">
+    <h4>अन्य जानकारी</h4>
+    <ul class="drawer-links">
+      <li><a href="about-us.html">हमारे बारे में</a></li>
+      <li><a href="contact-us.html">संपर्क करें</a></li>
+      <li><a href="privacy-policy.html">गोपनीयता नीति</a></li>
+    </ul>
+  </div>
+  <div class="drawer-social">
+    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  </div>
+</aside>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-modal" role="dialog" aria-modal="true">
+    <div class="search-top">
+      <h3>भक्ति सामग्री खोजें</h3>
+      <button class="close-btn" id="searchCloseBtn">×</button>
+    </div>
+    <input type="search" id="searchInput" class="search-input" placeholder="जैसे: चालीसा, बजरंग बाण, सुंदरकांड..." autocomplete="off" />
+    <div class="search-results" id="searchResults">
+      <a href="chalisa.html" class="search-item">हनुमान चालीसा</a>
+      <a href="bajrang-baan.html" class="search-item">बजरंग बाण</a>
+      <a href="sunderkand.html" class="search-item">सुंदरकांड</a>
+      <a href="hanuman-ashtak.html" class="search-item">हनुमान अष्टक</a>
+      <a href="mantra.html" class="search-item">हनुमान मंत्र</a>
+      <a href="katha.html" class="search-item">पौराणिक कथाएँ</a>
+      <a href="mandir-darshan.html" class="search-item">मंदिर दर्शन</a>
+      <a href="contact-us.html" class="search-item">संपर्क करें</a>
+    </div>
+  </div>
+</div>
+
+<!-- DARSHAN MODAL (NEW FEATURE) -->
+<div class="modal-overlay" id="mandirModal" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <div class="modal-img-wrap">
+      <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+      <div id="modalImgArea"></div>
+    </div>
+    <div class="modal-body">
+      <h2 id="modalName"></h2>
+      <p class="modal-loc" id="modalLoc"><i class="fas fa-map-marker-alt" style="color:var(--saffron)"></i> <span></span></p>
+      <p id="modalDesc"></p>
+      <div class="modal-tags" id="modalTags"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ===== DATA =====
+  const mandirs = [
+    {
+      name: "हनुमान गढ़ी",
+      loc: "अयोध्या, उत्तर प्रदेश",
+      state: "उत्तर प्रदेश",
+      img: "assets/images/hanuman-garhi.jpg",
+      desc: "हनुमान गढ़ी अयोध्या का सबसे प्रसिद्ध मंदिर है। यहाँ माँ अंजनी की गोद में बाल हनुमान जी विराजमान हैं। 76 सीढ़ियाँ चढ़कर दर्शन किए जाते हैं।",
+      tags: ["सिद्धपीठ", "प्राचीन", "तीर्थ"]
+    },
+    {
+      name: "सालासर बालाजी",
+      loc: "चूरू, राजस्थान",
+      state: "राजस्थान",
+      img: "assets/images/salasar-balaji.jpg",
+      desc: "सालासर धाम में स्थापित बालाजी की प्रतिमा अत्यंत चमत्कारी है। दाढ़ी-मूछ वाले हनुमान जी का यह एकमात्र मंदिर है।",
+      tags: ["चमत्कारी", "श्रद्धा केंद्र", "राजस्थान"]
+    },
+    {
+      name: "मेहंदीपुर बालाजी",
+      loc: "दौसा, राजस्थान",
+      state: "राजस्थान",
+      img: "assets/images/mehendipur-balaji.jpg",
+      desc: "यह मंदिर तंत्र-मंत्र और बाधा निवारण के लिए प्रसिद्ध है। यहाँ हनुमान जी के साथ भैरव जी और प्रेतराज सरकार की भी पूजा होती है।",
+      tags: ["बाधामुक्ति", "तांत्रिक", "सिद्धपीठ"]
+    },
+    {
+      name: "संकट मोचन मंदिर",
+      loc: "वाराणसी, उत्तर प्रदेश",
+      state: "उत्तर प्रदेश",
+      img: "assets/images/sankat-mochan-varanasi.jpg",
+      desc: "गोस्वामी तुलसीदास जी द्वारा स्थापित यह मंदिर काशी का हृदय है। माना जाता है कि यहाँ हनुमान जी स्वयं भक्तों के संकट हरते हैं।",
+      tags: ["तुलसीदास", "काशी", "ऐतिहासिक"]
+    },
+    {
+      name: "लेटे हनुमान जी",
+      loc: "प्रयागराज, उत्तर प्रदेश",
+      state: "उत्तर प्रदेश",
+      img: "assets/images/lete-hanuman-prayagraj.jpg",
+      desc: "संगम तट पर स्थित इस मंदिर में हनुमान जी लेटी हुई अवस्था में हैं। बाढ़ के समय गंगाजल से स्नान होता है — यह अद्भुत दृश्य होता है।",
+      tags: ["अद्वितीय", "संगम", "प्राचीन"]
+    },
+    {
+      name: "कष्टभंजन हनुमान",
+      loc: "सारंगपुर, गुजरात",
+      state: "गुजरात",
+      img: "assets/images/kashtbhanjan-sarangpur.jpg",
+      desc: "स्वामीनारायण सम्प्रदाय का यह मंदिर कष्टों का नाश करने वाला माना जाता है। हनुमान जी यहाँ शनि देव को पैर तले दबाए हुए हैं।",
+      tags: ["कष्टनिवारक", "गुजरात", "स्वामीनारायण"]
+    },
+    {
+      name: "जाखू मंदिर",
+      loc: "शिमला, हिमाचल प्रदेश",
+      state: "अन्य",
+      img: "assets/images/jakhu-temple-shimla.jpg",
+      desc: "शिमला की सबसे ऊँची पहाड़ी पर स्थित यह मंदिर 108 फुट ऊँची हनुमान जी की प्रतिमा के लिए प्रसिद्ध है।",
+      tags: ["पर्वत", "विशाल प्रतिमा", "हिमाचल"]
+    },
+    {
+      name: "नामक्कल अंजनयार",
+      loc: "नामक्कल, तमिलनाडु",
+      state: "तमिलनाडु",
+      img: "assets/images/namakkal-anjaneyar.jpg",
+      desc: "18 फुट ऊँची यह प्रतिमा 1200 साल पुरानी है। दक्षिण भारत का सबसे पूजनीय हनुमान मंदिर जहाँ नवरात्रि पर लाखों भक्त आते हैं।",
+      tags: ["दक्षिण भारत", "प्राचीन", "विशाल"]
+    },
+    {
+      name: "महीयप्पन मंदिर",
+      loc: "केरल",
+      state: "अन्य",
+      img: "assets/images/mahiyappan-kerala.jpg",
+      desc: "केरल का यह अनोखा हनुमान मंदिर द्रविड़ स्थापत्य कला का उत्कृष्ट उदाहरण है। यहाँ हनुमान जी वरद मुद्रा में विराजमान हैं।",
+      tags: ["केरल", "द्रविड़ शैली", "दक्षिण भारत"]
+    },
+    {
+      name: "प्राचीन हनुमान मंदिर",
+      loc: "नई दिल्ली",
+      state: "अन्य",
+      img: "assets/images/hanuman-temple-delhi.jpg",
+      desc: "कनॉट प्लेस स्थित यह मंदिर दिल्ली का प्रमुख धार्मिक स्थल है। मंगलवार को यहाँ विशेष पूजा-अर्चना होती है।",
+      tags: ["दिल्ली", "शहरी", "मंगलवार विशेष"]
+    },
+    {
+      name: "पंचमुखी आंजनेयर",
+      loc: "कुम्बकोणम, तमिलनाडु",
+      state: "तमिलनाडु",
+      img: "assets/images/panchmukhi-kumbakonam.jpg",
+      desc: "पाँच मुखों वाले हनुमान जी की यह प्रतिमा अत्यंत दुर्लभ है। पंचमुखी हनुमान की पूजा से सभी पाँच दिशाओं की रक्षा मानी जाती है।",
+      tags: ["पंचमुखी", "दुर्लभ", "शक्ति पीठ"]
+    },
+    {
+      name: "हनुमान धारा",
+      loc: "चित्रकूट, उत्तर प्रदेश",
+      state: "उत्तर प्रदेश",
+      img: "assets/images/hanuman-dhara-chitrakoot.jpg",
+      desc: "पर्वत से निकलती जलधारा सीधे हनुमान जी की प्रतिमा पर गिरती है। यह स्थान राम-सीता के वनवास से जुड़ा है।",
+      tags: ["जलधारा", "प्राकृतिक", "चित्रकूट"]
+    },
+    {
+      name: "बालाजी धाम",
+      loc: "कुरुक्षेत्र, हरियाणा",
+      state: "अन्य",
+      img: "assets/images/balaji-dham-kurukshetra.jpg",
+      desc: "महाभारत की भूमि कुरुक्षेत्र में यह मंदिर आस्था का बड़ा केंद्र है। यहाँ 51 फुट ऊँची हनुमान प्रतिमा है।",
+      tags: ["कुरुक्षेत्र", "हरियाणा", "विशाल"]
+    },
+    {
+      name: "बजरंগগढ़ मंदिर",
+      loc: "गुना, मध्य प्रदेश",
+      state: "मध्य प्रदेश",
+      img: "assets/images/bajranggarh-guna.jpg",
+      desc: "ऊँची पहाड़ी पर स्थित यह किला मंदिर ऐतिहासिक और धार्मिक दोनों दृष्टि से महत्वपूर्ण है। यहाँ से पूरे गुना का मनोरम दृश्य दिखता है।",
+      tags: ["किला मंदिर", "मध्य प्रदेश", "ऐतिहासिक"]
+    },
+    {
+      name: "महावीर मंदिर",
+      loc: "पटना, बिहार",
+      state: "अन्य",
+      img: "assets/images/mahavir-mandir-patna.jpg",
+      desc: "पटना जंक्शन के पास स्थित यह मंदिर भारत के सबसे अमीर हनुमान मंदिरों में गिना जाता है। प्रतिदिन लाखों रुपये का प्रसाद वितरण होता है।",
+      tags: ["बिहार", "समृद्ध", "प्रसिद्ध"]
+    }
+  ];
+
+  // ===== STATE =====
+  let favorites = JSON.parse(localStorage.getItem('hb_favs') || '[]');
+  let activeFilter = 'all';
+
+  // ===== ELEMENTS =====
+  const grid = document.getElementById('mandirGrid');
+  const favGrid = document.getElementById('favGrid');
+  const favSection = document.getElementById('favSection');
+  const favCount = document.getElementById('favCount');
+  const modal = document.getElementById('mandirModal');
+  const toast = document.getElementById('toast');
+
+  // ===== LOADER =====
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('siteLoader').classList.add('hidden');
+    }, 800);
+  });
+
+  // ===== RENDER CARDS =====
+  function renderCards(data) {
+    grid.innerHTML = '';
+    if (!data.length) {
+      grid.innerHTML = '<div class="empty-state"><i class="fas fa-gopuram"></i><p>इस राज्य में कोई मंदिर नहीं मिला</p></div>';
+      return;
+    }
+    data.forEach((m, i) => {
+      const isFav = favorites.includes(m.name);
+      const card = document.createElement('div');
+      card.className = 'mandir-card fade-in';
+      card.style.animationDelay = `${i * 0.05}s`;
+      card.dataset.name = m.name;
+      card.innerHTML = `
+        <div class="card-img-wrap">
+          <img src="${m.img}" alt="${m.name}" loading="lazy"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="card-img-placeholder" style="display:none">🏛️</div>
+          <span class="card-state-badge">${m.state}</span>
+        </div>
+        <div class="card-body">
+          <h3>${m.name}</h3>
+          <p class="loc"><i class="fas fa-map-marker-alt"></i> ${m.loc}</p>
+        </div>
+        <div class="card-footer">
+          <button class="btn-darshan" onclick="openModal('${m.name}')">दर्शन करें →</button>
+          <button class="btn-fav ${isFav ? 'active' : ''}" onclick="toggleFav('${m.name}', this)" aria-label="पसंदीदा">
+            <i class="fas fa-heart"></i>
+          </button>
         </div>
       `;
+      grid.appendChild(card);
     });
-  </script>
-  <script src="script.js"></script>
+    document.getElementById('totalCount').textContent = data.length;
+  }
+
+  function renderFavs() {
+    const favMandirs = mandirs.filter(m => favorites.includes(m.name));
+    favCount.textContent = favMandirs.length;
+    if (!favMandirs.length) {
+      favSection.classList.remove('has-items');
+      return;
+    }
+    favSection.classList.add('has-items');
+    favGrid.innerHTML = '';
+    favMandirs.forEach(m => {
+      const card = document.createElement('div');
+      card.className = 'mandir-card fade-in';
+      card.innerHTML = `
+        <div class="card-img-wrap" style="height:140px">
+          <img src="${m.img}" alt="${m.name}" loading="lazy"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="card-img-placeholder" style="display:none;height:140px">🏛️</div>
+          <span class="card-state-badge">${m.state}</span>
+        </div>
+        <div class="card-body">
+          <h3 style="font-size:.95rem">${m.name}</h3>
+          <p class="loc"><i class="fas fa-map-marker-alt"></i> ${m.loc}</p>
+        </div>
+      `;
+      favGrid.appendChild(card);
+    });
+  }
+
+  // ===== FILTER =====
+  document.getElementById('filterBar').addEventListener('click', e => {
+    const btn = e.target.closest('.filter-btn');
+    if (!btn) return;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.state;
+    const filtered = activeFilter === 'all' ? mandirs : mandirs.filter(m => m.state === activeFilter);
+    renderCards(filtered);
+  });
+
+  // ===== FAVORITES =====
+  function toggleFav(name, btn) {
+    const idx = favorites.indexOf(name);
+    if (idx === -1) {
+      favorites.push(name);
+      btn.classList.add('active');
+      showToast('❤️ पसंदीदा में जोड़ा गया');
+    } else {
+      favorites.splice(idx, 1);
+      btn.classList.remove('active');
+      showToast('💔 पसंदीदा से हटाया गया');
+    }
+    localStorage.setItem('hb_favs', JSON.stringify(favorites));
+    renderFavs();
+  }
+
+  // ===== MODAL =====
+  function openModal(name) {
+    const m = mandirs.find(x => x.name === name);
+    if (!m) return;
+    document.getElementById('modalName').textContent = m.name;
+    document.getElementById('modalLoc').querySelector('span').textContent = m.loc;
+    document.getElementById('modalDesc').textContent = m.desc;
+    document.getElementById('modalTags').innerHTML = m.tags.map(t => `<span class="modal-tag">${t}</span>`).join('');
+    const imgArea = document.getElementById('modalImgArea');
+    imgArea.innerHTML = `<img class="modal-img" src="${m.img}" alt="${m.name}" onerror="this.outerHTML='<div class=modal-img-placeholder>🏛️</div>'">`;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+  function closeModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // ===== TOAST =====
+  let toastTimer;
+  function showToast(msg) {
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+  }
+
+  // ===== DRAWER =====
+  function openDrawer() {
+    document.getElementById('mobileDrawer').classList.add('open');
+    document.getElementById('drawerOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+    document.getElementById('mobileDrawer').classList.remove('open');
+    document.getElementById('drawerOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('menuToggleBtn').addEventListener('click', openDrawer);
+  document.getElementById('mobileMenuBtn').addEventListener('click', openDrawer);
+  document.getElementById('drawerCloseBtn').addEventListener('click', closeDrawer);
+  document.getElementById('drawerOverlay').addEventListener('click', closeDrawer);
+
+  // ===== SEARCH =====
+  function openSearch() {
+    document.getElementById('searchOverlay').classList.add('open');
+    document.getElementById('searchInput').focus();
+  }
+  function closeSearch() {
+    document.getElementById('searchOverlay').classList.remove('open');
+  }
+  document.getElementById('searchToggleBtn').addEventListener('click', openSearch);
+  document.getElementById('searchCloseBtn').addEventListener('click', closeSearch);
+  document.getElementById('searchOverlay').addEventListener('click', e => {
+    if (e.target === document.getElementById('searchOverlay')) closeSearch();
+  });
+  document.getElementById('searchInput').addEventListener('input', function() {
+    const q = this.value.toLowerCase();
+    const items = document.querySelectorAll('.search-item');
+    items.forEach(it => {
+      it.style.display = it.textContent.includes(q) || q === '' ? '' : 'none';
+    });
+  });
+
+  // ===== THEME =====
+  const themeBtn = document.getElementById('themeToggleBtn');
+  const savedTheme = localStorage.getItem('hb_theme') || 'light';
+  if (savedTheme === 'dark') applyDark();
+  themeBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    if (isDark) { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('hb_theme','light'); themeBtn.querySelector('i').className = 'fas fa-moon'; }
+    else { applyDark(); }
+  });
+  function applyDark() {
+    document.documentElement.setAttribute('data-theme','dark');
+    localStorage.setItem('hb_theme','dark');
+    themeBtn.querySelector('i').className = 'fas fa-sun';
+  }
+
+  // ===== BACK TO TOP =====
+  const topBtn = document.getElementById('backToTopBtn');
+  window.addEventListener('scroll', () => {
+    topBtn.classList.toggle('visible', window.scrollY > 300);
+  }, { passive: true });
+  topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // ===== KEYBOARD ESC =====
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { closeModal(); closeDrawer(); closeSearch(); }
+  });
+
+  // ===== INIT =====
+  renderCards(mandirs);
+  renderFavs();
+</script>
 </body>
 </html>
