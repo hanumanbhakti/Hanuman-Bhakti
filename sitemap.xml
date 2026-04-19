@@ -1,89 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- HOMEPAGE -->
-  <url>
-    <loc>https://hanumanbhakti.org/</loc>
-    <priority>1.00</priority>
-  </url>
+  <url><loc>https://hanumanbhakti.org/</loc><priority>1.00</priority></url>
 
-  <!-- MAIN AUTHORITY PAGE -->
-  <url>
-    <loc>https://hanumanbhakti.org/hanuman-chalisa-hindi-images.html</loc>
-    <priority>0.90</priority>
-  </url>
+  <url><loc>https://hanumanbhakti.org/hanuman-chalisa-hindi-images.html</loc><priority>0.90</priority></url>
 
-  <!-- CORE CONTENT -->
-  <url>
-    <loc>https://hanumanbhakti.org/chalisa.html</loc>
-    <priority>0.80</priority>
-  </url>
+  <url><loc>https://hanumanbhakti.org/chalisa.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hanumanbhakti.org/sunderkand.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hanumanbhakti.org/bajrang-baan.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hanumanbhakti.org/hanuman-ashtak.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hanumanbhakti.org/mantra.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hanumanbhakti.org/katha.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hanumanbhakti.org/mandir-darshan.html</loc><priority>0.80</priority></url>
 
-  <url>
-    <loc>https://hanumanbhakti.org/sunderkand.html</loc>
-    <priority>0.80</priority>
-  </url>
+  <!-- NEW -->
+  <url><loc>https://hanumanbhakti.org/aarti.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hanumanbhakti.org/chalisa-arth.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hanumanbhakti.org/chalisa-labh.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hanumanbhakti.org/hanuman-chalisa-kab-padhen.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hanumanbhakti.org/hanuman-janm.html</loc><priority>0.70</priority></url>
+  <url><loc>https://hanumanbhakti.org/sunderkand-vidhi.html</loc><priority>0.80</priority></url>
 
-  <url>
-    <loc>https://hanumanbhakti.org/bajrang-baan.html</loc>
-    <priority>0.80</priority>
-  </url>
+  <url><loc>https://hanumanbhakti.org/mandir-ayodhya.html</loc><priority>0.70</priority></url>
+  <url><loc>https://hanumanbhakti.org/hanuman-ji-ke-baare.html</loc><priority>0.70</priority></url>
 
-  <url>
-    <loc>https://hanumanbhakti.org/hanuman-ashtak.html</loc>
-    <priority>0.80</priority>
-  </url>
+  <url><loc>https://hanumanbhakti.org/about-us.html</loc><priority>0.60</priority></url>
+  <url><loc>https://hanumanbhakti.org/contact-us.html</loc><priority>0.60</priority></url>
 
-  <url>
-    <loc>https://hanumanbhakti.org/mantra.html</loc>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://hanumanbhakti.org/katha.html</loc>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://hanumanbhakti.org/mandir-darshan.html</loc>
-    <priority>0.80</priority>
-  </url>
-
-  <!-- SECONDARY CONTENT -->
-  <url>
-    <loc>https://hanumanbhakti.org/mandir-ayodhya.html</loc>
-    <priority>0.70</priority>
-  </url>
-
-  <url>
-    <loc>https://hanumanbhakti.org/hanuman-ji-ke-baare.html</loc>
-    <priority>0.70</priority>
-  </url>
-
-  <!-- INFO / LEGAL -->
-  <url>
-    <loc>https://hanumanbhakti.org/about-us.html</loc>
-    <priority>0.60</priority>
-  </url>
-
-  <url>
-    <loc>https://hanumanbhakti.org/contact-us.html</loc>
-    <priority>0.60</priority>
-  </url>
-
-  <url>
-    <loc>https://hanumanbhakti.org/privacy-policy.html</loc>
-    <priority>0.30</priority>
-  </url>
-
-  <url>
-    <loc>https://hanumanbhakti.org/terms.html</loc>
-    <priority>0.30</priority>
-  </url>
-
-  <url>
-    <loc>https://hanumanbhakti.org/disclaimer.html</loc>
-    <priority>0.30</priority>
-  </url>
+  <url><loc>https://hanumanbhakti.org/privacy-policy.html</loc><priority>0.30</priority></url>
+  <url><loc>https://hanumanbhakti.org/terms.html</loc><priority>0.30</priority></url>
+  <url><loc>https://hanumanbhakti.org/disclaimer.html</loc><priority>0.30</priority></url>
 
 </urlset>
