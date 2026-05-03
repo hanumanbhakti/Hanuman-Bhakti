@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <title>पंचमुखी हनुमान अवतार — पूर्ण कथा | हनुमान भक्ति</title>
+  <meta name="description" content="पंचमुखी हनुमान अवतार की सम्पूर्ण कथा — पाँचों मुखों का रहस्य, अहिरावण वध और इस दिव्य स्वरूप का आध्यात्मिक महत्व | हनुमान भक्ति" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Tiro+Devanagari+Hindi:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    /* ═══════════════════════════════════════
+       ROOT & THEME
+    ═══════════════════════════════════════ */
+    :root {
+      --ink:        #0f0a05;
+      --ink-soft:   #2c1f0e;
+      --parchment:  #fdf8f0;
+      --warm-white: #fffcf7;
+      --saffron:    #e85d04;
+      --saffron-2:  #f48c06;
+      --gold:       #d4a017;
+      --gold-light: #f9e4a0;
+      --crimson:    #9b1c1c;
+      --forest:     #1a3d2b;
+      --border:     #e2d5bc;
+      --muted:      #7a6652;
+      --card:       #ffffff;
+      --shadow-warm: 0 8px 40px rgba(180,100,20,0.12);
+      --t: 0.3s cubic-bezier(.4,0,.2,1);
+    }
+    [data-theme="dark"] {
+      --ink:        #f5ede0;
+      --ink-soft:   #e0ccb0;
+      --parchment:  #120a02;
+      --warm-white: #1a0f05;
+      --saffron:    #ff7b1c;
+      --gold:       #f0bc30;
+      --gold-light: #3d2a00;
+      --crimson:    #e05252;
+      --border:     #3a2510;
+      --muted:      #a08868;
+      --card:       #1e1208;
+      --shadow-warm: 0 8px 40px rgba(0,0,0,0.4);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--parchment);
+      color: var(--ink);
+      transition: background var(--t), color var(--t);
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    /* ═══════════════════════════════════════
+       LOADER
+    ═══════════════════════════════════════ */
+    #siteLoader {
+      position: fixed; inset: 0; z-index: 9999;
+      background: var(--crimson);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 14px;
+      transition: opacity 0.6s, visibility 0.6s;
+    }
+    #siteLoader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .loader-mandala {
+      width: 64px; height: 64px;
+      border: 3px solid rgba(255,255,255,0.2);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    #siteLoader p { color: #fff; font-size: 1rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ═══════════════════════════════════════
+       HEADER
+    ═══════════════════════════════════════ */
+    .site-header {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(253,248,240,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    [data-theme="dark"] .site-header { background: rgba(18,10,2,0.96); }
+    .header-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; gap: 16px;
+      padding: 14px 24px;
+    }
+    .logo {
+      display: flex; align-items: center; gap: 10px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem; font-weight: 700;
+      color: var(--saffron);
+    }
+    .logo-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--gold); flex-shrink: 0;
+    }
+    .desk-nav { display: none; margin-left: auto; }
+    .desk-nav ul { display: flex; gap: 4px; }
+    .desk-nav a {
+      padding: 6px 14px; border-radius: 6px;
+      font-size: 0.88rem; font-weight: 600;
+      color: var(--muted); transition: all var(--t);
+      letter-spacing: 0.3px;
+    }
+    .desk-nav a:hover { color: var(--saffron); background: rgba(232,93,4,0.07); }
+    .desk-nav a.active { color: var(--saffron); background: rgba(232,93,4,0.1); }
+    .h-actions { display: flex; gap: 8px; margin-left: auto; }
+    .h-btn {
+      width: 38px; height: 38px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.95rem; color: var(--muted);
+      transition: all var(--t); border: 1px solid var(--border);
+      background: var(--card);
+    }
+    .h-btn:hover { color: var(--saffron); border-color: var(--saffron); }
+    .mob-menu-btn {
+      width: 38px; height: 38px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--saffron); color: #fff; font-size: 1rem;
+    }
+    @media (min-width: 768px) {
+      .desk-nav { display: block; }
+      .mob-menu-btn { display: none; }
+      .h-actions { margin-left: 0; }
+    }
+
+    /* ═══════════════════════════════════════
+       HERO — FULL-BLEED EDITORIAL
+    ═══════════════════════════════════════ */
+    .hero {
+      position: relative;
+      height: 92vh; min-height: 580px; max-height: 860px;
+      overflow: hidden;
+      display: flex; align-items: flex-end;
+    }
+    .hero-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%; object-fit: cover;
+      object-position: center 20%;
+      filter: brightness(0.55) saturate(1.2);
+      transform: scale(1.04);
+      animation: heroZoom 12s ease-out forwards;
+    }
+    @keyframes heroZoom { to { transform: scale(1); } }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(10,5,0,0.1) 0%,
+        rgba(10,5,0,0.05) 30%,
+        rgba(10,5,0,0.6) 65%,
+        rgba(10,5,0,0.95) 100%
+      );
+    }
+    /* Gold shimmer line */
+    .hero-line {
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), var(--saffron), var(--gold), transparent);
+      animation: shimmer 3s linear infinite;
+      background-size: 200% 100%;
+    }
+    @keyframes shimmer { to { background-position: 200% 0; } }
+
+    .hero-content {
+      position: relative; z-index: 2;
+      padding: 0 24px 56px;
+      max-width: 900px; margin: 0 auto; width: 100%;
+    }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(212,160,23,0.15);
+      border: 1px solid rgba(212,160,23,0.4);
+      color: var(--gold-light);
+      padding: 6px 16px; border-radius: 4px;
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 2.5px; text-transform: uppercase;
+      margin-bottom: 20px;
+      animation: fadeUp 0.8s ease 0.3s both;
+    }
+    .hero-h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 6vw, 4.2rem);
+      font-weight: 900; color: #fff;
+      line-height: 1.12; letter-spacing: -0.5px;
+      margin-bottom: 16px;
+      animation: fadeUp 0.8s ease 0.5s both;
+    }
+    .hero-h1 em {
+      font-style: italic; color: var(--gold);
+    }
+    .hero-sub {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: 1.1rem; color: rgba(255,255,255,0.78);
+      line-height: 1.8; max-width: 600px;
+      animation: fadeUp 0.8s ease 0.7s both;
+    }
+    .hero-meta {
+      display: flex; align-items: center; flex-wrap: wrap; gap: 20px;
+      margin-top: 28px;
+      animation: fadeUp 0.8s ease 0.9s both;
+    }
+    .hero-meta-item {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 0.82rem; font-weight: 600;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.5px;
+    }
+    .hero-meta-item i { color: var(--gold); font-size: 0.9rem; }
+    .hero-scroll {
+      position: absolute; bottom: 24px; right: 24px; z-index: 3;
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.5); font-size: 0.72rem;
+      font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+      animation: bounce 2s ease infinite;
+    }
+    .hero-scroll i { font-size: 1rem; }
+    @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(6px)} }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+
+    /* ═══════════════════════════════════════
+       CONTROLS BAR
+    ═══════════════════════════════════════ */
+    .ctrl-bar {
+      position: sticky; top: 65px; z-index: 100;
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+    .ctrl-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; flex-wrap: wrap; gap: 8px;
+      padding: 10px 24px;
+    }
+    .c-btn {
+      display: flex; align-items: center; gap: 7px;
+      padding: 8px 18px; border-radius: 6px;
+      font-size: 0.84rem; font-weight: 600;
+      border: 1px solid var(--border);
+      background: var(--card); color: var(--ink);
+      transition: all var(--t); letter-spacing: 0.3px;
+    }
+    .c-btn:hover { border-color: var(--saffron); color: var(--saffron); background: rgba(232,93,4,0.05); }
+    .c-btn.fill { background: var(--saffron); color: #fff; border-color: var(--saffron); }
+    .c-btn.fill:hover { background: #c94f00; }
+    .font-ctrl { display: flex; align-items: center; gap: 6px; margin-left: auto; }
+    .font-ctrl span { font-size: 0.8rem; color: var(--muted); font-weight: 600; }
+    .progress-bar {
+      position: fixed; top: 0; left: 0; z-index: 9000;
+      height: 3px; background: linear-gradient(90deg, var(--saffron), var(--gold));
+      width: 0%; transition: width 0.1s;
+    }
+
+    /* ═══════════════════════════════════════
+       ARTICLE LAYOUT
+    ═══════════════════════════════════════ */
+    .article-wrap {
+      max-width: 1200px; margin: 0 auto;
+      padding: 60px 24px 40px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    @media (min-width: 1024px) {
+      .article-wrap {
+        grid-template-columns: minmax(0,1fr) 320px;
+        align-items: start;
+      }
+    }
+
+    /* ═══════════════════════════════════════
+       MAIN CONTENT
+    ═══════════════════════════════════════ */
+    .article-body { min-width: 0; }
+
+    /* Drop cap intro */
+    .intro-block {
+      margin-bottom: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+    }
+    .intro-text {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: 1.18rem; line-height: 2;
+      color: var(--ink-soft);
+    }
+    .intro-text::first-letter {
+      font-family: 'Playfair Display', serif;
+      font-size: 4.5rem; font-weight: 900;
+      float: left; line-height: 0.75;
+      margin: 8px 12px 0 0;
+      color: var(--saffron);
+    }
+
+    /* Section blocks */
+    .sec {
+      margin-bottom: 52px;
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .sec.visible { opacity: 1; transform: translateY(0); }
+
+    .sec-eyebrow {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 3px;
+      color: var(--saffron); margin-bottom: 10px;
+    }
+    .sec-eyebrow::before {
+      content: ''; width: 28px; height: 2px;
+      background: var(--saffron); flex-shrink: 0;
+    }
+    .sec-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700; color: var(--ink);
+      line-height: 1.25; margin-bottom: 18px;
+    }
+    .sec-body {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: 1.08rem; line-height: 2.05;
+      color: var(--ink-soft);
+    }
+    .sec-body p { margin-bottom: 18px; }
+    .sec-body p:last-child { margin-bottom: 0; }
+
+    /* Inline image */
+    .inline-img-wrap {
+      margin: 32px 0;
+      border-radius: 12px; overflow: hidden;
+      box-shadow: var(--shadow-warm);
+      position: relative;
+    }
+    .inline-img-wrap img {
+      width: 100%; display: block;
+      aspect-ratio: 16/9; object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .inline-img-wrap:hover img { transform: scale(1.03); }
+    .img-caption {
+      background: var(--card);
+      padding: 12px 18px;
+      font-size: 0.8rem; color: var(--muted);
+      border-top: 1px solid var(--border);
+      display: flex; align-items: center; gap: 8px;
+      font-style: italic;
+    }
+    .img-caption i { color: var(--gold); }
+
+    /* Pull quote */
+    .pull-quote {
+      position: relative;
+      margin: 36px 0;
+      padding: 28px 32px 28px 40px;
+      border-left: 4px solid var(--gold);
+      background: linear-gradient(135deg, rgba(212,160,23,0.07), rgba(232,93,4,0.04));
+      border-radius: 0 12px 12px 0;
+    }
+    .pull-quote::before {
+      content: '\201C';
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem; line-height: 1;
+      color: var(--gold); opacity: 0.3;
+      position: absolute; top: 8px; left: 12px;
+    }
+    .pull-quote p {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: 1.15rem; line-height: 2;
+      color: var(--saffron);
+      font-style: italic;
+      position: relative; z-index: 1;
+    }
+    .pull-quote cite {
+      display: block; margin-top: 10px;
+      font-size: 0.8rem; font-style: normal;
+      font-weight: 700; color: var(--muted);
+      letter-spacing: 1px; text-transform: uppercase;
+    }
+
+    /* FACES GRID */
+    .faces-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+      margin: 32px 0;
+    }
+    .face-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-warm);
+      transition: transform var(--t), box-shadow var(--t);
+    }
+    .face-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(180,100,20,0.18);
+    }
+    .face-img {
+      width: 100%; aspect-ratio: 4/3;
+      object-fit: cover; display: block;
+      transition: transform 0.5s ease;
+    }
+    .face-card:hover .face-img { transform: scale(1.06); }
+    .face-body { padding: 18px 20px; }
+    .face-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.72rem; font-weight: 700;
+      color: var(--saffron); letter-spacing: 2px;
+      text-transform: uppercase; margin-bottom: 6px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .face-number::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .face-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem; font-weight: 700;
+      color: var(--ink); margin-bottom: 8px;
+    }
+    .face-hindi {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: 0.95rem; color: var(--muted);
+      line-height: 1.7; margin-bottom: 10px;
+    }
+    .face-badge {
+      display: inline-block;
+      padding: 3px 10px; border-radius: 4px;
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase;
+    }
+    .badge-fire  { background: rgba(232,93,4,0.1);  color: var(--saffron); }
+    .badge-water { background: rgba(26,61,43,0.12); color: var(--forest); }
+    .badge-wind  { background: rgba(212,160,23,0.12);color: #8a6500; }
+    .badge-earth { background: rgba(155,28,28,0.1); color: var(--crimson); }
+    .badge-sky   { background: rgba(30,60,120,0.1); color: #1e3c78; }
+
+    /* AHIRAVAN FULL IMAGE */
+    .full-img-block {
+      margin: 40px 0;
+      position: relative;
+      border-radius: 16px; overflow: hidden;
+      box-shadow: 0 16px 60px rgba(0,0,0,0.2);
+    }
+    .full-img-block img {
+      width: 100%; display: block;
+      aspect-ratio: 21/9; object-fit: cover;
+      object-position: center 35%;
+    }
+    .full-img-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, rgba(10,5,0,0.7) 0%, transparent 60%);
+      display: flex; align-items: center;
+      padding: 40px;
+    }
+    .full-img-text { max-width: 420px; }
+    .full-img-text h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.3rem, 3vw, 2rem);
+      color: #fff; font-weight: 700;
+      line-height: 1.3; margin-bottom: 10px;
+    }
+    .full-img-text p {
+      color: rgba(255,255,255,0.75);
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: 0.95rem; line-height: 1.8;
+    }
+    @media (max-width: 640px) {
+      .full-img-block img { aspect-ratio: 4/3; }
+      .full-img-overlay { background: linear-gradient(to top, rgba(10,5,0,0.85) 0%, transparent 60%); align-items: flex-end; }
+    }
+
+    /* KEY LEARNINGS */
+    .learnings-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px; margin: 28px 0;
+    }
+    .learning-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px; padding: 20px;
+      display: flex; flex-direction: column; gap: 10px;
+      box-shadow: var(--shadow-warm);
+      transition: border-color var(--t);
+    }
+    .learning-card:hover { border-color: var(--gold); }
+    .l-icon { font-size: 1.8rem; }
+    .l-title { font-weight: 700; font-size: 0.95rem; color: var(--ink); }
+    .l-text {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: 0.9rem; line-height: 1.8; color: var(--muted);
+    }
+
+    /* DIVIDER */
+    .ornament {
+      text-align: center; margin: 40px 0;
+      color: var(--gold); font-size: 1.1rem;
+      letter-spacing: 10px; opacity: 0.5;
+    }
+
+    /* ═══════════════════════════════════════
+       SIDEBAR
+    ═══════════════════════════════════════ */
+    .sidebar { display: flex; flex-direction: column; gap: 24px; }
+
+    .side-widget {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px; overflow: hidden;
+      box-shadow: var(--shadow-warm);
+    }
+    .widget-header {
+      padding: 14px 18px;
+      background: linear-gradient(135deg, var(--ink-soft), var(--saffron));
+      display: flex; align-items: center; gap: 10px;
+    }
+    .widget-header h3 { color: #fff; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.5px; }
+    .widget-header i { color: var(--gold); }
+    .widget-body { padding: 18px; }
+
+    /* Fact list */
+    .fact-list { display: flex; flex-direction: column; gap: 12px; }
+    .fact-item { display: flex; gap: 12px; align-items: flex-start; }
+    .fact-icon {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: rgba(232,93,4,0.1);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 0.9rem; color: var(--saffron);
+    }
+    .fact-text { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
+    .fact-text strong { color: var(--ink); display: block; font-size: 0.88rem; margin-bottom: 2px; }
+
+    /* Related links */
+    .related-list { display: flex; flex-direction: column; gap: 4px; }
+    .related-link {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 12px; border-radius: 8px;
+      transition: background var(--t);
+    }
+    .related-link:hover { background: rgba(232,93,4,0.06); }
+    .rl-img {
+      width: 54px; height: 40px; border-radius: 6px;
+      object-fit: cover; flex-shrink: 0;
+    }
+    .rl-text { font-size: 0.84rem; font-weight: 600; color: var(--ink); line-height: 1.4; }
+    .rl-sub { font-size: 0.76rem; color: var(--muted); margin-top: 2px; }
+
+    /* Mantra box */
+    .mantra-box {
+      background: linear-gradient(135deg, var(--crimson), #5c0a0a);
+      border-radius: 10px; padding: 20px;
+      text-align: center;
+    }
+    .mantra-box .m-label {
+      font-size: 0.7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 2px;
+      color: rgba(255,255,255,0.6); margin-bottom: 10px;
+    }
+    .mantra-box .m-text {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: 1rem; color: var(--gold-light);
+      line-height: 2; margin-bottom: 12px;
+    }
+    .mantra-copy {
+      padding: 7px 18px; border-radius: 20px;
+      background: rgba(255,255,255,0.15); color: #fff;
+      font-size: 0.8rem; font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.25);
+      transition: all var(--t);
+    }
+    .mantra-copy:hover { background: rgba(255,255,255,0.25); }
+
+    /* ═══════════════════════════════════════
+       RELATED ARTICLES SECTION
+    ═══════════════════════════════════════ */
+    .more-section {
+      border-top: 1px solid var(--border);
+      padding: 60px 24px;
+      max-width: 1200px; margin: 0 auto;
+    }
+    .more-label {
+      font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 3px;
+      color: var(--saffron); margin-bottom: 8px;
+    }
+    .more-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem; font-weight: 700;
+      color: var(--ink); margin-bottom: 32px;
+    }
+    .more-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .more-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px; overflow: hidden;
+      box-shadow: var(--shadow-warm);
+      display: flex; flex-direction: column;
+      transition: transform var(--t), box-shadow var(--t);
+    }
+    .more-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(180,100,20,0.16); }
+    .more-card-img {
+      width: 100%; aspect-ratio: 16/9; object-fit: cover;
+      display: block; transition: transform 0.5s;
+    }
+    .more-card:hover .more-card-img { transform: scale(1.05); }
+    .more-card-img-wrap { overflow: hidden; }
+    .more-card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+    .more-card-tag {
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 1.5px; color: var(--saffron); margin-bottom: 8px;
+    }
+    .more-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem; font-weight: 700;
+      color: var(--ink); line-height: 1.4; flex: 1; margin-bottom: 16px;
+    }
+    .more-card-footer {
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .more-card-meta { font-size: 0.78rem; color: var(--muted); display: flex; align-items: center; gap: 5px; }
+    .read-link {
+      font-size: 0.82rem; font-weight: 700;
+      color: var(--saffron); display: flex; align-items: center; gap: 5px;
+      transition: gap var(--t);
+    }
+    .read-link:hover { gap: 10px; }
+
+    /* ═══════════════════════════════════════
+       TOAST
+    ═══════════════════════════════════════ */
+    .toast {
+      position: fixed; bottom: 80px; left: 50%;
+      transform: translateX(-50%) translateY(16px);
+      background: #1a1a1a; color: #fff;
+      padding: 10px 24px; border-radius: 6px;
+      font-size: 0.85rem; font-weight: 600;
+      z-index: 5000; opacity: 0; transition: all 0.3s;
+      pointer-events: none; white-space: nowrap;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* ═══════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════ */
+    .site-footer {
+      background: var(--ink-soft);
+      color: rgba(255,255,255,0.65);
+      margin-top: 0;
+    }
+    [data-theme="dark"] .site-footer { background: #0a0500; }
+    .footer-grid {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+      gap: 36px; padding: 56px 24px 36px;
+    }
+    .fg h3, .fg h4 { color: var(--gold); margin-bottom: 14px; font-size: 0.95rem; font-weight: 700; }
+    .fg p { font-size: 0.85rem; line-height: 1.8; }
+    .fg ul { display: flex; flex-direction: column; gap: 8px; }
+    .fg ul a { font-size: 0.85rem; transition: color var(--t); }
+    .fg ul a:hover { color: var(--saffron); }
+    .f-social { display: flex; gap: 10px; margin-top: 14px; }
+    .f-social a {
+      width: 34px; height: 34px; border-radius: 6px;
+      background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.7);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem; transition: all var(--t);
+    }
+    .f-social a:hover { background: var(--saffron); color: #fff; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      text-align: center; padding: 18px 24px;
+      font-size: 0.8rem; color: rgba(255,255,255,0.35); line-height: 1.9;
+    }
+
+    /* ═══════════════════════════════════════
+       MOBILE NAV
+    ═══════════════════════════════════════ */
+    .mob-nav {
+      display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 300;
+      background: var(--card); border-top: 1px solid var(--border);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    .mob-nav .ni {
+      flex: 1; display: flex; flex-direction: column; align-items: center;
+      padding: 8px 4px; color: var(--muted);
+      font-size: 0.7rem; font-weight: 600; gap: 3px; transition: color var(--t);
+    }
+    .mob-nav .ni i { font-size: 1.1rem; }
+    .mob-nav .ni.active, .mob-nav .ni:hover { color: var(--saffron); }
+    @media (min-width: 768px) { .mob-nav { display: none; } }
+    @media (max-width: 767px) { body { padding-bottom: 64px; } }
+
+    /* ═══════════════════════════════════════
+       DRAWER
+    ═══════════════════════════════════════ */
+    .d-overlay {
+      position: fixed; inset: 0; z-index: 400;
+      background: rgba(0,0,0,0.55); opacity: 0; visibility: hidden; transition: all 0.3s;
+    }
+    .d-overlay.open { opacity: 1; visibility: visible; }
+    .drawer {
+      position: fixed; top: 0; left: 0; bottom: 0; z-index: 500;
+      width: min(82vw, 300px); background: var(--card);
+      transform: translateX(-100%); transition: transform 0.35s cubic-bezier(.4,0,.2,1);
+      overflow-y: auto; display: flex; flex-direction: column;
+    }
+    .drawer.open { transform: translateX(0); }
+    .d-head {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 18px; background: var(--saffron); color: #fff;
+    }
+    .d-head .d-logo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; }
+    .d-head .cls { font-size: 1.5rem; color: #fff; }
+    .d-sec { padding: 16px 18px; border-bottom: 1px solid var(--border); }
+    .d-sec h4 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); margin-bottom: 10px; }
+    .d-links { display: flex; flex-direction: column; gap: 2px; }
+    .d-links a {
+      display: flex; align-items: center; gap: 10px;
+      padding: 9px 10px; border-radius: 6px;
+      font-size: 0.9rem; font-weight: 600; color: var(--ink); transition: background var(--t);
+    }
+    .d-links a i { color: var(--saffron); width: 18px; text-align: center; }
+    .d-links a:hover { background: rgba(232,93,4,0.07); }
+
+    /* ═══════════════════════════════════════
+       SEARCH
+    ═══════════════════════════════════════ */
+    .s-overlay {
+      position: fixed; inset: 0; z-index: 600;
+      background: rgba(0,0,0,0.65); backdrop-filter: blur(8px);
+      display: flex; align-items: flex-start; justify-content: center;
+      padding-top: 80px; opacity: 0; visibility: hidden; transition: all 0.3s;
+    }
+    .s-overlay.open { opacity: 1; visibility: visible; }
+    .s-modal {
+      background: var(--card); border-radius: 12px;
+      width: min(560px, 92vw); padding: 24px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.3);
+    }
+    .s-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .s-top h3 { font-size: 1rem; font-weight: 700; }
+    .s-top .cls { font-size: 1.4rem; color: var(--muted); }
+    .s-input {
+      width: 100%; padding: 12px 16px; border-radius: 8px;
+      border: 2px solid var(--border); background: var(--parchment);
+      font-family: 'DM Sans', sans-serif; font-size: 1rem; color: var(--ink);
+      outline: none; transition: border-color var(--t);
+    }
+    .s-input:focus { border-color: var(--saffron); }
+    .s-results { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .s-item {
+      padding: 6px 14px; border-radius: 5px;
+      background: rgba(232,93,4,0.08); color: var(--saffron);
+      font-size: 0.84rem; font-weight: 600; transition: all var(--t);
+    }
+    .s-item:hover { background: var(--saffron); color: #fff; }
+
+    /* BACK TO TOP */
+    .btt {
+      position: fixed; bottom: 80px; right: 20px; z-index: 250;
+      width: 42px; height: 42px; border-radius: 8px;
+      background: var(--saffron); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(232,93,4,0.4);
+      opacity: 0; visibility: hidden; transition: all var(--t);
+    }
+    .btt.visible { opacity: 1; visibility: visible; }
+    @media (min-width: 768px) { .btt { bottom: 24px; } }
+  </style>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- LOADER -->
+<div id="siteLoader">
+  <div class="loader-mandala"></div>
+  <p>Loading</p>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-dot"></div>
+      हनुमान भक्ति
+    </a>
+    <nav class="desk-nav">
+      <ul>
+        <li><a href="index.html">होम</a></li>
+        <li><a href="chalisa.html">चालीसा</a></li>
+        <li><a href="aarti.html">आरती</a></li>
+        <li><a href="katha.html" class="active">कथाएँ</a></li>
+        <li><a href="mandir-darshan.html">मंदिर</a></li>
+      </ul>
+    </nav>
+    <div class="h-actions">
+      <button class="h-btn" id="searchBtn" aria-label="खोज"><i class="fas fa-search"></i></button>
+      <button class="h-btn" id="themeBtn" aria-label="थीम"><i class="fas fa-moon"></i></button>
+    </div>
+    <button class="mob-menu-btn" id="menuBtn"><i class="fas fa-bars"></i></button>
+  </div>
+</header>
+
+<!-- ═══════ HERO ═══════ -->
+<section class="hero">
+  <img
+    class="hero-img"
+    src="https://images.unsplash.com/photo-1621401960948-77e10b97ab43?w=1800&q=85&auto=format&fit=crop"
+    alt="पंचमुखी हनुमान"
+    loading="eager"
+  />
+  <div class="hero-overlay"></div>
+  <div class="hero-line"></div>
+  <div class="hero-content">
+    <div class="hero-tag"><i class="fas fa-fire"></i> पौराणिक कथा — सुंदरकांड</div>
+    <h1 class="hero-h1">
+      <em>पंचमुखी हनुमान</em><br>अवतार की सम्पूर्ण कथा
+    </h1>
+    <p class="hero-sub">
+      पाँच दिव्य मुखों वाले इस अद्भुत स्वरूप का प्राकट्य कैसे हुआ — अहिरावण वध की वह रोमांचक कथा और पाँचों मुखों का आध्यात्मिक रहस्य
+    </p>
+    <div class="hero-meta">
+      <span class="hero-meta-item"><i class="fas fa-book-open"></i> सुंदरकांड · वाल्मीकि रामायण</span>
+      <span class="hero-meta-item"><i class="fas fa-clock"></i> 12 मिनट पठन</span>
+      <span class="hero-meta-item"><i class="fas fa-calendar"></i> पौराणिक कथा</span>
+    </div>
+  </div>
+  <div class="hero-scroll"><i class="fas fa-chevron-down"></i> स्क्रॉल करें</div>
+</section>
+
+<!-- ═══════ CONTROLS ═══════ -->
+<div class="ctrl-bar">
+  <div class="ctrl-inner">
+    <button class="c-btn fill" id="copyBtn"><i class="fas fa-copy"></i> कथा कॉपी करें</button>
+    <button class="c-btn" id="shareBtn"><i class="fas fa-share-nodes"></i> साझा करें</button>
+    <div class="font-ctrl">
+      <span>आकार:</span>
+      <button class="c-btn" id="fontDec"><i class="fas fa-minus"></i></button>
+      <button class="c-btn" id="fontInc"><i class="fas fa-plus"></i></button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ ARTICLE ═══════ -->
+<div class="article-wrap">
+
+  <!-- MAIN -->
+  <main class="article-body" id="articleBody">
+
+    <!-- INTRO -->
+    <div class="intro-block sec">
+      <p class="intro-text">
+        हिंदू पुराणों में श्री हनुमान जी के अनेक दिव्य स्वरूपों का वर्णन मिलता है, किंतु उनमें सबसे विलक्षण, सबसे शक्तिशाली और सबसे रहस्यमय स्वरूप है — <strong>पंचमुखी हनुमान</strong>। पाँच मुख, दस भुजाएँ और असीमित दैवीय शक्ति से संपन्न यह अवतार त्रेतायुग में उस विकट क्षण में प्रकट हुआ जब स्वयं भगवान राम और लक्ष्मण पाताल लोक में बंदी बना लिए गए थे।
+      </p>
+    </div>
+
+    <!-- SECTION 1 -->
+    <div class="sec">
+      <div class="sec-eyebrow">पृष्ठभूमि</div>
+      <h2 class="sec-title">अहिरावण — रावण का पाताली भाई</h2>
+      <div class="sec-body">
+        <p>लंका युद्ध अपने चरम पर था। राम सेना ने रावण की विशाल सेना के एक बड़े भाग को परास्त कर दिया था। रावण अपनी पराजय निकट देख घबरा उठा। तब उसने अपने पाताल लोक के भाई <strong>अहिरावण</strong> (जिसे महिरावण भी कहते हैं) को सहायता के लिए बुलाया।</p>
+        <p>अहिरावण महान मायावी था — माया विद्या में उसे महारत हासिल थी। वह रूप बदल सकता था, अदृश्य हो सकता था और किसी को भी सम्मोहित कर सकता था। उसने एक रात को माया से विभीषण का रूप धारण किया और सोते हुए भगवान राम और लक्ष्मण को अपने साथ पाताल लोक ले गया।</p>
+      </div>
+    </div>
+
+    <!-- FULL BLEED IMAGE 1 -->
+    <div class="full-img-block sec">
+      <img
+        src="https://images.unsplash.com/photo-1604881991720-f91add269bed?w=1600&q=85&auto=format&fit=crop"
+        alt="रात्रि का अंधकार — माया का साम्राज्य"
+      />
+      <div class="full-img-overlay">
+        <div class="full-img-text">
+          <h3>माया का साम्राज्य — पाताल लोक</h3>
+          <p>अहिरावण ने राम-लक्ष्मण को देवी के समक्ष बलि चढ़ाने की योजना बनाई थी।</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="sec">
+      <div class="sec-eyebrow">संकट की घड़ी</div>
+      <h2 class="sec-title">हनुमान जी को मिला असंभव कार्य</h2>
+      <div class="sec-body">
+        <p>प्रातःकाल जब वानर सेना ने देखा कि राम और लक्ष्मण कहीं नहीं हैं, तो हाहाकार मच गया। विभीषण जी ने बताया कि यह अहिरावण का कार्य है। पाताल लोक में उसकी माया से रक्षित ऐसी नगरी है जहाँ सामान्य योद्धा पहुँच ही नहीं सकते।</p>
+        <p>सभी की आँखें हनुमान जी पर टिक गईं। जाम्बवंत जी ने कहा — "हे पवनपुत्र! आप ही एकमात्र हैं जो पाताल लोक तक पहुँच कर प्रभु को वापस ला सकते हैं।"</p>
+      </div>
+
+      <div class="pull-quote">
+        <p>"मैं पाताल की गहराइयों तक जाऊँगा, चाहे अहिरावण की कितनी भी माया क्यों न हो। प्रभु राम की रक्षा मेरा धर्म है।"</p>
+        <cite>— श्री हनुमान जी का संकल्प</cite>
+      </div>
+    </div>
+
+    <!-- INLINE IMAGE 2 -->
+    <div class="inline-img-wrap sec">
+      <img
+        src="https://images.unsplash.com/photo-1600689148988-9e562714c27f?w=1200&q=85&auto=format&fit=crop"
+        alt="दीपक की लौ — पाँच दीपकों का रहस्य"
+        loading="lazy"
+      />
+      <div class="img-caption">
+        <i class="fas fa-circle-info"></i>
+        पाँच दिशाओं में जलते दीप — पंचमुखी हनुमान के अवतरण का प्रतीक
+      </div>
+    </div>
+
+    <!-- SECTION 3 — PATAL -->
+    <div class="sec">
+      <div class="sec-eyebrow">पाताल यात्रा</div>
+      <h2 class="sec-title">पाताल द्वार का रक्षक — मकरध्वज</h2>
+      <div class="sec-body">
+        <p>हनुमान जी ने पाताल लोक का द्वार खोजा। वहाँ द्वार पर एक विचित्र प्राणी था — वानर मुख और मकर (मगरमच्छ) शरीर वाला। उसका नाम था <strong>मकरध्वज</strong>। उसने हनुमान जी को रोका।</p>
+        <p>हनुमान जी ने उससे परिचय पूछा तो उसने कहा — "मैं आपका ही पुत्र हूँ!" हनुमान जी आश्चर्यचकित रह गए। दरअसल जब हनुमान जी ने लंका जलाई थी, तब समुद्र में कूदने पर उनके पसीने की एक बूँद गिरी जिसे एक मगरमच्छ ने निगल लिया — और मकरध्वज का जन्म हुआ।</p>
+        <p>हनुमान जी ने मकरध्वज को बाँधकर पाताल में प्रवेश किया।</p>
+      </div>
+    </div>
+
+    <div class="ornament">✦ ॐ ✦ ॐ ✦ ॐ ✦</div>
+
+    <!-- SECTION 4 — PANCHMUKHI -->
+    <div class="sec">
+      <div class="sec-eyebrow">दिव्य प्राकट्य</div>
+      <h2 class="sec-title">पंचमुखी अवतार का प्राकट्य — पाँच दीपकों का रहस्य</h2>
+      <div class="sec-body">
+        <p>पाताल में पहुँचकर हनुमान जी ने देखा कि अहिरावण ने राम-लक्ष्मण को देवी के मंदिर में बलि के लिए तैयार किया हुआ है। हनुमान जी ने देवी से मार्ग माँगा। देवी ने बताया कि अहिरावण को मारने का एक ही उपाय है —</p>
+      </div>
+      <div class="pull-quote">
+        <p>"अहिरावण के प्राण पाँच दिशाओं में जलते पाँच दीपकों में हैं। यदि इन पाँचों दीपकों को एक साथ बुझाया जाए, तभी उसकी मृत्यु होगी। यह कार्य केवल पाँच मुखों वाला ही कर सकता है।"</p>
+        <cite>— देवी का रहस्योद्घाटन</cite>
+      </div>
+      <div class="sec-body">
+        <p>यही वह क्षण था — भगवान राम की रक्षा के लिए हनुमान जी ने वह दिव्य स्वरूप धारण किया जो पहले कभी नहीं देखा गया था। <strong>पंचमुखी हनुमान अवतार</strong> का अलौकिक प्राकट्य हुआ।</p>
+      </div>
+    </div>
+
+    <!-- FACES GRID -->
+    <div class="sec">
+      <div class="sec-eyebrow">पाँच दिव्य मुख</div>
+      <h2 class="sec-title">पंचमुखों का रहस्य और महत्व</h2>
+
+      <div class="faces-grid">
+
+        <div class="face-card">
+          <img class="face-img"
+            src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&q=80&auto=format&fit=crop"
+            alt="हनुमान — वायव्य मुख" loading="lazy" />
+          <div class="face-body">
+            <div class="face-number">प्रथम मुख</div>
+            <div class="face-name">श्री हनुमान मुख</div>
+            <div class="face-hindi">पूर्व दिशा · वायव्य दीपक बुझाया। समस्त पापों का नाश करने वाला, भय दूर करने वाला स्वरूप।</div>
+            <span class="face-badge badge-wind">वायु तत्व</span>
+          </div>
+        </div>
+
+        <div class="face-card">
+          <img class="face-img"
+            src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80&auto=format&fit=crop"
+            alt="नरसिंह मुख" loading="lazy" />
+          <div class="face-body">
+            <div class="face-number">द्वितीय मुख</div>
+            <div class="face-name">श्री नरसिंह मुख</div>
+            <div class="face-hindi">दक्षिण दिशा · अग्नि दीपक बुझाया। विजय, निर्भयता और शत्रु-नाश का प्रतीक।</div>
+            <span class="face-badge badge-fire">अग्नि तत्व</span>
+          </div>
+        </div>
+
+        <div class="face-card">
+          <img class="face-img"
+            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80&auto=format&fit=crop"
+            alt="गरुड़ मुख" loading="lazy" />
+          <div class="face-body">
+            <div class="face-number">तृतीय मुख</div>
+            <div class="face-name">श्री गरुड़ मुख</div>
+            <div class="face-hindi">पश्चिम दिशा · जल दीपक बुझाया। विष-नाश, रोग-मुक्ति और नकारात्मकता के निवारण का स्वरूप।</div>
+            <span class="face-badge badge-water">जल तत्व</span>
+          </div>
+        </div>
+
+        <div class="face-card">
+          <img class="face-img"
+            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80&auto=format&fit=crop"
+            alt="वराह मुख" loading="lazy" />
+          <div class="face-body">
+            <div class="face-number">चतुर्थ मुख</div>
+            <div class="face-name">श्री वराह मुख</div>
+            <div class="face-hindi">उत्तर दिशा · भूमि दीपक बुझाया। समृद्धि, धन, ऐश्वर्य और पृथ्वी की रक्षा का प्रतीक।</div>
+            <span class="face-badge badge-earth">पृथ्वी तत्व</span>
+          </div>
+        </div>
+
+        <div class="face-card">
+          <img class="face-img"
+            src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=600&q=80&auto=format&fit=crop"
+            alt="हयग्रीव मुख" loading="lazy" />
+          <div class="face-body">
+            <div class="face-number">पंचम मुख</div>
+            <div class="face-name">श्री हयग्रीव मुख</div>
+            <div class="face-hindi">ऊर्ध्व दिशा · आकाश दीपक बुझाया। ज्ञान, विद्या, मोक्ष और दिव्यता का उच्चतम स्वरूप।</div>
+            <span class="face-badge badge-sky">आकाश तत्व</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SECTION 5 — VICTORY -->
+    <div class="sec">
+      <div class="sec-eyebrow">अहिरावण वध</div>
+      <h2 class="sec-title">पाँचों दीपकों का एक साथ विनाश</h2>
+      <div class="sec-body">
+        <p>पंचमुखी स्वरूप में हनुमान जी ने अपने पाँचों मुखों की सहायता से पाँचों दीपकों को एक साथ बुझा दिया। अहिरावण चीख उठा — उसकी माया समाप्त हो गई। हनुमान जी ने उसे उठाकर पटकते हुए उसका वध किया।</p>
+        <p>भगवान राम और लक्ष्मण मुक्त हुए। पाताल लोक में भी हनुमान जी की जय-जयकार गूँज उठी। मकरध्वज को पाताल का राज्य सौंपकर हनुमान जी भगवान राम को लेकर वापस लौटे।</p>
+      </div>
+    </div>
+
+    <!-- INLINE IMAGE 3 -->
+    <div class="inline-img-wrap sec">
+      <img
+        src="https://images.unsplash.com/photo-1604881991720-f91add269bed?w=1200&q=85&auto=format&fit=crop&crop=entropy"
+        alt="विजय का प्रकाश"
+        loading="lazy"
+      />
+      <div class="img-caption">
+        <i class="fas fa-circle-info"></i>
+        अहिरावण वध के पश्चात् पाताल में दिव्य आलोक — प्रभु राम की विजय
+      </div>
+    </div>
+
+    <!-- SECTION 6 — LEARNINGS -->
+    <div class="sec">
+      <div class="sec-eyebrow">आध्यात्मिक महत्व</div>
+      <h2 class="sec-title">पंचमुखी हनुमान की उपासना से क्या मिलता है?</h2>
+
+      <div class="learnings-grid">
+        <div class="learning-card">
+          <div class="l-icon">🔥</div>
+          <div class="l-title">शत्रु भय से मुक्ति</div>
+          <div class="l-text">नरसिंह मुख की उपासना शत्रुओं का नाश करती है और जीवन में निर्भयता प्रदान करती है।</div>
+        </div>
+        <div class="learning-card">
+          <div class="l-icon">💊</div>
+          <div class="l-title">रोग व विष नाश</div>
+          <div class="l-text">गरुड़ मुख हर प्रकार के विष, रोग और नकारात्मक ऊर्जा को नष्ट करने में सक्षम है।</div>
+        </div>
+        <div class="learning-card">
+          <div class="l-icon">💰</div>
+          <div class="l-title">समृद्धि व ऐश्वर्य</div>
+          <div class="l-text">वराह मुख धन-धान्य और सांसारिक सुख-समृद्धि का आशीर्वाद देता है।</div>
+        </div>
+        <div class="learning-card">
+          <div class="l-icon">📚</div>
+          <div class="l-title">ज्ञान व मोक्ष</div>
+          <div class="l-text">हयग्रीव मुख विद्यार्थियों को ज्ञान और साधकों को मोक्ष का मार्ग दिखाता है।</div>
+        </div>
+        <div class="learning-card">
+          <div class="l-icon">🛡️</div>
+          <div class="l-title">सर्वपाप नाश</div>
+          <div class="l-text">हनुमान मुख समस्त पापों का नाश करता है और भक्त को भय मुक्त करता है।</div>
+        </div>
+        <div class="learning-card">
+          <div class="l-icon">🌟</div>
+          <div class="l-title">पंचतत्व संतुलन</div>
+          <div class="l-text">पाँचों मुख पाँच तत्वों — अग्नि, जल, वायु, पृथ्वी, आकाश — के संतुलन का प्रतीक हैं।</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONCLUSION -->
+    <div class="sec">
+      <div class="sec-eyebrow">उपसंहार</div>
+      <h2 class="sec-title">अद्वितीय है यह दिव्य स्वरूप</h2>
+      <div class="sec-body">
+        <p>पंचमुखी हनुमान का यह अवतार केवल एक पौराणिक कथा नहीं है — यह उस सत्य का प्रतीक है कि जब भक्त पर संकट आता है, तो भगवान नया रूप धारण करके भी उसकी रक्षा करते हैं। हनुमान जी ने एक ऐसा स्वरूप लिया जो पहले कभी प्रकट नहीं हुआ था — केवल अपने प्रभु की रक्षा के लिए।</p>
+        <p>दक्षिण भारत के अनेक प्रसिद्ध मंदिरों में आज भी पंचमुखी हनुमान की भव्य मूर्तियाँ स्थापित हैं। तिरुवल्लूर, गोकर्ण और नासिक में इनके विशेष मंदिर हैं। इस स्वरूप की उपासना भक्त को पंचतत्वों की शक्ति से जोड़ती है और जीवन के हर संकट से बाहर निकालती है।</p>
+        <p style="color: var(--saffron); font-weight: 700;">जय पंचमुखी हनुमान! जय श्री राम! 🙏</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <!-- Quick Facts -->
+    <div class="side-widget">
+      <div class="widget-header">
+        <i class="fas fa-circle-info"></i>
+        <h3>त्वरित तथ्य</h3>
+      </div>
+      <div class="widget-body">
+        <div class="fact-list">
+          <div class="fact-item">
+            <div class="fact-icon"><i class="fas fa-book"></i></div>
+            <div class="fact-text"><strong>स्रोत ग्रंथ</strong>वाल्मीकि रामायण, सुंदरकांड</div>
+          </div>
+          <div class="fact-item">
+            <div class="fact-icon"><i class="fas fa-star"></i></div>
+            <div class="fact-text"><strong>मुखों की संख्या</strong>पाँच — हनुमान, नरसिंह, गरुड़, वराह, हयग्रीव</div>
+          </div>
+          <div class="fact-item">
+            <div class="fact-icon"><i class="fas fa-hand-fist"></i></div>
+            <div class="fact-text"><strong>भुजाएँ</strong>दस दिव्य भुजाएँ — प्रत्येक में शस्त्र</div>
+          </div>
+          <div class="fact-item">
+            <div class="fact-icon"><i class="fas fa-location-dot"></i></div>
+            <div class="fact-text"><strong>प्रमुख मंदिर</strong>तिरुवल्लूर, गोकर्ण, नासिक</div>
+          </div>
+          <div class="fact-item">
+            <div class="fact-icon"><i class="fas fa-calendar-days"></i></div>
+            <div class="fact-text"><strong>विशेष पूजा तिथि</strong>शनिवार और मंगलवार</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mantra -->
+    <div class="side-widget">
+      <div class="widget-header">
+        <i class="fas fa-om"></i>
+        <h3>पंचमुखी मंत्र</h3>
+      </div>
+      <div class="widget-body">
+        <div class="mantra-box">
+          <div class="m-label">पंचमुखी हनुमान मंत्र</div>
+          <div class="m-text" id="mantraText">
+            ॐ श्री पञ्चवदनाय<br>
+            हनुमते नमः।<br>
+            पञ्चमुख पञ्चायुध<br>
+            सर्वशत्रु संहारकाय<br>
+            विजयं देहि स्वाहा॥
+          </div>
+          <button class="mantra-copy" id="mantraCopyBtn"><i class="fas fa-copy"></i> मंत्र कॉपी करें</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related -->
+    <div class="side-widget">
+      <div class="widget-header">
+        <i class="fas fa-newspaper"></i>
+        <h3>संबंधित कथाएँ</h3>
+      </div>
+      <div class="widget-body">
+        <div class="related-list">
+          <a href="ashok-vatika.html" class="related-link">
+            <img class="rl-img"
+              src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=200&q=70&auto=format&fit=crop"
+              alt="अशोक वाटिका" loading="lazy" />
+            <div>
+              <div class="rl-text">अशोक वाटिका में माता सीता से भेंट</div>
+              <div class="rl-sub">सुंदरकांड · 10 मिनट</div>
+            </div>
+          </a>
+          <a href="aarti.html" class="related-link">
+            <img class="rl-img"
+              src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=200&q=70&auto=format&fit=crop"
+              alt="सुग्रीव मित्रता" loading="lazy" />
+            <div>
+              <div class="rl-text">सुग्रीव से मित्रता</div>
+              <div class="rl-sub">किष्किंधा कांड · 8 मिनट</div>
+            </div>
+          </a>
+          <a href="chalisa.html" class="related-link">
+            <img class="rl-img"
+              src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=200&q=70&auto=format&fit=crop"
+              alt="हनुमान चालीसा" loading="lazy" />
+            <div>
+              <div class="rl-text">हनुमान चालीसा — पूर्ण पाठ</div>
+              <div class="rl-sub">भक्ति पाठ · 5 मिनट</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<!-- MORE ARTICLES -->
+<div class="more-section">
+  <div class="more-label">और पढ़ें</div>
+  <h2 class="more-title">अन्य भक्ति कथाएँ</h2>
+  <div class="more-grid">
+
+    <div class="more-card">
+      <div class="more-card-img-wrap">
+        <img class="more-card-img"
+          src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=800&q=80&auto=format&fit=crop"
+          alt="अशोक वाटिका" loading="lazy" />
+      </div>
+      <div class="more-card-body">
+        <div class="more-card-tag">सुंदरकांड</div>
+        <h3 class="more-card-title">अशोक वाटिका में माता सीता से भेंट — वह भावविभोर क्षण</h3>
+        <div class="more-card-footer">
+          <span class="more-card-meta"><i class="fas fa-clock"></i> 10 मिनट</span>
+          <a href="ashok-vatika.html" class="read-link">पढ़ें <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="more-card">
+      <div class="more-card-img-wrap">
+        <img class="more-card-img"
+          src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800&q=80&auto=format&fit=crop"
+          alt="किष्किंधा" loading="lazy" />
+      </div>
+      <div class="more-card-body">
+        <div class="more-card-tag">किष्किंधा कांड</div>
+        <h3 class="more-card-title">हनुमान जी और सुग्रीव की मित्रता — राम-सुग्रीव मिलन</h3>
+        <div class="more-card-footer">
+          <span class="more-card-meta"><i class="fas fa-clock"></i> 8 मिनट</span>
+          <a href="aarti.html" class="read-link">पढ़ें <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="more-card">
+      <div class="more-card-img-wrap">
+        <img class="more-card-img"
+          src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?w=800&q=80&auto=format&fit=crop"
+          alt="हनुमान चालीसा" loading="lazy" />
+      </div>
+      <div class="more-card-body">
+        <div class="more-card-tag">भक्ति पाठ</div>
+        <h3 class="more-card-title">हनुमान चालीसा — सम्पूर्ण पाठ एवं हिंदी अर्थ</h3>
+        <div class="more-card-footer">
+          <span class="more-card-meta"><i class="fas fa-clock"></i> 5 मिनट</span>
+          <a href="chalisa.html" class="read-link">पढ़ें <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="fg">
+      <h3>हनुमान भक्ति</h3>
+      <p>सनातन धर्म को समर्पित एक डिजिटल मंच — जहाँ श्री हनुमान जी की भक्ति, कथा, मंत्र और ज्ञान प्रस्तुत किया जाता है।</p>
+      <div class="f-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="fg">
+      <h4>महत्वपूर्ण लिंक</h4>
+      <ul>
+        <li><a href="about-us.html">हमारे बारे में</a></li>
+        <li><a href="contact-us.html">संपर्क करें</a></li>
+        <li><a href="privacy-policy.html">गोपनीयता नीति</a></li>
+        <li><a href="disclaimer.html">अस्वीकरण</a></li>
+      </ul>
+    </div>
+    <div class="fg">
+      <h4>भक्ति सामग्री</h4>
+      <ul>
+        <li><a href="chalisa.html">हनुमान चालीसा</a></li>
+        <li><a href="bajrang-baan.html">बजरंग बाण</a></li>
+        <li><a href="sunderkand.html">सुंदरकांड</a></li>
+        <li><a href="katha.html">पौराणिक कथाएँ</a></li>
+      </ul>
+    </div>
+    <div class="fg">
+      <h4>विश्वास का आधार</h4>
+      <p>✔ प्रामाणिक पौराणिक स्रोत<br>✔ सनातन मूल्यों पर आधारित<br>✔ विज्ञापन-मुक्त अनुभव</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 www.hanumanbhakti.org &nbsp;·&nbsp; जय पंचमुखी हनुमान 🔱<br>
+    यह वेबसाइट केवल धार्मिक एवं शैक्षिक उद्देश्य हेतु है।
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="btt" id="bttBtn"><i class="fas fa-arrow-up"></i></button>
+
+<!-- MOBILE NAV -->
+<nav class="mob-nav">
+  <a href="index.html" class="ni"><i class="fas fa-home"></i><span>होम</span></a>
+  <a href="chalisa.html" class="ni"><i class="fas fa-book-open"></i><span>चालीसा</span></a>
+  <a href="katha.html" class="ni active"><i class="fas fa-scroll"></i><span>कथाएँ</span></a>
+  <button class="ni" id="mobMenuBtn"><i class="fas fa-bars"></i><span>मेनू</span></button>
+</nav>
+
+<!-- DRAWER -->
+<div class="d-overlay" id="dOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="d-head">
+    <div class="d-logo">हनुमान भक्ति</div>
+    <button class="cls" id="dCloseBtn">×</button>
+  </div>
+  <div class="d-sec">
+    <h4>मुख्य श्रेणियाँ</h4>
+    <ul class="d-links">
+      <li><a href="index.html"><i class="fas fa-home"></i> होम</a></li>
+      <li><a href="chalisa.html"><i class="fas fa-book-open"></i> हनुमान चालीसा</a></li>
+      <li><a href="bajrang-baan.html"><i class="fas fa-bolt"></i> बजरंग बाण</a></li>
+      <li><a href="sunderkand.html"><i class="fas fa-fire"></i> सुंदरकांड</a></li>
+      <li><a href="mantra.html"><i class="fas fa-om"></i> मंत्र एवं विधि</a></li>
+      <li><a href="katha.html"><i class="fas fa-scroll"></i> पौराणिक कथाएँ</a></li>
+    </ul>
+  </div>
+  <div class="d-sec">
+    <h4>अन्य जानकारी</h4>
+    <ul class="d-links">
+      <li><a href="about-us.html">हमारे बारे में</a></li>
+      <li><a href="contact-us.html">संपर्क करें</a></li>
+    </ul>
+  </div>
+</aside>
+
+<!-- SEARCH -->
+<div class="s-overlay" id="sOverlay">
+  <div class="s-modal">
+    <div class="s-top">
+      <h3>भक्ति सामग्री खोजें</h3>
+      <button class="cls" id="sCloseBtn">×</button>
+    </div>
+    <input type="search" id="sInput" class="s-input" placeholder="जैसे: चालीसा, आरती, सुंदरकांड..." autocomplete="off" />
+    <div class="s-results">
+      <a href="chalisa.html" class="s-item">हनुमान चालीसा</a>
+      <a href="bajrang-baan.html" class="s-item">बजरंग बाण</a>
+      <a href="sunderkand.html" class="s-item">सुंदरकांड</a>
+      <a href="aarti.html" class="s-item">हनुमान आरती</a>
+      <a href="mantra.html" class="s-item">हनुमान मंत्र</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  /* LOADER */
+  window.addEventListener('load', () => setTimeout(() => document.getElementById('siteLoader').classList.add('hidden'), 600));
+
+  /* THEME */
+  const themeBtn = document.getElementById('themeBtn');
+  if (localStorage.getItem('hb_theme') === 'dark') applyDark();
+  themeBtn.addEventListener('click', () => {
+    document.documentElement.getAttribute('data-theme') === 'dark' ? removeDark() : applyDark();
+  });
+  function applyDark() {
+    document.documentElement.setAttribute('data-theme','dark');
+    localStorage.setItem('hb_theme','dark');
+    themeBtn.querySelector('i').className = 'fas fa-sun';
+  }
+  function removeDark() {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('hb_theme','light');
+    themeBtn.querySelector('i').className = 'fas fa-moon';
+  }
+
+  /* PROGRESS BAR */
+  window.addEventListener('scroll', () => {
+    const el = document.getElementById('progressBar');
+    const pct = (scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    el.style.width = Math.min(pct, 100) + '%';
+  }, { passive: true });
+
+  /* SCROLL REVEAL */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.sec').forEach(el => observer.observe(el));
+
+  /* FONT SIZE */
+  let fs = 1.08;
+  const textEls = () => document.querySelectorAll('.sec-body p, .katha-para, .intro-text, .pull-quote p, .face-hindi, .l-text');
+  document.getElementById('fontInc').addEventListener('click', () => { fs = Math.min(fs + 0.08, 1.55); textEls().forEach(el => el.style.fontSize = fs + 'rem'); });
+  document.getElementById('fontDec').addEventListener('click', () => { fs = Math.max(fs - 0.08, 0.85); textEls().forEach(el => el.style.fontSize = fs + 'rem'); });
+
+  /* COPY KATHA */
+  const kathaText = `पंचमुखी हनुमान अवतार की सम्पूर्ण कथा
+
+अहिरावण — रावण का पाताली भाई — ने माया से राम-लक्ष्मण को पाताल लोक अपहरण किया।
+
+हनुमान जी पाताल गए जहाँ उनके पुत्र मकरध्वज ने द्वार रोका। अहिरावण के प्राण पाँच दिशाओं के पाँच दीपकों में थे।
+
+देवी ने बताया — "केवल पाँच मुखों वाला ही इन्हें एक साथ बुझा सकता है।"
+
+तब हनुमान जी ने पंचमुखी अवतार धारण किया:
+१. हनुमान मुख (पूर्व) — भय नाश
+२. नरसिंह मुख (दक्षिण) — शत्रु नाश
+३. गरुड़ मुख (पश्चिम) — विष नाश
+४. वराह मुख (उत्तर) — समृद्धि
+५. हयग्रीव मुख (ऊर्ध्व) — ज्ञान-मोक्ष
+
+पंचमुखी मंत्र:
+ॐ श्री पञ्चवदनाय हनुमते नमः।
+पञ्चमुख पञ्चायुध सर्वशत्रु संहारकाय विजयं देहि स्वाहा॥
+
+जय पंचमुखी हनुमान! जय श्री राम! 🙏
+www.hanumanbhakti.org`;
+
+  document.getElementById('copyBtn').addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(kathaText); showToast('✅ कथा कॉपी हो गई!'); }
+    catch { showToast('❌ कॉपी नहीं हो सका'); }
+  });
+
+  /* COPY MANTRA */
+  document.getElementById('mantraCopyBtn').addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText('ॐ श्री पञ्चवदनाय हनुमते नमः। पञ्चमुख पञ्चायुध सर्वशत्रु संहारकाय विजयं देहि स्वाहा॥');
+      showToast('🙏 मंत्र कॉपी हो गया!');
+    } catch { showToast('❌ कॉपी नहीं हो सका'); }
+  });
+
+  /* SHARE */
+  document.getElementById('shareBtn').addEventListener('click', async () => {
+    if (navigator.share) {
+      try { await navigator.share({ title: 'पंचमुखी हनुमान अवतार की कथा', url: window.location.href }); }
+      catch {}
+    } else {
+      await navigator.clipboard.writeText(window.location.href);
+      showToast('🔗 लिंक कॉपी हो गया!');
+    }
+  });
+
+  /* TOAST */
+  let tt;
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg; t.classList.add('show');
+    clearTimeout(tt); tt = setTimeout(() => t.classList.remove('show'), 2600);
+  }
+
+  /* DRAWER */
+  const openD = () => { document.getElementById('drawer').classList.add('open'); document.getElementById('dOverlay').classList.add('open'); document.body.style.overflow = 'hidden'; };
+  const closeD = () => { document.getElementById('drawer').classList.remove('open'); document.getElementById('dOverlay').classList.remove('open'); document.body.style.overflow = ''; };
+  document.getElementById('menuBtn').addEventListener('click', openD);
+  document.getElementById('mobMenuBtn').addEventListener('click', openD);
+  document.getElementById('dCloseBtn').addEventListener('click', closeD);
+  document.getElementById('dOverlay').addEventListener('click', closeD);
+
+  /* SEARCH */
+  document.getElementById('searchBtn').addEventListener('click', () => { document.getElementById('sOverlay').classList.add('open'); document.getElementById('sInput').focus(); });
+  document.getElementById('sCloseBtn').addEventListener('click', () => document.getElementById('sOverlay').classList.remove('open'));
+  document.getElementById('sOverlay').addEventListener('click', e => { if (e.target === document.getElementById('sOverlay')) document.getElementById('sOverlay').classList.remove('open'); });
+
+  /* BACK TO TOP */
+  const btt = document.getElementById('bttBtn');
+  window.addEventListener('scroll', () => btt.classList.toggle('visible', scrollY > 400), { passive: true });
+  btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  /* ESC */
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { closeD(); document.getElementById('sOverlay').classList.remove('open'); }
+  });
+</script>
+</body>
+</html>
