@@ -12,19 +12,22 @@
   <url><loc>https://hanumanbhakti.org/mantra.html</loc><priority>0.80</priority></url>
   <url><loc>https://hanumanbhakti.org/katha.html</loc><priority>0.80</priority></url>
   <url><loc>https://hanumanbhakti.org/mandir-darshan.html</loc><priority>0.80</priority></url>
-
-  <!-- NEW -->
   <url><loc>https://hanumanbhakti.org/aarti.html</loc><priority>0.80</priority></url>
   <url><loc>https://hanumanbhakti.org/chalisa-arth.html</loc><priority>0.80</priority></url>
   <url><loc>https://hanumanbhakti.org/hanuman-chalisa-labh.html</loc><priority>0.80</priority></url>
   <url><loc>https://hanumanbhakti.org/hanuman-chalisa-kab-padhen.html</loc><priority>0.80</priority></url>
-  <url><loc>https://hanumanbhakti.org/hanuman-janm.html</loc><priority>0.70</priority></url>
   <url><loc>https://hanumanbhakti.org/sunderkand-vidhi.html</loc><priority>0.80</priority></url>
-
-  <!-- ADDED NOW -->
   <url><loc>https://hanumanbhakti.org/rishi-shrap.html</loc><priority>0.80</priority></url>
   <url><loc>https://hanumanbhakti.org/ram-milan.html</loc><priority>0.80</priority></url>
 
+  <!-- NEW PAGES ADDED -->
+  <url><loc>https://hanumanbhakti.org/hanuman-surya-article.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hanumanbhakti.org/hanuman-surya-katha.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hanumanbhakti.org/sita-bhent.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hanumanbhakti.org/sugreev-mitrata.html</loc><priority>0.80</priority></url>
+  <url><loc>https://hanumanbhakti.org/panchmukhi-avatar.html</loc><priority>0.80</priority></url>
+
+  <url><loc>https://hanumanbhakti.org/hanuman-janm.html</loc><priority>0.70</priority></url>
   <url><loc>https://hanumanbhakti.org/mandir-ayodhya.html</loc><priority>0.70</priority></url>
   <url><loc>https://hanumanbhakti.org/hanuman-ji-ke-baare.html</loc><priority>0.70</priority></url>
 
