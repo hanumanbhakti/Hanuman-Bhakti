@@ -1,41 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url><loc>https://hanumanbhakti.org/</loc><priority>1.00</priority></url>
+  <!-- Homepage -->
+  <url>
+    <loc>https://hanumanbhakti.org/</loc>
+    <priority>1.00</priority>
+    <changefreq>daily</changefreq>
+  </url>
 
-  <url><loc>https://hanumanbhakti.org/hanuman-chalisa-hindi-images.html</loc><priority>0.90</priority></url>
+  <!-- Main Devotional Pages -->
+  <url>
+    <loc>https://hanumanbhakti.org/chalisa.html</loc>
+    <priority>0.90</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/sunderkand.html</loc>
+    <priority>0.90</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/bajrang-baan.html</loc>
+    <priority>0.90</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/hanuman-ashtak.html</loc>
+    <priority>0.85</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/mantra.html</loc>
+    <priority>0.85</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/katha.html</loc>
+    <priority>0.85</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/aarti.html</loc>
+    <priority>0.85</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/chalisa-arth.html</loc>
+    <priority>0.85</priority>
+    <changefreq>weekly</changefreq>
+  </url>
 
-  <url><loc>https://hanumanbhakti.org/chalisa.html</loc><priority>0.80</priority></url>
-  <url><loc>https://hanumanbhakti.org/sunderkand.html</loc><priority>0.80</priority></url>
-  <url><loc>https://hanumanbhakti.org/bajrang-baan.html</loc><priority>0.80</priority></url>
-  <url><loc>https://hanumanbhakti.org/hanuman-ashtak.html</loc><priority>0.80</priority></url>
-  <url><loc>https://hanumanbhakti.org/mantra.html</loc><priority>0.80</priority></url>
-  <url><loc>https://hanumanbhakti.org/katha.html</loc><priority>0.80</priority></url>
-  <url><loc>https://hanumanbhakti.org/mandir-darshan.html</loc><priority>0.80</priority></url>
-  <url><loc>https://hanumanbhakti.org/aarti.html</loc><priority>0.80</priority></url>
-  <url><loc>https://hanumanbhakti.org/chalisa-arth.html</loc><priority>0.80</priority></url>
-  <url><loc>https://hanumanbhakti.org/hanuman-chalisa-labh.html</loc><priority>0.80</priority></url>
-  <url><loc>https://hanumanbhakti.org/hanuman-chalisa-kab-padhen.html</loc><priority>0.80</priority></url>
-  <url><loc>https://hanumanbhakti.org/sunderkand-vidhi.html</loc><priority>0.80</priority></url>
-  <url><loc>https://hanumanbhakti.org/rishi-shrap.html</loc><priority>0.80</priority></url>
-  <url><loc>https://hanumanbhakti.org/ram-milan.html</loc><priority>0.80</priority></url>
+  <!-- Hanuman Articles -->
+  <url>
+    <loc>https://hanumanbhakti.org/hanuman-ji-ke-baare.html</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/hanuman-janm.html</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/hanuman-chalisa-labh.html</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/hanuman-chalisa-kab-padhen.html</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/hanuman-chalisa-hindi-images.html</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/panchmukhi-avatar.html</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/hanuman-surya-article.html</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/hanuman-surya-katha.html</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 
-  <!-- NEW PAGES ADDED -->
-  <url><loc>https://hanumanbhakti.org/hanuman-surya-article.html</loc><priority>0.80</priority></url>
-  <url><loc>https://hanumanbhakti.org/hanuman-surya-katha.html</loc><priority>0.80</priority></url>
-  <url><loc>https://hanumanbhakti.org/sita-bhent.html</loc><priority>0.80</priority></url>
-  <url><loc>https://hanumanbhakti.org/sugreev-mitrata.html</loc><priority>0.80</priority></url>
-  <url><loc>https://hanumanbhakti.org/panchmukhi-avatar.html</loc><priority>0.80</priority></url>
+  <!-- Ramayana Stories -->
+  <url>
+    <loc>https://hanumanbhakti.org/ram-milan.html</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/sita-bhent.html</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/sugreev-mitrata.html</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/rishi-shrap.html</loc>
+    <priority>0.75</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/sunderkand-vidhi.html</loc>
+    <priority>0.75</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/ayodhya-ram-mandir.html</loc>
+    <priority>0.75</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 
-  <url><loc>https://hanumanbhakti.org/hanuman-janm.html</loc><priority>0.70</priority></url>
-  <url><loc>https://hanumanbhakti.org/ayodhya-ram-mandir.html</loc><priority>0.70</priority></url>
-  <url><loc>https://hanumanbhakti.org/hanuman-ji-ke-baare.html</loc><priority>0.70</priority></url>
+  <!-- Temple & Darshan -->
+  <url>
+    <loc>https://hanumanbhakti.org/mandir-darshan.html</loc>
+    <priority>0.75</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/hanuman-jan.html</loc>
+    <priority>0.75</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 
-  <url><loc>https://hanumanbhakti.org/about-us.html</loc><priority>0.60</priority></url>
-  <url><loc>https://hanumanbhakti.org/contact-us.html</loc><priority>0.60</priority></url>
+  <!-- About & Info Pages -->
+  <url>
+    <loc>https://hanumanbhakti.org/about-us.html</loc>
+    <priority>0.60</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/contact-us.html</loc>
+    <priority>0.60</priority>
+    <changefreq>yearly</changefreq>
+  </url>
 
-  <url><loc>https://hanumanbhakti.org/privacy-policy.html</loc><priority>0.30</priority></url>
-  <url><loc>https://hanumanbhakti.org/terms.html</loc><priority>0.30</priority></url>
-  <url><loc>https://hanumanbhakti.org/disclaimer.html</loc><priority>0.30</priority></url>
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://hanumanbhakti.org/privacy-policy.html</loc>
+    <priority>0.30</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/terms.html</loc>
+    <priority>0.30</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://hanumanbhakti.org/disclaimer.html</loc>
+    <priority>0.30</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <!-- PDF File -->
+  <url>
+    <loc>https://hanumanbhakti.org/files/sunderkand-full.pdf</loc>
+    <priority>0.50</priority>
+    <changefreq>yearly</changefreq>
+  </url>
 
 </urlset>
