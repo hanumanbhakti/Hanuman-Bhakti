@@ -123,7 +123,17 @@
     <priority>0.75</priority>
     <changefreq>monthly</changefreq>
   </url>
+<url>
+    <loc>https://hanumanbhakti.org/vibhisana-milan.html</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 
+  <url>
+    <loc>https://hanumanbhakti.org/sindoor-katha.html</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
   <!-- Temple & Darshan -->
   <url>
     <loc>https://hanumanbhakti.org/mandir-darshan.html</loc>
