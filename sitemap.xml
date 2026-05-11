@@ -107,6 +107,13 @@
     <priority>0.8</priority>
   </url>
 
+    <!-- Sunderkand PDF -->
+  <url>
+    <loc>https://hanumanbhakti.org/files/sunderkand-full.pdf</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
   <!-- Hanuman Ji - Jankari & Katha -->
   <url>
     <loc>https://hanumanbhakti.org/hanuman-ji-ke-baare.html</loc>
