@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कथा सागर: हनुमान जी की संपूर्ण पौराणिक कथाएं और युद्ध - Hanuman Bhakti</title>
+
+    <link rel="canonical" href="https://hanumanbhakti.org/katha.html">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Modern Horizontal Slider CSS */
+        .slider-section {
+            margin-bottom: 60px;
+            padding: 0 10px;
+        }
+        .slider-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px 5px;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .slider-container::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .katha-card {
+            min-width: 260px;
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: 0.4s;
+            text-decoration: none;
+            border: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .katha-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(230, 81, 0, 0.15);
+        }
+        
+        .card-img {
+            width: 100%;
+            height: 160px;
+            background: linear-gradient(135deg, #FF9800, #E65100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 50px;
+        }
+        
+        .card-content {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+        }
+        
+        .card-content h3 {
+            font-family: 'Mukta';
+            color: #333;
+            font-size: 17px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .card-btn {
+            background: var(--orange);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #eee;
+            margin-bottom: 10px;
+        }
+        .section-header h2 {
+            font-family: 'Mukta';
+            color: var(--orange);
+            font-size: 26px;
+        }
+        .scroll-hint {
+            font-size: 12px;
+            color: #888;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
+    </style>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+    <div class="container header-wrap">
+     <a href="/" class="logo" aria-label="हनुमान भक्ति होम">
+        <i class="fas fa-om" aria-hidden="true"></i>
+        <span>हनुमान भक्ति</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="मुख्य नेविगेशन">
+        <ul>
+          <li><a href="#home" class="nav-link active" aria-current="page">होम</a></li>
+          <li><a href="#popular" class="nav-link">लोकप्रिय</a></li>
+          <li><a href="#mainContent" class="nav-link">सामग्री</a></li>
+          <li><a href="#footerSection" class="nav-link">संपर्क</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="searchToggleBtn" type="button" aria-label="खोज खोलें">
+          <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+        </button>
+        <button class="icon-btn" id="themeToggleBtn" type="button" aria-label="डार्क मोड बदलें" aria-pressed="false">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <button
+        class="menu-btn"
+        id="menuToggleBtn"
+        type="button"
+        aria-label="मेनू खोलें"
+        aria-expanded="false"
+        aria-controls="mobileDrawer"
+      >
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
+
+<div class="wrapper">
+    <main class="main">
+        
+        <section class="slider-section">
+            <div class="section-header">
+                <h2><i class="fas fa-scroll"></i> पौराणिक कथाएं</h2>
+                <span class="scroll-hint">Scroll →</span>
+            </div>
+            <div class="slider-container">
+                <a href="hanuman-janm.html" class="katha-card">
+                    <div class="card-img"><i class="fas fa-om"></i></div>
+                    <div class="card-content"><h3>हनुमान जी का जन्म और पवन देव का वरदान</h3><span class="card-btn">विस्तार से पढ़ें</span></div>
+                </a>
+                <a href="hanuman-surya-article.html" class="katha-card">
+                    <div class="card-img"><i class="fas fa-sun"></i></div>
+                    <div class="card-content"><h3>सूर्य को फल समझकर निगलना</h3><span class="card-btn">विस्तार से पढ़ें</span></div>
+                </a>
+                <a href="rishi-shrap.html" class="katha-card">
+                    <div class="card-img"><i class="fas fa-comment-slash"></i></div>
+                    <div class="card-content"><h3>हनुमान जी को ऋषियों का श्राप</h3><span class="card-btn">विस्तार से पढ़ें</span></div>
+                </a>
+                <a href="ram-milan.html" class="katha-card">
+                    <div class="card-img"><i class="fas fa-hands-helping"></i></div>
+                    <div class="card-content"><h3>प्रभु श्री राम से प्रथम मिलन</h3><span class="card-btn">विस्तार से पढ़ें</span></div>
+                </a>
+                <a href="sugreev-mitrata.html" class="katha-card">
+                    <div class="card-img"><i class="fas fa-handshake"></i></div>
+                    <div class="card-content"><h3>सुग्रीव के साथ अटूट मित्रता</h3><span class="card-btn">विस्तार से पढ़ें</span></div>
+                </a>
+                <a href="sita-bhent.html" class="katha-card">
+                    <div class="card-img"><i class="fas fa-ring"></i></div>
+                    <div class="card-content"><h3>अशोक वाटिका में माता सीता से भेंट</h3><span class="card-btn">विस्तार से पढ़ें</span></div>
+                </a>
+                <a href="panchmukhi-avatar.html" class="katha-card">
+                    <div class="card-img"><i class="fas fa-dharmachakra"></i></div>
+                    <div class="card-content"><h3>पंचमुखी हनुमान अवतार की कथा</h3><span class="card-btn">विस्तार से पढ़ें</span></div>
+                </a>
+                <a href="hanuman-ramayan.html" class="katha-card">
+                    <div class="card-img"><i class="fas fa-pen-nib"></i></div>
+                    <div class="card-content"><h3>हनुमान जी का रामायण में योगदान</h3><span class="card-btn">विस्तार से पढ़ें</span></div>
+                </a>
+                <a href="bharat-milan.html" class="katha-card">
+                    <div class="card-img"><i class="fas fa-arrow-right"></i></div>
+                    <div class="card-content"><h3>भरत जी से हनुमान जी की भेंट</h3><span class="card-btn">विस्तार से पढ़ें</span></div>
+                </a>
+                <a href="vibhisana-milan.html" class="katha-card">
+                    <div class="card-img"><i class="fas fa-user-shield"></i></div>
+                    <div class="card-content"><h3>विभीषण और हनुमान जी का मिलन</h3><span class="card-btn">विस्तार से पढ़ें</span></div>
+                </a>
+                <a href="sindoor-katha.html" class="katha-card">
+                    <div class="card-img"><i class="fas fa-eye"></i></div>
+                    <div class="card-content"><h3>माता सीता का सिंदूर प्रसंग</h3><span class="card-btn">विस्तार से पढ़ें</span></div>
+                </a>
+                <a href="kalyug-niwas.html" class="katha-card">
+                    <div class="card-img"><i class="fas fa-mountain"></i></div>
+                    <div class="card-content"><h3>हनुमान जी का कलयुग में निवास</h3><span class="card-btn">विस्तार से पढ़ें</span></div>
+                </a>
+            </div>
+        </section>
+
+        <section class="slider-section">
+            <div class="section-header">
+                <h2><i class="fas fa-khanda"></i> श्री हनुमान जी के महा-युद्ध</h2>
+                <span class="scroll-hint">Scroll →</span>
+            </div>
+            <div class="slider-container">
+                <a href="shani-war.html" class="katha-card">
+                    <div class="card-img" style="background: linear-gradient(135deg, #424242, #000);"><i class="fas fa-cloud-moon"></i></div>
+                    <div class="card-content"><h3>हनुमान जी और शनि देव का युद्ध</h3><span class="card-btn">युद्ध कथा</span></div>
+                </a>
+                <a href="ahiravan-vadh.html" class="katha-card">
+                    <div class="card-img" style="background: linear-gradient(135deg, #b71c1c, #000);"><i class="fas fa-skull"></i></div>
+                    <div class="card-content"><h3>पाताल में अहिरावण का वध</h3><span class="card-btn">युद्ध कथा</span></div>
+                </a>
+                <a href="akshay-vadh.html" class="katha-card">
+                    <div class="card-img"><i class="fas fa-fire"></i></div>
+                    <div class="card-content"><h3>अक्षय कुमार का वध</h3><span class="card-btn">युद्ध कथा</span></div>
+                </a>
+                <a href="meghnad-war.html" class="katha-card">
+                    <div class="card-img"><i class="fas fa-bolt"></i></div>
+                    <div class="card-content"><h3>मेघनाद और हनुमान जी का युद्ध</h3><span class="card-btn">युद्ध कथा</span></div>
+                </a>
+                <a href="kumbhkaran-war.html" class="katha-card">
+                    <div class="card-img"><i class="fas fa-mountain"></i></div>
+                    <div class="card-content"><h3>हनुमान बनाम कुंभकर्ण युद्ध</h3><span class="card-btn">युद्ध कथा</span></div>
+                </a>
+                <a href="bheem-hanuman.html" class="katha-card">
+                    <div class="card-img"><i class="fas fa-fist-raised"></i></div>
+                    <div class="card-content"><h3>भीम और हनुमान जी का शक्ति प्रदर्शन</h3><span class="card-btn">युद्ध कथा</span></div>
+                </a>
+                <a href="arjun-dhwaj.html" class="katha-card">
+                    <div class="card-img"><i class="fas fa-flag"></i></div>
+                    <div class="card-content"><h3>अर्जुन और हनुमान (ध्वज का युद्ध)</h3><span class="card-btn">युद्ध कथा</span></div>
+                </a>
+                <a href="sursa-war.html" class="katha-card">
+                    <div class="card-img"><i class="fas fa-dragon"></i></div>
+                    <div class="card-content"><h3>हनुमान जी और सुरसा (समुद्र मार्ग)</h3><span class="card-btn">युद्ध कथा</span></div>
+                </a>
+                <a href="lankini-vadh.html" class="katha-card">
+                    <div class="card-img"><i class="fas fa-dungeon"></i></div>
+                    <div class="card-content"><h3>राक्षसी लंकिनी का वध</h3><span class="card-btn">युद्ध कथा</span></div>
+                </a>
+                <a href="makardhwaj-war.html" class="katha-card">
+                    <div class="card-img"><i class="fas fa-water"></i></div>
+                    <div class="card-content"><h3>मकरध्वज और हनुमान जी का युद्ध</h3><span class="card-btn">युद्ध कथा</span></div>
+                </a>
+                <a href="kalnemi-vadh.html" class="katha-card">
+                    <div class="card-img"><i class="fas fa-user-ninja"></i></div>
+                    <div class="card-content"><h3>कालनेमि राक्षस का वध</h3><span class="card-btn">युद्ध कथा</span></div>
+                </a>
+                <a href="garuda-war.html" class="katha-card">
+                    <div class="card-img"><i class="fas fa-feather-alt"></i></div>
+                    <div class="card-content"><h3>हनुमान जी और गरुड़ का युद्ध</h3><span class="card-btn">युद्ध कथा</span></div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+<aside class="sidebar" aria-label="साइडबार">
+        <div class="sidebar-widget reveal">
+          <h3>भक्ति मार्ग</h3>
+          <ul>
+            <li><a href="/chalisa.html"><i class="fas fa-book-open" aria-hidden="true"></i> हनुमान चालीसा</a></li>
+            <li><a href="/bajrang-baan.html"><i class="fas fa-bolt" aria-hidden="true"></i> बजरंग बाण</a></li>
+            <li><a href="/sunderkand.html"><i class="fas fa-fire" aria-hidden="true"></i> सुंदरकांड</a></li>
+            <li><a href="/katha.html"><i class="fas fa-scroll" aria-hidden="true"></i> पौराणिक कथाएँ</a></li>
+            <li><a href="/mandir-darshan.html"><i class="fas fa-gopuram" aria-hidden="true"></i> प्रसिद्ध मंदिर</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget reveal">
+          <h3>दैनिक प्रेरणा</h3>
+          <blockquote class="quote" id="dailyQuote">
+            “राम काज कीन्हे बिनु मोहि कहाँ विश्राम”
+          </blockquote>
+        </div>
+
+        <div class="sidebar-widget reveal" aria-label="प्रायोजन">
+          <h3>प्रायोजन</h3>
+          <div class="ad-box adsense-ready">
+            <span class="ad-label">Advertisement</span>
+            Google AdSense Space
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="site-footer" id="footerSection">
+    <div class="container footer-container">
+      <div class="footer-box reveal">
+        <h3>हनुमान भक्ति</h3>
+        <p>
+          हनुमान भक्ति एक समर्पित सनातन मंच है, जहाँ श्री हनुमान जी की भक्ति, चालीसा,
+          कथा, मंत्र और आध्यात्मिक ज्ञान श्रद्धा और शुद्धता के साथ प्रस्तुत किया जाता है।
+        </p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-box reveal">
+        <h4>महत्वपूर्ण लिंक</h4>
+        <ul>
+          <li><a href="/about-us.html">हमारे बारे में</a></li>
+          <li><a href="/contact-us.html">संपर्क करें</a></li>
+          <li><a href="/privacy-policy.html">गोपनीयता नीति</a></li>
+          <li><a href="/disclaimer.html">अस्वीकरण</a></li>
+          <li><a href="/terms.html">नियम एवं शर्तें</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box reveal">
+        <h4>भक्ति सामग्री</h4>
+        <ul>
+          <li><a href="/chalisa.html">हनुमान चालीसा</a></li>
+          <li><a href="/bajrang-baan.html">बजरंग बाण</a></li>
+          <li><a href="/hanuman-ashtak.html">हनुमान अष्टक</a></li>
+          <li><a href="/sunderkand.html">सुंदरकांड</a></li>
+          <li><a href="/katha.html">पौराणिक कथाएँ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box reveal">
+        <h4>विश्वास का आधार</h4>
+        <p class="trust-text">
+          ✔ भक्ति-आधारित सामग्री<br />
+          ✔ भ्रामक जानकारी से मुक्त<br />
+          ✔ सनातन मूल्यों पर आधारित मंच
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 www.hanumanbhakti.org • जय बजरंग बली 🔱<br />
+      <span>यह वेबसाइट केवल धार्मिक एवं शैक्षिक उद्देश्य हेतु है।</span>
+    </div>
+  </footer>
+
+  <button class="sticky-share" type="button" aria-label="पेज साझा करें">
+    <i class="fas fa-share-nodes" aria-hidden="true"></i>
+  </button>
+
+  <button class="back-to-top" id="backToTopBtn" type="button" aria-label="ऊपर जाएँ">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <nav class="mobile-bottom-nav" aria-label="मोबाइल त्वरित नेविगेशन">
+   <a href="/" class="nav-item active" aria-current="page">
+      <i class="fas fa-home" aria-hidden="true"></i>
+      <span>होम</span>
+    </a>
+    <a href="/chalisa.html" class="nav-item">
+      <i class="fas fa-book-open" aria-hidden="true"></i>
+      <span>चालीसा</span>
+    </a>
+    <a href="/mandir-darshan.html" class="nav-item">
+      <i class="fas fa-gopuram" aria-hidden="true"></i>
+      <span>मंदिर</span>
+    </a>
+    <button type="button" class="nav-item mobile-nav-menu-btn" aria-label="मेनू खोलें" aria-expanded="false">
+      <i class="fas fa-bars" aria-hidden="true"></i>
+      <span>मेनू</span>
+    </button>
+  </nav>
+
+  <div class="mobile-drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="मोबाइल मेनू" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="drawer-logo">
+        <i class="fas fa-om" aria-hidden="true"></i>
+        <span>हनुमान भक्ति</span>
+      </div>
+      <button class="close-btn" type="button" id="drawerCloseBtn" aria-label="मेनू बंद करें">
+        &times;
+      </button>
+    </div>
+
+    <div class="drawer-content">
+      <div class="drawer-section">
+        <h4>मुख्य श्रेणियाँ</h4>
+        <ul class="drawer-links">
+          <li><a href="/"><i class="fas fa-home"></i> होम</a></li>
+          <li><a href="/chalisa.html"><i class="fas fa-book-open" aria-hidden="true"></i> हनुमान चालीसा</a></li>
+          <li><a href="/bajrang-baan.html"><i class="fas fa-bolt" aria-hidden="true"></i> बजरंग बाण</a></li>
+          <li><a href="/sunderkand.html"><i class="fas fa-fire" aria-hidden="true"></i> सुंदरकांड</a></li>
+          <li><a href="/mantra.html"><i class="fas fa-om" aria-hidden="true"></i> मंत्र एवं विधि</a></li>
+          <li><a href="/katha.html"><i class="fas fa-scroll" aria-hidden="true"></i> पौराणिक कथाएँ</a></li>
+        </ul>
+      </div>
+
+      <div class="drawer-section">
+        <h4>अन्य जानकारी</h4>
+        <ul class="drawer-links">
+          <li><a href="/about-us.html">हमारे बारे में</a></li>
+          <li><a href="/contact-us.html">संपर्क करें</a></li>
+          <li><a href="/privacy-policy.html">गोपनीयता नीति</a></li>
+        </ul>
+      </div>
+
+      <div class="drawer-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+    <div class="search-modal" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
+      <div class="search-top">
+        <h3 id="searchTitle">भक्ति सामग्री खोजें</h3>
+        <button type="button" class="close-btn" id="searchCloseBtn" aria-label="खोज बंद करें">&times;</button>
+      </div>
+
+      <div class="search-box-wrap">
+        <input
+          type="search"
+          id="searchInput"
+          class="search-input"
+          placeholder="जैसे: चालीसा, बजरंग बाण, सुंदरकांड..."
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="search-results" id="searchResults">
+        <a href="/chalisa.html" class="search-item">हनुमान चालीसा</a>
+        <a href="/bajrang-baan.html" class="search-item">बजरंग बाण</a>
+        <a href="/sunderkand.html" class="search-item">सुंदरकांड</a>
+        <a href="/hanuman-ashtak.html" class="search-item">हनुमान अष्टक</a>
+        <a href="/mantra.html" class="search-item">हनुमान मंत्र</a>
+        <a href="/katha.html" class="search-item">पौराणिक कथाएँ</a>
+        <a href="/mandir-darshan.html" class="search-item">मंदिर दर्शन</a>
+        <a href="/contact-us.html" class="search-item">संपर्क करें</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
