@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="google-adsense-account" content="ca-pub-7457059453269060">
+  <title>संपर्क करें | Contact Us – हनुमान भक्ति</title>
+  <meta name="description" content="हनुमान भक्ति से संपर्क करें — ईमेल, WhatsApp या Instagram के माध्यम से हमसे जुड़ें। हम सदैव आपकी सहायता के लिए तत्पर हैं।" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Hanuman Bhakti" />
+  <meta name="theme-color" content="#FF6B00" />
+  <link rel="canonical" href="https://hanumanbhakti.org/contact-us.html" />
+  <meta property="og:locale" content="hi_IN" />
+  <meta property="og:title" content="संपर्क करें | Contact Us – हनुमान भक्ति" />
+  <meta property="og:description" content="हनुमान भक्ति से ईमेल, WhatsApp या Instagram पर जुड़ें।" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hanumanbhakti.org/contact-us.html" />
+  <meta property="og:image" content="https://hanumanbhakti.org/assets/images/hanuman-bg.png" />
+  <meta property="og:site_name" content="हनुमान भक्ति" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "संपर्क करें – हनुमान भक्ति",
+    "url": "https://hanumanbhakti.org/contact-us.html",
+    "inLanguage": "hi",
+    "description": "हनुमान भक्ति से संपर्क के लिए ईमेल, WhatsApp और Instagram उपलब्ध है।",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hanuman Bhakti",
+      "url": "https://hanumanbhakti.org/",
+      "logo": "https://hanumanbhakti.org/assets/images/hanuman-bg.png",
+      "email": "contact@hanumanbhakti.org",
+      "sameAs": ["https://instagram.com/_hanumanbhakti_"]
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;700;800&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --saffron: #FF6B00;
+      --saffron-dark: #cc5500;
+      --saffron-light: #fff3e8;
+      --gold: #FFB300;
+      --maroon: #7B1818;
+      --deep: #4a0d00;
+      --whatsapp: #25D366;
+      --whatsapp-dark: #128C7E;
+      --insta: #E1306C;
+      --text: #1a1a1a;
+      --text-muted: #666;
+      --bg: #fdf6ee;
+      --card-bg: #fff;
+      --header-bg: rgba(255,255,255,0.97);
+      --border: #e8d5c0;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08);
+      --radius: 14px;
+      --t: 0.3s cubic-bezier(.4,0,.2,1);
+    }
+    [data-theme="dark"] {
+      --bg: #1a100a;
+      --card-bg: #2a1a10;
+      --text: #f5e6d3;
+      --text-muted: #bba;
+      --header-bg: rgba(26,16,10,0.97);
+      --border: #4a2e1e;
+      --shadow: 0 4px 20px rgba(0,0,0,0.3);
+      --saffron-light: #2a1500;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: 'Mukta', sans-serif; background: var(--bg); color: var(--text); transition: background var(--t), color var(--t); overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    img { max-width: 100%; height: auto; }
+
+    /* LOADER */
+    #siteLoader { position: fixed; inset: 0; z-index: 9999; background: var(--maroon); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; transition: opacity 0.5s, visibility 0.5s; }
+    #siteLoader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .loader-icon { font-size: 3rem; color: var(--gold); animation: spin 2s linear infinite; }
+    #siteLoader p { color: #fff; font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* HEADER */
+    .site-header { position: sticky; top: 0; z-index: 100; background: var(--header-bg); backdrop-filter: blur(12px); border-bottom: 2px solid var(--border); box-shadow: 0 2px 16px rgba(255,107,0,0.1); }
+    .header-wrap { display: flex; align-items: center; gap: 12px; padding: 11px 16px; max-width: 1200px; margin: 0 auto; }
+    .logo { display: flex; align-items: center; gap: 8px; font-size: 1.25rem; font-weight: 800; color: var(--saffron); white-space: nowrap; }
+    .logo i { font-size: 1.4rem; }
+    .desktop-nav { display: none; margin-left: auto; }
+    .desktop-nav ul { display: flex; gap: 4px; }
+    .desktop-nav a { padding: 6px 12px; border-radius: 20px; font-weight: 600; font-size: 0.9rem; color: var(--text-muted); transition: all var(--t); }
+    .desktop-nav a:hover, .desktop-nav a.active { background: var(--saffron); color: #fff; }
+    .header-actions { display: flex; gap: 6px; margin-left: auto; }
+    .icon-btn { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--saffron-light); color: var(--saffron); font-size: 1rem; transition: all var(--t); }
+    .icon-btn:hover { background: var(--saffron); color: #fff; transform: scale(1.1); }
+    .menu-btn { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--saffron); color: #fff; font-size: 1rem; }
+    @media (min-width: 768px) { .desktop-nav { display: block; } .menu-btn { display: none; } .header-actions { margin-left: 0; } }
+
+    /* HERO */
+    .hero { min-height: 38vh; background: linear-gradient(135deg, #3a0800 0%, #7B1818 45%, #FF6B00 100%); position: relative; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 80%, rgba(255,179,0,0.2) 0%, transparent 65%); animation: glow 3s ease-in-out infinite alternate; }
+    .hero-om { position: absolute; font-size: 18rem; opacity: 0.04; top: 50%; left: 50%; transform: translate(-50%,-50%); color: #fff; pointer-events: none; animation: slowSpin 30s linear infinite; user-select: none; }
+    @keyframes slowSpin { to { transform: translate(-50%,-50%) rotate(360deg); } }
+    @keyframes glow { from { opacity: 0.4; } to { opacity: 1; } }
+    .hero-content { position: relative; z-index: 1; padding: 44px 20px 40px; max-width: 700px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,179,0,0.2); border: 1px solid rgba(255,179,0,0.5); color: var(--gold); padding: 5px 16px; border-radius: 20px; font-size: 0.82rem; font-weight: 700; margin-bottom: 14px; }
+    .hero-icon { font-size: 3rem; display: block; margin-bottom: 8px; }
+    .hero h1 { font-family: 'Tiro Devanagari Hindi', serif; font-size: clamp(1.5rem, 4.5vw, 2.4rem); color: #fff; text-shadow: 0 2px 20px rgba(0,0,0,0.4); margin-bottom: 10px; line-height: 1.35; }
+    .hero p { color: rgba(255,255,255,0.82); font-size: 0.97rem; font-family: 'Tiro Devanagari Hindi', serif; line-height: 1.8; }
+
+    /* BREADCRUMB */
+    .breadcrumb { background: var(--saffron-light); border-bottom: 1px solid var(--border); padding: 10px 16px; font-size: 0.82rem; color: var(--text-muted); }
+    .breadcrumb-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 6px; }
+    .breadcrumb a { color: var(--saffron); }
+    .breadcrumb i { font-size: 0.7rem; }
+
+    /* AD SLOT */
+    .ad-slot { background: var(--card-bg); border: 1px dashed var(--border); border-radius: 8px; text-align: center; padding: 12px; color: var(--text-muted); font-size: 0.8rem; overflow: hidden; }
+    .ad-banner-top { max-width: 1200px; margin: 20px auto; padding: 0 16px; }
+    .ad-banner-mid { max-width: 1200px; margin: 24px auto; padding: 0 16px; }
+
+    /* PAGE LAYOUT */
+    .page-wrap { max-width: 1200px; margin: 0 auto; padding: 36px 16px 48px; display: grid; grid-template-columns: 1fr; gap: 28px; }
+    @media (min-width: 900px) { .page-wrap { grid-template-columns: 1fr 340px; align-items: start; } }
+
+    /* SECTION HEADING */
+    .section-heading { margin-bottom: 24px; }
+    .section-heading h2 { font-family: 'Tiro Devanagari Hindi', serif; font-size: 1.5rem; color: var(--maroon); margin-bottom: 6px; }
+    .section-divider { width: 56px; height: 4px; background: linear-gradient(90deg, var(--saffron), var(--gold)); border-radius: 2px; margin-top: 8px; }
+
+    /* CONTACT FORM CARD */
+    .form-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 30px 26px; box-shadow: var(--shadow); }
+    .form-card h3 { font-family: 'Tiro Devanagari Hindi', serif; font-size: 1.15rem; color: var(--maroon); margin-bottom: 22px; padding-bottom: 10px; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; }
+    .field label { font-size: 0.88rem; font-weight: 700; color: var(--text-muted); }
+    .field input, .field textarea, .field select {
+      padding: 12px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      font-family: 'Mukta', sans-serif;
+      font-size: 0.97rem;
+      color: var(--text);
+      background: var(--bg);
+      transition: border-color var(--t), box-shadow var(--t);
+      outline: none;
+    }
+    .field input:focus, .field textarea:focus { border-color: var(--saffron); box-shadow: 0 0 0 3px rgba(255,107,0,0.12); }
+    .field textarea { resize: vertical; min-height: 120px; }
+    .honeypot { display: none; }
+    .submit-btn {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, var(--saffron), var(--saffron-dark));
+      color: #fff;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all var(--t);
+      box-shadow: 0 4px 16px rgba(255,107,0,0.35);
+    }
+    .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(255,107,0,0.45); }
+
+    /* CONTACT INFO CARDS */
+    .info-col { display: flex; flex-direction: column; gap: 18px; }
+
+    .info-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 20px; box-shadow: var(--shadow); display: flex; align-items: flex-start; gap: 16px; transition: all var(--t); }
+    .info-card:hover { border-color: var(--saffron); transform: translateY(-2px); }
+    .info-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+    .info-icon.email-ic { background: #fff3e8; color: var(--saffron); }
+    .info-icon.wa-ic { background: #e8f9f1; color: var(--whatsapp); }
+    .info-icon.insta-ic { background: #fde8f0; color: var(--insta); }
+    .info-icon.yt-ic { background: #ffeaea; color: #FF0000; }
+    .info-icon.fb-ic { background: #e8eeff; color: #1877F2; }
+    .info-body h4 { font-size: 0.92rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .info-body a { color: var(--saffron); font-weight: 600; font-size: 0.95rem; word-break: break-all; }
+    .info-body a:hover { text-decoration: underline; }
+    .info-body p { font-size: 0.8rem; color: var(--text-muted); margin-top: 3px; }
+
+    /* SOCIAL LOGOS CARD */
+    .social-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 20px; box-shadow: var(--shadow); }
+    .social-card h4 { font-size: 0.92rem; font-weight: 700; color: var(--text); margin-bottom: 16px; }
+    .social-logos { display: flex; gap: 14px; flex-wrap: wrap; }
+    .social-logo-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      transition: all var(--t);
+      border: 1.5px solid transparent;
+    }
+    .social-logo-btn i { font-size: 1.15rem; }
+    .social-logo-btn.wa { background: #e8f9f1; color: var(--whatsapp-dark); border-color: #c3eeda; }
+    .social-logo-btn.wa:hover { background: var(--whatsapp); color: #fff; }
+    .social-logo-btn.insta { background: #fde8f0; color: var(--insta); border-color: #f5bfd5; }
+    .social-logo-btn.insta:hover { background: var(--insta); color: #fff; }
+    .social-logo-btn.yt { background: #ffeaea; color: #FF0000; border-color: #ffc1c1; }
+    .social-logo-btn.yt:hover { background: #FF0000; color: #fff; }
+    .social-logo-btn.fb { background: #e8eeff; color: #1877F2; border-color: #bfceff; }
+    .social-logo-btn.fb:hover { background: #1877F2; color: #fff; }
+
+    /* TRUST BOX */
+    .trust-box { background: var(--saffron-light); border: 1px dashed var(--saffron); border-radius: var(--radius); padding: 20px; }
+    .trust-box h4 { font-size: 0.92rem; color: var(--saffron-dark); font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+    .trust-box ul { display: flex; flex-direction: column; gap: 7px; }
+    .trust-box ul li { font-size: 0.82rem; color: var(--text-muted); display: flex; align-items: center; gap: 7px; }
+    .trust-box ul li i { color: var(--saffron); font-size: 0.78rem; }
+
+    /* NOTICE BOX */
+    .notice-box { background: var(--card-bg); border: 1.5px solid var(--gold); border-radius: var(--radius); padding: 20px 22px; margin-top: 4px; display: flex; align-items: flex-start; gap: 14px; }
+    .notice-box i { color: var(--gold); font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+    .notice-box p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; }
+    .notice-box strong { color: var(--maroon); }
+
+    /* SIDEBAR */
+    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+    .sidebar-widget { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 18px; box-shadow: var(--shadow); }
+    .sidebar-widget h3 { font-family: 'Tiro Devanagari Hindi', serif; font-size: 1rem; color: var(--maroon); margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid var(--gold); }
+    .sidebar-widget ul { display: flex; flex-direction: column; gap: 10px; }
+    .sidebar-widget ul a { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--text); font-weight: 600; padding: 8px 10px; border-radius: 8px; transition: all var(--t); }
+    .sidebar-widget ul a:hover { background: var(--saffron-light); color: var(--saffron); }
+    .sidebar-widget ul a i { color: var(--saffron); font-size: 0.85rem; width: 18px; text-align: center; }
+    blockquote.quote { font-family: 'Tiro Devanagari Hindi', serif; font-size: 0.95rem; color: var(--maroon); border-left: 4px solid var(--gold); padding: 10px 14px; background: var(--saffron-light); border-radius: 0 8px 8px 0; line-height: 1.7; font-style: italic; }
+    .ad-box { background: var(--saffron-light); border: 1px dashed var(--border); border-radius: 8px; min-height: 120px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
+    .ad-label { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+
+    /* FOOTER */
+    .site-footer { background: #1a0a00; color: #ccc; margin-top: 40px; }
+    .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; padding: 48px 20px 28px; }
+    .footer-box h3, .footer-box h4 { color: var(--gold); margin-bottom: 14px; font-size: 1rem; }
+    .footer-box p { font-size: 0.88rem; line-height: 1.7; color: #aaa; }
+    .footer-box ul { display: flex; flex-direction: column; gap: 8px; }
+    .footer-box ul a { font-size: 0.88rem; color: #aaa; transition: color var(--t); }
+    .footer-box ul a:hover { color: var(--saffron); }
+    .footer-social { display: flex; gap: 12px; margin-top: 14px; }
+    .footer-social a { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); color: #fff; display: flex; align-items: center; justify-content: center; transition: background var(--t); }
+    .footer-social a:hover { background: var(--saffron); }
+    .footer-social a.wa-foot:hover { background: var(--whatsapp); }
+    .footer-social a.insta-foot:hover { background: var(--insta); }
+    .footer-bottom { text-align: center; padding: 16px 20px; border-top: 1px solid #333; color: #888; font-size: 0.82rem; line-height: 1.9; }
+
+    /* BACK TO TOP */
+    .back-to-top { position: fixed; bottom: 90px; right: 16px; z-index: 200; width: 44px; height: 44px; border-radius: 50%; background: var(--saffron); color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(255,107,0,0.4); opacity: 0; visibility: hidden; transition: all var(--t); }
+    .back-to-top.visible { opacity: 1; visibility: visible; }
+
+    /* WHATSAPP FLOAT */
+    .whatsapp-float { position: fixed; bottom: 90px; left: 16px; z-index: 200; width: 50px; height: 50px; border-radius: 50%; background: var(--whatsapp); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 4px 16px rgba(37,211,102,0.5); animation: waPulse 2.4s ease-in-out infinite; }
+    .whatsapp-float:hover { background: var(--whatsapp-dark); transform: scale(1.06); }
+    @keyframes waPulse { 0%,100% { box-shadow: 0 4px 16px rgba(37,211,102,0.5); } 50% { box-shadow: 0 4px 16px rgba(37,211,102,0.5), 0 0 0 8px rgba(37,211,102,0.18); } }
+
+    /* MOBILE BOTTOM NAV */
+    .mobile-bottom-nav { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: var(--card-bg); border-top: 1px solid var(--border); padding-bottom: env(safe-area-inset-bottom); }
+    .mobile-bottom-nav .nav-item { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 8px 4px; color: var(--text-muted); font-size: 0.68rem; font-weight: 600; gap: 3px; transition: color var(--t); }
+    .mobile-bottom-nav .nav-item i { font-size: 1.2rem; }
+    .mobile-bottom-nav .nav-item.active, .mobile-bottom-nav .nav-item:hover { color: var(--saffron); }
+    @media (min-width: 768px) { .mobile-bottom-nav { display: none; } }
+
+    /* DRAWER */
+    .mobile-drawer-overlay { position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,0.5); opacity: 0; visibility: hidden; transition: all 0.3s; }
+    .mobile-drawer-overlay.open { opacity: 1; visibility: visible; }
+    .mobile-drawer { position: fixed; top: 0; left: 0; bottom: 0; z-index: 400; width: min(82vw, 300px); background: var(--card-bg); transform: translateX(-100%); transition: transform 0.35s cubic-bezier(.4,0,.2,1); overflow-y: auto; display: flex; flex-direction: column; }
+    .mobile-drawer.open { transform: translateX(0); }
+    .drawer-header { display: flex; align-items: center; justify-content: space-between; padding: 18px 16px; background: var(--saffron); color: #fff; }
+    .drawer-logo { display: flex; align-items: center; gap: 8px; font-size: 1.1rem; font-weight: 800; }
+    .close-btn { width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.2); color: #fff; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; cursor: pointer; border: none; }
+    .drawer-content { padding: 20px 16px; flex: 1; }
+    .drawer-section { margin-bottom: 24px; }
+    .drawer-section h4 { font-size: 0.78rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 10px; }
+    .drawer-links { display: flex; flex-direction: column; gap: 2px; }
+    .drawer-links a { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 10px; font-size: 0.95rem; font-weight: 600; color: var(--text); transition: all var(--t); }
+    .drawer-links a:hover { background: var(--saffron-light); color: var(--saffron); }
+    .drawer-links a i { width: 18px; text-align: center; color: var(--saffron); }
+    .drawer-social { display: flex; gap: 12px; padding: 16px 12px; border-top: 1px solid var(--border); margin-top: auto; }
+    .drawer-social a { width: 36px; height: 36px; border-radius: 50%; background: var(--saffron-light); color: var(--saffron); display: flex; align-items: center; justify-content: center; transition: all var(--t); }
+    .drawer-social a:hover { background: var(--saffron); color: #fff; }
+
+    /* SEARCH OVERLAY */
+    .search-overlay { position: fixed; inset: 0; z-index: 500; background: rgba(0,0,0,0.6); display: flex; align-items: flex-start; justify-content: center; padding-top: 80px; opacity: 0; visibility: hidden; transition: all 0.3s; }
+    .search-overlay.open { opacity: 1; visibility: visible; }
+    .search-modal { background: var(--card-bg); border-radius: var(--radius); width: min(560px, 94vw); max-height: 70vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+    .search-top { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid var(--border); }
+    .search-top h3 { font-size: 1rem; color: var(--maroon); font-family: 'Tiro Devanagari Hindi', serif; }
+    .search-input { width: 100%; padding: 14px 20px; border: none; border-bottom: 1px solid var(--border); background: var(--bg); font-family: 'Mukta', sans-serif; font-size: 1rem; color: var(--text); outline: none; }
+    .search-results { padding: 10px 10px 14px; display: flex; flex-direction: column; gap: 4px; }
+    .search-item { padding: 10px 12px; border-radius: 8px; font-size: 0.93rem; color: var(--text); transition: all var(--t); font-weight: 600; }
+    .search-item:hover { background: var(--saffron-light); color: var(--saffron); }
+
+    /* FORM SUCCESS MESSAGE */
+    .form-success { display: none; background: #e8f9f1; border: 1.5px solid var(--whatsapp); border-radius: 12px; padding: 18px 20px; text-align: center; }
+    .form-success i { font-size: 2rem; color: var(--whatsapp); margin-bottom: 8px; }
+    .form-success p { color: #1a5e3a; font-weight: 700; }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="siteLoader">
+  <div class="loader-icon"><i class="fas fa-om"></i></div>
+  <p>जय बजरंग बली 🙏</p>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="header-wrap">
+    <a href="/" class="logo" aria-label="हनुमान भक्ति होम">
+      <i class="fas fa-om" aria-hidden="true"></i>
+      <span>हनुमान भक्ति</span>
+    </a>
+    <nav class="desktop-nav" aria-label="मुख्य नेविगेशन">
+      <ul>
+        <li><a href="/">होम</a></li>
+        <li><a href="/chalisa.html">चालीसा</a></li>
+        <li><a href="/katha.html">कथाएँ</a></li>
+        <li><a href="/sunderkand.html">सुंदरकांड</a></li>
+        <li><a href="/mandir-darshan.html">मंदिर</a></li>
+        <li><a href="/contact-us.html" class="active">संपर्क</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggleBtn" type="button" aria-label="खोज">
+        <i class="fas fa-magnifying-glass"></i>
+      </button>
+      <button class="icon-btn" id="themeToggleBtn" type="button" aria-label="डार्क मोड">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+    <button class="menu-btn" id="menuToggleBtn" type="button" aria-label="मेनू" aria-expanded="false">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" aria-label="संपर्क हीरो">
+  <div class="hero-om" aria-hidden="true">ॐ</div>
+  <div class="hero-content reveal">
+    <div class="hero-badge">🙏 हम यहाँ हैं — आपकी सेवा में</div>
+    <span class="hero-icon">📬</span>
+    <h1>संपर्क करें</h1>
+    <p>किसी भी जिज्ञासा, सुझाव या सहयोग के लिए हमसे जुड़ें — ईमेल, WhatsApp या Instagram पर।</p>
+  </div>
+</section>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="ब्रेडक्रम्ब">
+  <div class="breadcrumb-inner">
+    <a href="/"><i class="fas fa-home"></i> होम</a>
+    <i class="fas fa-chevron-right"></i>
+    <span>संपर्क करें</span>
+  </div>
+</nav>
+
+<!-- AD SLOT TOP -->
+<div class="ad-banner-top">
+  <div class="ad-slot" style="min-height:90px;">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-7457059453269060"
+      data-ad-slot="auto"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+  </div>
+</div>
+
+<!-- MAIN PAGE -->
+<main id="mainContent">
+  <div class="page-wrap">
+
+    <!-- LEFT: FORM + NOTICE -->
+    <div>
+      <div class="section-heading reveal">
+        <h2>✉️ हमें संदेश भेजें</h2>
+        <p>नीचे दिया गया फ़ॉर्म भरें — हम 24-48 घंटों में उत्तर देंगे।</p>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="form-card reveal">
+        <h3>संपर्क फ़ॉर्म</h3>
+
+        <!-- Success message shown after submit -->
+        <div class="form-success" id="formSuccess">
+          <i class="fas fa-circle-check"></i>
+          <p>आपका संदेश सफलतापूर्वक भेजा गया! 🙏 हम शीघ्र उत्तर देंगे।</p>
+        </div>
+
+        <form
+          action="https://formspree.io/f/xykgzvqy"
+          method="POST"
+          id="contactForm"
+        >
+          <!-- Redirect to thank-you via Formspree _next -->
+          <input type="hidden" name="_subject" value="हनुमान भक्ति — नया संपर्क संदेश" />
+
+          <div class="field">
+            <label for="fname">पूरा नाम *</label>
+            <input type="text" id="fname" name="name" required placeholder="अपना नाम लिखें" />
+          </div>
+
+          <div class="field">
+            <label for="femail">ईमेल पता *</label>
+            <input type="email" id="femail" name="email" required placeholder="आपका ईमेल" />
+          </div>
+
+          <div class="field">
+            <label for="fsubject">विषय</label>
+            <input type="text" id="fsubject" name="subject" placeholder="जैसे: विज्ञापन, सुझाव, अन्य" />
+          </div>
+
+          <div class="field">
+            <label for="fmessage">आपका संदेश *</label>
+            <textarea id="fmessage" name="message" required placeholder="यहाँ अपना संदेश लिखें..."></textarea>
+          </div>
+
+          <!-- Honeypot anti-spam -->
+          <div class="honeypot">
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i> संदेश भेजें
+          </button>
+        </form>
+      </div>
+
+      <!-- NOTICE -->
+      <div class="notice-box reveal" style="margin-top: 20px;">
+        <i class="fas fa-circle-info"></i>
+        <p><strong>विशेष सूचना:</strong> यह मंच केवल आध्यात्मिक चर्चा और धार्मिक ज्ञान साझा करने के लिए है। विज्ञापन या व्यावसायिक सहयोग के लिए ईमेल पर संपर्क करें।</p>
+      </div>
+
+      <!-- MID AD -->
+      <div class="ad-banner-mid" style="padding: 0; margin-top: 28px;">
+        <div class="ad-slot" style="min-height: 90px;">
+          <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-7457059453269060"
+            data-ad-slot="auto"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: CONTACT INFO + SIDEBAR -->
+    <aside class="sidebar" aria-label="संपर्क जानकारी">
+
+      <!-- EMAIL -->
+      <div class="info-card reveal">
+        <div class="info-icon email-ic">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div class="info-body">
+          <h4>ईमेल</h4>
+          <a href="mailto:contact@hanumanbhakti.org">contact@hanumanbhakti.org</a>
+          <p>24-48 घंटों में उत्तर मिलेगा।</p>
+        </div>
+      </div>
+
+      <!-- WHATSAPP -->
+      <div class="info-card reveal">
+        <div class="info-icon wa-ic">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+        <div class="info-body">
+          <h4>WhatsApp</h4>
+          <a href="https://wa.me/919351531493" target="_blank" rel="noopener">+91 93515 31493</a>
+          <p>संदेश भेजें — कॉल नहीं।</p>
+        </div>
+      </div>
+
+      <!-- INSTAGRAM -->
+      <div class="info-card reveal">
+        <div class="info-icon insta-ic">
+          <i class="fab fa-instagram"></i>
+        </div>
+        <div class="info-body">
+          <h4>Instagram</h4>
+          <a href="https://instagram.com/_hanumanbhakti_" target="_blank" rel="noopener">@_hanumanbhakti_</a>
+          <p>DM के लिए फ़ॉलो करें।</p>
+        </div>
+      </div>
+
+      <!-- SOCIAL LOGOS (YouTube + Facebook placeholder) -->
+      <div class="social-card reveal">
+        <h4><i class="fas fa-share-nodes" style="color:var(--saffron);margin-right:6px;"></i> सोशल मीडिया पर जुड़ें</h4>
+        <div class="social-logos">
+          <a href="https://wa.me/919351531493" target="_blank" rel="noopener" class="social-logo-btn wa" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a href="https://instagram.com/_hanumanbhakti_" target="_blank" rel="noopener" class="social-logo-btn insta" aria-label="Instagram">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+          <!-- YouTube & Facebook — link baad mein add karein -->
+          <a href="#" class="social-logo-btn yt" aria-label="YouTube" title="जल्द आ रहा है">
+            <i class="fab fa-youtube"></i> YouTube
+          </a>
+          <a href="#" class="social-logo-btn fb" aria-label="Facebook" title="जल्द आ रहा है">
+            <i class="fab fa-facebook-f"></i> Facebook
+          </a>
+        </div>
+      </div>
+
+      <!-- TRUST -->
+      <div class="trust-box reveal">
+        <h4><i class="fas fa-shield-halved"></i> सुरक्षित संपर्क</h4>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> आपकी जानकारी सुरक्षित है</li>
+          <li><i class="fas fa-check-circle"></i> हम स्पैम नहीं करते</li>
+          <li><i class="fas fa-check-circle"></i> भक्ति-केंद्रित, विश्वसनीय मंच</li>
+          <li><i class="fas fa-check-circle"></i> सनातन मूल्यों पर आधारित</li>
+        </ul>
+      </div>
+
+      <!-- BHAKTI LINKS -->
+      <div class="sidebar-widget reveal">
+        <h3>भक्ति मार्ग</h3>
+        <ul>
+          <li><a href="/chalisa.html"><i class="fas fa-book-open"></i> हनुमान चालीसा</a></li>
+          <li><a href="/bajrang-baan.html"><i class="fas fa-bolt"></i> बजरंग बाण</a></li>
+          <li><a href="/sunderkand.html"><i class="fas fa-fire"></i> सुंदरकांड</a></li>
+          <li><a href="/katha.html"><i class="fas fa-scroll"></i> पौराणिक कथाएँ</a></li>
+          <li><a href="/mandir-darshan.html"><i class="fas fa-gopuram"></i> प्रसिद्ध मंदिर</a></li>
+        </ul>
+      </div>
+
+      <!-- QUOTE -->
+      <div class="sidebar-widget reveal">
+        <h3>दैनिक प्रेरणा</h3>
+        <blockquote class="quote">"राम काज कीन्हे बिनु मोहि कहाँ विश्राम"</blockquote>
+      </div>
+
+      <!-- AD -->
+      <div class="sidebar-widget reveal" aria-label="प्रायोजन">
+        <h3>प्रायोजन</h3>
+        <div class="ad-box">
+          <span class="ad-label">Advertisement</span>
+          <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-7457059453269060"
+            data-ad-slot="auto"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer" id="footerSection">
+  <div class="footer-container">
+    <div class="footer-box reveal">
+      <h3>हनुमान भक्ति</h3>
+      <p>श्री हनुमान जी की भक्ति, चालीसा, कथा, मंत्र और आध्यात्मिक ज्ञान का पवित्र मंच — श्रद्धा और शुद्धता के साथ।</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/_hanumanbhakti_" class="insta-foot" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/919351531493" class="wa-foot" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-box reveal">
+      <h4>महत्वपूर्ण लिंक</h4>
+      <ul>
+        <li><a href="/about-us.html">हमारे बारे में</a></li>
+        <li><a href="/contact-us.html">संपर्क करें</a></li>
+        <li><a href="/privacy-policy.html">गोपनीयता नीति</a></li>
+        <li><a href="/disclaimer.html">अस्वीकरण</a></li>
+        <li><a href="/terms.html">नियम एवं शर्तें</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-box reveal">
+      <h4>भक्ति सामग्री</h4>
+      <ul>
+        <li><a href="/chalisa.html">हनुमान चालीसा</a></li>
+        <li><a href="/bajrang-baan.html">बजरंग बाण</a></li>
+        <li><a href="/hanuman-ashtak.html">हनुमान अष्टक</a></li>
+        <li><a href="/sunderkand.html">सुंदरकांड</a></li>
+        <li><a href="/katha.html">पौराणिक कथाएँ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-box reveal">
+      <h4>विश्वास का आधार</h4>
+      <p class="trust-text">
+        ✔ भक्ति-आधारित सामग्री<br />
+        ✔ भ्रामक जानकारी से मुक्त<br />
+        ✔ सनातन मूल्यों पर आधारित मंच
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © <span id="year"></span> www.hanumanbhakti.org • जय बजरंग बली 🔱<br />
+    <span>यह वेबसाइट केवल धार्मिक एवं शैक्षिक उद्देश्य हेतु है।</span>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919351531493" class="whatsapp-float" aria-label="WhatsApp पर संपर्क करें" target="_blank" rel="noopener">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTopBtn" type="button" aria-label="ऊपर जाएँ">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- MOBILE BOTTOM NAV -->
+<nav class="mobile-bottom-nav" aria-label="मोबाइल त्वरित नेविगेशन">
+  <a href="/" class="nav-item">
+    <i class="fas fa-home"></i>
+    <span>होम</span>
+  </a>
+  <a href="/chalisa.html" class="nav-item">
+    <i class="fas fa-book-open"></i>
+    <span>चालीसा</span>
+  </a>
+  <a href="/mandir-darshan.html" class="nav-item">
+    <i class="fas fa-gopuram"></i>
+    <span>मंदिर</span>
+  </a>
+  <a href="/contact-us.html" class="nav-item active" aria-current="page">
+    <i class="fas fa-envelope"></i>
+    <span>संपर्क</span>
+  </a>
+</nav>
+
+<!-- DRAWER OVERLAY -->
+<div class="mobile-drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+
+<!-- MOBILE DRAWER -->
+<aside class="mobile-drawer" id="mobileDrawer" aria-label="मोबाइल मेनू" aria-hidden="true">
+  <div class="drawer-header">
+    <div class="drawer-logo">
+      <i class="fas fa-om"></i>
+      <span>हनुमान भक्ति</span>
+    </div>
+    <button class="close-btn" type="button" id="drawerCloseBtn" aria-label="मेनू बंद करें">&times;</button>
+  </div>
+  <div class="drawer-content">
+    <div class="drawer-section">
+      <h4>मुख्य श्रेणियाँ</h4>
+      <ul class="drawer-links">
+        <li><a href="/"><i class="fas fa-home"></i> होम</a></li>
+        <li><a href="/chalisa.html"><i class="fas fa-book-open"></i> हनुमान चालीसा</a></li>
+        <li><a href="/bajrang-baan.html"><i class="fas fa-bolt"></i> बजरंग बाण</a></li>
+        <li><a href="/sunderkand.html"><i class="fas fa-fire"></i> सुंदरकांड</a></li>
+        <li><a href="/mantra.html"><i class="fas fa-om"></i> मंत्र एवं विधि</a></li>
+        <li><a href="/katha.html"><i class="fas fa-scroll"></i> पौराणिक कथाएँ</a></li>
+      </ul>
+    </div>
+    <div class="drawer-section">
+      <h4>अन्य जानकारी</h4>
+      <ul class="drawer-links">
+        <li><a href="/about-us.html">हमारे बारे में</a></li>
+        <li><a href="/contact-us.html">संपर्क करें</a></li>
+        <li><a href="/privacy-policy.html">गोपनीयता नीति</a></li>
+      </ul>
+    </div>
+    <div class="drawer-social">
+      <a href="https://instagram.com/_hanumanbhakti_" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/919351531493" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    </div>
+  </div>
+</aside>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay" aria-hidden="true">
+  <div class="search-modal" role="dialog" aria-modal="true" aria-label="खोज">
+    <div class="search-top">
+      <h3>भक्ति सामग्री खोजें</h3>
+      <button class="close-btn" id="searchCloseBtn" type="button" aria-label="बंद करें" style="background:var(--saffron-light);color:var(--saffron);">×</button>
+    </div>
+    <input type="search" id="searchInput" class="search-input" placeholder="जैसे: चालीसा, बजरंग बाण, सुंदरकांड..." autocomplete="off" />
+    <div class="search-results" id="searchResults">
+      <a href="/chalisa.html" class="search-item">हनुमान चालीसा</a>
+      <a href="/bajrang-baan.html" class="search-item">बजरंग बाण</a>
+      <a href="/sunderkand.html" class="search-item">सुंदरकांड</a>
+      <a href="/hanuman-ashtak.html" class="search-item">हनुमान अष्टक</a>
+      <a href="/mantra.html" class="search-item">हनुमान मंत्र</a>
+      <a href="/katha.html" class="search-item">पौराणिक कथाएँ</a>
+      <a href="/mandir-darshan.html" class="search-item">मंदिर दर्शन</a>
+      <a href="/contact-us.html" class="search-item">संपर्क करें</a>
+    </div>
+  </div>
+</div>
+
+<!-- ADSENSE SCRIPT -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7457059453269060" crossorigin="anonymous"></script>
+<script>
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Loader
+  window.addEventListener('load', () => {
+    setTimeout(() => document.getElementById('siteLoader').classList.add('hidden'), 800);
+  });
+
+  // Dark Mode
+  const themeBtn = document.getElementById('themeToggleBtn');
+  function applyDark() {
+    document.documentElement.setAttribute('data-theme','dark');
+    localStorage.setItem('hb_theme','dark');
+    themeBtn.querySelector('i').className = 'fas fa-sun';
+  }
+  if (localStorage.getItem('hb_theme') === 'dark') applyDark();
+  themeBtn.addEventListener('click', () => {
+    if (document.documentElement.getAttribute('data-theme') === 'dark') {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('hb_theme','light');
+      themeBtn.querySelector('i').className = 'fas fa-moon';
+    } else { applyDark(); }
+  });
+
+  // Drawer
+  const openDrawer = () => {
+    document.getElementById('mobileDrawer').classList.add('open');
+    document.getElementById('drawerOverlay').classList.add('open');
+    document.getElementById('mobileDrawer').setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  };
+  const closeDrawer = () => {
+    document.getElementById('mobileDrawer').classList.remove('open');
+    document.getElementById('drawerOverlay').classList.remove('open');
+    document.getElementById('mobileDrawer').setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  };
+  document.getElementById('menuToggleBtn').addEventListener('click', openDrawer);
+  document.getElementById('drawerCloseBtn').addEventListener('click', closeDrawer);
+  document.getElementById('drawerOverlay').addEventListener('click', closeDrawer);
+
+  // Search
+  document.getElementById('searchToggleBtn').addEventListener('click', () => {
+    document.getElementById('searchOverlay').classList.add('open');
+    document.getElementById('searchInput').focus();
+  });
+  document.getElementById('searchCloseBtn').addEventListener('click', () => {
+    document.getElementById('searchOverlay').classList.remove('open');
+  });
+  document.getElementById('searchOverlay').addEventListener('click', e => {
+    if (e.target === document.getElementById('searchOverlay'))
+      document.getElementById('searchOverlay').classList.remove('open');
+  });
+  document.getElementById('searchInput').addEventListener('input', function() {
+    const q = this.value.toLowerCase();
+    document.querySelectorAll('.search-item').forEach(el => {
+      el.style.display = el.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
+
+  // Back to Top
+  const topBtn = document.getElementById('backToTopBtn');
+  window.addEventListener('scroll', () => topBtn.classList.toggle('visible', scrollY > 300), {passive:true});
+  topBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+  // Escape key
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      closeDrawer();
+      document.getElementById('searchOverlay').classList.remove('open');
+    }
+  });
+
+  // Scroll Reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
+  }, {threshold: 0.1});
+  reveals.forEach(el => observer.observe(el));
+
+  // AdSense push
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  (adsbygoogle = window.adsbygoogle || []).push({});
+
+  // Form AJAX submit (Formspree)
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = form.querySelector('.submit-btn');
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> भेजा जा रहा है...';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      } else {
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> दोबारा प्रयास करें';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.innerHTML = '<i class="fas fa-paper-plane"></i> दोबारा प्रयास करें';
+      btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
