@@ -286,7 +286,14 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-
+  
+  <url>
+    <loc>https://hanumanbhakti.org/hanuman-ji-prasad-puja-samay.html</loc>
+    <lastmod>2025-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
   <!-- Temple & Special Pages -->
   <url>
     <loc>https://hanumanbhakti.org/ayodhya-ram-mandir.html</loc>
