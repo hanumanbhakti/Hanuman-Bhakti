@@ -767,10 +767,18 @@ form.addEventListener('submit', function(e) {
 
 <script>
 // ===== Hide Loader =====
-window.addEventListener('load', () => {
+function hideLoader() {
   const loader = document.getElementById('siteLoader');
   if (loader) loader.classList.add('hidden');
-});
+}
+// Hide as soon as HTML/CSS is parsed (don't wait for slow ads/images)
+document.addEventListener('DOMContentLoaded', hideLoader);
+// Safety fallback in case DOMContentLoaded already fired before this script ran
+if (document.readyState === 'interactive' || document.readyState === 'complete') {
+  hideLoader();
+}
+// Extra safety: force-hide after 2.5s no matter what (covers any edge case)
+setTimeout(hideLoader, 2500);
 
 // ===== Mobile Drawer Menu =====
 const menuToggleBtn = document.getElementById('menuToggleBtn');
