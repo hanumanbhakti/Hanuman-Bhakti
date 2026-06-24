@@ -706,97 +706,29 @@
   </div>
 </div>
 
-<!-- ADSENSE SCRIPT -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7457059453269060" crossorigin="anonymous"></script>
-<script>
-  // Year
-  document.getElementById('year').textContent = new Date().getFullYear();
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script><script>
+emailjs.init({
+  publicKey: "ZohXNJ2Nunns11ps9"
+});
 
-  // Loader
-  window.addEventListener('load', () => {
-    setTimeout(() => document.getElementById('siteLoader').classList.add('hidden'), 800);
-  });
-
-  // Dark Mode
-  const themeBtn = document.getElementById('themeToggleBtn');
-  function applyDark() {
-    document.documentElement.setAttribute('data-theme','dark');
-    localStorage.setItem('hb_theme','dark');
-    themeBtn.querySelector('i').className = 'fas fa-sun';
-  }
-  if (localStorage.getItem('hb_theme') === 'dark') applyDark();
-  themeBtn.addEventListener('click', () => {
-    if (document.documentElement.getAttribute('data-theme') === 'dark') {
-      document.documentElement.removeAttribute('data-theme');
-      localStorage.setItem('hb_theme','light');
-      themeBtn.querySelector('i').className = 'fas fa-moon';
-    } else { applyDark(); }
-  });
-
-  // Drawer
-  const openDrawer = () => {
-    document.getElementById('mobileDrawer').classList.add('open');
-    document.getElementById('drawerOverlay').classList.add('open');
-    document.getElementById('mobileDrawer').setAttribute('aria-hidden','false');
-    document.body.style.overflow = 'hidden';
-  };
-  const closeDrawer = () => {
-    document.getElementById('mobileDrawer').classList.remove('open');
-    document.getElementById('drawerOverlay').classList.remove('open');
-    document.getElementById('mobileDrawer').setAttribute('aria-hidden','true');
-    document.body.style.overflow = '';
-  };
-  document.getElementById('menuToggleBtn').addEventListener('click', openDrawer);
-  document.getElementById('drawerCloseBtn').addEventListener('click', closeDrawer);
-  document.getElementById('drawerOverlay').addEventListener('click', closeDrawer);
-
-  // Search
-  document.getElementById('searchToggleBtn').addEventListener('click', () => {
-    document.getElementById('searchOverlay').classList.add('open');
-    document.getElementById('searchInput').focus();
-  });
-  document.getElementById('searchCloseBtn').addEventListener('click', () => {
-    document.getElementById('searchOverlay').classList.remove('open');
-  });
-  document.getElementById('searchOverlay').addEventListener('click', e => {
-    if (e.target === document.getElementById('searchOverlay'))
-      document.getElementById('searchOverlay').classList.remove('open');
-  });
-  document.getElementById('searchInput').addEventListener('input', function() {
-    const q = this.value.toLowerCase();
-    document.querySelectorAll('.search-item').forEach(el => {
-      el.style.display = el.textContent.toLowerCase().includes(q) ? '' : 'none';
-    });
-  });
-
-  // Back to Top
-  const topBtn = document.getElementById('backToTopBtn');
-  window.addEventListener('scroll', () => topBtn.classList.toggle('visible', scrollY > 300), {passive:true});
-  topBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
-
-  // Escape key
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      closeDrawer();
-      document.getElementById('searchOverlay').classList.remove('open');
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
     }
   });
+}, { threshold: 0.1 });
 
-  // Scroll Reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
-  }, {threshold: 0.1});
-  reveals.forEach(el => observer.observe(el));
+reveals.forEach(el => observer.observe(el));
 
-  // AdSense push
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  (adsbygoogle = window.adsbygoogle || []).push({});
+// AdSense push
+(adsbygoogle = window.adsbygoogle || []).push({});
+(adsbygoogle = window.adsbygoogle || []).push({});
+(adsbygoogle = window.adsbygoogle || []).push({});
 
-  <script>
-    
-const form = document.getElementById('contactForm');
+// Contact Form
 const form = document.getElementById('contactForm');
 
 form.addEventListener('submit', function(e) {
@@ -804,33 +736,32 @@ form.addEventListener('submit', function(e) {
 
   const btn = form.querySelector('.submit-btn');
 
-  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> भेजा जा रहा है...';
+  btn.innerHTML =
+    '<i class="fas fa-spinner fa-spin"></i> भेजा जा रहा है...';
   btn.disabled = true;
 
   emailjs.sendForm(
     'service_zxycx8v',
     'template_woju8ei',
-    form,
-    'ZohXNJ2Nunns11ps9'
+    form
   )
   .then(() => {
     form.style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
+
+    const successBox = document.getElementById('formSuccess');
+    if (successBox) {
+      successBox.style.display = 'block';
+    }
   })
   .catch((error) => {
-    console.error(error);
-    btn.innerHTML = '<i class="fas fa-paper-plane"></i> संदेश भेजें';
+    console.error('EmailJS Error:', error);
+
+    btn.innerHTML =
+      '<i class="fas fa-paper-plane"></i> संदेश भेजें';
     btn.disabled = false;
+
+    alert('संदेश भेजने में समस्या हुई। कृपया पुनः प्रयास करें।');
   });
 });
-  
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-<script>
-emailjs.init("ZohXNJ2Nunns11ps9");
-</script>
-
-</body>
+</script></body>
 </html>
