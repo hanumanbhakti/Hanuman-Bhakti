@@ -795,30 +795,35 @@
   (adsbygoogle = window.adsbygoogle || []).push({});
 
   <script>
+    
+const form = document.getElementById('contactForm');
 const form = document.getElementById('contactForm');
 
 form.addEventListener('submit', function(e) {
   e.preventDefault();
 
   const btn = form.querySelector('.submit-btn');
+
   btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> भेजा जा रहा है...';
   btn.disabled = true;
 
   emailjs.sendForm(
     'service_zxycx8v',
     'template_woju8ei',
-    '#contactForm'
+    form,
+    'ZohXNJ2Nunns11ps9'
   )
   .then(() => {
-      form.style.display = 'none';
-      document.getElementById('formSuccess').style.display = 'block';
+    form.style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
   })
   .catch((error) => {
-      console.error(error);
-      btn.innerHTML = '<i class="fas fa-paper-plane"></i> दोबारा प्रयास करें';
-      btn.disabled = false;
+    console.error(error);
+    btn.innerHTML = '<i class="fas fa-paper-plane"></i> संदेश भेजें';
+    btn.disabled = false;
   });
 });
+  
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
