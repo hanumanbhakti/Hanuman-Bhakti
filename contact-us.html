@@ -401,12 +401,9 @@
           <p>आपका संदेश सफलतापूर्वक भेजा गया! 🙏 हम शीघ्र उत्तर देंगे।</p>
         </div>
 
-        <form
-          action="https://formspree.io/f/mpqegaar"
-          method="POST"
-          id="contactForm"
-        >
-          <!-- Redirect to thank-you via Formspree _next -->
+        <form id="contactForm">
+          
+  
           <input type="hidden" name="_subject" value="हनुमान भक्ति — नया संपर्क संदेश" />
 
           <div class="field">
@@ -797,31 +794,39 @@
   (adsbygoogle = window.adsbygoogle || []).push({});
   (adsbygoogle = window.adsbygoogle || []).push({});
 
-  // Form AJAX submit (Formspree)
-  const form = document.getElementById('contactForm');
-  form.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const btn = form.querySelector('.submit-btn');
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> भेजा जा रहा है...';
-    btn.disabled = true;
-    try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' }
-      });
-      if (res.ok) {
-        form.style.display = 'none';
-        document.getElementById('formSuccess').style.display = 'block';
-      } else {
-        btn.innerHTML = '<i class="fas fa-paper-plane"></i> दोबारा प्रयास करें';
-        btn.disabled = false;
-      }
-    } catch {
+  <script>
+const form = document.getElementById('contactForm');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const btn = form.querySelector('.submit-btn');
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> भेजा जा रहा है...';
+  btn.disabled = true;
+
+  emailjs.sendForm(
+    'service_zxycx8v',
+    'template_woju8ei',
+    '#contactForm'
+  )
+  .then(() => {
+      form.style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+  })
+  .catch((error) => {
+      console.error(error);
       btn.innerHTML = '<i class="fas fa-paper-plane"></i> दोबारा प्रयास करें';
       btn.disabled = false;
-    }
   });
+});
 </script>
+  
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init("ZohXNJ2Nunns11ps9");
+</script>
+  
 </body>
 </html>
