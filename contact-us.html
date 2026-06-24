@@ -763,5 +763,130 @@ form.addEventListener('submit', function(e) {
     alert('संदेश भेजने में समस्या हुई। कृपया पुनः प्रयास करें।');
   });
 });
-</script></body>
+</script>
+
+<script>
+// ===== Hide Loader =====
+window.addEventListener('load', () => {
+  const loader = document.getElementById('siteLoader');
+  if (loader) loader.classList.add('hidden');
+});
+
+// ===== Mobile Drawer Menu =====
+const menuToggleBtn = document.getElementById('menuToggleBtn');
+const drawerOverlay = document.getElementById('drawerOverlay');
+const mobileDrawer = document.getElementById('mobileDrawer');
+const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+
+function openDrawer() {
+  if (mobileDrawer) mobileDrawer.classList.add('open');
+  if (drawerOverlay) drawerOverlay.classList.add('open');
+  if (mobileDrawer) mobileDrawer.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeDrawer() {
+  if (mobileDrawer) mobileDrawer.classList.remove('open');
+  if (drawerOverlay) drawerOverlay.classList.remove('open');
+  if (mobileDrawer) mobileDrawer.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+if (menuToggleBtn) menuToggleBtn.addEventListener('click', openDrawer);
+if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeDrawer);
+if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
+
+// ===== Search Overlay =====
+const searchToggleBtn = document.getElementById('searchToggleBtn');
+const searchOverlay = document.getElementById('searchOverlay');
+const searchCloseBtn = document.getElementById('searchCloseBtn');
+const searchInput = document.getElementById('searchInput');
+
+function openSearch() {
+  if (searchOverlay) searchOverlay.classList.add('open');
+  if (searchOverlay) searchOverlay.setAttribute('aria-hidden', 'false');
+  if (searchInput) setTimeout(() => searchInput.focus(), 100);
+  document.body.style.overflow = 'hidden';
+}
+
+function closeSearch() {
+  if (searchOverlay) searchOverlay.classList.remove('open');
+  if (searchOverlay) searchOverlay.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+if (searchToggleBtn) searchToggleBtn.addEventListener('click', openSearch);
+if (searchCloseBtn) searchCloseBtn.addEventListener('click', closeSearch);
+if (searchOverlay) {
+  searchOverlay.addEventListener('click', (e) => {
+    if (e.target === searchOverlay) closeSearch();
+  });
+}
+
+// Live filter for search results
+if (searchInput) {
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.trim().toLowerCase();
+    document.querySelectorAll('#searchResults .search-item').forEach(item => {
+      const text = item.textContent.trim().toLowerCase();
+      item.style.display = text.includes(query) ? 'block' : 'none';
+    });
+  });
+}
+
+// Close drawer/search on Escape
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeDrawer();
+    closeSearch();
+  }
+});
+
+// ===== Back to Top =====
+const backToTopBtn = document.getElementById('backToTopBtn');
+if (backToTopBtn) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  });
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// ===== Dark Mode Toggle =====
+const themeToggleBtn = document.getElementById('themeToggleBtn');
+const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
+const savedTheme = localStorage.getItem('theme');
+
+function setThemeIcon(isDark) {
+  if (!themeIcon) return;
+  themeIcon.classList.remove('fa-moon', 'fa-sun');
+  themeIcon.classList.add(isDark ? 'fa-sun' : 'fa-moon');
+}
+
+if (savedTheme === 'dark') {
+  document.documentElement.setAttribute('data-theme', 'dark');
+  setThemeIcon(true);
+}
+
+if (themeToggleBtn) {
+  themeToggleBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    if (isDark) {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'light');
+      setThemeIcon(false);
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+      setThemeIcon(true);
+    }
+  });
+}
+</script>
+</body>
 </html>
